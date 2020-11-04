@@ -23,3 +23,6 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard
 
 
 Route::get('/customerList', [App\Http\Controllers\CustomerController::class, 'customerList'])->name('customerList');
+
+
+Route::get('/stockList', [App\Http\Controllers\StockController::class, 'stockList'])->name('stockList');

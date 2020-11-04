@@ -205,8 +205,17 @@
           </li>
 
           <li class="nav-item">
+            <a href="{{route('stockList')}}" class="nav-link">
+              <i class="nav-icon fas fa-box"></i>
+              <p>
+                Stocks List
+              </p>
+            </a>
+          </li>
+
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fas fa-box"></i>
+              <i class="nav-icon fas fa-box"></i>
               <p>
                 Stocks
                 <i class="right fas fa-angle-left"></i>
@@ -226,7 +235,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           
           <li class="nav-item">
             <a href="#" class="nav-link">
