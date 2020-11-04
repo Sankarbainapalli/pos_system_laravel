@@ -8,7 +8,7 @@ class CustomerController extends Controller
 {
     //
 
-    public function customers_list(){
+    public function customerList(){
 
         return view('admin.customers.list');
     }
