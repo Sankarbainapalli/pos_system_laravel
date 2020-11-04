@@ -26,3 +26,15 @@ Route::get('/customerList', [App\Http\Controllers\CustomerController::class, 'cu
 
 
 Route::get('/stockList', [App\Http\Controllers\StockController::class, 'stockList'])->name('stockList');
+
+
+Route::get('/employeeList', [App\Http\Controllers\EmployeeController::class, 'employeeList'])->name('employeeList');
+
+
+Route::get('/userList', [App\Http\Controllers\UserController::class, 'userList'])->name('userList');
+
+
+Route::get('/groupList', [App\Http\Controllers\groupController::class, 'groupList'])->name('groupList');
+
+
+Route::get('/branchList', [App\Http\Controllers\branchController::class, 'branchList'])->name('branchList');

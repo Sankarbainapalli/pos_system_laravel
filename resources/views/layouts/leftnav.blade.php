@@ -156,6 +156,26 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="{{route('userList')}}" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Users
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="{{route('groupList')}}" class="nav-link">
+              <i class="nav-icon far fa-object-group"></i>
+              <p>
+                Groups
+              </p>
+            </a>
+          </li>
+
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -236,29 +256,22 @@
               </li>
             </ul>
           </li> -->
-          
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('employeeList')}}" class="nav-link">
               <i class="nav-icon fas fa-user-plus"></i>
               <p>
-                Employees
-                <i class="right fas fa-angle-left"></i>
+                Employees List
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Add Employee</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Employees List</p>
-                </a>
-              </li>
-            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('branchList')}}" class="nav-link">
+              <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Branches
+              </p>
+            </a>
           </li>
           
           <li class="nav-item">
@@ -292,30 +305,6 @@
                 Customers List
               </p>
             </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-code-branch"></i>
-              <p>
-                Branches
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Add Branch</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Branches List</p>
-                </a>
-              </li>
-            </ul>
           </li>
 
           <li class="nav-item">
