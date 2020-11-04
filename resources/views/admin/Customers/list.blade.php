@@ -28,7 +28,8 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Customers List</h3>
+                <h3 class="card-title justify-content-center ">Customers List</h3>
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-customer">Add Customer</button>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -36,7 +37,7 @@
                   <thead>
                   <tr>
                     <th>Customer Name</th>
-                    <th>Email Id</th>
+                    <th>Location</th>
                     <th>Mobile No.</th>
                     <th>Action</th>
                   </tr>
@@ -50,11 +51,11 @@
                     <td>Win 95+</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -67,11 +68,11 @@
                     <td>Win 95+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -84,11 +85,11 @@
                     <td>Win 95+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -101,11 +102,11 @@
                     <td>Win 98+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -116,11 +117,11 @@
                     <td>Win XP SP2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -131,11 +132,11 @@
                     <td>Win XP</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -146,11 +147,11 @@
                     <td>Win 98+ / OSX.2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -161,11 +162,11 @@
                     <td>Win 98+ / OSX.2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -176,11 +177,11 @@
                     <td>Win 98+ / OSX.2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -191,11 +192,11 @@
                     <td>Win 2k+ / OSX.3+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -206,11 +207,11 @@
                     <td>OSX.2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -221,11 +222,11 @@
                     <td>OSX.3+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -236,11 +237,11 @@
                     <td>Win 95+ / Mac OS 8.6-9.2</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -251,11 +252,11 @@
                     <td>Win 98SE+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -266,11 +267,11 @@
                     <td>Win 98+ / OSX.2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-lg">
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
                             <i class="far fa-edit"></i>
                           </button>
                           <button type="button" class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                            <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
@@ -297,8 +298,56 @@
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-    
-    <div class="modal fade" id="modal-lg">
+
+    <!-- /.modal add customer-->
+    <div class="modal fade" id="add-customer">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Customer</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <form>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Customer Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Customer Name">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" class="form-control" placeholder="Enter Email Id">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No.">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal add customer-->
+
+
+    <!-- /.modal edit customer-->
+    <div class="modal fade" id="edit-customer">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -319,8 +368,8 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Email Id</label>
-                        <input type="email" class="form-control" placeholder="Enter Email Id">
+                        <label>Location</label>
+                        <input type="text" class="form-control" placeholder="Enter Email Id">
                       </div>
                     </div>
                     <div class="col-sm-6">
