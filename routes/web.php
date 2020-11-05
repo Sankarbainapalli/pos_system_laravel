@@ -50,3 +50,6 @@ Route::get('/franchiseeList', [App\Http\Controllers\FranchiseeController::class,
 
 
 Route::get('/edit_franchisee', [App\Http\Controllers\FranchiseeController::class, 'edit_franchisee'])->name('edit_franchisee');
+
+
+Route::get('/categoryList', [App\Http\Controllers\CategoryController::class, 'categoryList'])->name('categoryList');
