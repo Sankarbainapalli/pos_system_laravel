@@ -38,3 +38,15 @@ Route::get('/groupList', [App\Http\Controllers\groupController::class, 'groupLis
 
 
 Route::get('/branchList', [App\Http\Controllers\branchController::class, 'branchList'])->name('branchList');
+
+
+Route::get('/productList', [App\Http\Controllers\productController::class, 'productList'])->name('productList');
+
+
+Route::get('/add_franchisee', [App\Http\Controllers\FranchiseeController::class, 'add_franchisee'])->name('add_franchisee');
+
+
+Route::get('/franchiseeList', [App\Http\Controllers\FranchiseeController::class, 'franchiseeList'])->name('franchiseeList');
+
+
+Route::get('/edit_franchisee', [App\Http\Controllers\FranchiseeController::class, 'edit_franchisee'])->name('edit_franchisee');
