@@ -233,29 +233,24 @@
             </a>
           </li>
 
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-box"></i>
+          <li class="nav-item">
+            <a href="{{route('categoryList')}}" class="nav-link">
+              <i class="nav-icon fas fa-list-ol"></i>
               <p>
-                Stocks
-                <i class="right fas fa-angle-left"></i>
+                Categories
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Add Stock</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Stocks List</p>
-                </a>
-              </li>
-            </ul>
-          </li> -->
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('productList')}}" class="nav-link">
+              <i class="nav-icon fab fa-product-hunt"></i>
+              <p>
+                Products
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="{{route('employeeList')}}" class="nav-link">
               <i class="nav-icon fas fa-user-plus"></i>
@@ -267,7 +262,7 @@
 
           <li class="nav-item">
             <a href="{{route('branchList')}}" class="nav-link">
-              <i class="nav-icon fas fa-user-plus"></i>
+              <i class="nav-icon fas fa-code-branch"></i>
               <p>
                 Branches
               </p>
@@ -303,15 +298,6 @@
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Customers
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="{{route('productList')}}" class="nav-link">
-              <i class="nav-icon fas fa-user-plus"></i>
-              <p>
-                Products
               </p>
             </a>
           </li>
