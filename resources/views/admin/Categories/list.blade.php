@@ -23,7 +23,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        <x-alert />
         <div class="row">
+
           <div class="col-12">
 
             <div class="card">
@@ -37,205 +39,30 @@
                   <thead>
                   <tr>
                     <th>Category Name</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
+
+                    @foreach($category_list as $category)
                   <tr>
-                    <td>Live</td>
+                    <td>{{$category->name}}</td>
+                    <td>{{$category->status}}</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
+                          <a href=""> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
                             <i class="far fa-edit"></i>
                           </button>
-                          <button type="button" class="btn btn-primary">
+                          <a href="{{route('category.destroy', $category->id)}}"> <button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
-                          </button>
+                          </button></a>
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
+                  @endforeach
+                 
+        
                   </tbody>
                   <tfoot>
                   <tr>
@@ -268,22 +95,41 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="{{route('category.store')}}" method="post">
+                  @csrf
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Category Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname">
+                        <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name" required="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Status</label>
+
+                        <select name="status" class="form-control" required="">
+
+                          <option>Select Status</option>
+                          <option value="1">Active</option>
+                          <option value="0">Disable</option>
+
+                        </select>
+
+                        <!-- <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name"> -->
+
                       </div>
                     </div>
                   </div>
-                </form>
+                
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Add</button>
+              <button type="submit" class="btn btn-primary">Add</button>
             </div>
+            </form>
           </div>
           <!-- /.modal-content -->
         </div>

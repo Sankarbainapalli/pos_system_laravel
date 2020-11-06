@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
 
@@ -67,3 +68,7 @@ Route::get('/edit_franchisee', [App\Http\Controllers\FranchiseeController::class
 
 
 Route::get('/categoryList', [App\Http\Controllers\CategoryController::class, 'categoryList'])->name('categoryList');
+
+Route::post('/category/store', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
+
+Route::get('/category/{category}/destroy', [App\Http\Controllers\CategoryController::class, 'destory'])->name('category.destroy');

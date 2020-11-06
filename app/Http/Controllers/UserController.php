@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -10,6 +11,9 @@ class UserController extends Controller
 
     public function userList(){
 
-        return view('admin.users.list');
+    	$userlist=User::all();
+
+        return view('admin.users.list',compact('userlist'));
     }
+    
 }
