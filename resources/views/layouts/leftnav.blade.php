@@ -156,15 +156,6 @@
               </p>
             </a>
           </li>
-
-          <li class="nav-item">
-            <a href="{{route('userList')}}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Users
-              </p>
-            </a>
-          </li>
           
           <li class="nav-item">
             <a href="{{route('groupList')}}" class="nav-link">

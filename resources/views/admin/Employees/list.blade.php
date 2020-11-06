@@ -36,7 +36,7 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
-                    <th>Employee Name</th>
+                    <th>User Name</th>
                     <th>Email Id</th>
                     <th>Mobile No.</th>
                     <th>Role</th>
@@ -303,7 +303,7 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Employee Name</th>
+                    <th>User Name</th>
                     <th>Email Id</th>
                     <th>Mobile No.</th>
                     <th>Role</th>
@@ -341,8 +341,8 @@
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Employee Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Employee Name" id="uname">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" placeholder="Enter User Name" id="uname">
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -403,8 +403,8 @@
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Employee Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Employee Name" id="Ename">
+                        <label>User Name</label>
+                        <input type="text" class="form-control" placeholder="Enter User Name" id="Uname">
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -422,7 +422,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Role</label>
-                        <input type="text" class="form-control" placeholder="Enter Role" id="rate">
+                        <input type="text" class="form-control" placeholder="Enter Role" id="role">
                       </div>
                     </div>
                     <div class="col-sm-6">

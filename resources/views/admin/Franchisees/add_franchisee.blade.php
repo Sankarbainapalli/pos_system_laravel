@@ -43,8 +43,8 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Customer Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Customer Name" id="Cname">
+                    <label>Franchisee Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">

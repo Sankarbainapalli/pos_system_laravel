@@ -31,7 +31,7 @@ Route::get('/stockList', [App\Http\Controllers\StockController::class, 'stockLis
 Route::get('/employeeList', [App\Http\Controllers\EmployeeController::class, 'employeeList'])->name('employeeList');
 
 
-Route::get('/userList', [App\Http\Controllers\UserController::class, 'userList'])->name('userList');
+// Route::get('/userList', [App\Http\Controllers\UserController::class, 'userList'])->name('userList');
 
 
 Route::get('/groupList', [App\Http\Controllers\groupController::class, 'groupList'])->name('groupList');

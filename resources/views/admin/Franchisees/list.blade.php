@@ -36,7 +36,7 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
-                    <th>Customer Name</th>
+                    <th>Franchisee Name</th>
                     <th>Mobile No.</th>
                     <th>Adhaar/Pan No.</th>
                     <th>Bank A/C No.</th>
@@ -350,7 +350,7 @@
                   </tr>
                   </tbody>
                   <tfoot>
-                    <th>Customer Name</th>
+                    <th>Franchisee Name</th>
                     <th>Mobile No.</th>
                     <th>Adhaar/Pan No.</th>
                     <th>Bank A/C No.</th>

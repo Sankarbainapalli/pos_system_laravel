@@ -38,8 +38,8 @@
                   <tr>
                     <th>Category</th>
                     <th>Product Name</th>
-                    <th>Price</th>
                     <th>Qty(Kgs)</th>
+                    <th>Price</th>
                     <th>Branch</th>
                     <th>Availability</th>
                     <th>Action</th>
@@ -320,8 +320,8 @@
                   <tfoot>
                     <th>Category</th>
                     <th>Product Name</th>
+                    <th>Qty(Kgs)</th>
                     <th>Price</th>
-                    <th>Qty</th>
                     <th>Branch</th>
                     <th>Availability</th>
                     <th>Action</th>
@@ -365,12 +365,8 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Product Name</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
-                                <option>Chicken</option>
-                                <option>Fish</option>
-                                <option>Prawns</option>
-                            </select>
+                            <label for="prod">Product Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Product Name" id="Prod" required>
                         </div>
                     </div>
                     <div class="col-sm-6">

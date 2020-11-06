@@ -8,8 +8,8 @@ class UserController extends Controller
 {
     //
 
-    public function userList(){
+    // public function userList(){
 
-        return view('admin.users.list');
-    }
+    //     return view('admin.users.list');
+    // }
 }
