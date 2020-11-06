@@ -12,4 +12,9 @@ class ProductController extends Controller
 
         return view('admin.products.list');
     }
+
+    public function edit_product(){
+
+        return view('admin.products.edit_product');
+    }
 }

@@ -12,4 +12,9 @@ class BranchController extends Controller
 
         return view('admin.branches.list');
     }
+
+    public function edit_branch(){
+
+        return view('admin.branches.edit_branch');
+    }
 }

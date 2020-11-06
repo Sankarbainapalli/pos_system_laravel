@@ -51,9 +51,9 @@
                     <td>Win 95+</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -68,9 +68,9 @@
                     <td>Win 95+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -85,9 +85,9 @@
                     <td>Win 95+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -102,9 +102,9 @@
                     <td>Win 98+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -117,9 +117,9 @@
                     <td>Win XP SP2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -132,9 +132,9 @@
                     <td>Win XP</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -147,129 +147,9 @@
                     <td>Win 98+ / OSX.2+</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Firefox 1.5</td>
-                    <td>Win 98+ / OSX.2+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Firefox 2.0</td>
-                    <td>Win 98+ / OSX.2+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Firefox 3.0</td>
-                    <td>Win 2k+ / OSX.3+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Camino 1.0</td>
-                    <td>OSX.2+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Camino 1.5</td>
-                    <td>OSX.3+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Netscape 7.2</td>
-                    <td>Win 95+ / Mac OS 8.6-9.2</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Netscape Browser 8</td>
-                    <td>Win 98SE+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Gecko</td>
-                    <td>Netscape Navigator 9</td>
-                    <td>Win 98+ / OSX.2+</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
-                            <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -316,19 +196,19 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Customer Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Customer Name">
+                        <input type="text" class="form-control" placeholder="Enter Customer Name" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Location</label>
-                        <input type="text" class="form-control" placeholder="Enter Email Id">
+                        <input type="text" class="form-control" placeholder="Enter Location">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile No.</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No.">
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." required>
                       </div>
                     </div>
                   </div>
@@ -344,52 +224,5 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal add customer-->
-
-
-    <!-- /.modal edit customer-->
-    <div class="modal fade" id="edit-customer">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Customer List</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            <form>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Customer Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Customer Name">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Location</label>
-                        <input type="text" class="form-control" placeholder="Enter Email Id">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Mobile No.</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No.">
-                      </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
 
 @endsection

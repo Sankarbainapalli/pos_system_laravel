@@ -53,9 +53,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
+                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -70,9 +70,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
+                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -87,9 +87,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
+                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -104,9 +104,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
+                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -121,179 +121,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
+                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  </tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-employee">
-                            <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -342,7 +172,7 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>User Name</label>
-                        <input type="text" class="form-control" placeholder="Enter User Name" id="uname">
+                        <input type="text" class="form-control" placeholder="Enter User Name" id="uname" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -354,13 +184,16 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile No.</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile">
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Role</label>
-                        <input type="text" class="form-control" placeholder="Enter Role" id="rate">
+                        <select class="select2" multiple="multiple" data-placeholder="Put Status" style="width: 100%;" id="stat">
+                            <option>Administrator</option>
+                            <option>Developer</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -385,67 +218,5 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal add customer-->
-
-
-    <!-- /.modal edit customer-->
-    <div class="modal fade" id="edit-employee">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Stocks List</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>User Name</label>
-                        <input type="text" class="form-control" placeholder="Enter User Name" id="Uname">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Email Id</label>
-                        <input type="email" class="form-control" placeholder="abc@gmail.com" id="email">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Mobile No.</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Role</label>
-                        <input type="text" class="form-control" placeholder="Enter Role" id="role">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Status</label>
-                        <select class="form-control select2bs4" style="width: 100%;">
-                            <option selected="selected">Active</option>
-                            <option>Deactive</option>
-                        </select>
-                        </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
 
 @endsection

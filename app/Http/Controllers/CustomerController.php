@@ -12,6 +12,11 @@ class CustomerController extends Controller
 
         return view('admin.customers.list');
     }
+
+    public function edit_customer(){
+
+        return view('admin.customers.edit_customer');
+    }
 }
 
 

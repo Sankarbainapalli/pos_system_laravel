@@ -158,10 +158,10 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{route('groupList')}}" class="nav-link">
+            <a href="{{route('roleList')}}" class="nav-link">
               <i class="nav-icon far fa-object-group"></i>
               <p>
-                Groups
+                Roles
               </p>
             </a>
           </li>
@@ -261,27 +261,12 @@
           </li>
           
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-sitemap"></i>
+            <a href="{{route('franchiseeList')}}" class="nav-link">
+              <i class="nav-icon fas fa-code-branch"></i>
               <p>
                 Franchisees
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{route('add_franchisee')}}" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Add Franchisee</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('franchiseeList')}}" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Franchisees List</p>
-                </a>
-              </li>
-            </ul>
           </li>
 
           <li class="nav-item">

@@ -49,9 +49,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-branch">
+                          <a href="{{route('edit_branch')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -64,9 +64,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-branch">
+                          <a href="{{route('edit_branch')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -79,9 +79,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-branch">
+                          <a href="{{route('edit_branch')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -143,14 +143,14 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Branch Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Branch Name" id="branchname">
+                        <input type="text" class="form-control" placeholder="Enter Branch Name" id="branchname" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Location</label>
-                        <input type="text" class="form-control" placeholder="Enter Location Name" id="locationname">
+                        <input type="text" class="form-control" placeholder="Enter Location Name" id="locationname" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -175,56 +175,5 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal add customer-->
-
-
-    <!-- /.modal edit customer-->
-    <div class="modal fade" id="edit-branch">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Group</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Branch Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Branch Name" id="ebranchname">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Location</label>
-                        <input type="text" class="form-control" placeholder="Enter Location Name" id="elocationname">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Status</label>
-                        <select class="form-control select2bs4" style="width: 100%;">
-                            <option selected="selected">Active</option>
-                            <option>Deactive</option>
-                        </select>
-                        </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
 
 @endsection

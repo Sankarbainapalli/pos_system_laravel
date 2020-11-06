@@ -12,4 +12,9 @@ class CategoryController extends Controller
 
         return view('admin.categories.list');
     }
+
+    public function edit_category(){
+
+        return view('admin.categories.edit_category');
+    }
 }

@@ -12,4 +12,9 @@ class EmployeeController extends Controller
 
         return view('admin.employees.list');
     }
+
+    public function edit_employee(){
+
+        return view('admin.employees.edit_employee');
+    }
 }

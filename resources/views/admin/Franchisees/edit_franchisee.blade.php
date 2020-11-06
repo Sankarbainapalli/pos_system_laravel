@@ -44,22 +44,22 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Franchisee Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname">
+                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Mobile No.</label>
-                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile">
+                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Adhaar Card/ Pan Card No.</label>
-                    <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan">
+                    <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                       <label>Bank A/c No.</label>
-                      <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc">
+                      <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required>
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -72,7 +72,7 @@
                   <!-- /.form-group -->
                   <div class="form-group">
                     <label>Unique ID No.(Auto-Generated)</label>  <!-- We have to auto-generate IDs -->
-                    <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id">
+                    <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required>
                   </div>
                   <!-- /.form-group -->
                   <!-- Date -->
