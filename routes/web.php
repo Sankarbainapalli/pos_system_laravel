@@ -19,10 +19,24 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+// Route::resource('customer', App\Http\Controllers\CustomerController::class);
+
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
 
-Route::get('/customerList', [App\Http\Controllers\CustomerController::class, 'customerList'])->name('customerList');
+Route::get('/customer', [App\Http\Controllers\CustomerController::class, 'index'])->name('customer.index');
+
+Route::post('/customer/store', [App\Http\Controllers\CustomerController::class, 'store'])->name('customer.store');
+
+// Route::get('/customer/{customer}', [App\Http\Controllers\CustomerController::class, 'show'])->name('customer.show');
+
+Route::get('/customer/{customer}/edit', [App\Http\Controllers\CustomerController::class, 'edit'])->name('customer.edit');
+
+Route::patch('/customer/{customer}/update', [App\Http\Controllers\CustomerController::class, 'update'])->name('customer.update');
+
+Route::get('/customer/{customer}/destroy', [App\Http\Controllers\CustomerController::class, 'destory'])->name('customer.destroy');
+
 
 
 Route::get('/stockList', [App\Http\Controllers\StockController::class, 'stockList'])->name('stockList');

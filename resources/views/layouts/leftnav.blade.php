@@ -299,7 +299,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('customerList')}}" class="nav-link">
+            <a href="{{route('customer.index')}}" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Customers
