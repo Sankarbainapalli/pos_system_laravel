@@ -40,19 +40,43 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+           <form action="{{route('category.update', $category->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Category Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Category Name" id="Cname" required>
+                    <input type="text" class="form-control" placeholder="Enter Category Name" name="name" required value="{{$category->name}}">
                 </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
+              <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Status</label>
+
+                        <select name="status" class="form-control" required="">
+                          @if($category->status=='1')
+                          <option value="1">Active</option>
+                          <option value="0">Disable</option>
+                          @else
+                          <option value="0">Disable</option>
+                          <option value="1">Active</option>
+                          @endif
+
+                        </select>
+
+                    
+
+     </div>
+                    </div>
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
+          </form>
           </div>
           <!-- /.card-body -->
         </div>

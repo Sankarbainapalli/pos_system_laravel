@@ -29,109 +29,49 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title justify-content-center ">Employees List</h3>
-                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-employee">Add Employee</button>
+                <!-- <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-employee">Add Employee</button> -->
+                <a href="{{route('register')}}"><button type="button" class="btn btn-success float-right" >Add Employee</button></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
+                    <th>S.no</th>
                     <th>User Name</th>
                     <th>Email Id</th>
                     <th>Mobile No.</th>
                     <th>Role</th>
-                    <th>Status</th>
+                    <!-- <th>Status</th> -->
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
+                    @foreach($employee_list as $list)
                   <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
+
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$list->name}}</td>
+                    <td>{{$list->email}}</td>
+                    <td>{{$list->mobile}}</td>
+                    <td>{{$list->role}}</td>web
+                    <!-- <td>{{$list->name}}</td> -->
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
+                         <!--  <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
+                          </button></a> -->
+                        <a href="{{route('user.destroy', $list->id)}}"><button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shankar</td>
-                    <td>abc@gmail.com</td>
-                    <td>8885051616</td>
-                    <td>Developer</td>
-                    <td>Active</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
+                  @endforeach
+           
                   </tbody>
-                  <tfoot>
+                 <!--  <tfoot>
                   <tr>
                     <th>User Name</th>
                     <th>Email Id</th>
@@ -140,7 +80,7 @@
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->

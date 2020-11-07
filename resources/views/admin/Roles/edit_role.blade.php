@@ -40,18 +40,22 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+            <form action="{{route('role.update', $role->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Role Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Role Name" id="Rname" required>
+                    <input type="text" class="form-control" placeholder="Enter Role Name" id="Rname" name="name" value="{{$role->name}}" required>
                 </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
+          </form>
             <!-- /.button -->
           </div>
           <!-- /.card-body -->

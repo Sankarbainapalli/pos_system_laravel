@@ -40,16 +40,19 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+             <form action="{{route('branch.update', $branch->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Branch Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Branch Name" id="ebranchname" required>
+                    <input type="text" class="form-control" placeholder="Enter Branch Name" id="ebranchname" name="name" value="{{$branch->name}}" required>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Location</label>
-                    <input type="text" class="form-control" placeholder="Enter Location Name" id="elocationname" required>
+                    <input type="text" class="form-control" placeholder="Enter Location Name" id="elocationname" name="location" value="{{$branch->location}}" required>
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -57,9 +60,15 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Status</label>
-                    <select class="form-control select2bs4" style="width: 100%;">
-                        <option selected="selected">Active</option>
-                        <option>Deactive</option>
+                    <select name="status" class="form-control select2bs4" style="width: 100%;">
+                        @if($branch->status=='1')
+                        <option selected="selected" value="1">Active</option>
+                        <option value="0">Deactive</option>
+                        @else
+                        <option value="1">Active</option>
+                        <option selected="selected" value="0">Deactive</option>
+                        @endif
+
                     </select>
                 </div>
                 <!-- /.form-group -->
@@ -67,7 +76,8 @@
               <!-- /.col -->
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
+          </form>
             <!-- /.button -->
           </div>
           <!-- /.card-body -->

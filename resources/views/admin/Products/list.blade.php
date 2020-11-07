@@ -25,7 +25,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-
+              <x-alert />
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title justify-content-center ">Products List</h3>
@@ -46,116 +46,33 @@
                   </tr>
                   </thead>
                   <tbody>
+                     @foreach($product_list as $product)
                   <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$product->category_id}}</td>
+                    <td>{{$product->product_name}}</td>
+                    <td>{{$product->qty}}</td>
+                    <td>{{$product->amount}}</td>
+                    <td>{{$product->branch_id}}</td>
+                    <td>{{$product->status}}</td>
+                    
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
+                      <a href="{{route('product.edit',$product->id)}}"><button type="button" class="btn btn-primary" >
                             <i class="far fa-edit"></i>
                           </button></a>
-                          <button type="button" class="btn btn-primary">
+
+                        <a href="{{route('product.destroy',$product->id)}}"><button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button>
+                          </a>  
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
+                  @endforeach
+                
                   </tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                     <th>Category</th>
                     <th>Product Name</th>
                     <th>Qty(Kgs)</th>
@@ -163,7 +80,7 @@
                     <th>Branch</th>
                     <th>Status</th>
                     <th>Action</th>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
@@ -189,63 +106,67 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+               <form action="{{route('product.store')}}" method="POST">
+              @csrf
                   <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Category</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
-                                <option>Live</option>
-                                <option>Dressed</option>
-                                <option>Boneless</option>
+                            <select name="category_id" class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
+                               @foreach($category_list as $category)
+                                <option>{{$category->id}}</option>
+                                
+                                @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="prod">Product Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Product Name" id="Prod" required>
+                            <input type="text"  name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Qty(Kgs)</label>
-                        <input type="text" class="form-control" placeholder="Enter Qty" id="qty" required>
+                        <input type="text" name="qty" class="form-control" placeholder="Enter Qty" id="qty" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Price" id="price" required>
+                        <input type="text" name="amount" class="form-control" placeholder="Enter Price" id="price" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Branch</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Branch" style="width: 100%;" id="branch">
-                                <option>Madhapur</option>
-                                <option>Secunderabad</option>
-                                <option>Karim Nagar</option>
+                            <select name="branch_id" class="select2" multiple="multiple" data-placeholder="Select a Branch" style="width: 100%;" id="branch">
+                                 @foreach($branch_list as $branch)
+                                <option>{{$branch->id}}</option>
+                                
+                                @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Status</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Availability" style="width: 100%;" id="prod">
-                                <option>Active</option>
-                                <option>Deactive</option>
+                            <select name="status" class="select2" multiple="multiple" data-placeholder="Availability" style="width: 100%;" id="prod">
+                                <option value="1">Active</option>
+                                <option value="0">Deactive</option>
                             </select>
                         </div>
                     </div>
                   </div>
-                </form>
+                
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Add</button>
+              <button type="submit" class="btn btn-primary">Add</button>
             </div>
           </div>
+          </form>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->

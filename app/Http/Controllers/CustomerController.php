@@ -59,13 +59,14 @@ class CustomerController extends Controller
     // 	 return view('admin.customers.list',compact('customer_list '));
     // }
 
+
      public function edit(Customer $customer){
    
          // $todo = Todo::find($id);
 
         // dd($todo->title);
 
-        return view('admin.customers.list',compact('customer'));
+        return view('admin.customers.edit_customer',compact('customer'));
     }
 
     public function update(CustomerCreateRequest $request,Customer $customer){
@@ -76,7 +77,7 @@ class CustomerController extends Controller
     }
 
 
-    public function destory(Customer $customer){
+    public function destroy(Customer $customer){
 
         // Todo::where('id',$id)->delete();
          $customer->delete();
@@ -84,15 +85,10 @@ class CustomerController extends Controller
          return redirect()->back()->with('error','Customer Deleted Has been Successfully');
 
     }
-<<<<<<< HEAD
-    
-=======
 
-    public function edit_customer(){
 
-        return view('admin.customers.edit_customer');
-    }
->>>>>>> vishal
+   
+
 }
 
 

@@ -38,6 +38,7 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
+                    <th>S.No</th>
                     <th>Category Name</th>
                     <th>Status</th>
                     <th>Action</th>
@@ -47,129 +48,36 @@
 
                     @foreach($category_list as $category)
                   <tr>
+                    <td>{{$loop->index+1}}</td>
                     <td>{{$category->name}}</td>
                     <td>{{$category->status}}</td>
                     <td> 
                       <div class="btn-group">
-<<<<<<< HEAD
-                          <a href=""> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
+
+                          <a href="{{route('category.edit',$category->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
+
                           <a href="{{route('category.destroy', $category->id)}}"> <button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
-=======
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
+                         
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
->>>>>>> vishal
-                      </div>
-                    </td>
-                  </tr>
+
                   @endforeach
                  
         
                   </tbody>
-                  <tfoot>
+                 <!--  <tfoot>
                   <tr>
+                     <th>S.No</th>
                     <th>Category Name</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
@@ -202,7 +110,6 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Category Name</label>
-<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name" required="">
                       </div>
                     </div>
@@ -218,12 +125,6 @@
                           <option value="0">Disable</option>
 
                         </select>
-
-                        <!-- <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name"> -->
-
-=======
-                        <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" required>
->>>>>>> vishal
                       </div>
                     </div>
                   </div>

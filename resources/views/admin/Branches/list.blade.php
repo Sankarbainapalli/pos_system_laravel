@@ -25,7 +25,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-
+                <x-alert />
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title justify-content-center ">Branches</h3>
@@ -36,6 +36,7 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
+                    <th>S.no</th>
                     <th>Branch Name</th>
                     <th>Location</th>
                     <th>Status</th>
@@ -43,75 +44,38 @@
                   </tr>
                   </thead>
                   <tbody>
+                     @foreach($branch_list as $branch)
                   <tr>
-                    <td>Shop 1</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
+
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$branch->name}}</td>
+                    <td>{{$branch->location}}</td>
+                    <td>{{$branch->status}}</td>
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('edit_branch')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('branch.edit',$branch->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                          <button type="button" class="btn btn-primary">
+                       <a href="{{route('branch.destroy', $branch->id)}}">  <button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
-                          </button>
+                          </button></a> 
+
+                          
+                          
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Shop 1</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_branch')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shop 1</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_branch')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Shop 1</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-branch">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
+                  @endforeach
+             
                   </tbody>
-                  <tfoot>
+                  <!-- <tfoot>
                   <tr>
                     <th>Branch Name</th>
                     <th>Location</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
@@ -137,39 +101,41 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+              <form action="{{route('branch.store')}}" method="POST">
+              @csrf
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Branch Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Branch Name" id="branchname" required>
+                        <input type="text" class="form-control" placeholder="Enter Branch Name" id="branchname" name="name" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>Location</label>
-                        <input type="text" class="form-control" placeholder="Enter Location Name" id="locationname" required>
+                        <input type="text" class="form-control" placeholder="Enter Location Name" id="locationname" name="location" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Status</label>
-                        <select class="form-control select2bs4" style="width: 100%;">
-                            <option selected="selected">Active</option>
-                            <option>Deactive</option>
+                        <select class="form-control select2bs4" name="status" style="width: 100%;">
+                            <option selected="selected" value="1">Active</option>
+                            <option value="0">Deactive</option>
                         </select>
                         </div>
                     </div>
                   </div>
-                </form>
+               
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Add</button>
+              <button type="submit" class="btn btn-primary">Add</button>
             </div>
           </div>
+           </form>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->

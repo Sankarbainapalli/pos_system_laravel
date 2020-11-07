@@ -38,13 +38,17 @@
               </button>
             </div>
           </div>
+
           <!-- /.card-header -->
           <div class="card-body">
+            <form action="{{route('customer.update', $customer->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Customer Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Customer Name" required>
+                     <input type="text" class="form-control" placeholder="Enter Customer Name" name="name" value="{{$customer->name}}">
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -52,7 +56,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Location</label>
-                    <input type="text" class="form-control" placeholder="Enter Location">
+                     <input type="text" class="form-control" placeholder="Enter Location " name="location" value="{{$customer->location}}">
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -60,14 +64,14 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Mobile No.</label>
-                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." required>
+                   <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." name="mobile" value="{{$customer->mobile}}">
                 </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
           </div>
           <!-- /.card-body -->

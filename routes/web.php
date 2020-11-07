@@ -14,23 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.dashboard');
 });
+
 
 
 Auth::routes();
 
-<<<<<<< HEAD
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 // Route::resource('customer', App\Http\Controllers\CustomerController::class);
-=======
+
 //*************dashboard***************/
->>>>>>> vishal
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
 
 
-<<<<<<< HEAD
 Route::get('/customer', [App\Http\Controllers\CustomerController::class, 'index'])->name('customer.index');
 
 Route::post('/customer/store', [App\Http\Controllers\CustomerController::class, 'store'])->name('customer.store');
@@ -41,15 +41,7 @@ Route::get('/customer/{customer}/edit', [App\Http\Controllers\CustomerController
 
 Route::patch('/customer/{customer}/update', [App\Http\Controllers\CustomerController::class, 'update'])->name('customer.update');
 
-Route::get('/customer/{customer}/destroy', [App\Http\Controllers\CustomerController::class, 'destory'])->name('customer.destroy');
-
-=======
-//*************Customers***************/
-
-Route::get('/customerList', [App\Http\Controllers\CustomerController::class, 'customerList'])->name('customerList');
->>>>>>> vishal
-
-Route::get('/edit_customer', [App\Http\Controllers\CustomerController::class, 'edit_customer'])->name('edit_customer');
+Route::get('/customer/{customer}/destroy', [App\Http\Controllers\CustomerController::class, 'destroy'])->name('customer.destroy');
 
 
 //*************Stocks***************/
@@ -66,27 +58,58 @@ Route::get('/employeeList', [App\Http\Controllers\EmployeeController::class, 'em
 
 Route::get('/edit_employee', [App\Http\Controllers\EmployeeController::class, 'edit_employee'])->name('edit_employee');
 
+Route::get('/user/{user}/destroy', [App\Http\Controllers\EmployeeController::class, 'destroy'])->name('user.destroy');
+
 
 
 //*************Roles***************/
 
 Route::get('/roleList', [App\Http\Controllers\RoleController::class, 'roleList'])->name('roleList');
 
-Route::get('/edit_role', [App\Http\Controllers\RoleController::class, 'edit_role'])->name('edit_role');
+Route::post('/role/store', [App\Http\Controllers\RoleController::class, 'store'])->name('role.store');
+
+Route::get('/role/{role}/edit', [App\Http\Controllers\RoleController::class, 'edit'])->name('role.edit');
+
+Route::patch('/role/{role}/update', [App\Http\Controllers\RoleController::class, 'update'])->name('role.update');
+
+Route::get('/role/{role}/destroy', [App\Http\Controllers\RoleController::class, 'destroy'])->name('role.destroy');
+
+
+// Route::get('/edit_role', [App\Http\Controllers\RoleController::class, 'edit_role'])->name('edit_role');
 
 
 //*************Branches***************/
 
-Route::get('/branchList', [App\Http\Controllers\branchController::class, 'branchList'])->name('branchList');
+Route::get('/branchList', [App\Http\Controllers\BranchController::class, 'branchList'])->name('branchList');
 
-Route::get('/edit_branch', [App\Http\Controllers\branchController::class, 'edit_branch'])->name('edit_branch');
+Route::post('/branch/store', [App\Http\Controllers\BranchController::class, 'store'])->name('branch.store');
+
+Route::get('/branch/{branch}/edit', [App\Http\Controllers\BranchController::class, 'edit'])->name('branch.edit');
+
+Route::patch('/branch/{branch}/update', [App\Http\Controllers\BranchController::class, 'update'])->name('branch.update');
+
+Route::get('/branch/{branch}/destroy', [App\Http\Controllers\BranchController::class, 'destroy'])->name('branch.destroy');
+
+
+// Route::get('/edit_branch', [App\Http\Controllers\branchController::class, 'edit_branch'])->name('edit_branch');
 
 
 //*************Products***************/
 
-Route::get('/productList', [App\Http\Controllers\productController::class, 'productList'])->name('productList');
+Route::get('/productList', [App\Http\Controllers\ProductController::class, 'productList'])->name('productList');
 
-Route::get('/edit_product', [App\Http\Controllers\productController::class, 'edit_product'])->name('edit_product');
+Route::post('/product/store', [App\Http\Controllers\ProductController::class, 'store'])->name('product.store');
+
+Route::get('/product/{product}/edit', [App\Http\Controllers\ProductController::class, 'edit'])->name('product.edit');
+
+Route::patch('/product/{product}/update', [App\Http\Controllers\ProductController::class, 'update'])->name('product.update');
+
+Route::get('/product/{product}/destroy', [App\Http\Controllers\ProductController::class, 'destroy'])->name('product.destroy');
+
+
+
+
+// Route::get('/edit_product', [App\Http\Controllers\ProductController::class, 'edit_product'])->name('edit_product');
 
 
 //*************Franchisees***************/
@@ -100,10 +123,12 @@ Route::get('/edit_franchisee', [App\Http\Controllers\FranchiseeController::class
 
 Route::get('/categoryList', [App\Http\Controllers\CategoryController::class, 'categoryList'])->name('categoryList');
 
-<<<<<<< HEAD
+
 Route::post('/category/store', [App\Http\Controllers\CategoryController::class, 'store'])->name('category.store');
 
+
+Route::get('/category/{category}/edit', [App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
+
+Route::patch('/category/{category}/update', [App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
+
 Route::get('/category/{category}/destroy', [App\Http\Controllers\CategoryController::class, 'destory'])->name('category.destroy');
-=======
-Route::get('/edit_category', [App\Http\Controllers\CategoryController::class, 'edit_category'])->name('edit_category');
->>>>>>> vishal

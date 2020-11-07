@@ -14,7 +14,7 @@ class CategoryController extends Controller
 
     public function categoryList(){
 
-    		$category_list=Category::all();
+         $category_list=Category::all();
         return view('admin.categories.list',compact('category_list'));
     }
 
@@ -23,6 +23,19 @@ class CategoryController extends Controller
        Category::create($request->all());
 
     return redirect()->route('categoryList')->with('message','Category Has been added Successfully');
+    }
+
+     public function edit(Category $category){
+
+        return view('admin.categories.edit_category',compact('category'));
+    }
+
+     public function update(Request $request,Category $category){
+
+
+        $category->update(['name'=>$request->name,'status'=>$request->status]);
+
+        return redirect(route('categoryList'))->with('message','Category Updated Successfully');
     }
 
     public function destory(Category $category){
@@ -34,8 +47,5 @@ class CategoryController extends Controller
 
     }
 
-    public function edit_category(){
-
-        return view('admin.categories.edit_category');
-    }
+   
 }
