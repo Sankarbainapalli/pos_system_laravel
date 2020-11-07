@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 class FranchiseeController extends Controller
 {
     //
-    public function add_franchisee(){
-
-        return view('admin.franchisees.add_franchisee');
-    }
 
     public function franchiseeList(){
 

@@ -51,12 +51,115 @@
                     <td>{{$customer->mobile}}</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-customer">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
+<<<<<<< HEAD
                           </button>
                        <a href="{{route('customer.destroy', $customer->id)}}">  <button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button></a> 
+=======
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 5.0
+                    </td>
+                    <td>Win 95+</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 5.5
+                    </td>
+                    <td>Win 95+</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trident</td>
+                    <td>Internet
+                      Explorer 6
+                    </td>
+                    <td>Win 98+</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trident</td>
+                    <td>Internet Explorer 7</td>
+                    <td>Win XP SP2+</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Trident</td>
+                    <td>AOL browser (AOL desktop)</td>
+                    <td>Win XP</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Gecko</td>
+                    <td>Firefox 1.0</td>
+                    <td>Win 98+ / OSX.2+</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_customer')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+>>>>>>> vishal
                       </div>
                     </td>
                   </tr>
@@ -107,21 +210,33 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Customer Name</label>
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="Enter Customer Name" name="name">
+=======
+                        <input type="text" class="form-control" placeholder="Enter Customer Name" required>
+>>>>>>> vishal
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
 
                         <label>Location</label>
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="Enter Location" name="location">
 
+=======
+                        <input type="text" class="form-control" placeholder="Enter Location">
+>>>>>>> vishal
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile No.</label>
+<<<<<<< HEAD
                         <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." name="mobile">
+=======
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." required>
+>>>>>>> vishal
                       </div>
                     </div>
                   </div>
@@ -139,6 +254,7 @@
       </div>
       <!-- /.modal add customer-->
 
+<<<<<<< HEAD
 
     <!-- /.modal edit customer-->
     <div class="modal fade" id="edit-customer">
@@ -189,4 +305,6 @@
       </div>
       <!-- /.modal -->
 
+=======
+>>>>>>> vishal
 @endsection

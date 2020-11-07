@@ -51,12 +51,112 @@
                     <td>{{$category->status}}</td>
                     <td> 
                       <div class="btn-group">
+<<<<<<< HEAD
                           <a href=""> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
                             <i class="far fa-edit"></i>
                           </button>
                           <a href="{{route('category.destroy', $category->id)}}"> <button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
+=======
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-category">
+                            <i class="far fa-edit"></i>
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Boneless</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Boneless</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Live</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dressed</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dressed</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Live</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Live</td>
+                    <td>
+                      <div class="btn-group">
+                          <a href="{{route('edit_category')}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                          <button type="button" class="btn btn-primary">
+                            <i class="far fa-trash-alt"></i>
+                          </button>
+>>>>>>> vishal
                       </div>
                     </td>
                   </tr>
@@ -102,6 +202,7 @@
                       <!-- text input -->
                       <div class="form-group">
                         <label>Category Name</label>
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name" required="">
                       </div>
                     </div>
@@ -120,6 +221,9 @@
 
                         <!-- <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name"> -->
 
+=======
+                        <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" required>
+>>>>>>> vishal
                       </div>
                     </div>
                   </div>
@@ -136,40 +240,5 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal add customer-->
-
-
-    <!-- /.modal edit customer-->
-    <div class="modal fade" id="edit-category">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Category</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Category Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Category Name" id="editcateg">
-                      </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
 
 @endsection

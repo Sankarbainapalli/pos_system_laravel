@@ -33,4 +33,9 @@ class CategoryController extends Controller
          return redirect()->back()->with('error','Category Deleted Has been Successfully');
 
     }
+
+    public function edit_category(){
+
+        return view('admin.categories.edit_category');
+    }
 }

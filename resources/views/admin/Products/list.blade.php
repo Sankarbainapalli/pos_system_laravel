@@ -38,10 +38,10 @@
                   <tr>
                     <th>Category</th>
                     <th>Product Name</th>
-                    <th>Price</th>
                     <th>Qty(Kgs)</th>
+                    <th>Price</th>
                     <th>Branch</th>
-                    <th>Availability</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -55,9 +55,9 @@
                     <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -73,9 +73,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -91,9 +91,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -109,9 +109,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -127,9 +127,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -145,171 +145,9 @@
                     <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href="{{route('edit_product')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Boneless</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Dressed</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Live</td>
-                    <td>Chicken</td>
-                    <td>400</td>
-                    <td>50</td>
-                    <td>Madhapur</td>
-                    <td>Active</td>
-                    <td>
-                      <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -320,10 +158,10 @@
                   <tfoot>
                     <th>Category</th>
                     <th>Product Name</th>
+                    <th>Qty(Kgs)</th>
                     <th>Price</th>
-                    <th>Qty</th>
                     <th>Branch</th>
-                    <th>Availability</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tfoot>
                 </table>
@@ -365,24 +203,20 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Product Name</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
-                                <option>Chicken</option>
-                                <option>Fish</option>
-                                <option>Prawns</option>
-                            </select>
+                            <label for="prod">Product Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Product Name" id="Prod" required>
                         </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Price" id="price">
+                        <label>Qty(Kgs)</label>
+                        <input type="text" class="form-control" placeholder="Enter Qty" id="qty" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Qty(Kgs)</label>
-                        <input type="text" class="form-control" placeholder="Enter Qty" id="qty">
+                        <label>Price</label>
+                        <input type="text" class="form-control" placeholder="Enter Price" id="price" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
@@ -397,7 +231,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Availability</label>
+                            <label>Status</label>
                             <select class="select2" multiple="multiple" data-placeholder="Availability" style="width: 100%;" id="prod">
                                 <option>Active</option>
                                 <option>Deactive</option>
@@ -417,84 +251,5 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal add customer-->
-
-
-    <!-- /.modal edit customer-->
-    <div class="modal fade" id="edit-product">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit User</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            <form>
-                  <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Category</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" id="edit-cat">
-                                <option>Live</option>
-                                <option>Dressed</option>
-                                <option>Boneless</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Product Name</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" id="edit-product">
-                                <option>Chicken</option>
-                                <option>Fish</option>
-                                <option>Prawns</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Price" id="edit-price">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Qty(Kgs)</label>
-                        <input type="text" class="form-control" placeholder="Enter Qty" id="edit-qty">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Branch</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Select a Branch" style="width: 100%;" id="edit-branch">
-                                <option>Madhapur</option>
-                                <option>Secunderabad</option>
-                                <option>Karim Nagar</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Availability</label>
-                            <select class="select2" multiple="multiple" data-placeholder="Availability" style="width: 100%;" id="edi-avail">
-                                <option>Active</option>
-                                <option>Deactive</option>
-                            </select>
-                        </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
 
 @endsection

@@ -9,11 +9,16 @@ class UserController extends Controller
 {
     //
 
-    public function userList(){
+    // public function userList(){
 
+<<<<<<< HEAD
     	$userlist=User::all();
 
         return view('admin.users.list',compact('userlist'));
     }
     
+=======
+    //     return view('admin.users.list');
+    // }
+>>>>>>> vishal
 }

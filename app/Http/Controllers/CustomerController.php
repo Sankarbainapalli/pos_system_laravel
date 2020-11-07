@@ -84,7 +84,15 @@ class CustomerController extends Controller
          return redirect()->back()->with('error','Customer Deleted Has been Successfully');
 
     }
+<<<<<<< HEAD
     
+=======
+
+    public function edit_customer(){
+
+        return view('admin.customers.edit_customer');
+    }
+>>>>>>> vishal
 }
 
 

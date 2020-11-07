@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Manage Groups</h1>
+            <h1 class="m-0">Manage Roles</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-              <li class="breadcrumb-item active">Groups</li>
+              <li class="breadcrumb-item active">Roles</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -28,15 +28,15 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title justify-content-center ">Groups</h3>
-                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-group">Add Group</button>
+                <h3 class="card-title justify-content-center ">Roles</h3>
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-group">Add Role</button>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
-                    <th>Group Name</th>
+                    <th>Role Name</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -45,9 +45,9 @@
                     <td>Administrator</td>
                     <td> 
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                      <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary" >
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -58,9 +58,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -71,9 +71,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -84,9 +84,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -97,9 +97,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -110,9 +110,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -123,9 +123,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -136,9 +136,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -149,9 +149,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -162,9 +162,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -175,9 +175,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -188,9 +188,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -201,9 +201,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -214,9 +214,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -227,9 +227,9 @@
                     <td>Administrator</td>
                     <td>
                       <div class="btn-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-group">
+                          <a href="{{route('edit_role')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button>
+                          </button></a>
                           <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button>
@@ -239,7 +239,7 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Group Name</th>
+                    <th>Role Name</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>
@@ -262,7 +262,7 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Add Group</h4>
+              <h4 class="modal-title">Add Role</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -273,8 +273,8 @@
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Group Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Group Name" id="groupname">
+                        <label>Role Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Role Name" id="rolename" required>
                       </div>
                     </div>
                   </div>
@@ -290,40 +290,5 @@
         <!-- /.modal-dialog -->
       </div>
       <!-- /.modal add customer-->
-
-
-    <!-- /.modal edit customer-->
-    <div class="modal fade" id="edit-group">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Group</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>Group Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Group Name" id="groupname">
-                      </div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
 
 @endsection

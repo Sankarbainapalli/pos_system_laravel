@@ -30,13 +30,14 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title justify-content-center ">Franchisees List</h3>
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-franchisee">Add Franchisee</button>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
-                    <th>Customer Name</th>
+                    <th>Franchisee Name</th>
                     <th>Mobile No.</th>
                     <th>Adhaar/Pan No.</th>
                     <th>Bank A/C No.</th>
@@ -350,7 +351,7 @@
                   </tr>
                   </tbody>
                   <tfoot>
-                    <th>Customer Name</th>
+                    <th>Franchisee Name</th>
                     <th>Mobile No.</th>
                     <th>Adhaar/Pan No.</th>
                     <th>Bank A/C No.</th>
@@ -373,5 +374,83 @@
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+
+    <!-- /.modal add customer-->
+    <div class="modal fade" id="add-franchisee">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Add Franchisee</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Franchisee Name</label>
+                        <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Adhaar Card/ Pan Card No.</label>
+                        <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required>
+                    </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>District/City/Town</label>
+                        <input type="text" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Unique ID No.(Auto-Generated)</label>  <!-- We have to auto-generate IDs -->
+                        <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                     <label>Date Of Franchisee Starts</label>
+                      <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                          <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" id="dte"/>
+                          <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                          <label>Bank A/c No.</label>
+                          <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Remarks/Note</label>
+                        <textarea class="form-control" rows="1" placeholder="Enter Remarks/Note" id="remarks"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal add customer-->
 
 @endsection

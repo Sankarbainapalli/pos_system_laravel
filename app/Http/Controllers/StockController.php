@@ -12,4 +12,9 @@ class StockController extends Controller
 
         return view('admin.Stocks.list');
     }
+
+    public function edit_stock(){
+
+        return view('admin.Stocks.edit_stock');
+    }
 }
