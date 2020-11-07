@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Stocks List</h1>
+            <h1 class="m-0">Accounts List</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-              <li class="breadcrumb-item active">Stocks</li>
+              <li class="breadcrumb-item active">Accounts</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -28,32 +28,36 @@
 
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title justify-content-center ">Stocks List</h3>
-                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-stock">Add Stock</button>
+                <h3 class="card-title justify-content-center ">Accounts List</h3>
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-account">Add Account</button>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
-                    <th>OverAll Stocks</th>
-                    <th>Live Stocks</th>
-                    <th>Dressed Stocks</th>
-                    <th>Rate</th>
-                    <th>Amount</th>
+                    <th>Account Title</th>
+                    <th>Account Type</th>
+                    <th>Credit Amount</th>
+                    <th>Debit Amount</th>
+                    <th>Mobile No.</th>
+                    <th>Address</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
-                    <td>Branch 1</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -63,14 +67,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Branch 1</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -80,14 +86,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>branch 3</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -97,14 +105,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>branch 3</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -114,14 +124,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>branch 1</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -131,14 +143,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>branch 2</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -148,14 +162,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>branch 2</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -165,14 +181,16 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>branch 2</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
+                    <td>Online Company Account</td>
+                    <td>Savings</td>
+                    <td>34566</td>
+                    <td>23444</td>
+                    <td>8885051616</td>
+                    <td>Madhapur</td>
+                    <td>Active</td>
                     <td>
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('edit')}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -183,17 +201,19 @@
                   </tr>
                   </tbody>
                   <tfoot>
-                  <tr>
+                  <!-- <tr>
                     <th colspan="4">Total</th>
                     <th>54000</th>
                     <th></th>
-                  </tr>
+                  </tr> -->
                   <tr>
-                    <th>OverAll Stocks</th>
-                    <th>Live Stocks</th>
-                    <th>Dressed Stocks</th>
-                    <th>Rate</th>
-                    <th>Amount</th>
+                    <th>Account Title</th>
+                    <th>Account Type</th>
+                    <th>Credit Amount</th>
+                    <th>Debit Amount</th>
+                    <th>Mobile No.</th>
+                    <th>Address</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>
@@ -212,11 +232,11 @@
     <!-- /.content -->
 
     <!-- /.modal add customer-->
-    <div class="modal fade" id="add-stock">
+    <div class="modal fade" id="add-account">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Add Stock</h4>
+              <h4 class="modal-title">Add Account</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -227,33 +247,51 @@
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>OverAll Stocks</label>
-                        <input type="text" class="form-control" placeholder="Enter OverAll Stocks" required>
+                        <label>Account Title</label>
+                        <input type="text" class="form-control" placeholder="Enter Account Title" id="accntitle" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Live Stocks</label>
-                        <input type="text" class="form-control" placeholder="Enter Live Stocks" required>
+                        <label>Account Type</label>
+                        <select class="form-control select2bs4" style="width: 100%;" id="accntype">
+                            <option selected="selected">Savings</option>
+                            <option>Current</option>
+                        </select>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Dressed Stocks</label>
-                        <input type="text" class="form-control" placeholder="Enter Dressed Stocks" required>
+                        <label>Credit Amount</label>
+                        <input type="text" class="form-control" placeholder="Enter Credit Amount" id="credit" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Rate</label>
-                        <input type="text" class="form-control" placeholder="Enter Rate" required>
+                        <label>Debit Amount</label>
+                        <input type="text" class="form-control" placeholder="Enter Debit Amount" id="debit" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Amount</label>
-                        <input type="text" class="form-control" placeholder="Enter Amount" required>
+                        <label>Mobile No.</label>
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
                       </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-control" placeholder="Enter Your Address" id="address" required>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Status</label>
+                        <select class="form-control select2bs4" style="width: 100%;">
+                            <option selected="selected">Active</option>
+                            <option>Deactive</option>
+                        </select>
+                        </div>
                     </div>
                   </div>
                 </form>

@@ -166,6 +166,14 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{route('employeeList')}}" class="nav-link">
+              <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Employees
+              </p>
+            </a>
+          </li>
 
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -192,27 +200,12 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('accountList')}}" class="nav-link">
               <i class="nav-icon far fa-file-alt"></i>
               <p>
                 Accounts
-                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Add Account</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                  <p>Accounts List</p>
-                </a>
-              </li>
-            </ul>
           </li>
 
           <li class="nav-item">
@@ -242,14 +235,6 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="{{route('employeeList')}}" class="nav-link">
-              <i class="nav-icon fas fa-user-plus"></i>
-              <p>
-                Employees
-              </p>
-            </a>
-          </li>
 
           <li class="nav-item">
             <a href="{{route('branchList')}}" class="nav-link">
