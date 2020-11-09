@@ -46,8 +46,6 @@
                                 <input id="mobile" type="mobile" class="form-control " name="mobile" required autocomplete="mobile">
                             </div>
                         </div>
-
-
                         
 
 

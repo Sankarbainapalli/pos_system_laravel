@@ -25,12 +25,12 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-
+            <x-alert />
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title justify-content-center ">Employees List</h3>
-                <!-- <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-employee">Add Employee</button> -->
-                <a href="{{route('register')}}"><button type="button" class="btn btn-success float-right" >Add Employee</button></a>
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-employee">Add Employee</button>
+                <!-- <a href="{{route('register')}}"><button type="button" class="btn btn-success float-right" >Add Employee</button></a> -->
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -42,7 +42,7 @@
                     <th>Email Id</th>
                     <th>Mobile No.</th>
                     <th>Role</th>
-                    <!-- <th>Status</th> -->
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -54,15 +54,18 @@
                     <td>{{$list->name}}</td>
                     <td>{{$list->email}}</td>
                     <td>{{$list->mobile}}</td>
-                    <td>{{$list->role}}</td>web
-                    <!-- <td>{{$list->name}}</td> -->
-                    <td>Active</td>
+                    <td>{{$list->roles->name}}</td>
+                    <td>@if($list->status=='1')
+                      <span class="badge badge-success">Active</span>
+                      @else
+                      <span class="badge badge-danger">Deactive</span>
+                      @endif</td>
                     <td> 
                       <div class="btn-group">
-                         <!--  <a href="{{route('edit_employee')}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('employee.edit',$list->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button></a> -->
-                        <a href="{{route('user.destroy', $list->id)}}"><button type="button" class="btn btn-danger">
+                          </button></a>
+                        <a href="{{route('employee.destroy', $list->id)}}"><button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
@@ -106,53 +109,63 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="{{route('employee.store')}}" method="POST">
+                  @csrf
                   <div class="row">
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
                         <label>User Name</label>
-                        <input type="text" class="form-control" placeholder="Enter User Name" id="uname" required>
+                        <input type="text" name="name" class="form-control" placeholder="Enter User Name" id="uname" required autocomplete="off">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Email Id</label>
-                        <input type="email" class="form-control" placeholder="abc@gmail.com" id="email">
+                        <input type="email" name="email" class="form-control" placeholder="admin@gmail.com" id="email" required="">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile No.</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
+                        <input type="text" name="mobile" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
+                      </div>
+                    </div>
+
+                     <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter Password." id="password" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Role</label>
-                        <select class="select2" multiple="multiple" data-placeholder="Put Status" style="width: 100%;" id="stat">
-                            <option>Administrator</option>
-                            <option>Developer</option>
+                        <select name="role" class="form-control select2bs4" style="width: 100%;" id="stat">
+                            @foreach($role_list as $role)
+                            <option value="{{$role->id}}">{{$role->name}}</option>
+                            @endforeach
                         </select>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Status</label>
-                        <select class="form-control select2bs4" style="width: 100%;">
-                            <option selected="selected">Active</option>
-                            <option>Deactive</option>
+                        <select name="status" class="form-control" style="width: 100%;">
+                            <option value="1">Active</option>
+                            <option value="0">Deactive</option>
                         </select>
                         </div>
                     </div>
                   </div>
-                </form>
+               
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Add</button>
+              <button type="submit" class="btn btn-primary">Add</button>
             </div>
           </div>
+           </form>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->

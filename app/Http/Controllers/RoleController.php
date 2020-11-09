@@ -10,7 +10,7 @@ class RoleController extends Controller
 {
     //
 
-    public function roleList(){
+    public function index(){
 
     	$role_list=Role::all();
 
@@ -23,7 +23,7 @@ class RoleController extends Controller
 
          Role::create($request->all());
 
-       return redirect()->route('roleList')->with('message','Role Has been added Successfully');
+       return redirect()->route('role.index')->with('message','Role Has been added Successfully');
     }
 
   
@@ -37,8 +37,19 @@ class RoleController extends Controller
 
         $role->update(['name'=>$request->name]);
 
-        return redirect(route('roleList'))->with('message','Updated Successfully');
+        return redirect(route('role.index'))->with('message','Updated Successfully');
     }
+
+
+    public function show(Role $role){
+
+        // Todo::where('id',$id)->delete();
+         $role->delete();
+
+         return redirect()->back()->with('error','Role Deleted Has been Successfully');
+
+    }
+
 
 
     public function destroy(Role $role){

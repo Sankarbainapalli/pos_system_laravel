@@ -53,7 +53,7 @@
                     <td>50000</td>
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
+                          <a href=""><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -62,125 +62,7 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Branch 1</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>branch 3</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>branch 3</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>branch 1</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>branch 2</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>branch 2</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>branch 2</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_stock')}}"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
+            
                   </tbody>
                   <tfoot>
                   <tr>

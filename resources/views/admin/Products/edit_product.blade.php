@@ -40,25 +40,31 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+              <form action="{{route('product.update', $product->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Category</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
-                        <option>Live</option>
-                        <option>Dressed</option>
-                        <option>Boneless</option>
+                    <select name="category"  style="width: 100%;" class="form-control">
+                      <!-- class="select2" multiple="multiple" data-placeholder="Select a Category" -->
+                      @foreach($category_list as $category)
+
+                      <option value="{{$category->id}}" {{ ( $category->id == $product->category_id) ? 'selected' : '' }}>{{$category->name}}</option>
+
+                      @endforeach
                     </select>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label for="prod">Product Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Product Name" id="Prod" required>
+                    <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required value="{{$product->product_name}}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Qty(Kgs)</label>
-                    <input type="text" class="form-control" placeholder="Enter Qty" id="qty" required>
+                    <input type="text" name="qty" class="form-control" placeholder="Enter Qty" id="qty" required value="{{$product->qty}}">
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -66,23 +72,32 @@
               <div class="col-md-6">
                   <div class="form-group">
                         <label>Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Price" id="price" required>
+                        <input type="text" name="amount" class="form-control" placeholder="Enter Price" id="price" required value="{{$product->amount}}">
                    </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                     <label>Branch</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Select a Branch" style="width: 100%;" id="branch">
-                        <option>Madhapur</option>
-                        <option>Secunderabad</option>
-                        <option>Karim Nagar</option>
+                    <select name="branch_id" class="form-control" style="width: 100%;" id="branch">
+                      <!-- class="select2" multiple="multiple" data-placeholder="Select a Branch"  -->
+                       @foreach($branch_list as $branch)
+
+                      <option value="{{$branch->id}}" {{ ( $branch->id == $product->branch_id) ? 'selected' : '' }}>{{$branch->name}}</option>
+
+                      @endforeach
+
                     </select>
                   </div>
 
                   <div class="form-group">
                     <label>Status</label>
-                    <select class="select2" multiple="multiple" data-placeholder="Put Status" style="width: 100%;" id="prod">
-                        <option>Active</option>
-                        <option>Deactive</option>
+                    <select name="status" class="form-control" style="width: 100%;" id="prod">
+                      @if($product->status=='1')
+                        <option value="1" selected="selected">Active</option>
+                        <option value="0">Deactive</option>
+                        @else
+                       <option value="1" >Active</option>
+                        <option value="0" selected="selected">Deactive</option>
+                        @endif
                     </select>
                   </div>
                   <!-- /.form-group -->
@@ -90,11 +105,12 @@
               <!-- /.col -->
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
           </div>
           <!-- /.card-body -->
         </div>
+      </form>
         <!-- /.card -->
       </div>
       <!-- /.container-fluid -->

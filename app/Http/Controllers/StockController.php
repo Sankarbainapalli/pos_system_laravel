@@ -8,13 +8,13 @@ class StockController extends Controller
 {
     //
 
-    public function stockList(){
+    public function index(){
 
         return view('admin.Stocks.list');
     }
 
-    public function edit_stock(){
+    // public function edit_stock(){
 
-        return view('admin.Stocks.edit_stock');
-    }
+    //     return view('admin.Stocks.edit_stock');
+    // }
 }

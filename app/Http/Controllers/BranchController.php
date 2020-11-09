@@ -10,7 +10,7 @@ class BranchController extends Controller
 {
     //
 
-    public function branchList(){
+    public function index(){
 
     	$branch_list=Branch::all();
 
@@ -23,7 +23,7 @@ class BranchController extends Controller
 
          Branch::create($request->all());
 
-       return redirect()->route('branchList')->with('message','branch Has been added Successfully');
+       return redirect()->route('branch.index')->with('message','branch Has been added Successfully');
     }
 
   
@@ -39,7 +39,16 @@ class BranchController extends Controller
 
         $branch->update($request->all());
 
-        return redirect(route('branchList'))->with('message','Updated Successfully');
+        return redirect(route('branch.index'))->with('message','Updated Successfully');
+    }
+
+    public function show(Branch $branch){
+
+        // Todo::where('id',$id)->delete();
+         $branch->delete();
+
+         return redirect()->back()->with('error','branch Deleted Has been Successfully');
+
     }
 
 

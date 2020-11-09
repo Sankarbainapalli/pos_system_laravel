@@ -50,7 +50,13 @@
                   <tr>
                     <td>{{$loop->index+1}}</td>
                     <td>{{$category->name}}</td>
-                    <td>{{$category->status}}</td>
+                    <td>
+                      @if($category->status=='1')
+                      <span class="badge badge-success">Active</span>
+                      @else
+                      <span class="badge badge-danger">Deactive</span>
+                      @endif
+                    </td>
                     <td> 
                       <div class="btn-group">
 

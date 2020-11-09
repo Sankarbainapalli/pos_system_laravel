@@ -37,12 +37,12 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
+                    <th>Franchisee Id.</th>
                     <th>Franchisee Name</th>
                     <th>Mobile No.</th>
                     <th>Adhaar/Pan No.</th>
                     <th>Bank A/C No.</th>
                     <th>District/City/Town</th>
-                    <th>ID No.</th>
                     <th>Date of Franch. Starts</th>
                     <th>Remarks/Note</th>
                     <th>Action</th>
@@ -50,17 +50,18 @@
                   </thead>
                   <tbody>
                   <tr>
+                    <td>100021</td>
                     <td>Vishal</td>
                     <td>123456789</td>
                     <td>134902344</td>
                     <td>123492121323</td>
                     <td>Madhapur</td>
-                    <td>100021</td>
+                    
                     <td>11/17/2020</td>
                     <td>This is a small remarks area notifying contents</td>
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
+                          <a href=""><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
                             <i class="far fa-edit"></i>
                           </button></a>
                           <button type="button" class="btn btn-primary">
@@ -69,288 +70,9 @@
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Vishal</td>
-                    <td>123456789</td>
-                    <td>134902344</td>
-                    <td>123492121323</td>
-                    <td>Madhapur</td>
-                    <td>100021</td>
-                    <td>11/17/2020</td>
-                    <td>This is a small remarks area notifying contents</td>
-                    <td>
-                      <div class="btn-group">
-                          <a href="{{route('edit_franchisee')}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
+         
                   </tbody>
-                  <tfoot>
+                 <!--  <tfoot>
                     <th>Franchisee Name</th>
                     <th>Mobile No.</th>
                     <th>Adhaar/Pan No.</th>
@@ -360,7 +82,7 @@
                     <th>Date of Franch. Starts</th>
                     <th>Remarks/Note</th>
                     <th>Action</th>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
@@ -386,42 +108,43 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="{{route('franchisee.store')}}" method="POST">
+                  @csrf
                   <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Franchisee Name</label>
-                        <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required>
+                        <input type="text" name="name" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required>
                     </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile No.</label>
-                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
+                        <input type="text" name="mobile" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
                     </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Adhaar Card/ Pan Card No.</label>
-                        <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required>
+                        <input type="text" name="addhar_no" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required>
                     </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>District/City/Town</label>
-                        <input type="text" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town">
+                        <input type="text" name="city" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Unique ID No.(Auto-Generated)</label>  <!-- We have to auto-generate IDs -->
-                        <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required>
+                        <input type="text" name="franchisee-id" class="form-control" placeholder="Enter Id No." id="uni_id" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                      <label>Date Of Franchisee Starts</label>
                       <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                          <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" id="dte"/>
+                          <input type="text" name="start_date" class="form-control datetimepicker-input" data-target="#reservationdate" id="dte"/>
                           <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                           </div>
@@ -430,23 +153,24 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                           <label>Bank A/c No.</label>
-                          <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required>
+                          <input type="text" name="account_no" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Remarks/Note</label>
-                        <textarea class="form-control" rows="1" placeholder="Enter Remarks/Note" id="remarks"></textarea>
+                        <textarea class="form-control" name="remarks" rows="1" placeholder="Enter Remarks/Note" id="remarks"></textarea>
                       </div>
                     </div>
                   </div>
-                </form>
+                
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Add</button>
+              <button type="submit" class="btn btn-primary">Add</button>
             </div>
           </div>
+          </form>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->

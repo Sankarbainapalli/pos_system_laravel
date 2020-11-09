@@ -36,6 +36,7 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
+                    <th>S.no</th>
                     <th>Category</th>
                     <th>Product Name</th>
                     <th>Qty(Kgs)</th>
@@ -49,12 +50,18 @@
                      @foreach($product_list as $product)
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>{{$product->category_id}}</td>
+                    <td>{{$product->Category->name}}</td>
                     <td>{{$product->product_name}}</td>
                     <td>{{$product->qty}}</td>
                     <td>{{$product->amount}}</td>
-                    <td>{{$product->branch_id}}</td>
-                    <td>{{$product->status}}</td>
+                    <td>{{$product->Branch->name}}</td>
+                    <td>
+                      @if($product->status=='1')
+                      <span class="badge badge-success">Active</span>
+                      @else
+                      <span class="badge badge-danger">Deactive</span>
+                      @endif
+                    </td>
                     
                     <td> 
                       <div class="btn-group">
@@ -114,7 +121,7 @@
                             <label>Category</label>
                             <select name="category_id" class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
                                @foreach($category_list as $category)
-                                <option>{{$category->id}}</option>
+                                <option value="{{$category->id}}">{{$category->name}}</option>
                                 
                                 @endforeach
                             </select>
@@ -143,7 +150,7 @@
                             <label>Branch</label>
                             <select name="branch_id" class="select2" multiple="multiple" data-placeholder="Select a Branch" style="width: 100%;" id="branch">
                                  @foreach($branch_list as $branch)
-                                <option>{{$branch->id}}</option>
+                                <option value="{{$branch->id}}">{{$branch->name}}</option>
                                 
                                 @endforeach
                             </select>

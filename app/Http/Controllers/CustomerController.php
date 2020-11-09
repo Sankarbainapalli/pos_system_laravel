@@ -76,6 +76,14 @@ class CustomerController extends Controller
         return redirect(route('customer.index'))->with('message','Updated Successfully');
     }
 
+    public function show(Customer $customer){
+      
+        $customer->delete();
+
+         return redirect()->back()->with('error','Customer Deleted Has been Successfully');
+
+    }
+
 
     public function destroy(Customer $customer){
 

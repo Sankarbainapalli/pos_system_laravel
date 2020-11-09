@@ -149,7 +149,7 @@
                with font-awesome or any other icon font library -->
 
           <li class="nav-item">
-            <a href="{{route('dashboard')}}" class="nav-link">
+            <a href="{{route('home.index')}}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -158,7 +158,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{route('roleList')}}" class="nav-link">
+            <a href="{{route('role.index')}}" class="nav-link">
               <i class="nav-icon far fa-object-group"></i>
               <p>
                 Roles
@@ -216,7 +216,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('stockList')}}" class="nav-link">
+            <a href="{{route('stock.index')}}" class="nav-link">
               <i class="nav-icon fas fa-box"></i>
               <p>
                 Stocks
@@ -225,7 +225,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('categoryList')}}" class="nav-link">
+            <a href="{{route('category.index')}}" class="nav-link">
               <i class="nav-icon fas fa-list-ol"></i>
               <p>
                 Categories
@@ -234,7 +234,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('productList')}}" class="nav-link">
+            <a href="{{route('product.index')}}" class="nav-link">
               <i class="nav-icon fab fa-product-hunt"></i>
               <p>
                 Products
@@ -243,7 +243,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('employeeList')}}" class="nav-link">
+            <a href="{{route('employee.index')}}" class="nav-link">
               <i class="nav-icon fas fa-user-plus"></i>
               <p>
                 Employees
@@ -252,7 +252,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="{{route('branchList')}}" class="nav-link">
+            <a href="{{route('branch.index')}}" class="nav-link">
               <i class="nav-icon fas fa-code-branch"></i>
               <p>
                 Branches
@@ -261,7 +261,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{route('franchiseeList')}}" class="nav-link">
+            <a href="{{route('franchisee.index')}}" class="nav-link">
               <i class="nav-icon fas fa-code-branch"></i>
               <p>
                 Franchisees

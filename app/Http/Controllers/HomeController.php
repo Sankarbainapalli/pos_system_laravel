@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class HomeController extends Controller
 {
     /**
@@ -23,12 +25,14 @@ class HomeController extends Controller
      */
     
      public function index()
-    {
-        return view('admin.dashboard');
+    {    
+        $total_emp=User::count();
+        return view('admin.dashboard',compact('total_emp'));
     }
 
-    public function dashboard()
-    {
-        return view('admin.dashboard');
-    }
+    // public function dashboard()
+    // {
+    //     $total_emp=User::count();
+    //     return view('admin.dashboard',compact('total_emp'));
+    // }
 }

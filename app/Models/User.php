@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Role;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -20,9 +22,10 @@ class User extends Authenticatable
         'name',
         'email',
         'mobile',
-        'role',
-        // 'status',
         'password',
+        'role',
+        'status',
+        
     ];
 
     /**
@@ -43,4 +46,22 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roles(){
+    
+        return $this->belongsTo("App\Models\Role", "role");
+
+    } 
+
+    // public function getPasswordAttribute($password)
+    // {
+    //     // return bcrypt($password);
+
+    //     $this->attributes['password']=Crypt::encryptString($password);
+    // }
+
+    // public function getPasswordAttribute($password){
+
+    //     return encrypt($password);
+    // }
 }
