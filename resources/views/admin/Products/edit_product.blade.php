@@ -62,23 +62,22 @@
                     <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required value="{{$product->product_name}}">
                 </div>
                 <!-- /.form-group -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Qty(Kgs)</label>
                     <input type="text" name="qty" class="form-control" placeholder="Enter Qty" id="qty" required value="{{$product->qty}}">
-                </div>
+                </div> -->
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
               <div class="col-md-6">
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                         <label>Price</label>
                         <input type="text" name="amount" class="form-control" placeholder="Enter Price" id="price" required value="{{$product->amount}}">
-                   </div>
+                   </div> -->
                   <!-- /.form-group -->
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Branch</label>
                     <select name="branch_id" class="form-control" style="width: 100%;" id="branch">
-                      <!-- class="select2" multiple="multiple" data-placeholder="Select a Branch"  -->
                        @foreach($branch_list as $branch)
 
                       <option value="{{$branch->id}}" {{ ( $branch->id == $product->branch_id) ? 'selected' : '' }}>{{$branch->name}}</option>
@@ -86,8 +85,8 @@
                       @endforeach
 
                     </select>
-                  </div>
-
+                  </div> -->
+<!-- 
                   <div class="form-group">
                     <label>Status</label>
                     <select name="status" class="form-control" style="width: 100%;" id="prod">
@@ -99,13 +98,13 @@
                         <option value="0" selected="selected">Deactive</option>
                         @endif
                     </select>
-                  </div>
+                  </div> -->
                   <!-- /.form-group -->
               </div>
               <!-- /.col -->
             </div>
             <!-- /.row -->
-            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
           </div>
           <!-- /.card-body -->

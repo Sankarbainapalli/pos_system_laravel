@@ -40,26 +40,29 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+             <form action="{{route('franchisee.update', $franchisee->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Franchisee Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required>
+                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required value="{{$franchisee->name}}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Mobile No.</label>
-                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
+                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required value="{{$franchisee->mobile}}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Adhaar Card/ Pan Card No.</label>
-                    <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required>
+                    <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required value="{{$franchisee->addhar_no}}">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                       <label>Bank A/c No.</label>
-                      <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required>
+                      <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required value="{{$franchisee->account_no}}">
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -67,19 +70,19 @@
               <div class="col-md-6">
                   <div class="form-group">
                     <label>District/City/Town</label>
-                    <input type="text" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town">
+                    <input type="text" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town" value="{{$franchisee->account_no}}">
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                     <label>Unique ID No.(Auto-Generated)</label>  <!-- We have to auto-generate IDs -->
-                    <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required>
+                    <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required value="FRD00{{$franchisee->id}}">
                   </div>
                   <!-- /.form-group -->
                   <!-- Date -->
                   <div class="form-group">
                     <label>Date Of Franchisee Starts</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" value="{{$franchisee->date}}"/>
                             <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
@@ -88,16 +91,17 @@
                   <!-- /.form group --> 
                   <div class="form-group">
                     <label>Remarks/Note</label>
-                    <textarea class="form-control" rows="1" placeholder="Enter Remarks/Note" id="remarks"></textarea>
+                    <textarea class="form-control" rows="1" placeholder="Enter Remarks/Note" id="remarks">{{$franchisee->remarks}}</textarea>
                   </div>
                 <!-- /.form-group --> 
               </div>
               <!-- /.col -->
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
           </div>
+        </form>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->

@@ -5,21 +5,34 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
+use App\Models\Franchisee;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class EmployeeController extends Controller
 {
     //
 
+   // public function __construct()
+   //  {
+   //      $this->middleware('auth');
+   //  }
+
     public function index(){
+
+      // dd(Auth::user()->id);
 
     	$employee_list=User::all();
         $role_list=Role::all();
+        $franchisee_list=Franchisee::all();
 
-        return view('admin.employees.list',compact('employee_list','role_list'));
+        return view('admin.employees.list',compact('employee_list','role_list','franchisee_list'));
     }
 
     public function store(Request $request){
+
+
 
         // dd($request->all());
 
@@ -28,9 +41,13 @@ class EmployeeController extends Controller
        $post->email = $request->input('email');
        $post->mobile = $request->input('mobile');
        $post->password =  Hash::make($request->input('password'));
-       $post->role = $request->input('role');
+       $post->role_id = $request->input('role_id');
+       $post->frans_id = $request->input('frans_id');
+       // $post->user_id = Auth::user()->id;
        $post->status = $request->input('status');
        $post->save();
+
+         send_sms('7661910404', "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
 
          return redirect()->back()->with('message','Employee Added Has been Successfully');
     }
@@ -51,7 +68,8 @@ class EmployeeController extends Controller
 
 
 
-    public function destory(User $user){
+
+    public function destory(User $employee){
 
         // Todo::where('id',$id)->delete();
          $user->delete();
@@ -59,4 +77,16 @@ class EmployeeController extends Controller
          return redirect()->back()->with('error','Employee Deleted Has been Successfully');
 
     }
+
+
+
+    public function show(User $employee){
+
+        // Todo::where('id',$id)->delete();
+         $employee->delete();
+
+         return redirect()->back()->with('error','Employee Deleted Has been Successfully');
+
+    }
+
 }

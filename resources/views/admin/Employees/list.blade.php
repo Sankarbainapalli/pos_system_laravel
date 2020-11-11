@@ -42,6 +42,7 @@
                     <th>Email Id</th>
                     <th>Mobile No.</th>
                     <th>Role</th>
+                    <th>Franchisee</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
@@ -54,7 +55,17 @@
                     <td>{{$list->name}}</td>
                     <td>{{$list->email}}</td>
                     <td>{{$list->mobile}}</td>
-                    <td>{{$list->roles->name}}</td>
+                    <td style="font-weight: bold;">{{$list->roles->name}}</td>
+                    
+                      @if($list->frans_id=='0')
+                      <td>
+                        --
+                      </td>
+
+                      @else
+                      <td>{{$list->franchisee->name}}</td>
+                      @endif
+                      
                     <td>@if($list->status=='1')
                       <span class="badge badge-success">Active</span>
                       @else
@@ -141,13 +152,26 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Role</label>
-                        <select name="role" class="form-control select2bs4" style="width: 100%;" id="stat">
+                        <select name="role_id" class="form-control select2bs4" style="width: 100%;" id="stat">
                             @foreach($role_list as $role)
                             <option value="{{$role->id}}">{{$role->name}}</option>
                             @endforeach
                         </select>
                       </div>
                     </div>
+
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Franchisees</label>
+                        <select name="frans_id" class="form-control" style="width: 100%;">
+                            @foreach($franchisee_list as $franchisee)
+                            <option value="0">Select</option>
+                            <option value="{{$franchisee->id}}">{{$franchisee->name}}</option>
+                            @endforeach
+                        </select>
+                        </div>
+                    </div>
+
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Status</label>

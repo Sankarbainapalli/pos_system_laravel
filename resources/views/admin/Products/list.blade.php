@@ -39,10 +39,10 @@
                     <th>S.no</th>
                     <th>Category</th>
                     <th>Product Name</th>
-                    <th>Qty(Kgs)</th>
-                    <th>Price</th>
-                    <th>Branch</th>
-                    <th>Status</th>
+                   <!--  <th>Qty(Kgs)</th>
+                    <th>Price</th> -->
+                    <!-- <th>Branch</th> -->
+                    <!-- <th>Status</th> -->
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -52,16 +52,16 @@
                     <td>{{$loop->index+1}}</td>
                     <td>{{$product->Category->name}}</td>
                     <td>{{$product->product_name}}</td>
-                    <td>{{$product->qty}}</td>
+                   <!--  <td>{{$product->qty}}</td>
                     <td>{{$product->amount}}</td>
-                    <td>{{$product->Branch->name}}</td>
-                    <td>
+                    <td>{{$product->product_name}}</td> -->
+                   <!--  <td>
                       @if($product->status=='1')
                       <span class="badge badge-success">Active</span>
                       @else
                       <span class="badge badge-danger">Deactive</span>
                       @endif
-                    </td>
+                    </td> -->
                     
                     <td> 
                       <div class="btn-group">
@@ -116,9 +116,17 @@
                <form action="{{route('product.store')}}" method="POST">
               @csrf
                   <div class="row">
+
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Category</label>
+                            <label for="prod">Product Name</label>
+                            <input type="text"  name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Product Category</label>
                             <select name="category_id" class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
                                @foreach($category_list as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -127,13 +135,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="prod">Product Name</label>
-                            <input type="text"  name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
+                    
+                   <!--  <div class="col-sm-6">
                       <div class="form-group">
                         <label>Qty(Kgs)</label>
                         <input type="text" name="qty" class="form-control" placeholder="Enter Qty" id="qty" required>
@@ -155,8 +158,8 @@
                                 @endforeach
                             </select>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
+                    </div> -->
+                  <!--   <div class="col-sm-6">
                         <div class="form-group">
                             <label>Status</label>
                             <select name="status" class="select2" multiple="multiple" data-placeholder="Availability" style="width: 100%;" id="prod">
@@ -164,7 +167,7 @@
                                 <option value="0">Deactive</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                   </div>
                 
             </div>

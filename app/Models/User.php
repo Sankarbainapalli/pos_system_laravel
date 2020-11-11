@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\Role;
+use App\Models\Franchisee;
 use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
@@ -23,7 +24,9 @@ class User extends Authenticatable
         'email',
         'mobile',
         'password',
-        'role',
+        'role_id',
+        'frans_id',
+        'user_id',
         'status',
         
     ];
@@ -49,10 +52,15 @@ class User extends Authenticatable
 
     public function roles(){
     
-        return $this->belongsTo("App\Models\Role", "role");
+        return $this->belongsTo("App\Models\Role", "role_id");
 
     } 
 
+public function franchisee(){
+    
+        return $this->belongsTo("App\Models\Franchisee", "frans_id");
+
+    } 
     // public function getPasswordAttribute($password)
     // {
     //     // return bcrypt($password);
