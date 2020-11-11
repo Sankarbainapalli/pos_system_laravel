@@ -86,3 +86,10 @@ Route::get('/edit_franchisee', [App\Http\Controllers\FranchiseeController::class
 Route::get('/categoryList', [App\Http\Controllers\CategoryController::class, 'categoryList'])->name('categoryList');
 
 Route::get('/edit_category', [App\Http\Controllers\CategoryController::class, 'edit_category'])->name('edit_category');
+
+
+//*************Profit & Loss***************/
+
+Route::get('/profitloss', [App\Http\Controllers\ProfitlossController::class, 'profitloss'])->name('profitloss');
+
+// Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');

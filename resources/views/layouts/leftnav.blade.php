@@ -247,9 +247,18 @@
           
           <li class="nav-item">
             <a href="{{route('franchiseeList')}}" class="nav-link">
-              <i class="nav-icon fas fa-code-branch"></i>
+              <i class="nav-icon fas fa-sitemap"></i>
               <p>
                 Franchisees
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('profitloss')}}" class="nav-link">
+              <i class="nav-icon fas fa-percent"></i>
+              <p>
+                Profit & Loss
               </p>
             </a>
           </li>
