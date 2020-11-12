@@ -174,7 +174,7 @@
                       </div>
                     </div>
 
-                     <div class="col-sm-6">
+                   <!--   <div class="col-sm-6">
                       <div class="form-group">
                         <label>UserName</label>
                        <input type="text" name="user_name" class="form-control">
@@ -186,7 +186,7 @@
                         <label>Password</label>
                         <input type="password" name="password" class="form-control">
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 
             </div>

@@ -164,8 +164,9 @@
                       <div class="form-group">
                         <label>Franchisees</label>
                         <select name="frans_id" class="form-control" style="width: 100%;">
-                            @foreach($franchisee_list as $franchisee)
                             <option value="0">Select</option>
+                            @foreach($franchisee_list as $franchisee)
+                          
                             <option value="{{$franchisee->id}}">{{$franchisee->name}}</option>
                             @endforeach
                         </select>
