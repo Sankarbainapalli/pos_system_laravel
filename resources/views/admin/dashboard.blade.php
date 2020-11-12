@@ -268,8 +268,11 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
+<<<<<<< HEAD
 
        
+=======
+>>>>>>> vishal
       </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->
