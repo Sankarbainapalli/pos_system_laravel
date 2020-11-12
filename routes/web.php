@@ -93,3 +93,10 @@ Route::get('/edit_category', [App\Http\Controllers\CategoryController::class, 'e
 Route::get('/profitloss', [App\Http\Controllers\ProfitlossController::class, 'profitloss'])->name('profitloss');
 
 // Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');
+
+
+//*************Live Amount***************/
+
+Route::resource('liveamount', App\Http\Controllers\LiveAmountController::class);
+
+// Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');

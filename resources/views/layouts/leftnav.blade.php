@@ -200,6 +200,15 @@
           </li>
 
           <li class="nav-item">
+            <a href="{{route('liveamount.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-rupee-sign"></i>
+              <p>
+                Live Amount
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a href="{{route('accountList')}}" class="nav-link">
               <i class="nav-icon far fa-file-alt"></i>
               <p>

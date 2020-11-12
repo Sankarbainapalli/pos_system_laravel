@@ -11,5 +11,5 @@ class ProfitlossController extends Controller
 
         return view('admin.profit&loss.list');
     
-}
+    }
 }
