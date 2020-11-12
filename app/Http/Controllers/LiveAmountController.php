@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Liveamount;
+
 class LiveAmountController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class LiveAmountController extends Controller
     public function index()
     {
         //
-            return view('admin.liveamount.list');
+        $liveamount_list=Liveamount::all();
+     return view('admin.liveamount.list',compact('liveamount_list'));
         
     }
 
@@ -37,6 +40,19 @@ class LiveAmountController extends Controller
     public function store(Request $request)
     {
         //
+
+        // dd($request->all());
+
+        $liveamount=new Liveamount;
+        $liveamount->chicken= $request->input('chicken');
+        $liveamount->motton= $request->input('motton');
+        $liveamount->fish= $request->input('fish');
+        $liveamount->ratedate= date('Y-m-d');
+        $liveamount->save();
+
+        return redirect()->back()->with('message','LiveAmount Added Has been Successfully');
+
+
     }
 
     /**
@@ -45,42 +61,36 @@ class LiveAmountController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show(Liveamount $liveamount){
+
+        // Todo::where('id',$id)->delete();
+         $liveamount->delete();
+
+         return redirect()->back()->with('error','LiveAmount Deleted Has been Successfully');
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function edit(Liveamount $liveamount){
+        
+        return view('admin.liveamount.edit',compact('liveamount'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+     public function update(Request $request,Liveamount $liveamount){
+
+
+
+        $liveamount->update(['chicken'=>$request->chicken,'motton'=>$request->motton,'fish'=>$request->fish]);
+
+        return redirect(route('liveamount.index'))->with('message','LiveAmount Updated Successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function destroy(Liveamount $liveamount){
+
+        // Todo::where('id',$id)->delete();
+         $liveamount->delete();
+
+         return redirect()->back()->with('error','LiveAmount Deleted Has been Successfully');
+
     }
+
 }

@@ -25,25 +25,26 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-
+            <x-alert />
             <div class="card">
               <div class="card-header">
                 <!-- <h3 class="card-title justify-content-center ">Live Amount (Main Shop)</h3> -->
-                <form>
+                <form action="{{route('liveamount.store')}}" method="POST">
+                  @csrf
                   <div class="row">
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Product Name" id="name1" required> 
+                        <input type="text" name="chicken" class="form-control" placeholder="Chicken Rate" id="name1" required> 
                         </div>
                       </div>
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Product Name" id="name2" required>
+                        <input type="text" name="motton" class="form-control" placeholder="Motton Rate" id="name2" required>
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Product Name" id="name3" required>
+                        <input type="text" name="fish" class="form-control" placeholder="Fish Rate" id="name3" required>
                       </div> 
                     </div>
                     <div class="col-sm-3">
@@ -59,6 +60,7 @@
                 <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
+                    <th>S.no</th>
                     <th><h4><span class="badge badge-pill badge-danger mt-2">Chicken</span><h4></th>
                     <th><h4><span class="badge badge-pill badge-danger mt-2">Mutton</span><h4></th>
                     <th><h4><span class="badge badge-pill badge-danger mt-2">Fish</span><h4></th>
@@ -67,95 +69,26 @@
                   </tr>
                   </thead>
                   <tbody>
+                    @foreach($liveamount_list as $liveamount)
                   <tr>
-                    <td>₹ 250/-</td>
-                    <td>₹ 720/-</td>
-                    <td>₹ 420/-</td>
-                    <td>01/01/20</td>
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$liveamount->chicken}}/-</td>
+                    <td>{{$liveamount->motton}}/-</td>
+                    <td>{{$liveamount->fish}}/-</td>
+                    <td>{{$liveamount->ratedate}}/-</td>
+               
                     <td> 
                       <div class="btn-group">
-                          <a href="#"><button type="button" class="btn btn-primary">
+                          <a href="{{route('liveamount.edit',$liveamount->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                          <button type="button" class="btn btn-primary">
+                         <a href="{{route('liveamount.destroy',$liveamount->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
-                          </button>
+                          </button></a>
                       </div>
                     </td>
                   </tr>
-                  <tr>
-                    <td>₹ 250/-</td>
-                    <td>₹ 720/-</td>
-                    <td>₹ 420/-</td>
-                    <td>03/01/20</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href="#"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>₹ 250/-</td>
-                    <td>₹ 720/-</td>
-                    <td>₹ 420/-</td>
-                    <td>05/01/20</td>
-                    <td> 
-                      <div class="btn-group">
-                         <a href="#"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>₹ 250/-</td>
-                    <td>₹ 720/-</td>
-                    <td>₹ 420/-</td>
-                    <td>05/01/20</td>
-                    <td> 
-                      <div class="btn-group">
-                         <a href="#"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>₹ 250/-</td>
-                    <td>₹ 720/-</td>
-                    <td>₹ 420/-</td>
-                    <td>07/01/20</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href="#"><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th><h4><span class="badge badge-pill badge-danger mt-2">Chicken</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-danger mt-2">Mutton</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-danger mt-2">Fish</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-info mt-2">Date</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-secondary mt-2">Action</span><h4></th>
-                  </tr>
+                  @endforeach
                   </tfoot>
                 </table>
               </div>
