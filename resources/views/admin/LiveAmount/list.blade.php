@@ -34,21 +34,45 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" name="chicken" class="form-control" placeholder="Chicken Rate" id="name1" required> 
+                        <!-- <input type="text" name="chicken" class="form-control" placeholder="Chicken Rate" id="name1" required>  -->
+                        <label>Product Category</label>
+                            <select name="category_id" id="product_category"  class="form-control" style="width: 100%;" onchange="product_type()">
+                              <option value="0">Select Category</option>
+                               @foreach($category_list as $category)
+
+                                @if($type==$category->id)
+                                <option value="{{$category->id}}" selected="selected">{{$category->name}}</option>
+                                @else
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                @endif
+                                
+                                @endforeach
+                            </select>
                         </div>
                       </div>
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" name="motton" class="form-control" placeholder="Motton Rate" id="name2" required>
+                     
+                        <label>Product Type</label>
+                            <select name="product_id"  class="form-control" style="width: 100%;" >
+                               @foreach($product_list as $product)
+                                <option value="{{$product->id}}">{{$product->product_name}}</option>
+                                
+                                @endforeach
+                            </select>
+
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" name="fish" class="form-control" placeholder="Fish Rate" id="name3" required>
+                      
+                        <label>Rate</label>
+                        <input type="text" name="rate" class="form-control" placeholder="Rate" id="name3" required>
                       </div> 
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 mt-2">
                       <div class="form-group">
+                         <label></label>
                         <button type="submit" class="btn btn-success w-100">Add</button>
                       </div> 
                     </div>
@@ -61,21 +85,21 @@
                   <thead>
                   <tr>
                     <th>S.no</th>
-                    <th><h4><span class="badge badge-pill badge-danger mt-2">Chicken</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-danger mt-2">Mutton</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-danger mt-2">Fish</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-info mt-2">Date</span><h4></th>
-                    <th><h4><span class="badge badge-pill badge-secondary mt-2">Action</span><h4></th>
+                    <th>Category</th>
+                    <th>Product type</th>
+                    <th>Rate</th>
+                    <th>Date</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                     @foreach($liveamount_list as $liveamount)
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>{{$liveamount->chicken}}/-</td>
-                    <td>{{$liveamount->motton}}/-</td>
-                    <td>{{$liveamount->fish}}/-</td>
-                    <td>{{$liveamount->ratedate}}/-</td>
+                    <td>{{$liveamount->Category->name}}</td>
+                    <td>{{$liveamount->Product->product_name}}</td>
+                    <td>{{$liveamount->rate}}/-</td>
+                    <td>{{$liveamount->ratedate}}</td>
                
                     <td> 
                       <div class="btn-group">
@@ -104,4 +128,35 @@
     </section>
     <!-- /.content -->
 
+@endsection
+
+@section('script')
+
+<script type="text/javascript">
+  function product_type() {
+
+  var x = document.getElementById("product_category").value;
+
+    var token = "{{ csrf_token() }}";
+    $.ajax({
+
+            url: "getProduct",
+            // url: "liveamount",
+            method: "POST",
+            data: {product_category:x, _token: token},
+            success:function(data){
+              if(data != 'SUCCESS'){
+                alert('Something Wrong');
+              }else{
+                // alert("fdsdf");
+                    location.reload();
+                    // console.log("success");
+
+              }
+             }
+
+            })
+}
+
+</script>
 @endsection

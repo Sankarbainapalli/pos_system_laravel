@@ -41,9 +41,13 @@ Route::resource('category', App\Http\Controllers\CategoryController::class);
 
 Route::resource('stock', App\Http\Controllers\StockController::class);
 
+Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
+
 Route::resource('franchisee', App\Http\Controllers\FranchiseeController::class);
 
 Route::resource('liveamount', App\Http\Controllers\LiveAmountController::class);
+
+Route::post('/getProduct', [App\Http\Controllers\LiveAmountController::class, 'getProduct'])->name('getProduct');
 
 //*************dashboard***************/
 

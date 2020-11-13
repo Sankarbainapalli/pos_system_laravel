@@ -127,7 +127,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Product Category</label>
-                            <select name="category_id" class="select2" multiple="multiple" data-placeholder="Select a Category" style="width: 100%;" >
+                            <select name="category_id"  class="form-control" style="width: 100%;" >
                                @foreach($category_list as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                 

@@ -26,18 +26,44 @@
         <div class="row">
           <div class="col-12">
 
-
+ <x-alert />
 
             <div class="card">
 
               <div class="card-header">
                <!--  <h3 class="card-title justify-content-center ">Stocks List</h3>
                 <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-stock">Add Stock</button> -->
-                <form action="" method="POST">
+                <form action="{{route('stock.store')}}" method="POST">
+                  @csrf
                   <div class="row col-md-12" >
                   <div class="col-md-3"></div>
                   <div class="col-md-6">
                      <div class="row">
+                      <div class="col-sm-6">
+                      <div class="form-group">
+                       <label>Product Type</label>
+                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
+                              <option >Select Product Type</option>
+                               @foreach($product_list as $product)
+
+                                 @if($product_id==$product->id)
+
+                               <option value="{{$product->id}}" selected="selected">{{($product->category_id)}}{{ ($product->product_name)}}</option>
+
+                                @else
+
+                               <option value="{{$product->id}}">{{($product->category_id)}}{{ ($product->product_name)}}</option>
+
+                                @endif
+                                
+                                @endforeach
+
+
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
                    
                     <div class="col-sm-6">
                       <div class="form-group">
@@ -49,13 +75,14 @@
                     <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
+                         @foreach($product_rate as $rate)
                         <label>Rate</label>
 
-                        @foreach($liveamount_list as $liveamount)
-                          <input type="text" name="rate" id="rate" class="form-control" placeholder="weiging machine" required onkeyup="sum()" value="{{$liveamount->chicken}}" readonly="">
-                        @endforeach
+                         
+                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value="{{$rate->rate}}" readonly="">
+                          @endforeach
 
-
+                    
                         <!-- <select class="form-control" name="rate" id="rate" disabled="">
                           @foreach($liveamount_list as $liveamount)
                           <option >{{$liveamount->chicken}}</option>
@@ -70,7 +97,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Amount</label>
-                        <input type="text" class="form-control" placeholder="Enter Amount" required id="total" onkeyup="sum()">
+                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()">
                       </div>
                     </div>
 
@@ -93,6 +120,60 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">
+                  <thead>
+                  <tr>
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Total Qty</th>
+                    <th>Rate</th>
+                    <th>Total Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($stock_list as $stock)
+                    
+                  <tr>
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$stock->Product->product_name}}</td>
+                    <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
+                           
+                          </a></td>
+                    <td>
+                      <!-- {{$stock->rate}} -->
+                     @foreach($liveamount_list as $live)
+                      @if($live->product_id==$stock->product_id) 
+                      {{$stock->rate}}
+                     @endif
+                      @endforeach 
+                    </td>
+                    <td>@foreach($liveamount_list as $live)
+                      @if($live->product_id==$stock->product_id) 
+                      {{$stock->rate*$stock->qty}}
+                     @endif
+                      @endforeach </td>
+                    <td>{{$stock->created_at}}</td>
+                    
+                    <td> 
+                      <div class="btn-group">
+                    
+                          <a href="{{route('stock.destroy',$stock->id)}}"><button type="button" class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                          </button></a>
+                      </div>
+                    </td>
+                  </tr>
+                 
+                  @endforeach
+            
+                  </tbody>
+             
+                </table>
+
+
+
+                <!-- <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
                     <th>OverAll Stocks</th>
@@ -137,7 +218,7 @@
                     <th>Amount</th>
                     <th>Action</th>
                   </tr>
-                  </tfoot>
+                  </tfoot> -->
                 </table>
               </div>
               <!-- /.card-body -->
@@ -220,6 +301,47 @@
 
              $('#total').val(total);
         }
+
+         function product_type() {
+
+  var x = document.getElementById("product_id").value;
+
+    var token = "{{ csrf_token() }}";
+    $.ajax({
+
+            url: "getRate",
+            // url: "liveamount",
+            method: "POST",
+            data: {product_id:x, _token: token},
+            success:function(data){
+
+              // var tab= " ";
+              // for (var i = 0; i < data.length; i++) {
+
+              //   tab += "<option value='"+data[i].location+"'>"+data[i].location+"</option>";
+
+              //   tab += "<input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value='"+data[i].rate+"' readonly="">";
+
+
+
+              
+              // }
+
+              //  $("#mySelect").append(tab);
+
+              if(data != 'SUCCESS'){
+                alert('Something Wrong');
+              }else{
+                // alert("fdsdf");
+                    location.reload();
+                    // console.log("success");
+
+              }
+             }
+
+            })
+}
+
 </script>
 
 @endsection

@@ -40,43 +40,23 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
+             <form action="{{route('stock.update', $stock->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>OverAll Stocks</label>
-                    <input type="text" class="form-control" placeholder="Enter OverAll Stocks" id="overallstk" required>
+                    <label>qty</label>
+                    <input type="text" name="qty" class="form-control" placeholder="Enter qty" id="overallstk" required value="{{$stock->qty}}">
                 </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>Dressed Stocks</label>
-                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Dressed Stocks" id="dres_stock" required>
-                </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>Amount</label>
-                    <input type="text" class="form-control" placeholder="Enter Amount" id="amnt" required>
-                </div>
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                  <div class="form-group">
-                    <label>Live Stocks</label>
-                    <input type="text" class="form-control" placeholder="Enter Live Stocks" id="liv-stk" required>
-                  </div>
-                  <!-- /.form-group -->
-                  <div class="form-group">
-                    <label>Rate</label>  <!-- We have to auto-generate IDs -->
-                    <input type="text" class="form-control" placeholder="Enter Rate" id="rate" required>
-                  </div>
-                  <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
+                
             </div>
+          </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
           </div>
+        </form>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
