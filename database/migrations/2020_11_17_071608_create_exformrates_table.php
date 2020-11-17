@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStocksTable extends Migration
+class CreateExformratesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateStocksTable extends Migration
      */
     public function up()
     {
-        Schema::create('stocks', function (Blueprint $table) {
+        Schema::create('exformrates', function (Blueprint $table) {
             $table->id();
-            $table->integer('product_id')->unsigned();
-            $table->bigInteger('qty');
-            $table->decimal('rate', 5, 2);
-            $table->decimal('amount', 5, 2);
-            $table->integer('franchisee_id')->unsigned();
+            $table->string('type');
+            $table->decimal('rate', 10, 2);
+            $table->date('cur_date');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateStocksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stocks');
+        Schema::dropIfExists('exformrates');
     }
 }

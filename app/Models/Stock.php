@@ -9,12 +9,24 @@ class Stock extends Model
 {
     use HasFactory;
 
-     protected $fillable  = ['product_id','qty','rate','amount'];
+     protected $fillable  = ['product_id','qty','rate','amount','franchisee_id'];
 
 
       public function Product(){
    	
     	return $this->belongsTo("App\Models\Product", "product_id");
+
+	} 
+
+	  public function Branch(){
+   	
+    	return $this->belongsTo("App\Models\Branch", "city");
+
+	} 
+
+	public function Franchisee(){
+   	
+    	return $this->belongsTo("App\Models\Franchisee", "franchisee_id");
 
 	} 
 

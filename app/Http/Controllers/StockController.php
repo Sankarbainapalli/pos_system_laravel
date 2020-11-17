@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Liveamount;
 use App\Models\Product;
 use App\Models\Stock;
+use App\Models\ExFormRate;
+use App\Models\Franchisee;
 
 class StockController extends Controller
 {
@@ -44,6 +46,14 @@ class StockController extends Controller
 
          Stock::create($request->all());
 
+          $directoryURI = $_SERVER['REQUEST_URI'];
+
+                           $path = parse_url($directoryURI, PHP_URL_PATH);
+
+                           $components = explode('/', $path);
+                            // var_dump($components);exit();
+                          $first_part = $components[2];
+
        return redirect()->route('stock.index')->with('message','stock Has been added Successfully');
     }
 
@@ -65,7 +75,9 @@ class StockController extends Controller
     
         $product_rate=Liveamount::where('product_id',$product_id)->get()->all();
 
-        return view('admin.Stocks.dressed_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum'));
+            $franchisee_list=Franchisee::all();
+
+        return view('admin.Stocks.dressed_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list'));
     }
 
 
@@ -73,24 +85,22 @@ class StockController extends Controller
 
          $product_id =  $request->session()->get('product_id');
 
-        
-       
         $liveamount_list=Liveamount::all();
-        $product_list=Product::where('product_name','live')->get();
+        $franchisee_list=Franchisee::all();
+
+      $product_list=Product::where('product_name','live')->get()->all();
 
         $stock_sum=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product_id)->sum('amount');
 
         foreach ($product_list as $products) {
 
              $stock_list=Stock::where('product_id',$products->id)->get();
-
-             // $category_list=Category::where('id',$products->category_id)->get();
-
-        }
+           }
     
-        $product_rate=Liveamount::where('product_id',$product_id)->get()->all();
+        $product_rate=ExFormRate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
-        return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum'));
+
+        return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list'));
     }
 
 

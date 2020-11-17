@@ -41,7 +41,13 @@ Route::resource('category', App\Http\Controllers\CategoryController::class);
 
 Route::resource('stock', App\Http\Controllers\StockController::class);
 
+Route::resource('purchaseorder', App\Http\Controllers\PurchaseOrderController::class);
+
 Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
+
+Route::post('/getFranchisee', [App\Http\Controllers\PurchaseOrderController::class, 'getFranchisee'])->name('getFranchisee');
+
+Route::post('/getBranch', [App\Http\Controllers\PurchaseOrderController::class, 'getBranch'])->name('getBranch');
 
 Route::get('/dressed_stock', [App\Http\Controllers\StockController::class, 'dressed_stock'])->name('stock.dressed_stock');
 
@@ -52,6 +58,9 @@ Route::get('/lived_stock', [App\Http\Controllers\StockController::class, 'lived_
 Route::resource('franchisee', App\Http\Controllers\FranchiseeController::class);
 
 Route::resource('liveamount', App\Http\Controllers\LiveAmountController::class);
+
+Route::resource('exformrate', App\Http\Controllers\ExFormRateController::class);
+
 
 Route::post('/getProduct', [App\Http\Controllers\LiveAmountController::class, 'getProduct'])->name('getProduct');
 

@@ -42,7 +42,7 @@
                       <div class="col-sm-6">
                       <div class="form-group">
                        <label>Product Type</label>
-                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
+                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
                               <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
@@ -63,6 +63,26 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="row">
+                   
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Select Franchisee</label>
+                        <select name="franchisee_id" class="form-control">
+
+                          @foreach($franchisee_list as $franchisee)
+
+                           <option value="{{$franchisee->id}}">FRD00{{$franchisee->id.'('}}{{$franchisee->name.')('}}{{$franchisee->Branch->location.')'}}</option>
+
+                          @endforeach
+                         
+                        
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
                       <div class="row">
                    
                     <div class="col-sm-6">
@@ -75,12 +95,10 @@
                     <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                         @foreach($product_rate as $rate)
-                        <label>Rate</label>
-
-                         
-                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value="{{$rate->rate}}" readonly="">
-                          @endforeach
+                        
+                           <label>Ex-Form Rate</label>                         
+                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value="{{$product_rate}}" readonly="">
+                       
 
                     
                         <!-- <select class="form-control" name="rate" id="rate" disabled="">
@@ -123,9 +141,10 @@
                   <thead>
                   <tr>
                     <th>S.no</th>
+                    <th>Franchisee ID</th>
                     <th>Name</th>
                     <th>Total Qty</th>
-                    <th>Rate</th>
+                    <th>Ex-Form Rate</th>
                     <th>Total Amount</th>
                     <th>Date</th>
                     <th>Action</th>
@@ -133,12 +152,11 @@
                   </thead>
                   <tbody>
                     @foreach($stock_list as $stock)
-                    
                   <tr>
                     <td>{{$loop->index+1}}</td>
+                    <td>FRD00{{$stock->franchisee_id}}</td>
                     <td>{{$stock->Product->product_name}}</td>
                     <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
-                           
                           </a></td>
                     <td>
                       <!-- {{$stock->rate}} -->
@@ -153,7 +171,7 @@
                       {{$stock->rate*$stock->qty}}
                      @endif
                       @endforeach </td>
-                    <td>{{$stock->created_at}}</td>
+                    <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
                     
                     <td> 
                       <div class="btn-group">

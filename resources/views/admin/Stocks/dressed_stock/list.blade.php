@@ -63,6 +63,26 @@
                           </div>
                         </div>
                       </div>
+
+  <div class="row">
+                   
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Select Franchisee</label>
+                        <select name="franchisee_id" class="form-control">
+
+                          @foreach($franchisee_list as $franchisee)
+
+                           <option value="{{$franchisee->id}}">FRD00{{$franchisee->id.'('}}{{$franchisee->name.')('}}{{$franchisee->Branch->location.')'}}</option>
+
+                          @endforeach
+                         
+                        
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
                       <div class="row">
                    
                     <div class="col-sm-6">
@@ -123,6 +143,7 @@
                   <thead>
                   <tr>
                     <th>S.no</th>
+                    <th>Franchisee ID</th>
                     <th>Name</th>
                     <th>Total Qty</th>
                     <th>Rate</th>
@@ -136,6 +157,8 @@
                     
                   <tr>
                     <td>{{$loop->index+1}}</td>
+                    <td>FRD00{{$stock->franchisee_id}}</td>
+                     <td>{{$stock->Franchisee->name}}</td>
                     <td>{{$stock->Product->product_name}}</td>
                     <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
                            
@@ -153,7 +176,7 @@
                       {{$stock->rate*$stock->qty}}
                      @endif
                       @endforeach </td>
-                    <td>{{$stock->created_at}}</td>
+                    <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
                     
                     <td> 
                       <div class="btn-group">

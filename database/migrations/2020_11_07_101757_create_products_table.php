@@ -17,10 +17,10 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->integer('category_id')->unsigned();
             $table->string('product_name');
-            $table->bigInteger('qty');
-            $table->decimal('amount', 5, 2);
-            $table->integer('branch_id')->unsigned();
-            $table->enum('status', ['0', '1']);
+            $table->bigInteger('qty')->default('NULL');
+            $table->decimal('amount', 5, 2)->default('NULL');
+            $table->integer('branch_id')->unsigned()->default('NULL');
+            $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }

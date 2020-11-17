@@ -152,8 +152,9 @@
                       @if($live->product_id==$stock->product_id) 
                       {{$stock->rate*$stock->qty}}
                      @endif
-                      @endforeach </td>
-                    <td>{{$stock->created_at}}</td>
+                    @endforeach </td>
+
+                    <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
                     
                     <td> 
                       <div class="btn-group">

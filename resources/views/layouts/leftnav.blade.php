@@ -162,6 +162,18 @@
             </p>
           </a>
         </li>
+
+        
+
+         <li class="nav-item">
+          <a href="{{route('purchaseorder.index')}}" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Purchase Order
+            </p>
+          </a>
+        </li>
+
         <!-- <li class="nav-item">
           <a href="{{route('role.index')}}" class="nav-link">
             <i class="nav-icon far fa-object-group"></i>
@@ -229,7 +241,16 @@
             <a href="{{route('liveamount.index')}}" class="nav-link">
               <i class="nav-icon fas fa-rupee-sign"></i>
               <p>
-                Live Amount
+                Today Rate
+              </p>
+            </a>
+          </li>
+
+           <li class="nav-item">
+            <a href="{{route('exformrate.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-rupee-sign"></i>
+              <p>
+                Ex-Form Rate
               </p>
             </a>
           </li>
@@ -249,23 +270,28 @@
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-box"></i>
+
             <p>
               Stocks
+              <i class="right fas fa-angle-left"></i>
             </p>
           </a>
            <ul class="nav nav-treeview">
-            <li class="nav-item">
-            <!--   <a href="{{route('stock.index')}}" class="nav-link">
-                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Lived Stock</p>
-              </a> -->
 
+           <!--  <li class="nav-item">
+              <a href="{{route('stock.index')}}" class="nav-link">
+                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                <p>Stocks</p>
+              </a>
+            </li> -->
+
+            <li class="nav-item">
                <a href="{{route('stock.lived_stock')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
                 <p>Lived Stock</p>
               </a>
-              
             </li>
+
             <li class="nav-item">
               <a href="{{route('stock.dressed_stock')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>

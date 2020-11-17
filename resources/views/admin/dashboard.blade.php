@@ -30,9 +30,9 @@
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-warehouse"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">No. Of Centers</span>
+                <span class="info-box-text">Total Franchisees</span>
                 <span class="info-box-number">
-                  10
+                  {{$total_franchisee}}
                   <!-- <small>%</small> -->
                 </span>
               </div>
@@ -64,7 +64,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Live Stocks</span>
-                <span class="info-box-number">760</span>
+                <span class="info-box-number">{{$total_dressed_stock}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -77,7 +77,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Dressed Stocks</span>
-                <span class="info-box-number">2,000</span>
+                <span class="info-box-number">{{$total_lived_stock}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->
             </div>

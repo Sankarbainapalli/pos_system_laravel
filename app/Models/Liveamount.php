@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Liveamount extends Model
 {
     use HasFactory;
-    protected $fillable  = ['chicken','motton','fish','category_id','product_id','rate','ratedate'];
+
+    protected $fillable  = ['category_id','product_id','rate','ratedate'];
 
       public function Category(){
    	
