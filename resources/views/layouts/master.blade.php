@@ -14,6 +14,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('public/dist/css/adminlte.min.css')}}">
 
+  <link rel="stylesheet" href="{{asset('public/build/scss/_small-box.scss')}}">
+
   <!-- DataTables -->
   <link rel="stylesheet" href="{{asset('public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">

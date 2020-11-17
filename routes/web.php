@@ -100,3 +100,10 @@ Route::get('/profitloss', [App\Http\Controllers\ProfitlossController::class, 'pr
 Route::resource('liveamount', App\Http\Controllers\LiveAmountController::class);
 
 // Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');
+
+
+//************* POS ***************/
+
+Route::resource('pos', App\Http\Controllers\PosController::class);
+
+// Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');
