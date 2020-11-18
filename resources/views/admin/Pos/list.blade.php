@@ -44,8 +44,8 @@
                       <th><i class="fas fa-window-close"></i></th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
+                  <tbody class="optionBox">
+                    <tr class="block">
                       <td>1.</td>
                       <td>Chicken</td>
                       <td>
@@ -60,75 +60,24 @@
                         </div>
                       </td>
                       <td><h4><span class="badge bg-success">₹ 50.00</span></h4></td>
-                      <td><i class="fas fa-times text-danger"></i></td>
+                      <td class="remove-btn"><i class="fas fa-times text-danger"></i></td>
                     </tr>
-                    <tr>
+                    <tr class="block">
                       <td>2.</td>
-                      <td>Mutton</td>
+                      <td>Chicken</td>
                       <td>
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod1" id="prod1">
+                            <input type="text" class="form-control rounded-0" placeholder="1" id="number">
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
                         </div>
                       </td>
-                      <td><h4><span class="badge bg-success">₹ 40.00</span></h4></td>
-                      <td><i class="fas fa-times text-danger"></i></td>
-                    </tr>
-                    <tr>
-                      <td>3.</td>
-                      <td>Fish</td>
-                      <td>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-secondary">
-                              <i class="fas fa-minus"></i>
-                            </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod2" id="prod2">
-                            <button type="button" class="btn btn-sm btn-secondary">
-                              <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                      </td>
-                      <td><h4><span class="badge bg-success">₹ 80.00</span></h4></td>
-                      <td><i class="fas fa-times text-danger"></i></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Prawns</td>
-                      <td>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-secondary">
-                              <i class="fas fa-minus"></i>
-                            </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod3" id="prod3">
-                            <button type="button" class="btn btn-sm btn-secondary">
-                              <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                      </td>
-                      <td><h4><span class="badge bg-success">₹ 30.00</span></h4></td>
-                      <td><i class="fas fa-times text-danger"></i></td>
-                    </tr>
-                    <tr>
-                      <td>4.</td>
-                      <td>Eggs</td>
-                      <td>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-secondary">
-                              <i class="fas fa-minus"></i>
-                            </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod4" id="prod4">
-                            <button type="button" class="btn btn-sm btn-secondary">
-                              <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                      </td>
-                      <td><h4><span class="badge bg-success">₹ 70.00</span></h4></td>
-                      <td><i class="fas fa-times text-danger"></i></td>
+                      <td><h4><span class="badge bg-success">₹ 50.00</span></h4></td>
+                      <td class="remove-btn"><i class="fas fa-times text-danger"></i></td>
                     </tr>
                   </tbody>
                 </table>
@@ -190,23 +139,23 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body overflow-auto" style="height: 245px">
-                <a class="btn btn-app">
+                <a class="btn btn-app add_details">
                   <span class="badge bg-warning">300kgs</span>
                   <i class="fas fa-image"></i> Chicken
                 </a>
-                <a class="btn btn-app">
+                <a class="btn btn-app add_details">
                   <span class="badge bg-warning">300kgs</span>
                   <i class="fas fa-image"></i> Mutton
                 </a>
-                <a class="btn btn-app">
+                <a class="btn btn-app add_details">
                   <span class="badge bg-warning">891kgs</span>
                   <i class="fas fa-image"></i> Fish
                 </a>
-                <a class="btn btn-app">
+                <a class="btn btn-app add_details">
                   <span class="badge bg-warning">67kgs</span>
                   <i class="fas fa-image"></i> Eggs
                 </a>
-                <a class="btn btn-app">
+                <a class="btn btn-app add_details">
                   <span class="badge bg-warning">12kgs</span>
                   <i class="fas fa-image"></i> Prawns
                 </a>
@@ -214,8 +163,6 @@
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
-
-
             
 
                 <div class="card-body row">

@@ -279,5 +279,20 @@
   });
 </script>
 
+
+<!-- POS dynamically adding/removing -->
+<script>
+
+    $('.add_details').click(function() {
+
+        $(".optionBox").append('<tr class="block"><td>1.</td><td>Chicken</td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0" placeholder="1" id="number"><button type="button" class="btn btn-sm btn-secondary"><i class="fas fa-plus"></i></button></div></td><td><h4><span class="badge bg-success">₹ 50.00</span></h4></td><td><i class="fas fa-times text-danger remove-btn"></i></td></tr>');
+    });
+
+    $('.optionBox').on('click','.remove-btn',function() {
+
+      $(this).parents('.block').remove();
+    });
+</script>
+
 </body>
 </html>
