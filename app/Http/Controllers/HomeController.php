@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Stock;
 use App\Models\Franchisee;
+use App\Models\ExFormRate;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,9 @@ class HomeController extends Controller
     
      public function index()
     {    
+
+    // $today_rate=ExFormRate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+
         $total_emp=User::count();
         $product_list_l=Product::where('product_name','live')->get()->all();
         $total_lived_stock='0';

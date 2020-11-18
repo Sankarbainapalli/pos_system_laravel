@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Franchisee;
 use App\Models\ExFormRate;
 use App\Models\Branch;
+use App\Models\Purchaseorder;
 
 class PurchaseOrderController extends Controller
 {
@@ -22,11 +23,13 @@ class PurchaseOrderController extends Controller
 
        function getFranchisee(Request $request){
 
-     $request->session()->put('product_id', $request->franchisee_id);
+     // $request->session()->put('product_id', $request->franchisee_id);
 
-     $franchisee_id =  $request->session()->get('franchisee_id');
+     // $franchisee_id =  $request->session()->get('franchisee_id');
 
-     $product_rate=Franchisee::where('id','1')->get()->all();
+     	$franchisee_id=$request->franchisee_id;
+
+     $product_rate=Franchisee::where('id',$franchisee_id)->get()->all();
 
     echo json_encode($product_rate);
 
@@ -38,7 +41,7 @@ class PurchaseOrderController extends Controller
 
        	$franchisee_id=$request->branch_id;
 
-     $product_rate=Franchisee::where('city','1')->get()->all();
+     $product_rate=Franchisee::where('city',$franchisee_id)->get()->all();
 
     echo json_encode($product_rate);
 
@@ -52,9 +55,9 @@ class PurchaseOrderController extends Controller
 
     	// dd($request->all());
 
-         PurchaseOrder::create($request->all());
+         Purchaseorder::create($request->all());
 
-       return redirect()->route('purchase.index')->with('message','Purchase Has been added Successfully');
+       return redirect()->route('purchaseorder.index')->with('message','Purchase Has been added Successfully');
     }
 
   

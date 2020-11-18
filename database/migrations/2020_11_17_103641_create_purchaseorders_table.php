@@ -15,7 +15,14 @@ class CreatePurchaseordersTable extends Migration
     {
         Schema::create('purchaseorders', function (Blueprint $table) {
             $table->id();
+             $table->integer('branch_id')->unsigned();
              $table->integer('franchisee_id')->unsigned();
+             $table->decimal('qty',10,2);
+             $table->decimal('rate',10,2);
+             $table->decimal('total_amount',10,2);
+             $table->string('sup_name');
+             $table->string('sup_mobile');
+             $table->string('pur_date');
             $table->timestamps();
         });
     }
