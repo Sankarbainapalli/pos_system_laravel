@@ -41,6 +41,7 @@
                       <th>Products</th>
                       <th style="width: 30%;">Quantity</th>
                       <th>Per Item</th>
+                      <th><i class="fas fa-window-close"></i></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -59,6 +60,7 @@
                         </div>
                       </td>
                       <td><h4><span class="badge bg-success">₹ 50.00</span></h4></td>
+                      <td><i class="fas fa-times text-danger"></i></td>
                     </tr>
                     <tr>
                       <td>2.</td>
@@ -75,6 +77,7 @@
                         </div>
                       </td>
                       <td><h4><span class="badge bg-success">₹ 40.00</span></h4></td>
+                      <td><i class="fas fa-times text-danger"></i></td>
                     </tr>
                     <tr>
                       <td>3.</td>
@@ -91,6 +94,7 @@
                         </div>
                       </td>
                       <td><h4><span class="badge bg-success">₹ 80.00</span></h4></td>
+                      <td><i class="fas fa-times text-danger"></i></td>
                     </tr>
                     <tr>
                       <td>4.</td>
@@ -107,6 +111,7 @@
                         </div>
                       </td>
                       <td><h4><span class="badge bg-success">₹ 30.00</span></h4></td>
+                      <td><i class="fas fa-times text-danger"></i></td>
                     </tr>
                     <tr>
                       <td>4.</td>
@@ -123,6 +128,7 @@
                         </div>
                       </td>
                       <td><h4><span class="badge bg-success">₹ 70.00</span></h4></td>
+                      <td><i class="fas fa-times text-danger"></i></td>
                     </tr>
                   </tbody>
                 </table>
