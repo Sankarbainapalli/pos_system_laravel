@@ -50,11 +50,12 @@
                       <td>Chicken</td>
                       <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-secondary">
+                            <button type="button" class="sub btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1" id="number">
-                            <button type="button" class="btn btn-sm btn-secondary">
+                            <input type="text" class="form-control rounded-0" placeholder="1" >
+                            
+                            <button type="button" class="add btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
                         </div>
@@ -70,7 +71,7 @@
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1" id="number">
+                            <input type="text" class="form-control rounded-0" placeholder="1" >
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
@@ -234,7 +235,7 @@
                       <label  class="col-form-label">Paid Amount</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="inputEmail3" placeholder="₹200.00" >
+                      <input type="text" class="form-control" id="paidamt" placeholder="₹200.00" >
                     </div>
                   </div>
                   <div class="form-group row">
@@ -242,7 +243,7 @@
                       <label  class="col-form-label">Return Change</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="inputEmail3" readonly placeholder="₹0.00" >
+                      <input type="text" class="form-control" id="return" readonly placeholder="₹0.00" >
                     </div>
                   </div>
                 </div>
