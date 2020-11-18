@@ -68,7 +68,7 @@
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1">
+                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod1" id="prod1">
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
@@ -84,7 +84,7 @@
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1">
+                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod2" id="prod2">
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
@@ -100,7 +100,7 @@
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1">
+                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod3" id="prod3">
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
@@ -116,7 +116,7 @@
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-minus"></i>
                             </button>
-                            <input type="text" class="form-control rounded-0" placeholder="1">
+                            <input type="text" class="form-control rounded-0" placeholder="1" name="prod4" id="prod4">
                             <button type="button" class="btn btn-sm btn-secondary">
                               <i class="fas fa-plus"></i>
                             </button>
@@ -146,7 +146,7 @@
                       <tr>
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
-                           <input size="50" type="text" name="table_search" placeholder="₹10.00" class="form-control float-right">
+                           <input size="50" type="text" name="disct" id="disct" placeholder="₹10.00" class="form-control float-right">
                         </td>
                         <th style="border-top: 0px;">Tax (18.00%)</th>
                         <td style="border-top: 0px;">₹10.00</td>
