@@ -14,11 +14,13 @@ class PurchaseOrderController extends Controller
 
      public function index(){
 
+        $pur_list=Purchaseorder::all();
+
      	$franchisee_list=Franchisee::all();
      	$banch_list=Branch::all();
      	 $product_rate=ExFormRate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
-        return view('admin.purchaseorder.list',compact('franchisee_list','product_rate','banch_list'));
+        return view('admin.purchaseorder.list',compact('franchisee_list','product_rate','banch_list','pur_list'));
     }
 
        function getFranchisee(Request $request){
@@ -62,36 +64,43 @@ class PurchaseOrderController extends Controller
 
   
 
-    public function edit(Role $role){
+    public function edit(Purchaseorder $purchaseorder){
 
-        return view('admin.roles.edit_role',compact('role'));
+
+        $franchisee_list=Franchisee::all();
+        $banch_list=Branch::all();
+         $product_rate=ExFormRate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+
+        return view('admin.purchaseorder.edit',compact('franchisee_list','product_rate','banch_list','purchaseorder'));
+
     }
 
-    public function update(Request $request,Role $role){
+    public function update(Request $request,Purchaseorder $purchaseorder){
 
-        $role->update(['name'=>$request->name]);
+        $purchaseorder->update($request->all());
 
-        return redirect(route('role.index'))->with('message','Updated Successfully');
+        return redirect(route('purchaseorder.index'))->with('message','Updated Successfully');
     }
 
 
-    public function show(Role $role){
+    public function show(Purchaseorder $purchaseorder){
 
         // Todo::where('id',$id)->delete();
-         $role->delete();
+         $purchaseorder->delete();
 
-         return redirect()->back()->with('error','Role Deleted Has been Successfully');
+         return redirect()->back()->with('error','purchaseorder Deleted Has been Successfully');
 
     }
 
 
 
-    public function destroy(Role $role){
+    public function destroy(Purchaseorder $purchaseorder){
 
         // Todo::where('id',$id)->delete();
-         $role->delete();
+         $purchaseorder->delete();
 
-         return redirect()->back()->with('error','Role Deleted Has been Successfully');
+         return redirect()->back()->with('error','purchaseorder Deleted Has been Successfully');
 
     }
+    
 }

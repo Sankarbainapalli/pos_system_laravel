@@ -69,13 +69,13 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                          <label>Franchisee Name</label>
-                        <input type="text" id="f_name" class="form-control" >
+                        <input type="text" id="f_name" class="form-control" readonly="">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Franchisee Mobile Number</label>
-                        <input type="text" id="f_mobile" class="form-control"  >
+                        <input type="text" id="f_mobile" class="form-control"  readonly="">
                       </div>
                     </div>
                    <!--  <div class="col-sm-6">
@@ -88,6 +88,8 @@
                       <div class="form-group">
                         <label>Required Qty</label>
                         <input type="text" name="qty" id="qty" class="form-control" placeholder="Auto"  onkeyup="sum()">
+
+                         <input type="button" onclick="ReadWeight();" value="GET" />
                       </div>
                     </div>
                    
@@ -112,7 +114,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Mobile</label>
-                        <input type="text"  name="sup_mobile" class="form-control" placeholder="Enter Your mobile" id="mobile" required>
+                        <input type="text"  name="sup_mobile" class="form-control" placeholder="Enter Your mobile" id="mobile" required maxlength="10">
                       </div>
                     </div>
 
@@ -131,6 +133,55 @@
                   </div>
                 </form>
               </div>
+
+               <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped text-center">
+                  <thead>
+                  <tr>
+                    <th>S.No</th>
+                    <th>Branch Id</th>
+                    <th>Franchisee Id</th>
+                    <th>Qty</th>
+                    <th>Rate</th>
+                    <th>Total Amount</th>
+                    <th>Supplier Name</th>
+                    <th>Supplier Mobile</th>
+                    <th>Purchase Date</th>
+                    <th>Created Date</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($pur_list as $purchaseorder)
+                  <tr>
+                    <td>{{$loop->index+1}}</td>
+                    <td>BRN00{{$purchaseorder->branch_id}}({{$purchaseorder->Branch->name}})</td>
+                    <td>FRD00{{$purchaseorder->franchisee_id}}({{$purchaseorder->Franchisee->name}})</td>
+                    <td>{{$purchaseorder->qty}}</td>
+                    <td>{{$purchaseorder->rate}}</td>
+                    <td>{{$purchaseorder->total_amount}}</td>
+                    <td>{{$purchaseorder->sup_name}}</td>
+                    <td>{{$purchaseorder->sup_mobile}}</td>
+                    <td>{{$purchaseorder->pur_date}}</td>
+                    <td><?php echo date('d-m-y H:i:s', strtotime($purchaseorder->created_at)) ?></td>
+               
+                    <td> 
+                       <div class="btn-group">
+                          <a href="{{route('purchaseorder.edit',$purchaseorder->id)}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                       <a href="{{route('purchaseorder.destroy', $purchaseorder->id)}}">  <button type="button" class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                          </button></a> 
+                      </div>
+                    </td>
+                  </tr>
+                  @endforeach
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
              
             </div>
             <!-- /.card -->
@@ -191,12 +242,12 @@
 
     $.ajax({
 
-            url: "getBranch",
+            url: "getBranch", 
             method: "POST",
             dataType: "json",
             data: {branch_id:x, _token: token},
             success:function(data){
-              
+
                var tab= "";
 
               tab += "<option value=''>Select Franchisee</option>";
@@ -213,6 +264,25 @@
 
             })
 }
+
+
+function ReadWeight()
+{
+$.ajax({
+  type: "post",
+  url: "http://www.noris.in/WeightAPI/getweight.php?ID=123",
+ 
+async:false,
+cache: false,
+success: function(data){
+  var RES=data.split(":");
+
+  alert(RES);
+  document.getElementById("qty").value=RES[1];
+}
+});
+}
+
 
 
 
