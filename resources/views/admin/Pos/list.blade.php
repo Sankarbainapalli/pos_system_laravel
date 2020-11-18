@@ -44,7 +44,7 @@
                       <th><i class="fas fa-window-close"></i></th>
                     </tr>
                   </thead>
-                  <tbody class="optionBox">
+                  <tbody class="tableBox">
                     <tr class="block">
                       <td>1.</td>
                       <td>Chicken</td>
