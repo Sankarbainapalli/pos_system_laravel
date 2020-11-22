@@ -37,13 +37,26 @@ Route::resource('branch', App\Http\Controllers\BranchController::class);
 
 Route::resource('product', App\Http\Controllers\ProductController::class);
 
+
 Route::resource('category', App\Http\Controllers\CategoryController::class);
 
 Route::resource('stock', App\Http\Controllers\StockController::class);
 
 Route::resource('purchaseorder', App\Http\Controllers\PurchaseOrderController::class);
 
+Route::resource('pos', App\Http\Controllers\PosController::class);
+
 Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
+
+Route::get('/delete_all_cart', [App\Http\Controllers\PosController::class, 'delete_all_cart'])->name('delete_all_cart');
+
+Route::get('/getCart', [App\Http\Controllers\PosController::class, 'getCart'])->name('getCart');
+
+Route::get('/getProduct', [App\Http\Controllers\PosController::class, 'getProduct'])->name('getProduct');
+
+Route::post('/removeProduct', [App\Http\Controllers\PosController::class, 'removeProduct'])->name('removeProduct');
+
+Route::post('/addProduct', [App\Http\Controllers\PosController::class, 'addProduct'])->name('addProduct');
 
 Route::post('/getFranchisee', [App\Http\Controllers\PurchaseOrderController::class, 'getFranchisee'])->name('getFranchisee');
 

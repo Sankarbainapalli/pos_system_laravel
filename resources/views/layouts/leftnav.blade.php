@@ -174,6 +174,15 @@
           </a>
         </li>
 
+        <li class="nav-item">
+          <a href="{{route('pos.index')}}" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              POS
+            </p>
+          </a>
+        </li>
+
         <!-- <li class="nav-item">
           <a href="{{route('role.index')}}" class="nav-link">
             <i class="nav-icon far fa-object-group"></i>
@@ -182,7 +191,7 @@
             </p>
           </a>
         </li> -->
-        <li class="nav-item">
+       <!--  <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
@@ -204,7 +213,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li> -->
        <!--  <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon far fa-file-alt"></i>
