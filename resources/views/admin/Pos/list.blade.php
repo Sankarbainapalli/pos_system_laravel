@@ -90,7 +90,7 @@
                            <input size="50" type="text" name="disct" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()">
                         </td>
                         <th style="border-top: 0px;">Tax (18.00%)</th>
-                        <td style="border-top: 0px;"><input type="text" name="tax" id="tax" value="18" onkeyup="sum()"></td>
+                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="" onkeyup="sum()"></td>
                       </tr>
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
@@ -121,6 +121,7 @@
                     <button type="button" class="btn btn-block bg-gradient-info"> {{$category->name}}</button>
                   </div>
                   @endforeach
+
                  <!--  <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-info"> Veg</button>
                   </div>
@@ -170,9 +171,25 @@
                     <div class="col-sm-5">
                       <label  class="col-form-label">Customer Mobile</label>
                     </div>
+
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="mobile" placeholder="Customer Mobile" name="c_name">
+                      <!-- <input type="text" class="form-control" id="mobile" placeholder="Customer Mobile" name="c_name"> -->
+                       <select class="form-control select2bs4" style="width: 100%;" id="paidby" onchange="customerType(this.value)">
+                        <!-- select2bs4 -->
+                                <option value="">Select</option>
+                                <option value="0">New</option>
+                                @foreach($customer_list as $customer)
+                                <option value="{{$customer->id}}">{{$customer->name}}</option>
+                                @endforeach
+                               
+                      </select>
+
+                      <div id="customerinput">
+                        
+                      </div>
+
                     </div>
+
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-5">
@@ -195,19 +212,28 @@
                       <label  class="col-form-label">Paid By</label>
                     </div>
                     <div class="col-sm-7">
-                      <select class="form-control select2bs4" style="width: 100%;" id="paidby">
-                          <option selected="selected">Cash</option>
-                          <option>Online Payment</option>
-                          <option>Net</option>
+                      <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)">
+                        <!-- select2bs4 -->
+                                <option value="1">Cash</option>
+                                <option value="2">Nett</option>
+                                <option value="3">VISA</option>
+                                <option value="4">Master Card</option>
+                                <option value="5">Cheque</option>
+                                <option value="6">Debit</option>
+                                <option value="10">credit</option>
+                                <option value="11">ONLINE PAYMENT</option>
                       </select>
                     </div>
+                  </div>
+                  <div class="form-group row cardinput">
+
                   </div>
                   <div class="form-group row">
                     <div class="col-sm-5">
                       <label  class="col-form-label">Paid Amount</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="paidamt" placeholder="₹200.00" >
+                      <input type="text" class="form-control" id="paid_amount" placeholder="" onkeyup="returnAmount(this.value)">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -215,7 +241,7 @@
                       <label  class="col-form-label">Return Change</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="return" readonly placeholder="₹0.00" >
+                      <input type="text" class="form-control" id="return_amount" readonly placeholder="₹0.00" >
                     </div>
                   </div>
                 </div>
@@ -396,16 +422,19 @@ function decrementValue(id)
 
                 $('#total_rate').val(tot_count);
 
-             var tax =parseFloat(document.getElementById('tax').value);
+             // var tax =parseFloat(document.getElementById('tax').value);
+
              var disct =parseFloat(document.getElementById('disct').value);
              
-             var total_tax=tot_count*(tax/100);
+             var total_tax=tot_count*(18/100);
+             // alert(total_tax);
 
              var payble_amt=tot_count+total_tax-disct;
 
               $('#total_payble').val(payble_amt);
 
               $('#total_payment').val(payble_amt);
+              $('#total_tax').val(total_tax);
 
 
             // });
@@ -506,6 +535,58 @@ function decrementValue(id)
               }
 
             });
+  }
+
+  
+
+  function customerType(value){
+
+    var tab='';
+
+    if(value=='0'){
+
+      tab+='<div class="col-sm-2"><label  class="col-form-label"> Name</label></div><div class="col-sm-10"><input type="text" class="form-control" id="name" placeholder="Enter Name"></div>';
+
+      tab+='<div class="col-sm-2"><label  class="col-form-label"> Number</label></div><div class="col-sm-10"><input type="text" class="form-control" id="mobile" placeholder="Enter mobile"></div>';
+
+      tab+='<div class="col-sm-2"><label  class="col-form-label"> Email</label></div><div class="col-sm-10"><input type="text" class="form-control" id="Email" placeholder="Enter Email"></div>';
+
+       $("#customerinput").html(tab).show();
+
+    }else{
+
+      $("#customerinput").hide();
+
+    }
+
+  }
+
+  function paymentMethod(value){
+    var tab='';
+
+    if(value=='4'){
+
+      tab='<div class="col-sm-5"><label  class="col-form-label">Card Number</label></div><div class="col-sm-7"><input type="text" class="form-control" id="cardnumber" placeholder="Enter Card Number"></div>';
+
+       $(".cardinput").html(tab).show();
+
+    }else{
+
+      $(".cardinput").hide();
+
+    }
+
+  }
+
+  function returnAmount(value){
+
+    var paid_amount=document.getElementById('paid_amount').value;
+    var total_payble=document.getElementById('total_payment').value;
+
+    var return_amount=total_payble-paid_amount;
+
+    $('#return_amount').val(return_amount);
+
   }
   
  

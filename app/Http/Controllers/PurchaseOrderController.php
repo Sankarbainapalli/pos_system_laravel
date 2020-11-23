@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Branch;
-use App\Models\ExFormRate;
+use App\Models\Exformrate;
 use App\Models\Franchisee;
 use App\Models\Purchaseorder;
 use Illuminate\Http\Request;
@@ -18,7 +18,7 @@ class PurchaseOrderController extends Controller
 
         $franchisee_list = Franchisee::all();
         $banch_list = Branch::all();
-        $product_rate = ExFormRate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
+        $product_rate = Exformrate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
 
         return view('admin.purchaseorder.list', compact('franchisee_list', 'product_rate', 'banch_list', 'pur_list'));
     }

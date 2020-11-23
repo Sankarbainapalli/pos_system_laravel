@@ -9,6 +9,7 @@ use App\Models\Stock;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Liveamount;
+use App\Models\Customer;
 use DB;
 
 class PosController extends Controller
@@ -20,8 +21,9 @@ class PosController extends Controller
     	$total_sum=Stock::sum('qty');
     	$category_list=Category::all();
     	$product_list=Product::all();
+        $customer_list=Customer::all();
 
-    	return view('admin.pos.list',compact('category_list','total_sum','product_list'));
+    	return view('admin.pos.list',compact('category_list','total_sum','product_list','customer_list'));
     }
 
      public function getProduct()

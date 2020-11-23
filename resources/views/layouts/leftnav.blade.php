@@ -18,7 +18,7 @@
       </div>
     </div>
   </form>
-  <marquee style="color:red">Today Rate of Chicken: 250</marquee>
+
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Messages Dropdown Menu -->

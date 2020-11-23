@@ -8,7 +8,7 @@ use App\Models\Category;
 use App\Models\Liveamount;
 use App\Models\Product;
 use App\Models\Stock;
-use App\Models\ExFormRate;
+use App\Models\Exformrate;
 use App\Models\Franchisee;
 
 class StockController extends Controller
@@ -97,7 +97,7 @@ class StockController extends Controller
              $stock_list=Stock::where('product_id',$products->id)->get();
            }
     
-        $product_rate=ExFormRate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+        $product_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
 
         return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list'));

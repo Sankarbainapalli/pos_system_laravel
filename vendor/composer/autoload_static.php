@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a
+class ComposerStaticInitb723d1265ac5162d8b23bb8595bd58a3
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -35,7 +35,6 @@ class ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
-        '0e7c32d0eac1795dcb184cf8a8c20dc3' => __DIR__ . '/../..' . '/app/common.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -531,6 +530,7 @@ class ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a
         'App\\Http\\Controllers\\FranchiseeController' => __DIR__ . '/../..' . '/app/Http/Controllers/FranchiseeController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LiveAmountController' => __DIR__ . '/../..' . '/app/Http/Controllers/LiveAmountController.php',
+        'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\PosController' => __DIR__ . '/../..' . '/app/Http/Controllers/PosController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Controllers\\ProfitlossController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfitlossController.php',
@@ -555,6 +555,7 @@ class ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a
         'App\\Models\\Exformrate' => __DIR__ . '/../..' . '/app/Models/Exformrate.php',
         'App\\Models\\Franchisee' => __DIR__ . '/../..' . '/app/Models/Franchisee.php',
         'App\\Models\\Liveamount' => __DIR__ . '/../..' . '/app/Models/Liveamount.php',
+        'App\\Models\\Order' => __DIR__ . '/../..' . '/app/Models/Order.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\Stock' => __DIR__ . '/../..' . '/app/Models/Stock.php',
@@ -5130,10 +5131,10 @@ class ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd08a36b109e0f35ef75c2228cafed59a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitb723d1265ac5162d8b23bb8595bd58a3::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitb723d1265ac5162d8b23bb8595bd58a3::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb723d1265ac5162d8b23bb8595bd58a3::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitb723d1265ac5162d8b23bb8595bd58a3::$classMap;
 
         }, null, ClassLoader::class);
     }

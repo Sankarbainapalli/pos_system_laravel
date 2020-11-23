@@ -8,7 +8,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Stock;
 use App\Models\Franchisee;
-use App\Models\ExFormRate;
+use App\Models\Exformrate;
 
 class HomeController extends Controller
 {
@@ -31,7 +31,7 @@ class HomeController extends Controller
      public function index()
     {    
 
-    // $today_rate=ExFormRate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+    $today_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
         $total_emp=User::count();
         $product_list_l=Product::where('product_name','live')->get()->all();
@@ -52,7 +52,7 @@ class HomeController extends Controller
         
         // $total_dressed_stock=Stock::where('')count();
         $total_franchisee=Franchisee::count();
-        return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee'));
+        return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate'));
     }
 
     // public function dashboard()
