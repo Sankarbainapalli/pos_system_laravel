@@ -99,11 +99,7 @@ class ServeCommand extends Command
                 return [$key => $value];
             }
 
-<<<<<<< HEAD
             return in_array($key, ['APP_ENV', 'LARAVEL_SAIL'])
-=======
-            return $key === 'APP_ENV'
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     ? [$key => $value]
                     : [$key => false];
         })->all());

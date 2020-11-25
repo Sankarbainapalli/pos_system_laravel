@@ -10,11 +10,7 @@ class File extends Base
      * @var array Map of MIME types => file extension(s)
      * @link http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
      */
-<<<<<<< HEAD
     protected static $mimeTypes = [
-=======
-    protected static $mimeTypes = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/atom+xml'                                                      => 'atom',
         'application/ecmascript'                                                    => 'ecma',
         'application/emma+xml'                                                      => 'emma',
@@ -29,13 +25,8 @@ class File extends Base
         'application/mets+xml'                                                      => 'mets',
         'application/mods+xml'                                                      => 'mods',
         'application/mp4'                                                           => 'mp4s',
-<<<<<<< HEAD
         'application/msword'                                                        => ['doc', 'dot'],
         'application/octet-stream'                                                  => [
-=======
-        'application/msword'                                                        => array('doc', 'dot'),
-        'application/octet-stream'                                                  => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'bin',
             'dms',
             'lrf',
@@ -48,28 +39,16 @@ class File extends Base
             'dump',
             'elc',
             'deploy'
-<<<<<<< HEAD
         ],
-=======
-        ),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/ogg'                                                           => 'ogx',
         'application/omdoc+xml'                                                     => 'omdoc',
         'application/pdf'                                                           => 'pdf',
         'application/pgp-encrypted'                                                 => 'pgp',
-<<<<<<< HEAD
         'application/pgp-signature'                                                 => ['asc', 'sig'],
         'application/pkix-pkipath'                                                  => 'pkipath',
         'application/pkixcmp'                                                       => 'pki',
         'application/pls+xml'                                                       => 'pls',
         'application/postscript'                                                    => ['ai', 'eps', 'ps'],
-=======
-        'application/pgp-signature'                                                 => array('asc', 'sig'),
-        'application/pkix-pkipath'                                                  => 'pkipath',
-        'application/pkixcmp'                                                       => 'pki',
-        'application/pls+xml'                                                       => 'pls',
-        'application/postscript'                                                    => array('ai', 'eps', 'ps'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/pskc+xml'                                                      => 'pskcxml',
         'application/rdf+xml'                                                       => 'rdf',
         'application/reginfo+xml'                                                   => 'rif',
@@ -82,17 +61,10 @@ class File extends Base
         'application/vnd.ahead.space'                                               => 'ahead',
         'application/vnd.dart'                                                      => 'dart',
         'application/vnd.data-vision.rdz'                                           => 'rdz',
-<<<<<<< HEAD
         'application/vnd.dece.data'                                                 => ['uvf', 'uvvf', 'uvd', 'uvvd'],
         'application/vnd.dece.ttml+xml'                                             => ['uvt', 'uvvt'],
         'application/vnd.dece.unspecified'                                          => ['uvx', 'uvvx'],
         'application/vnd.dece.zip'                                                  => ['uvz', 'uvvz'],
-=======
-        'application/vnd.dece.data'                                                 => array('uvf', 'uvvf', 'uvd', 'uvvd'),
-        'application/vnd.dece.ttml+xml'                                             => array('uvt', 'uvvt'),
-        'application/vnd.dece.unspecified'                                          => array('uvx', 'uvvx'),
-        'application/vnd.dece.zip'                                                  => array('uvz', 'uvvz'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.denovo.fcselayout-link'                                    => 'fe_launch',
         'application/vnd.dna'                                                       => 'dna',
         'application/vnd.dolby.mlp'                                                 => 'mlp',
@@ -113,22 +85,14 @@ class File extends Base
         'application/vnd.ezpix-package'                                             => 'ez3',
         'application/vnd.fdf'                                                       => 'fdf',
         'application/vnd.fdsn.mseed'                                                => 'mseed',
-<<<<<<< HEAD
         'application/vnd.fdsn.seed'                                                 => ['seed', 'dataless'],
-=======
-        'application/vnd.fdsn.seed'                                                 => array('seed', 'dataless'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.flographit'                                                => 'gph',
         'application/vnd.fluxtime.clip'                                             => 'ftc',
         'application/vnd.hal+xml'                                                   => 'hal',
         'application/vnd.hydrostatix.sof-data'                                      => 'sfd-hdstx',
         'application/vnd.ibm.minipay'                                               => 'mpy',
         'application/vnd.ibm.secure-container'                                      => 'sc',
-<<<<<<< HEAD
         'application/vnd.iccprofile'                                                => ['icc', 'icm'],
-=======
-        'application/vnd.iccprofile'                                                => array('icc', 'icm'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.igloader'                                                  => 'igl',
         'application/vnd.immervision-ivp'                                           => 'ivp',
         'application/vnd.kde.karbon'                                                => 'karbon',
@@ -136,7 +100,6 @@ class File extends Base
         'application/vnd.kde.kformula'                                              => 'kfo',
         'application/vnd.kde.kivio'                                                 => 'flw',
         'application/vnd.kde.kontour'                                               => 'kon',
-<<<<<<< HEAD
         'application/vnd.kde.kpresenter'                                            => ['kpr', 'kpt'],
         'application/vnd.kde.kspread'                                               => 'ksp',
         'application/vnd.kde.kword'                                                 => ['kwd', 'kwt'],
@@ -144,15 +107,6 @@ class File extends Base
         'application/vnd.kidspiration'                                              => 'kia',
         'application/vnd.kinar'                                                     => ['kne', 'knp'],
         'application/vnd.koan'                                                      => ['skp', 'skd', 'skt', 'skm'],
-=======
-        'application/vnd.kde.kpresenter'                                            => array('kpr', 'kpt'),
-        'application/vnd.kde.kspread'                                               => 'ksp',
-        'application/vnd.kde.kword'                                                 => array('kwd', 'kwt'),
-        'application/vnd.kenameaapp'                                                => 'htke',
-        'application/vnd.kidspiration'                                              => 'kia',
-        'application/vnd.kinar'                                                     => array('kne', 'knp'),
-        'application/vnd.koan'                                                      => array('skp', 'skd', 'skt', 'skm'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.kodak-descriptor'                                          => 'sse',
         'application/vnd.las.las+xml'                                               => 'lasxml',
         'application/vnd.llamagraphics.life-balance.desktop'                        => 'lbd',
@@ -166,22 +120,14 @@ class File extends Base
         'application/vnd.mozilla.xul+xml'                                           => 'xul',
         'application/vnd.ms-artgalry'                                               => 'cil',
         'application/vnd.ms-cab-compressed'                                         => 'cab',
-<<<<<<< HEAD
         'application/vnd.ms-excel'                                                  => [
-=======
-        'application/vnd.ms-excel'                                                  => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'xls',
             'xlm',
             'xla',
             'xlc',
             'xlt',
             'xlw'
-<<<<<<< HEAD
         ],
-=======
-        ),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.ms-excel.addin.macroenabled.12'                            => 'xlam',
         'application/vnd.ms-excel.sheet.binary.macroenabled.12'                     => 'xlsb',
         'application/vnd.ms-excel.sheet.macroenabled.12'                            => 'xlsm',
@@ -193,27 +139,16 @@ class File extends Base
         'application/vnd.ms-officetheme'                                            => 'thmx',
         'application/vnd.ms-pki.seccat'                                             => 'cat',
         'application/vnd.ms-pki.stl'                                                => 'stl',
-<<<<<<< HEAD
         'application/vnd.ms-powerpoint'                                             => ['ppt', 'pps', 'pot'],
-=======
-        'application/vnd.ms-powerpoint'                                             => array('ppt', 'pps', 'pot'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.ms-powerpoint.addin.macroenabled.12'                       => 'ppam',
         'application/vnd.ms-powerpoint.presentation.macroenabled.12'                => 'pptm',
         'application/vnd.ms-powerpoint.slide.macroenabled.12'                       => 'sldm',
         'application/vnd.ms-powerpoint.slideshow.macroenabled.12'                   => 'ppsm',
         'application/vnd.ms-powerpoint.template.macroenabled.12'                    => 'potm',
-<<<<<<< HEAD
         'application/vnd.ms-project'                                                => ['mpp', 'mpt'],
         'application/vnd.ms-word.document.macroenabled.12'                          => 'docm',
         'application/vnd.ms-word.template.macroenabled.12'                          => 'dotm',
         'application/vnd.ms-works'                                                  => ['wps', 'wks', 'wcm', 'wdb'],
-=======
-        'application/vnd.ms-project'                                                => array('mpp', 'mpt'),
-        'application/vnd.ms-word.document.macroenabled.12'                          => 'docm',
-        'application/vnd.ms-word.template.macroenabled.12'                          => 'dotm',
-        'application/vnd.ms-works'                                                  => array('wps', 'wks', 'wcm', 'wdb'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.ms-wpl'                                                    => 'wpl',
         'application/vnd.ms-xpsdocument'                                            => 'xps',
         'application/vnd.mseq'                                                      => 'mseq',
@@ -247,22 +182,14 @@ class File extends Base
         'application/vnd.openxmlformats-officedocument.wordprocessingml.document'   => 'docx',
         'application/vnd.openxmlformats-officedocument.wordprocessingml.template'   => 'dotx',
         'application/vnd.pvi.ptid1'                                                 => 'ptid',
-<<<<<<< HEAD
         'application/vnd.quark.quarkxpress'                                         => [
-=======
-        'application/vnd.quark.quarkxpress'                                         => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'qxd',
             'qxt',
             'qwd',
             'qwt',
             'qxl',
             'qxb'
-<<<<<<< HEAD
         ],
-=======
-        ),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.realvnc.bed'                                               => 'bed',
         'application/vnd.recordare.musicxml'                                        => 'mxl',
         'application/vnd.recordare.musicxml+xml'                                    => 'musicxml',
@@ -280,11 +207,7 @@ class File extends Base
         'application/vnd.shana.informed.formtemplate'                               => 'itp',
         'application/vnd.shana.informed.interchange'                                => 'iif',
         'application/vnd.shana.informed.package'                                    => 'ipk',
-<<<<<<< HEAD
         'application/vnd.simtech-mindmapper'                                        => ['twd', 'twds'],
-=======
-        'application/vnd.simtech-mindmapper'                                        => array('twd', 'twds'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.smaf'                                                      => 'mmf',
         'application/vnd.stepmania.stepchart'                                       => 'sm',
         'application/vnd.sun.xml.calc'                                              => 'sxc',
@@ -297,43 +220,25 @@ class File extends Base
         'application/vnd.sun.xml.writer'                                            => 'sxw',
         'application/vnd.sun.xml.writer.global'                                     => 'sxg',
         'application/vnd.sun.xml.writer.template'                                   => 'stw',
-<<<<<<< HEAD
         'application/vnd.sus-calendar'                                              => ['sus', 'susp'],
         'application/vnd.svd'                                                       => 'svd',
         'application/vnd.symbian.install'                                           => ['sis', 'sisx'],
-=======
-        'application/vnd.sus-calendar'                                              => array('sus', 'susp'),
-        'application/vnd.svd'                                                       => 'svd',
-        'application/vnd.symbian.install'                                           => array('sis', 'sisx'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.syncml+xml'                                                => 'xsm',
         'application/vnd.syncml.dm+wbxml'                                           => 'bdm',
         'application/vnd.syncml.dm+xml'                                             => 'xdm',
         'application/vnd.tao.intent-module-archive'                                 => 'tao',
-<<<<<<< HEAD
         'application/vnd.tcpdump.pcap'                                              => ['pcap', 'cap', 'dmp'],
-=======
-        'application/vnd.tcpdump.pcap'                                              => array('pcap', 'cap', 'dmp'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.tmobile-livetv'                                            => 'tmo',
         'application/vnd.trid.tpt'                                                  => 'tpt',
         'application/vnd.triscape.mxs'                                              => 'mxs',
         'application/vnd.trueapp'                                                   => 'tra',
-<<<<<<< HEAD
         'application/vnd.ufdl'                                                      => ['ufd', 'ufdl'],
-=======
-        'application/vnd.ufdl'                                                      => array('ufd', 'ufdl'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.uiq.theme'                                                 => 'utz',
         'application/vnd.umajin'                                                    => 'umj',
         'application/vnd.unity'                                                     => 'unityweb',
         'application/vnd.uoml+xml'                                                  => 'uoml',
         'application/vnd.vcx'                                                       => 'vcx',
-<<<<<<< HEAD
         'application/vnd.visio'                                                     => ['vsd', 'vst', 'vss', 'vsw'],
-=======
-        'application/vnd.visio'                                                     => array('vsd', 'vst', 'vss', 'vsw'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/vnd.visionary'                                                 => 'vis',
         'application/vnd.vsf'                                                       => 'vsf',
         'application/vnd.wap.wbxml'                                                 => 'wbxml',
@@ -353,11 +258,7 @@ class File extends Base
         'application/wspolicy+xml'                                                  => 'wspolicy',
         'application/x-7z-compressed'                                               => '7z',
         'application/x-bittorrent'                                                  => 'torrent',
-<<<<<<< HEAD
         'application/x-blorb'                                                       => ['blb', 'blorb'],
-=======
-        'application/x-blorb'                                                       => array('blb', 'blorb'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/x-bzip'                                                        => 'bz',
         'application/x-cdlink'                                                      => 'vcd',
         'application/x-cfs-compressed'                                              => 'cfs',
@@ -366,15 +267,9 @@ class File extends Base
         'application/x-conference'                                                  => 'nsc',
         'application/x-cpio'                                                        => 'cpio',
         'application/x-csh'                                                         => 'csh',
-<<<<<<< HEAD
         'application/x-debian-package'                                              => ['deb', 'udeb'],
         'application/x-dgc-compressed'                                              => 'dgc',
         'application/x-director'                                                    => [
-=======
-        'application/x-debian-package'                                              => array('deb', 'udeb'),
-        'application/x-dgc-compressed'                                              => 'dgc',
-        'application/x-director'                                                    => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'dir',
             'dcr',
             'dxr',
@@ -384,15 +279,9 @@ class File extends Base
             'w3d',
             'fgd',
             'swa'
-<<<<<<< HEAD
         ],
         'application/x-font-ttf'                                                    => ['ttf', 'ttc'],
         'application/x-font-type1'                                                  => ['pfa', 'pfb', 'pfm', 'afm'],
-=======
-        ),
-        'application/x-font-ttf'                                                    => array('ttf', 'ttc'),
-        'application/x-font-type1'                                                  => array('pfa', 'pfb', 'pfm', 'afm'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/x-font-woff'                                                   => 'woff',
         'application/x-freearc'                                                     => 'arc',
         'application/x-futuresplash'                                                => 'spl',
@@ -406,15 +295,9 @@ class File extends Base
         'application/x-iso9660-image'                                               => 'iso',
         'application/x-java-jnlp-file'                                              => 'jnlp',
         'application/x-latex'                                                       => 'latex',
-<<<<<<< HEAD
         'application/x-lzh-compressed'                                              => ['lzh', 'lha'],
         'application/x-mie'                                                         => 'mie',
         'application/x-mobipocket-ebook'                                            => ['prc', 'mobi'],
-=======
-        'application/x-lzh-compressed'                                              => array('lzh', 'lha'),
-        'application/x-mie'                                                         => 'mie',
-        'application/x-mobipocket-ebook'                                            => array('prc', 'mobi'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/x-ms-application'                                              => 'application',
         'application/x-ms-shortcut'                                                 => 'lnk',
         'application/x-ms-wmd'                                                      => 'wmd',
@@ -424,7 +307,6 @@ class File extends Base
         'application/x-msbinder'                                                    => 'obd',
         'application/x-mscardfile'                                                  => 'crd',
         'application/x-msclip'                                                      => 'clp',
-<<<<<<< HEAD
         'application/x-msdownload'                                                  => ['exe', 'dll', 'com', 'bat', 'msi'],
         'application/x-msmediaview'                                                 => [
             'mvb',
@@ -432,15 +314,6 @@ class File extends Base
             'm14'
         ],
         'application/x-msmetafile'                                                  => ['wmf', 'wmz', 'emf', 'emz'],
-=======
-        'application/x-msdownload'                                                  => array('exe', 'dll', 'com', 'bat', 'msi'),
-        'application/x-msmediaview'                                                 => array(
-            'mvb',
-            'm13',
-            'm14'
-        ),
-        'application/x-msmetafile'                                                  => array('wmf', 'wmz', 'emf', 'emz'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/x-rar-compressed'                                              => 'rar',
         'application/x-research-info-systems'                                       => 'ris',
         'application/x-sh'                                                          => 'sh',
@@ -459,19 +332,11 @@ class File extends Base
         'application/x-tcl'                                                         => 'tcl',
         'application/x-tex'                                                         => 'tex',
         'application/x-tex-tfm'                                                     => 'tfm',
-<<<<<<< HEAD
         'application/x-texinfo'                                                     => ['texinfo', 'texi'],
         'application/x-tgif'                                                        => 'obj',
         'application/x-ustar'                                                       => 'ustar',
         'application/x-wais-source'                                                 => 'src',
         'application/x-x509-ca-cert'                                                => ['der', 'crt'],
-=======
-        'application/x-texinfo'                                                     => array('texinfo', 'texi'),
-        'application/x-tgif'                                                        => 'obj',
-        'application/x-ustar'                                                       => 'ustar',
-        'application/x-wais-source'                                                 => 'src',
-        'application/x-x509-ca-cert'                                                => array('der', 'crt'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/x-xfig'                                                        => 'fig',
         'application/x-xliff+xml'                                                   => 'xlf',
         'application/x-xpinstall'                                                   => 'xpi',
@@ -480,45 +345,28 @@ class File extends Base
         'application/xaml+xml'                                                      => 'xaml',
         'application/xcap-diff+xml'                                                 => 'xdf',
         'application/xenc+xml'                                                      => 'xenc',
-<<<<<<< HEAD
         'application/xhtml+xml'                                                     => ['xhtml', 'xht'],
         'application/xml'                                                           => ['xml', 'xsl'],
-=======
-        'application/xhtml+xml'                                                     => array('xhtml', 'xht'),
-        'application/xml'                                                           => array('xml', 'xsl'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/xml-dtd'                                                       => 'dtd',
         'application/xop+xml'                                                       => 'xop',
         'application/xproc+xml'                                                     => 'xpl',
         'application/xslt+xml'                                                      => 'xslt',
         'application/xspf+xml'                                                      => 'xspf',
-<<<<<<< HEAD
         'application/xv+xml'                                                        => ['mxml', 'xhvml', 'xvml', 'xvm'],
-=======
-        'application/xv+xml'                                                        => array('mxml', 'xhvml', 'xvml', 'xvm'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'application/yang'                                                          => 'yang',
         'application/yin+xml'                                                       => 'yin',
         'application/zip'                                                           => 'zip',
         'audio/adpcm'                                                               => 'adp',
-<<<<<<< HEAD
         'audio/basic'                                                               => ['au', 'snd'],
         'audio/midi'                                                                => ['mid', 'midi', 'kar', 'rmi'],
         'audio/mp4'                                                                 => 'mp4a',
         'audio/mpeg'                                                                => [
-=======
-        'audio/basic'                                                               => array('au', 'snd'),
-        'audio/midi'                                                                => array('mid', 'midi', 'kar', 'rmi'),
-        'audio/mp4'                                                                 => 'mp4a',
-        'audio/mpeg'                                                                => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'mpga',
             'mp2',
             'mp2a',
             'mp3',
             'm2a',
             'm3a'
-<<<<<<< HEAD
         ],
         'audio/ogg'                                                                 => ['oga', 'ogg', 'spx'],
         'audio/vnd.dece.audio'                                                      => ['uva', 'uvva'],
@@ -526,26 +374,13 @@ class File extends Base
         'audio/webm'                                                                => 'weba',
         'audio/x-aac'                                                               => 'aac',
         'audio/x-aiff'                                                              => ['aif', 'aiff', 'aifc'],
-=======
-        ),
-        'audio/ogg'                                                                 => array('oga', 'ogg', 'spx'),
-        'audio/vnd.dece.audio'                                                      => array('uva', 'uvva'),
-        'audio/vnd.rip'                                                             => 'rip',
-        'audio/webm'                                                                => 'weba',
-        'audio/x-aac'                                                               => 'aac',
-        'audio/x-aiff'                                                              => array('aif', 'aiff', 'aifc'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'audio/x-caf'                                                               => 'caf',
         'audio/x-flac'                                                              => 'flac',
         'audio/x-matroska'                                                          => 'mka',
         'audio/x-mpegurl'                                                           => 'm3u',
         'audio/x-ms-wax'                                                            => 'wax',
         'audio/x-ms-wma'                                                            => 'wma',
-<<<<<<< HEAD
         'audio/x-pn-realaudio'                                                      => ['ram', 'ra'],
-=======
-        'audio/x-pn-realaudio'                                                      => array('ram', 'ra'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'audio/x-pn-realaudio-plugin'                                               => 'rmp',
         'audio/x-wav'                                                               => 'wav',
         'audio/xm'                                                                  => 'xm',
@@ -554,30 +389,17 @@ class File extends Base
         'image/g3fax'                                                               => 'g3',
         'image/gif'                                                                 => 'gif',
         'image/ief'                                                                 => 'ief',
-<<<<<<< HEAD
         'image/jpeg'                                                                => ['jpeg', 'jpg', 'jpe'],
-=======
-        'image/jpeg'                                                                => array('jpeg', 'jpg', 'jpe'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'image/ktx'                                                                 => 'ktx',
         'image/png'                                                                 => 'png',
         'image/prs.btif'                                                            => 'btif',
         'image/sgi'                                                                 => 'sgi',
-<<<<<<< HEAD
         'image/svg+xml'                                                             => ['svg', 'svgz'],
         'image/tiff'                                                                => ['tiff', 'tif'],
         'image/vnd.adobe.photoshop'                                                 => 'psd',
         'image/vnd.dece.graphic'                                                    => ['uvi', 'uvvi', 'uvg', 'uvvg'],
         'image/vnd.dvb.subtitle'                                                    => 'sub',
         'image/vnd.djvu'                                                            => ['djvu', 'djv'],
-=======
-        'image/svg+xml'                                                             => array('svg', 'svgz'),
-        'image/tiff'                                                                => array('tiff', 'tif'),
-        'image/vnd.adobe.photoshop'                                                 => 'psd',
-        'image/vnd.dece.graphic'                                                    => array('uvi', 'uvvi', 'uvg', 'uvvg'),
-        'image/vnd.dvb.subtitle'                                                    => 'sub',
-        'image/vnd.djvu'                                                            => array('djvu', 'djv'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'image/vnd.dwg'                                                             => 'dwg',
         'image/vnd.dxf'                                                             => 'dxf',
         'image/vnd.fastbidsheet'                                                    => 'fbs',
@@ -594,19 +416,11 @@ class File extends Base
         'image/x-3ds'                                                               => '3ds',
         'image/x-cmu-raster'                                                        => 'ras',
         'image/x-cmx'                                                               => 'cmx',
-<<<<<<< HEAD
         'image/x-freehand'                                                          => ['fh', 'fhc', 'fh4', 'fh5', 'fh7'],
         'image/x-icon'                                                              => 'ico',
         'image/x-mrsid-image'                                                       => 'sid',
         'image/x-pcx'                                                               => 'pcx',
         'image/x-pict'                                                              => ['pic', 'pct'],
-=======
-        'image/x-freehand'                                                          => array('fh', 'fhc', 'fh4', 'fh5', 'fh7'),
-        'image/x-icon'                                                              => 'ico',
-        'image/x-mrsid-image'                                                       => 'sid',
-        'image/x-pcx'                                                               => 'pcx',
-        'image/x-pict'                                                              => array('pic', 'pct'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'image/x-portable-anymap'                                                   => 'pnm',
         'image/x-portable-bitmap'                                                   => 'pbm',
         'image/x-portable-graymap'                                                  => 'pgm',
@@ -616,45 +430,26 @@ class File extends Base
         'image/x-xbitmap'                                                           => 'xbm',
         'image/x-xpixmap'                                                           => 'xpm',
         'image/x-xwindowdump'                                                       => 'xwd',
-<<<<<<< HEAD
         'message/rfc822'                                                            => ['eml', 'mime'],
         'model/iges'                                                                => ['igs', 'iges'],
         'model/mesh'                                                                => ['msh', 'mesh', 'silo'],
-=======
-        'message/rfc822'                                                            => array('eml', 'mime'),
-        'model/iges'                                                                => array('igs', 'iges'),
-        'model/mesh'                                                                => array('msh', 'mesh', 'silo'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'model/vnd.collada+xml'                                                     => 'dae',
         'model/vnd.dwf'                                                             => 'dwf',
         'model/vnd.gdl'                                                             => 'gdl',
         'model/vnd.gtw'                                                             => 'gtw',
         'model/vnd.mts'                                                             => 'mts',
         'model/vnd.vtu'                                                             => 'vtu',
-<<<<<<< HEAD
         'model/vrml'                                                                => ['wrl', 'vrml'],
-=======
-        'model/vrml'                                                                => array('wrl', 'vrml'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'model/x3d+binary'                                                          => 'x3db',
         'model/x3d+vrml'                                                            => 'x3dv',
         'model/x3d+xml'                                                             => 'x3d',
         'text/cache-manifest'                                                       => 'appcache',
-<<<<<<< HEAD
         'text/calendar'                                                             => ['ics', 'ifb'],
         'text/css'                                                                  => 'css',
         'text/csv'                                                                  => 'csv',
         'text/html'                                                                 => ['html', 'htm'],
         'text/n3'                                                                   => 'n3',
         'text/plain'                                                                => [
-=======
-        'text/calendar'                                                             => array('ics', 'ifb'),
-        'text/css'                                                                  => 'css',
-        'text/csv'                                                                  => 'csv',
-        'text/html'                                                                 => array('html', 'htm'),
-        'text/n3'                                                                   => 'n3',
-        'text/plain'                                                                => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'txt',
             'text',
             'conf',
@@ -662,36 +457,21 @@ class File extends Base
             'list',
             'log',
             'in'
-<<<<<<< HEAD
         ],
         'text/prs.lines.tag'                                                        => 'dsc',
         'text/richtext'                                                             => 'rtx',
         'text/sgml'                                                                 => ['sgml', 'sgm'],
         'text/tab-separated-values'                                                 => 'tsv',
         'text/troff'                                                                => [
-=======
-        ),
-        'text/prs.lines.tag'                                                        => 'dsc',
-        'text/richtext'                                                             => 'rtx',
-        'text/sgml'                                                                 => array('sgml', 'sgm'),
-        'text/tab-separated-values'                                                 => 'tsv',
-        'text/troff'                                                                => array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             't',
             'tr',
             'roff',
             'man',
             'me',
             'ms'
-<<<<<<< HEAD
         ],
         'text/turtle'                                                               => 'ttl',
         'text/uri-list'                                                             => ['uri', 'uris', 'urls'],
-=======
-        ),
-        'text/turtle'                                                               => 'ttl',
-        'text/uri-list'                                                             => array('uri', 'uris', 'urls'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'text/vcard'                                                                => 'vcard',
         'text/vnd.curl'                                                             => 'curl',
         'text/vnd.curl.dcurl'                                                       => 'dcurl',
@@ -706,19 +486,11 @@ class File extends Base
         'text/vnd.sun.j2me.app-descriptor'                                          => 'jad',
         'text/vnd.wap.wml'                                                          => 'wml',
         'text/vnd.wap.wmlscript'                                                    => 'wmls',
-<<<<<<< HEAD
         'text/x-asm'                                                                => ['s', 'asm'],
         'text/x-fortran'                                                            => ['f', 'for', 'f77', 'f90'],
         'text/x-java-source'                                                        => 'java',
         'text/x-opml'                                                               => 'opml',
         'text/x-pascal'                                                             => ['p', 'pas'],
-=======
-        'text/x-asm'                                                                => array('s', 'asm'),
-        'text/x-fortran'                                                            => array('f', 'for', 'f77', 'f90'),
-        'text/x-java-source'                                                        => 'java',
-        'text/x-opml'                                                               => 'opml',
-        'text/x-pascal'                                                             => array('p', 'pas'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'text/x-nfo'                                                                => 'nfo',
         'text/x-setext'                                                             => 'etx',
         'text/x-sfv'                                                                => 'sfv',
@@ -731,7 +503,6 @@ class File extends Base
         'video/h263'                                                                => 'h263',
         'video/h264'                                                                => 'h264',
         'video/jpeg'                                                                => 'jpgv',
-<<<<<<< HEAD
         'video/jpm'                                                                 => ['jpm', 'jpgm'],
         'video/mj2'                                                                 => 'mj2',
         'video/mp4'                                                                 => 'mp4',
@@ -748,39 +519,15 @@ class File extends Base
         'video/vnd.mpegurl'                                                         => ['mxu', 'm4u'],
         'video/vnd.ms-playready.media.pyv'                                          => 'pyv',
         'video/vnd.uvvu.mp4'                                                        => ['uvu', 'uvvu'],
-=======
-        'video/jpm'                                                                 => array('jpm', 'jpgm'),
-        'video/mj2'                                                                 => 'mj2',
-        'video/mp4'                                                                 => 'mp4',
-        'video/mpeg'                                                                => array('mpeg', 'mpg', 'mpe', 'm1v', 'm2v'),
-        'video/ogg'                                                                 => 'ogv',
-        'video/quicktime'                                                           => array('qt', 'mov'),
-        'video/vnd.dece.hd'                                                         => array('uvh', 'uvvh'),
-        'video/vnd.dece.mobile'                                                     => array('uvm', 'uvvm'),
-        'video/vnd.dece.pd'                                                         => array('uvp', 'uvvp'),
-        'video/vnd.dece.sd'                                                         => array('uvs', 'uvvs'),
-        'video/vnd.dece.video'                                                      => array('uvv', 'uvvv'),
-        'video/vnd.dvb.file'                                                        => 'dvb',
-        'video/vnd.fvt'                                                             => 'fvt',
-        'video/vnd.mpegurl'                                                         => array('mxu', 'm4u'),
-        'video/vnd.ms-playready.media.pyv'                                          => 'pyv',
-        'video/vnd.uvvu.mp4'                                                        => array('uvu', 'uvvu'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'video/vnd.vivo'                                                            => 'viv',
         'video/webm'                                                                => 'webm',
         'video/x-f4v'                                                               => 'f4v',
         'video/x-fli'                                                               => 'fli',
         'video/x-flv'                                                               => 'flv',
         'video/x-m4v'                                                               => 'm4v',
-<<<<<<< HEAD
         'video/x-matroska'                                                          => ['mkv', 'mk3d', 'mks'],
         'video/x-mng'                                                               => 'mng',
         'video/x-ms-asf'                                                            => ['asf', 'asx'],
-=======
-        'video/x-matroska'                                                          => array('mkv', 'mk3d', 'mks'),
-        'video/x-mng'                                                               => 'mng',
-        'video/x-ms-asf'                                                            => array('asf', 'asx'),
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'video/x-ms-vob'                                                            => 'vob',
         'video/x-ms-wm'                                                             => 'wm',
         'video/x-ms-wmv'                                                            => 'wmv',
@@ -788,11 +535,7 @@ class File extends Base
         'video/x-ms-wvx'                                                            => 'wvx',
         'video/x-msvideo'                                                           => 'avi',
         'video/x-sgi-movie'                                                         => 'movie',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Get a random MIME type
@@ -823,11 +566,7 @@ class File extends Base
      *
      * @param  string  $sourceDirectory The directory to look for random file taking
      * @param  string  $targetDirectory
-<<<<<<< HEAD
      * @param  bool $fullPath        Whether to have the full path or just the filename
-=======
-     * @param  boolean $fullPath        Whether to have the full path or just the filename
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return string
      */
     public static function file($sourceDirectory = '/tmp', $targetDirectory = '/tmp', $fullPath = true)
@@ -845,11 +584,7 @@ class File extends Base
         }
 
         // Drop . and .. and reset array keys
-<<<<<<< HEAD
         $files = array_filter(array_values(array_diff(scandir($sourceDirectory), ['.', '..'])), function ($file) use ($sourceDirectory) {
-=======
-        $files = array_filter(array_values(array_diff(scandir($sourceDirectory), array('.', '..'))), function ($file) use ($sourceDirectory) {
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             return is_file($sourceDirectory . DIRECTORY_SEPARATOR . $file) && is_readable($sourceDirectory . DIRECTORY_SEPARATOR . $file);
         });
 

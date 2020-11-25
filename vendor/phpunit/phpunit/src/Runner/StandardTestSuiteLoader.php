@@ -15,11 +15,7 @@ use function basename;
 use function class_exists;
 use function get_declared_classes;
 use function sprintf;
-<<<<<<< HEAD
 use function stripos;
-=======
-use function str_replace;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 use function strlen;
 use function substr;
 use PHPUnit\Framework\TestCase;
@@ -56,19 +52,11 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
         }
 
         if (!class_exists($suiteClassName, false)) {
-<<<<<<< HEAD
             // this block will handle namespaced classes
             $offset = 0 - strlen($suiteClassName);
 
             foreach ($loadedClasses as $loadedClass) {
                 if (stripos(substr($loadedClass, $offset - 1), '\\' . $suiteClassName) === 0) {
-=======
-            $offset = 0 - strlen($suiteClassName);
-
-            foreach ($loadedClasses as $loadedClass) {
-                if (substr($loadedClass, $offset) === $suiteClassName &&
-                    basename(str_replace('\\', '/', $loadedClass)) === $suiteClassName) {
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     $suiteClassName = $loadedClass;
 
                     break;

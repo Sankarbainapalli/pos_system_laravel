@@ -2,13 +2,9 @@
 
 namespace Illuminate\Cache;
 
-<<<<<<< HEAD
 use Illuminate\Contracts\Cache\LockProvider;
 
 class NullStore extends TaggableStore implements LockProvider
-=======
-class NullStore extends TaggableStore
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 {
     use RetrievesMultipleKeys;
 
@@ -73,7 +69,6 @@ class NullStore extends TaggableStore
     }
 
     /**
-<<<<<<< HEAD
      * Get a lock instance.
      *
      * @param  string  $name
@@ -99,8 +94,6 @@ class NullStore extends TaggableStore
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Remove an item from the cache.
      *
      * @param  string  $key

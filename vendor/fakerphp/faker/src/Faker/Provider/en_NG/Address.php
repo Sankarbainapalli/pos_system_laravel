@@ -4,15 +4,9 @@ namespace Faker\Provider\en_NG;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $postcode = ['#####', '## ###'];
 
     private static $county = [
-=======
-    protected static $postcode = array('#####', '## ###');
-
-    private static $county = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abuja', 'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra',
         'Bauchi', 'Bayelsa', 'Benue', 'Borno',
         'Cross River',
@@ -29,15 +23,9 @@ class Address extends \Faker\Provider\Address
         'Taraba',
         'Yobe',
         'Zamfara'
-<<<<<<< HEAD
     ];
 
     protected static $country = [
-=======
-    );
-
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica (the territory South of 60 deg S)', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan',
         'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Bouvet Island (Bouvetoya)', 'Brazil', 'British Indian Ocean Territory (Chagos Archipelago)', 'British Virgin Islands', 'Brunei Darussalam', 'Bulgaria', 'Burkina Faso', 'Burundi',
         'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Christmas Island', 'Cocos (Keeling) Islands', 'Colombia', 'Comoros', 'Congo', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote d\'Ivoire', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic',
@@ -63,15 +51,9 @@ class Address extends \Faker\Provider\Address
         'Wallis and Futuna', 'Western Sahara',
         'Yemen',
         'Zambia', 'Zimbabwe'
-<<<<<<< HEAD
     ];
 
     private static $regions = [
-=======
-    );
-
-    private static $regions = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abakaliki', 'Abeokuta', 'Akure', 'Asaba', 'Awka',
         'Bauchi',
         'Calabar', 'City',
@@ -88,11 +70,7 @@ class Address extends \Faker\Provider\Address
         'Sokoto',
         'Umuahia', 'Uyo',
         'Yenagoa', 'Yola'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Randomly returns a Nigerian state or county.

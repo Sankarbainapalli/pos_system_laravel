@@ -4,11 +4,7 @@ namespace Faker\Provider\tr_TR;
 
 class Company extends \Faker\Provider\Company
 {
-<<<<<<< HEAD
     protected static $formats = [
-=======
-    protected static $formats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastName}} {{companySuffix}}',
         '{{lastName}}oğlu {{companySuffix}}',
         '{{lastName}} {{lastName}} {{companySuffix}}',
@@ -16,19 +12,11 @@ class Company extends \Faker\Provider\Company
         '{{lastName}} {{companyField}} {{companySuffix}}',
         '{{lastName}} {{companyField}} {{companySuffix}}',
         '{{lastName}} {{lastName}} {{companyField}} {{companySuffix}}',
-<<<<<<< HEAD
     ];
 
     protected static $companySuffix = ['A.Ş.', 'Ltd. Şti.'];
 
     protected static $companyField = [
-=======
-    );
-
-    protected static $companySuffix = array('A.Ş.', 'Ltd. Şti.');
-
-    protected static $companyField = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Akaryakıt', 'Beyaz Eşya', 'Bilgi İşlem', 'Bilgisayar', 'Bilişim Hizmetleri',
         'Biracılık ve Malt Sanayii', 'Cam Sanayii', 'Çimento', 'Demir ve Çelik',
         'Dış Ticaret', 'Eczacılık', 'Elektrik İletim', 'Elektrik Üretim', 'Elektronik',
@@ -39,7 +27,6 @@ class Company extends \Faker\Provider\Company
         'Sağlık Hizmetleri', 'Servis ve Ticaret', 'Süt Ürünleri', 'Tarım Sanayi',
         'Tavukçuluk', 'Tekstil', 'Telekomunikasyon', 'Tersane ve Ulaşım Sanayi',
         'Ticaret', 'Ticaret ve Sanayi', 'Ticaret ve Taahhüt', 'Turizm', 'Yatırım'
-<<<<<<< HEAD
     ];
 
     /**
@@ -47,15 +34,6 @@ class Company extends \Faker\Provider\Company
      * @note Randomly took 300 from this list
      */
     protected static $jobTitleFormat = [
-=======
-    );
-
-    /**
-    * @link https://tr.wikipedia.org/wiki/Meslekler_listesi
-    * @note Randomly took 300 from this list
-    */
-    protected static $jobTitleFormat = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Acil tıp teknisyeni', 'Agronomist', 'Aile hekimi', 'Aktar', 'Aktör', 'Aktüer',
         'Akustikçi', 'Albay', 'Ambarcı', 'Ambulans şoförü', 'Amiral', 'Analist',
         'Antika satıcısı', 'Araba tamircisi', 'Arabacı', 'Araştırmacı', 'Armatör', 'Artist',
@@ -107,11 +85,7 @@ class Company extends \Faker\Provider\Company
         'Veteriner sağlık teknikeri', 'Veznedar', 'Vinç operatörü', 'Vitrinci', 'Yarbay',
         'Yardımcı pilot', 'Yargıç', 'Yazar', 'Yazı işleri müdürü', 'Yazılım mühendisi',
         'Yer gösterici', 'Yol bekçisi', 'Yorgancı', 'Yoğurtçu', 'Yıkıcı', 'Zabıta', 'Zoolog'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Returns a random company field.

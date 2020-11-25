@@ -21,10 +21,6 @@ trait ResetsPasswords
      * If no token is present, display the link request form.
      *
      * @param  \Illuminate\Http\Request  $request
-<<<<<<< HEAD
-=======
-     * @param  string|null  $token
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function showResetForm(Request $request)

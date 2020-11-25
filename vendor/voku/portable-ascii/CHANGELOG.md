@@ -1,6 +1,5 @@
 # Changelog
 
-<<<<<<< HEAD
 ### 1.5.6 (2020-11-12)
     
 - "ASCII::normalize_whitespace()" -> can now also remove "control characters" if needed v2
@@ -16,8 +15,6 @@
 - fix "Russian" char-mapping (thanks @ilyahoilik)
 - running test with PHP 8.0 rc3
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 ### 1.5.3 (2020-07-23)
 
 - fix "Georgian" char-mapping (thanks @waska14)

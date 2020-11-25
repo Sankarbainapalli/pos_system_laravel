@@ -39,11 +39,7 @@ class SqliteSchemaState extends SchemaState
     protected function appendMigrationData(string $path)
     {
         with($process = $this->makeProcess(
-<<<<<<< HEAD
             $this->baseCommand().' ".dump \''.$this->migrationTable.'\'"'
-=======
-            $this->baseCommand().' ".dump \'migrations\'"'
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         ))->mustRun(null, array_merge($this->baseVariables($this->connection->getConfig()), [
             //
         ]));
@@ -64,11 +60,7 @@ class SqliteSchemaState extends SchemaState
      */
     public function load($path)
     {
-<<<<<<< HEAD
         $process = $this->makeProcess($this->baseCommand().' < "${:LARAVEL_LOAD_PATH}"');
-=======
-        $process = $this->makeProcess($this->baseCommand().' < $LARAVEL_LOAD_PATH');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         $process->mustRun(null, array_merge($this->baseVariables($this->connection->getConfig()), [
             'LARAVEL_LOAD_PATH' => $path,
@@ -82,11 +74,7 @@ class SqliteSchemaState extends SchemaState
      */
     protected function baseCommand()
     {
-<<<<<<< HEAD
         return 'sqlite3 "${:LARAVEL_LOAD_DATABASE}"';
-=======
-        return 'sqlite3 $LARAVEL_LOAD_DATABASE';
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**

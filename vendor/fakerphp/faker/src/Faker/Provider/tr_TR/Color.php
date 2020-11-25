@@ -7,21 +7,12 @@ class Color extends \Faker\Provider\Color
     /**
      * @link http://tr.wikipedia.org/wiki/Renkler_listesi
      */
-<<<<<<< HEAD
     protected static $safeColorNames = [
         'siyah', 'kırmızı', 'sarı', 'mavi', 'turuncu',
         'yeşil', 'mor', 'gümüş', 'gri', 'pembe',
     ];
 
     protected static $allColorNames = [
-=======
-    protected static $safeColorNames = array(
-        'siyah', 'kırmızı', 'sarı', 'mavi', 'turuncu',
-        'yeşil', 'mor', 'gümüş', 'gri', 'pembe',
-    );
-
-    protected static $allColorNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Alev kırmızısı', 'Alice mavisi', 'Alizarin', 'Altunî', 'Ametist', 'Armut',
         'Akuamarin', 'Asker yeşili', 'Bakır', 'Barut', 'Bataklık yeşili',
         'Bebek mavisi', 'Bej', 'Beyaz', 'Bondi mavisi', 'Bordo',
@@ -63,9 +54,5 @@ class Color extends \Faker\Provider\Color
         'Kraliyet mavisi', 'Kırmızı şarap', 'Kırmızı', 'Deniz kabuğu', 'Ayrık sarı',
         'Vurgun pembe', 'Salamura grisi', 'Tenné (Tawny)', 'Küçük kara', 'Lacivert', 'Viridian',
         'Zinnwaldite',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

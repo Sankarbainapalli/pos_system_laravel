@@ -4,25 +4,15 @@ namespace Faker\Provider\cs_CZ;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $streetAddressFormats = [
-=======
-    protected static $streetAddressFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{streetName}}',
         '{{streetName}} {{buildingNumber}}',
         '{{streetName}} {{buildingNumber}}',
         '{{streetName}} {{buildingNumber}}',
         '{{streetName}} {{buildingNumber}}',
-<<<<<<< HEAD
     ];
 
     protected static $addressFormats = [
-=======
-    );
-
-    protected static $addressFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "{{streetAddress}}\n{{region}}\n{{postcode}} {{city}}",
         "{{streetAddress}}\n{{postcode}} {{city}}",
         "{{streetAddress}}\n{{postcode}} {{city}}",
@@ -30,28 +20,16 @@ class Address extends \Faker\Provider\Address
         "{{streetAddress}}\n{{postcode}} {{city}}",
         "{{streetAddress}}\n{{postcode}} {{city}}",
         "{{streetAddress}}\n{{postcode}} {{city}}\nČeská republika",
-<<<<<<< HEAD
     ];
 
     protected static $buildingNumber = ['%', '%%', '%/%%', '%%/%%', '%/%%%', '%%/%%%'];
 
     protected static $postcode = ['#####', '### ##'];
-=======
-    );
-
-    protected static $buildingNumber = array('%', '%%', '%/%%', '%%/%%', '%/%%%', '%%/%%%');
-
-    protected static $postcode = array('#####', '### ##');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Source: https://cs.wikipedia.org/wiki/Seznam_m%C4%9Bst_v_%C4%8Cesku_podle_po%C4%8Dtu_obyvatel
      */
-<<<<<<< HEAD
     protected static $city = [
-=======
-    protected static $city = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Brno', 'Břeclav', 'Cheb', 'Chomutov', 'Chrudim', 'Černošice', 'Česká Lípa', 'České Budějovice',
         'Český Těšín', 'Děčín', 'Frýdek-Místek', 'Havlíčkův Brod', 'Havířov', 'Hodonín', 'Hradec Králové',
         'Jablonec nad Nisou', 'Jihlava', 'Karlovy Vary', 'Karviná', 'Kladno', 'Kolín', 'Krnov', 'Kroměříž',
@@ -59,20 +37,12 @@ class Address extends \Faker\Provider\Address
         'Ostrava', 'Pardubice', 'Plzeň', 'Praha', 'Prostějov', 'Písek', 'Přerov', 'Příbram', 'Sokolov', 'Šumperk',
         'Teplice', 'Trutnov', 'Tábor', 'Třebíč', 'Třinec', 'Uherské Hradiště', 'Ústí nad Labem',
         'Valašské Meziříčí', 'Vsetín', 'Zlín', 'Znojmo',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Source: https://cs.wikipedia.org/wiki/Seznam_st%C3%A1t%C5%AF_sv%C4%9Bta
      */
-<<<<<<< HEAD
     protected static $country = [
-=======
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghánistán', 'Albánie', 'Alžírsko', 'Andorra', 'Angola', 'Antigua a Barbuda', 'Argentina',
         'Arménie', 'Austrálie', 'Ázerbájdžán', 'Bahamy', 'Bahrajn', 'Bangladéš', 'Barbados', 'Belgie',
         'Belize', 'Benin', 'Bělorusko', 'Bhútán', 'Bolívie', 'Bosna a Hercegovina', 'Botswana', 'Brazílie',
@@ -97,37 +67,21 @@ class Address extends \Faker\Provider\Address
         'Španělsko', 'Šrí Lanka', 'Švédsko', 'Švýcarsko', 'Tádžikistán', 'Tanzanie', 'Thajsko', 'Togo', 'Tonga',
         'Trinidad a Tobago', 'Tunisko', 'Turecko', 'Turkmenistán', 'Tuvalu', 'Uganda', 'Ukrajina', 'Uruguay',
         'Uzbekistán', 'Vanuatu', 'Vatikán', 'Venezuela', 'Vietnam', 'Východní Timor', 'Zambie', 'Zimbabwe',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Source: https://cs.wikipedia.org/wiki/Kraje_v_%C4%8Cesku#Ekonomika
      */
-<<<<<<< HEAD
     private static $regions = [
         'Hlavní město Praha', 'Jihomoravský kraj', 'Jihočeský kraj', 'Karlovarský kraj', 'Královéhradecký kraj',
         'Liberecký kraj', 'Moravskoslezský kraj', 'Olomoucký kraj', 'Pardubický kraj', 'Plzeňský kraj',
         'Středočeský kraj', 'Vysočina', 'Zlínský kraj', 'Ústecký kraj',
     ];
-=======
-    private static $regions = array(
-        'Hlavní město Praha', 'Jihomoravský kraj', 'Jihočeský kraj', 'Karlovarský kraj', 'Královéhradecký kraj',
-        'Liberecký kraj', 'Moravskoslezský kraj', 'Olomoucký kraj', 'Pardubický kraj', 'Plzeňský kraj',
-        'Středočeský kraj', 'Vysočina', 'Zlínský kraj', 'Ústecký kraj',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Source: http://aplikace.mvcr.cz/adresy/
      */
-<<<<<<< HEAD
     protected static $street = [
-=======
-    protected static $street = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Alžírská', 'Angelovova', 'Antonínská', 'Arménská', 'Čelkovická', 'Červenkova', 'Československého exilu',
         'Chlumínská', 'Chládkova', 'Diskařská', 'Do Kopečka', 'Do Vozovny', 'Do Vršku', 'Doubravická', 'Doudova',
         'Drahotínská', 'Dělnická', 'Generála Šišky', 'Gončarenkova', 'Gutova', 'Havlínova', 'Havraní', 'Helmova',
@@ -154,11 +108,7 @@ class Address extends \Faker\Provider\Address
         'Újezdská', 'V Jámě', 'V Předním Hloubětíně', 'V Rohu', 'V Uličce', 'Valčíkova', 'Ve Lhotce', 'Ve Vrších',
         'Velenická', 'Violková', 'Vlašská', 'Voděradská', 'Vyderská', 'Vysokoškolská', 'Výpadová', 'Vřesovická',
         'Za Pekárnou', 'Zámecká',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Randomly returns a czech city.

@@ -4,15 +4,9 @@ namespace Faker\Provider\en_HK;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $country = ['Hong Kong'];
 
     protected static $syllables = [
-=======
-    protected static $country = array('Hong Kong');
-
-    protected static $syllables = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'A', 'Ai', 'Ak', 'Am', 'An', 'Ang', 'Ap', 'At', 'Au',
         'Cha', 'Chai', 'Chak', 'Cham', 'Chan', 'Chang', 'Chap', 'Chat', 'Chau',
         'Che', 'Chek', 'Cheng', 'Cheuk', 'Cheung',
@@ -90,7 +84,6 @@ class Address extends \Faker\Provider\Address
         'Yik', 'Yim', 'Yin', 'Ying', 'Yip', 'Yit', 'Yiu',
         'Yo',
         'Yue', 'Yuen', 'Yuet', 'Yui', 'Yuk', 'Yun', 'Yung',
-<<<<<<< HEAD
     ];
 
     protected static $streetAddressFormats = [
@@ -104,21 +97,6 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $villageNameFormats = [
-=======
-    );
-
-    protected static $streetAddressFormats = array(
-        '{{buildingNumber}} {{streetName}}',
-        '{{buildingNumber}} {{village}}',
-        'Block {{buildingNumber}}, {{estate}}',
-    );
-
-    protected static $addressFormats = array(
-        "{{streetAddress}}\n{{town}}\n{{city}}",
-    );
-
-    protected static $villageNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{syllable}} {{syllable}} {{villageSuffix}}',
         '{{syllable}} {{syllable}} {{villageSuffix}}',
         '{{syllable}} {{syllable}} {{villageSuffix}}',
@@ -142,15 +120,9 @@ class Address extends \Faker\Provider\Address
         '{{syllable}} {{syllable}} {{syllable}}',
         '{{town}}',
         '{{town}} {{villageSuffix}}',
-<<<<<<< HEAD
     ];
 
     protected static $estateNameFormats = [
-=======
-    );
-
-    protected static $estateNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{syllable}} {{syllable}} {{estateSuffix}}',
         '{{syllable}} {{syllable}} {{estateSuffix}}',
         '{{syllable}} {{syllable}} {{estateSuffix}}',
@@ -158,7 +130,6 @@ class Address extends \Faker\Provider\Address
         '{{syllable}} {{syllable}} {{syllable}} {{estateSuffix}}',
         '{{syllable}} {{syllable}} {{syllable}} {{estateSuffix}}',
         '{{town}} {{estateSuffix}}',
-<<<<<<< HEAD
     ];
 
 
@@ -167,16 +138,6 @@ class Address extends \Faker\Provider\Address
     protected static $estateSuffixes = ['Estate', 'Court'];
 
     protected static $streetNameFormats = [
-=======
-    );
-
-
-    protected static $villageSuffixes = array('Village', 'Tsuen', 'San Tsuen', 'New Village', 'Wai');
-
-    protected static $estateSuffixes = array('Estate', 'Court');
-
-    protected static $streetNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{syllable}} {{streetSuffix}}',
         '{{syllable}} {{syllable}} {{streetSuffix}}',
         '{{syllable}} {{syllable}} {{streetSuffix}}',
@@ -190,7 +151,6 @@ class Address extends \Faker\Provider\Address
         '{{syllable}} {{syllable}} {{syllable}} {{streetSuffix}} {{direction}}',
         '{{englishStreetName}} {{streetSuffix}}',
         '{{englishStreetName}} {{streetSuffix}} {{direction}}',
-<<<<<<< HEAD
     ];
 
     protected static $englishStreetNames = [
@@ -208,25 +168,6 @@ class Address extends \Faker\Provider\Address
     protected static $cities = ['Hong Kong', 'Kowloon', 'New Territories'];
 
     protected static $towns = [
-=======
-    );
-
-    protected static $englishStreetNames = array(
-        "King's", "Queen's", "Nathan", "Robinson", "Kingston", "Irving", "Bonham", "Salisbury",
-        "Tonkin", "Nanking", "Peking", "Canton", "Amoy", "Shanghai"
-    );
-
-    protected static $streetSuffix = array(
-        'Road', 'Road', 'Road', 'Street', 'Street', 'Street', 'Lane',
-        'Circuit', 'Avenue', 'Path', 'Square',
-    );
-
-    protected static $directions = array('North', 'East', 'South', 'West');
-
-    protected static $cities = array('Hong Kong', 'Kowloon', 'New Territories');
-
-    protected static $towns = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{syllable}} {{syllable}}',
         '{{syllable}} {{syllable}}',
         '{{syllable}} {{syllable}}',
@@ -250,11 +191,7 @@ class Address extends \Faker\Provider\Address
         'Aberdeen',
         'Stanley',
         'Victoria',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function city()
     {

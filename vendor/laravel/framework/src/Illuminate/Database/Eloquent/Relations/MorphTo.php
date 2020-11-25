@@ -52,7 +52,6 @@ class MorphTo extends BelongsTo
     protected $morphableEagerLoadCounts = [];
 
     /**
-<<<<<<< HEAD
      * A map of constraints to apply for each individual morph type.
      *
      * @var array
@@ -60,8 +59,6 @@ class MorphTo extends BelongsTo
     protected $morphableConstraints = [];
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Create a new morph to relationship instance.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
@@ -143,13 +140,10 @@ class MorphTo extends BelongsTo
                                 (array) ($this->morphableEagerLoadCounts[get_class($instance)] ?? [])
                             );
 
-<<<<<<< HEAD
         if ($callback = ($this->morphableConstraints[get_class($instance)] ?? null)) {
             $callback($query);
         }
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $whereIn = $this->whereInMethod($instance, $ownerKey);
 
         return $query->{$whereIn}(
@@ -257,19 +251,6 @@ class MorphTo extends BelongsTo
     }
 
     /**
-<<<<<<< HEAD
-=======
-     * Alias for the "dissociate" method.
-     *
-     * @return \Illuminate\Database\Eloquent\Model
-     */
-    public function disassociate()
-    {
-        return $this->dissociate();
-    }
-
-    /**
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Touch all of the related models for the relationship.
      *
      * @return void
@@ -343,7 +324,6 @@ class MorphTo extends BelongsTo
     }
 
     /**
-<<<<<<< HEAD
      * Specify constraints on the query for a given morph types.
      *
      * @param  array  $with
@@ -359,8 +339,6 @@ class MorphTo extends BelongsTo
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Replay stored macro calls on the actual related instance.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query

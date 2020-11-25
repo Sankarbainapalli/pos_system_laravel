@@ -19,7 +19,6 @@ class Schedule
 {
     use Macroable;
 
-<<<<<<< HEAD
     const SUNDAY = 0;
     const MONDAY = 1;
     const TUESDAY = 2;
@@ -28,8 +27,6 @@ class Schedule
     const FRIDAY = 5;
     const SATURDAY = 6;
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     /**
      * All of the events on the schedule.
      *

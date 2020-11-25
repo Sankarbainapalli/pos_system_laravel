@@ -4,7 +4,6 @@ namespace Faker\Provider\pl_PL;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $streetAddressFormats = [
         '{{streetName}} {{buildingNumber}}'
     ];
@@ -22,34 +21,11 @@ class Address extends \Faker\Provider\Address
         'opolskie','podkarpackie','podlaskie','pomorskie','śląskie','świętokrzyskie','warmińsko-mazurskie',
         'wielkopolskie','zachodniopomorskie'
     ];
-=======
-    protected static $streetAddressFormats = array(
-        '{{streetName}} {{buildingNumber}}'
-    );
-    protected static $addressFormats = array(
-        '{{streetAddress}}, {{postcode}} {{city}}',
-    );
-
-    protected static $buildingNumber = array('##A', '##', '##A/##', '##/##');
-    protected static $postcode = array('##-###');
-    /**
-     * @var array full list of Polish voivodeship
-     */
-    protected static $state = array(
-        'dolnośląskie','kujawsko-pomorskie','lubelskie','lubuskie','łódzkie','małopolskie','mazowieckie',
-        'opolskie','podkarpackie','podlaskie','pomorskie','śląskie','świętokrzyskie','warmińsko-mazurskie',
-        'wielkopolskie','zachodniopomorskie'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     /**
      * @var array Countries in Polish
      * @link http://ksng.gugik.gov.pl/english/files/dictionary.pdf
      */
-<<<<<<< HEAD
     protected static $country = [
-=======
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afganistan', 'Albania', 'Algieria', 'Andora', 'Angola', 'Antigua i Barbuda', 'Arabia Saudyjska', 'Argentyna',
         'Armenia', 'Australia', 'Austria', 'Azerbejdżan', 'Bahamy', 'Bahrajn', 'Bangladesz', 'Barbados', 'Belgia',
         'Belize', 'Benin', 'Bhutan', 'Białoruś', 'Birma', 'Boliwia', 'Bośnia i Hercegowina', 'Botswana', 'Brazylia',
@@ -73,21 +49,13 @@ class Address extends \Faker\Provider\Address
         'Tuvalu', 'Uganda', 'Ukraina', 'Urugwaj', 'Uzbekistan', 'Vanuatu', 'Watykan', 'Wenezuela', 'Węgry',
         'Wielka Brytania', 'Wietnam', 'Włochy', 'Wybrzeże Kości Słoniowej', 'Wyspy Marshalla', 'Wyspy Salomona',
         'Wyspy Świętego Tomasza i Książęca', 'Zambia', 'Zimbabwe', 'Zjednoczone Emiraty Arabskie'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     /**
      * @var array 250 Polish cities with biggest number of streets. Extracted from data issued by the official
      * public postal service of Poland.
      * @link http://www.poczta-polska.pl/
      */
-<<<<<<< HEAD
     protected static $city = [
-=======
-    protected static $city = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Babienica','Bartoszyce','Bełchatów','Bezrzecze','Będzin','Biała Podlaska','Białystok',
         'Bielawa','Bielsko-Biała','Bieruń','Bochnia','Bogaczów','Bogatynia','Boguszów-Gorce','Bolesławiec',
         'Braniewo','Brodnica','Brzeg','Busko-Zdrój','Bydgoszcz','Bytom','Chełm','Chojnice','Chorzów',
@@ -121,21 +89,13 @@ class Address extends \Faker\Provider\Address
         'Wola Kiedrzyńska','Wrocław','Września','Wyszków','Zabrze','Zakopane','Zamość','Zawiercie',
         'Ząbki','Zborowskie','Zduńska Wola','Zgierz','Zgorzelec','Zielona Góra','Żary','Żory',
         'Żyrardów','Żywiec',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     /**
      * @var array 549 most common Polish street names. Extracted from data issued by the official public
      * postal service of Poland.
      * @link http://www.poczta-polska.pl/
      */
-<<<<<<< HEAD
     protected static $street = [
-=======
-    protected static $street = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '1 Maja','3 Maja','11 Listopada','Agrestowa','Akacjowa','Andersa Władysława','Armii Krajowej',
         'Asnyka Adama','Astrów','Azaliowa','Baczyńskiego Krzysztofa Kamila','Bałtycka',
         'Barlickiego Norberta','Batalionów Chłopskich','Batorego Stefana','Bema Józefa',
@@ -231,11 +191,7 @@ class Address extends \Faker\Provider\Address
         'Żeglarska','Żelazna','Żeromskiego Stefana','Żniwna','Żołnierska','Żółkiewskiego Stanisława',
         'Żurawia','Żwirki Franciszka i Wigury Stanisława','Żwirki i Wigury','Żwirowa',
         'Żytnia',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function city()
     {

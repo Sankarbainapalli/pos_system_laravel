@@ -53,11 +53,7 @@ class MySqlSchemaState extends SchemaState
     protected function appendMigrationData(string $path)
     {
         $process = $this->executeDumpProcess($this->makeProcess(
-<<<<<<< HEAD
             $this->baseDumpCommand().' '.$this->migrationTable.' --no-create-info --skip-extended-insert --skip-routines --compact'
-=======
-            $this->baseDumpCommand().' migrations --no-create-info --skip-extended-insert --skip-routines --compact'
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         ), null, array_merge($this->baseVariables($this->connection->getConfig()), [
             //
         ]));
@@ -73,15 +69,9 @@ class MySqlSchemaState extends SchemaState
      */
     public function load($path)
     {
-<<<<<<< HEAD
         $command = 'mysql '.$this->connectionString().' --database="${:LARAVEL_LOAD_DATABASE}" < "${:LARAVEL_LOAD_PATH}"';
 
         $this->makeProcess($command)->mustRun(null, array_merge($this->baseVariables($this->connection->getConfig()), [
-=======
-        $process = $this->makeProcess('mysql --host="${:LARAVEL_LOAD_HOST}" --port="${:LARAVEL_LOAD_PORT}" --user="${:LARAVEL_LOAD_USER}" --password="${:LARAVEL_LOAD_PASSWORD}" --database="${:LARAVEL_LOAD_DATABASE}" < "${:LARAVEL_LOAD_PATH}"');
-
-        $process->mustRun(null, array_merge($this->baseVariables($this->connection->getConfig()), [
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'LARAVEL_LOAD_PATH' => $path,
         ]));
     }
@@ -93,7 +83,6 @@ class MySqlSchemaState extends SchemaState
      */
     protected function baseDumpCommand()
     {
-<<<<<<< HEAD
         $command = 'mysqldump '.$this->connectionString().' --skip-add-locks --skip-comments --skip-set-charset --tz-utc';
 
         if (! $this->connection->isMaria()) {
@@ -117,13 +106,6 @@ class MySqlSchemaState extends SchemaState
                         : ' --host="${:LARAVEL_LOAD_HOST}" --port="${:LARAVEL_LOAD_PORT}"';
 
         return $value;
-=======
-        $columnStatistics = $this->connection->isMaria() ? '' : '--column-statistics=0';
-
-        $gtidPurged = $this->connection->isMaria() ? '' : '--set-gtid-purged=OFF';
-
-        return 'mysqldump '.$gtidPurged.' '.$columnStatistics.' --skip-add-drop-table --skip-add-locks --skip-comments --skip-set-charset --tz-utc --host="${:LARAVEL_LOAD_HOST}" --port="${:LARAVEL_LOAD_PORT}" --user="${:LARAVEL_LOAD_USER}" --password="${:LARAVEL_LOAD_PASSWORD}" "${:LARAVEL_LOAD_DATABASE}"';
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -134,18 +116,12 @@ class MySqlSchemaState extends SchemaState
      */
     protected function baseVariables(array $config)
     {
-<<<<<<< HEAD
         $config['host'] = $config['host'] ?? '';
 
         return [
             'LARAVEL_LOAD_SOCKET' => $config['unix_socket'] ?? '',
             'LARAVEL_LOAD_HOST' => is_array($config['host']) ? $config['host'][0] : $config['host'],
             'LARAVEL_LOAD_PORT' => $config['port'] ?? '',
-=======
-        return [
-            'LARAVEL_LOAD_HOST' => is_array($config['host']) ? $config['host'][0] : $config['host'],
-            'LARAVEL_LOAD_PORT' => $config['port'],
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'LARAVEL_LOAD_USER' => $config['username'],
             'LARAVEL_LOAD_PASSWORD' => $config['password'],
             'LARAVEL_LOAD_DATABASE' => $config['database'],

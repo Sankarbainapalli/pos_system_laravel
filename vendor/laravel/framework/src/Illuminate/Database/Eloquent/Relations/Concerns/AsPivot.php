@@ -83,26 +83,15 @@ trait AsPivot
     }
 
     /**
-<<<<<<< HEAD
      * Set the keys for a select query.
-=======
-     * Set the keys for a save update query.
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
      * @return \Illuminate\Database\Eloquent\Builder
      */
-<<<<<<< HEAD
     protected function setKeysForSelectQuery($query)
     {
         if (isset($this->attributes[$this->getKeyName()])) {
             return parent::setKeysForSelectQuery($query);
-=======
-    protected function setKeysForSaveQuery($query)
-    {
-        if (isset($this->attributes[$this->getKeyName()])) {
-            return parent::setKeysForSaveQuery($query);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
         $query->where($this->foreignKey, $this->getOriginal(
@@ -115,7 +104,6 @@ trait AsPivot
     }
 
     /**
-<<<<<<< HEAD
      * Set the keys for a save update query.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
@@ -127,8 +115,6 @@ trait AsPivot
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Delete the pivot model record from the database.
      *
      * @return int
@@ -311,11 +297,8 @@ trait AsPivot
      */
     protected function newQueryForCollectionRestoration(array $ids)
     {
-<<<<<<< HEAD
         $ids = array_values($ids);
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         if (! Str::contains($ids[0], ':')) {
             return parent::newQueryForRestoration($ids);
         }

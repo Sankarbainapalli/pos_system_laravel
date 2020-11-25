@@ -4,7 +4,6 @@ namespace Faker\Provider\en_NG;
 
 class Person extends \Faker\Provider\Person
 {
-<<<<<<< HEAD
     protected static $maleNameFormats = [
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{firstNameMale}} {{lastName}}'
@@ -14,27 +13,12 @@ class Person extends \Faker\Provider\Person
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{firstNameFemale}} {{lastName}}'
     ];
-=======
-    protected static $maleNameFormats = array(
-        '{{firstNameMale}} {{lastName}}',
-        '{{firstNameMale}} {{firstNameMale}} {{lastName}}'
-    );
-
-    protected static $femaleNameFormats = array(
-        '{{firstNameFemale}} {{lastName}}',
-        '{{firstNameFemale}} {{firstNameFemale}} {{lastName}}'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * An array of typical Nigerian male firstnames.
      * @link https://andela-celisha-wigwe.github.io/names.html
      */
-<<<<<<< HEAD
     protected static $firstNameMale = [
-=======
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abimbola','Abisola','Abisoye','Adeboye','Adedayo','Adegoke', 'Akande', 'Akanni', 'Alade', 'Ayinde', 'Azubuike',
         'Banji', 'Bankole', 'Buchi', 'Bukola',
         'Chinedu', 'Chisom', 'Chukwu',
@@ -56,20 +40,12 @@ class Person extends \Faker\Provider\Person
         'Uzodimma',
         'Wale',
         'Yakubu', 'Yusuf', 'Yusuf',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://andela-celisha-wigwe.github.io/names.html
      */
-<<<<<<< HEAD
     protected static $firstNameFemale = [
-=======
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Adaugo', 'Akunna', 'Aminat', 'Aminu', 'Augustina', 'Ayebatari',
         'Cherechi', 'Chiamaka', 'Chimamanda', 'Chinyere', 'Chizoba',
         'Ebiere', 'Efe',
@@ -82,20 +58,12 @@ class Person extends \Faker\Provider\Person
         'Sekinat', 'Simisola', 'Sumayyah',
         'Titi', 'Titilayo', 'Toluwani',
         'Zainab'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://andela-celisha-wigwe.github.io/names.html
      */
-<<<<<<< HEAD
     protected static $lastName = [
-=======
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abiodun', 'Abiola', 'Abodunrin', 'Abosede', 'Adaobi', 'Adebayo', 'Adegboye', 'Adegoke', 'Ademayowa', 'Ademola', 'Adeniyan', 'Adeoluwa', 'Aderinsola', 'Aderonke', 'Adesina', 'Adewale', 'Adewale', 'Adewale', 'Adewunmi', 'Adewura', 'Adeyemo', 'Afolabi', 'Afunku', 'Agboola', 'Agboola', 'Agnes', 'Aigbiniode', 'Ajakaiye', 'Ajose-adeogun', 'Akeem-omosanya', 'Akerele', 'Akintade', 'Aligbe', 'Amaechi', 'Aminat', 'Aremu', 'Atanda', 'Ayisat', 'Ayobami', 'Ayomide', 'Ayomide',
         'Babalola', 'Babatunde', 'Balogun', 'Bamisebi', 'Bello', 'Busari',
         'Chibike', 'Chibuike', 'Chidinma', 'Chidozie', 'Christian', 'Clare',
@@ -117,9 +85,5 @@ class Person extends \Faker\Provider\Person
         'Uchechi',
         'Wasiu', 'Wilcox', 'Wuraola',
         'Yaqub', 'Yussuf'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

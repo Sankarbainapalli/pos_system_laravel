@@ -1,9 +1,5 @@
 {
     "require-dev": {
-<<<<<<< HEAD
         "voku/php-readme-helper": "~0.6"
-=======
-        "voku/php-readme-helper": "~0.4"
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 }

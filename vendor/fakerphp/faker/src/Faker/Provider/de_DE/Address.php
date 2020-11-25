@@ -4,7 +4,6 @@ namespace Faker\Provider\de_DE;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $buildingNumber = ['%##', '%#', '%', '%/%', '%#[abc]', '%[abc]'];
 
     protected static $streetSuffixLong = [
@@ -15,28 +14,12 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $postcode = ['#####'];
-=======
-    protected static $buildingNumber = array('%##', '%#', '%', '%/%', '%#[abc]', '%[abc]');
-
-    protected static $streetSuffixLong = array(
-        'Gasse', 'Platz', 'Ring', 'Straße', 'Weg', 'Allee'
-    );
-    protected static $streetSuffixShort = array(
-        'gasse', 'platz', 'ring', 'straße', 'str.', 'weg', 'allee'
-    );
-
-    protected static $postcode = array('#####');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array
      * @see https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9F-_und_Mittelst%C3%A4dte_in_Deutschland
      */
-<<<<<<< HEAD
     protected static $cityNames = [
-=======
-    protected static $cityNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aachen', 'Aalen', 'Achern', 'Achim', 'Ahaus', 'Ahlen', 'Ahrensburg', 'Aichach', 'Albstadt', 'Alfter', 'Alsdorf', 'Altenburg', 'Amberg', 'Andernach', 'Annaberg-Buchholz', 'Ansbach', 'Apolda', 'Arnsberg', 'Arnstadt', 'Aschaffenburg', 'Aschersleben', 'Attendorn', 'Augsburg', 'Aurich',
         'Backnang', 'Bad Harzburg', 'Bad Hersfeld', 'Bad Homburg vor der Höhe', 'Bad Honnef', 'Bad Kissingen', 'Bad Kreuznach', 'Bad Mergentheim', 'Bad Nauheim', 'Bad Neuenahr-Ahrweiler', 'Bad Oeynhausen', 'Bad Oldesloe', 'Bad Rappenau', 'Bad Salzuflen', 'Bad Soden am Taunus', 'Bad Vilbel', 'Bad Waldsee', 'Bad Zwischenahn', 'Baden-Baden', 'Baesweiler', 'Balingen', 'Bamberg', 'Barsinghausen', 'Baunatal', 'Bautzen', 'Bayreuth', 'Beckum', 'Bedburg', 'Bensheim', 'Bergheim', 'Bergisch Gladbach', 'Bergkamen', 'Berlin', 'Bernau bei Berlin', 'Bernburg (Saale)', 'Biberach an der Riß', 'Bielefeld', 'Bietigheim-Bissingen', 'Bingen am Rhein', 'Bitterfeld-Wolfen', 'Blankenburg (Harz)', 'Blankenfelde-Mahlow', 'Blieskastel', 'Böblingen', 'Bocholt', 'Bochum', 'Bonn', 'Borken', 'Bornheim', 'Bottrop', 'Bramsche', 'Brandenburg an der Havel', 'Braunschweig', 'Bremen', 'Bremerhaven', 'Bretten', 'Brilon', 'Bruchköbel', 'Bruchsal', 'Brühl', 'Buchholz in der Nordheide', 'Büdingen', 'Bühl', 'Bünde', 'Büren', 'Burg', 'Burgdorf', 'Burgwedel', 'Butzbach', 'Buxtehude',
         'Calw', 'Castrop-Rauxel', 'Celle',
@@ -64,7 +47,6 @@ class Address extends \Faker\Provider\Address
         'Wachtberg', 'Waghäusel', 'Waiblingen', 'Waldkirch', 'Waldkraiburg', 'Waldshut-Tiengen', 'Wallenhorst', 'Walsrode', 'Waltrop', 'Wandlitz', 'Wangen im Allgäu', 'Warburg', 'Waren (Müritz)', 'Warendorf', 'Warstein', 'Wedel', 'Wedemark', 'Wegberg', 'Weiden in der Oberpfalz', 'Weil am Rhein', 'Weilheim in Oberbayern', 'Weimar', 'Weingarten', 'Weinheim', 'Weinstadt', 'Weißenfels', 'Weiterstadt', 'Werdau', 'Werder (Havel)', 'Werl', 'Wermelskirchen', 'Werne', 'Wernigerode', 'Wertheim', 'Wesel', 'Wesseling', 'Westerstede', 'Westoverledingen', 'Wetter (Ruhr)', 'Wetzlar', 'Weyhe', 'Wiehl', 'Wiesbaden', 'Wiesloch', 'Wilhelmshaven', 'Willich', 'Wilnsdorf', 'Winnenden', 'Winsen (Luhe)', 'Wipperfürth', 'Wismar', 'Witten', 'Lutherstadt Wittenberg', 'Wittmund', 'Wolfenbüttel', 'Wolfsburg', 'Worms', 'Wülfrath', 'Wunstorf', 'Wuppertal', 'Würselen', 'Würzburg',
         'Xanten',
         'Zeitz', 'Zerbst/Anhalt', 'Zirndorf', 'Zittau', 'Zülpich', 'Zweibrücken', 'Zwickau',
-<<<<<<< HEAD
     ];
 
     protected static $state = [
@@ -72,15 +54,6 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $country = [
-=======
-    );
-
-    protected static $state = array(
-        'Baden-Württemberg', 'Bayern', 'Berlin', 'Brandenburg', 'Bremen', 'Hamburg', 'Hessen', 'Mecklenburg-Vorpommern', 'Niedersachsen', 'Nordrhein-Westfalen', 'Rheinland-Pfalz', 'Saarland', 'Sachsen', 'Sachsen-Anhalt', 'Schleswig-Holstein', 'Thüringen'
-    );
-
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Alandinseln', 'Albanien', 'Algerien', 'Amerikanisch-Ozeanien', 'Amerikanisch-Samoa', 'Amerikanische Jungferninseln', 'Andorra', 'Angola', 'Anguilla', 'Antarktis', 'Antigua und Barbuda', 'Argentinien', 'Armenien', 'Aruba', 'Aserbaidschan', 'Australien', 'Ägypten', 'Äquatorialguinea', 'Äthiopien', 'Äußeres Ozeanien',
         'Bahamas', 'Bahrain', 'Bangladesch', 'Barbados', 'Belarus', 'Belgien', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivien', 'Bosnien und Herzegowina', 'Botsuana', 'Bouvetinsel', 'Brasilien', 'Britische Jungferninseln', 'Britisches Territorium im Indischen Ozean', 'Brunei Darussalam', 'Bulgarien', 'Burkina Faso', 'Burundi',
         'Chile', 'China', 'Cookinseln', 'Costa Rica', 'Côte d’Ivoire',
@@ -104,7 +77,6 @@ class Address extends \Faker\Provider\Address
         'Vanuatu', 'Vatikanstadt', 'Venezuela', 'Vereinigte Arabische Emirate', 'Vereinigte Staaten', 'Vereinigtes Königreich', 'Vietnam',
         'Wallis und Futuna', 'Weihnachtsinsel', 'Westsahara',
         'Zentralafrikanische Republik', 'Zypern',
-<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -122,25 +94,6 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
-=======
-    );
-
-    protected static $cityFormats = array(
-        '{{cityName}}',
-    );
-
-    protected static $streetNameFormats = array(
-        '{{lastName}}{{streetSuffixShort}}',
-        '{{firstName}}-{{lastName}}-{{streetSuffixLong}}'
-    );
-
-    protected static $streetAddressFormats = array(
-        '{{streetName}} {{buildingNumber}}',
-    );
-    protected static $addressFormats = array(
-        "{{streetAddress}}\n{{postcode}} {{city}}",
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function cityName()
     {

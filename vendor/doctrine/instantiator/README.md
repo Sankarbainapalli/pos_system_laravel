@@ -3,12 +3,7 @@
 This library provides a way of avoiding usage of constructors when instantiating PHP classes.
 
 [![Build Status](https://travis-ci.org/doctrine/instantiator.svg?branch=master)](https://travis-ci.org/doctrine/instantiator)
-<<<<<<< HEAD
 [![Code Coverage](https://codecov.io/gh/doctrine/instantiator/branch/master/graph/badge.svg)](https://codecov.io/gh/doctrine/instantiator/branch/master)
-=======
-[![Code Coverage](https://scrutinizer-ci.com/g/doctrine/instantiator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/doctrine/instantiator/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/doctrine/instantiator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/doctrine/instantiator/?branch=master)
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 [![Dependency Status](https://www.versioneye.com/package/php--doctrine--instantiator/badge.svg)](https://www.versioneye.com/package/php--doctrine--instantiator)
 
 [![Latest Stable Version](https://poser.pugx.org/doctrine/instantiator/v/stable.png)](https://packagist.org/packages/doctrine/instantiator)

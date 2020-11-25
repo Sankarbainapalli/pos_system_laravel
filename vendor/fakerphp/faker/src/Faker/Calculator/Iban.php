@@ -16,11 +16,7 @@ class Iban
         $checkString = substr($iban, 4) . substr($iban, 0, 2) . '00';
 
         // Replace all letters with their number equivalents
-<<<<<<< HEAD
         $checkString = preg_replace_callback('/[A-Z]/', ['self','alphaToNumberCallback'], $checkString);
-=======
-        $checkString = preg_replace_callback('/[A-Z]/', array('self','alphaToNumberCallback'), $checkString);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         // Perform mod 97 and subtract from 98
         $checksum = 98 - self::mod97($checkString);
@@ -57,11 +53,7 @@ class Iban
      */
     public static function mod97($number)
     {
-<<<<<<< HEAD
         $checksum = (int) $number[0];
-=======
-        $checksum = (int)$number[0];
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         for ($i = 1, $size = strlen($number); $i < $size; $i++) {
             $checksum = (10 * $checksum + (int) $number[$i]) % 97;
         }
@@ -72,11 +64,7 @@ class Iban
      * Checks whether an IBAN has a valid checksum
      *
      * @param string $iban
-<<<<<<< HEAD
      * @return bool
-=======
-     * @return boolean
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public static function isValid($iban)
     {

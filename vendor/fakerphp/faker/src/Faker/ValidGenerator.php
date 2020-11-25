@@ -15,11 +15,7 @@ class ValidGenerator
     /**
      * @param Generator $generator
      * @param callable|null $validator
-<<<<<<< HEAD
      * @param int $maxRetries
-=======
-     * @param integer $maxRetries
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function __construct(Generator $generator, $validator = null, $maxRetries = 10000)
     {
@@ -43,11 +39,7 @@ class ValidGenerator
      */
     public function __get($attribute)
     {
-<<<<<<< HEAD
         return $this->__call($attribute, []);
-=======
-        return $this->__call($attribute, array());
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -61,11 +53,7 @@ class ValidGenerator
     {
         $i = 0;
         do {
-<<<<<<< HEAD
             $res = call_user_func_array([$this->generator, $name], $arguments);
-=======
-            $res = call_user_func_array(array($this->generator, $name), $arguments);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $i++;
             if ($i > $this->maxRetries) {
                 throw new \OverflowException(sprintf('Maximum retries of %d reached without finding a valid value', $this->maxRetries));

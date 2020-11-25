@@ -575,15 +575,9 @@ class BladeCompiler extends Compiler implements CompilerInterface
     {
         foreach ($components as $key => $value) {
             if (is_numeric($key)) {
-<<<<<<< HEAD
                 $this->component($value, null, $prefix);
             } else {
                 $this->component($key, $value, $prefix);
-=======
-                static::component($value, null, $prefix);
-            } else {
-                static::component($key, $value, $prefix);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             }
         }
     }

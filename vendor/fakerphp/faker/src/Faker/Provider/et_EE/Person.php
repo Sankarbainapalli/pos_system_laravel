@@ -3,11 +3,6 @@
 namespace Faker\Provider\et_EE;
 
 /**
-<<<<<<< HEAD
-=======
- * Class Person
- * @package Faker\Provider\et_EE
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
  * @author David Gegelija <code@imdavid.xyz>
  */
 class Person extends \Faker\Provider\Person
@@ -16,11 +11,7 @@ class Person extends \Faker\Provider\Person
      * @link https://news.err.ee/114745/most-popular-baby-names-of-2014
      * @link https://www.stat.ee/public/apps/nimed/TOP
      */
-<<<<<<< HEAD
     protected static $firstNameMale = [
-=======
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "Andrei", "Aleksei", "Andres", "Alexander", "Aivar", "Aleksander", "Artur", "Andrus", "Ants", "Artjom", "Anatoli", "Anton", "Arvo", "Aare", "Ain", "Aleksandr",
         "Dmitri", "Daniil", "Daniel",
         "Eduard", "Erik", "Enn",
@@ -40,21 +31,13 @@ class Person extends \Faker\Provider\Person
         "Toomas", "Tarmo", "Tõnu", "Tiit", "Tanel", "Taavi", "Toivo", "Tõnis",
         "Urmas", "Ülo",
         "Vladimir", "Viktor", "Valeri", "Vello", "Vadim", "Vitali", "Vladislav", "Vjatšeslav", "Victor",
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://news.err.ee/114745/most-popular-baby-names-of-2014
      * @link https://www.stat.ee/public/apps/nimed/TOP
      */
-<<<<<<< HEAD
     protected static $firstNameFemale = [
-=======
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "Aino", "Aleksandra", "Alisa", "Anastasia", "Anna", "Anne", "Anneli", "Anu", "Arina", "Annika", "Anastassia", "Alla", "Aili", "Alina", "Aime", "Antonina",
         "Darja", "Diana",
         "Elena", "Eliise", "Elisabeth", "Emma", "Ene", "Eve", "Eha", "Evi",
@@ -74,21 +57,13 @@ class Person extends \Faker\Provider\Person
         "Ülle", "Urve",
         "Valentina", "Viktoria", "Veera", "Veronika", "Vaike",
         "Zinaida",
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/Category:Estonian-language_surnames
      * @link https://www.stat.ee/public/apps/nimed/pere/TOP
      */
-<<<<<<< HEAD
     protected static $lastName = [
-=======
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "Aleksejev", "Andrejev", "Allik", "Aas", "Aleksandrov", "Aare", "Aarma", "Aas", "Aasmäe", "Aav", "Aavik", "Allik", "Alver", "Andrejeva", "Aleksejeva", "Aleksandrova", "Allik", "Aas",
         "Bogdanova", "Bogdanov",
         "Eenpalu", "Eskola",
@@ -108,9 +83,5 @@ class Person extends \Faker\Provider\Person
         "Tamme", "Tomson", "Tamm", "Teder", "Toom", "Tomson", "Tamme", "Talts", "Tamm", "Tamme", "Tarvas", "Teder", "Toom", "Toome", "Toots", "Tamm", "Teder", "Toom",
         "Uibo", "Uibo",
         "Vassiljev", "Vaher", "Volkov", "Valk", "Vaher", "Vahtra", "Vaino", "Vainola", "Välbe", "Valdma", "Väljas", "Valk", "Vassiljev", "Vassiljeva", "Vesik", "Veski", "Viiding", "Vitsut", "Võigemast", "Volkov", "Volkova", "Võsu", "Vassiljeva", "Vaher", "Volkova",
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

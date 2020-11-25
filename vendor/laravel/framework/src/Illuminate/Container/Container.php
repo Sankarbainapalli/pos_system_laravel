@@ -106,7 +106,6 @@ class Container implements ArrayAccess, ContainerContract
     protected $reboundCallbacks = [];
 
     /**
-<<<<<<< HEAD
      * All of the global before resolving callbacks.
      *
      * @var \Closure[]
@@ -114,8 +113,6 @@ class Container implements ArrayAccess, ContainerContract
     protected $globalBeforeResolvingCallbacks = [];
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * All of the global resolving callbacks.
      *
      * @var \Closure[]
@@ -130,7 +127,6 @@ class Container implements ArrayAccess, ContainerContract
     protected $globalAfterResolvingCallbacks = [];
 
     /**
-<<<<<<< HEAD
      * All of the before resolving callbacks by class type.
      *
      * @var array[]
@@ -138,8 +134,6 @@ class Container implements ArrayAccess, ContainerContract
     protected $beforeResolvingCallbacks = [];
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * All of the resolving callbacks by class type.
      *
      * @var array[]
@@ -687,7 +681,6 @@ class Container implements ArrayAccess, ContainerContract
     {
         $abstract = $this->getAlias($abstract);
 
-<<<<<<< HEAD
         // First we wil fire any event handlers that handle the "before" resolving of
         // specific types. This gives some hooks the chance to add various extends
         // calls to change the resolution of objects that they're interested in.
@@ -695,8 +688,6 @@ class Container implements ArrayAccess, ContainerContract
             $this->fireBeforeResolvingCallbacks($abstract, $parameters);
         }
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $concrete = $this->getContextualConcrete($abstract);
 
         $needsContextualBuild = ! empty($parameters) || ! is_null($concrete);
@@ -1063,7 +1054,6 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-<<<<<<< HEAD
      * Register a new before resolving callback for all types.
      *
      * @param  \Closure|string  $abstract
@@ -1084,8 +1074,6 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Register a new resolving callback.
      *
      * @param  \Closure|string  $abstract
@@ -1126,7 +1114,6 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-<<<<<<< HEAD
      * Fire all of the before resolving callbacks.
      *
      * @param  string  $abstract
@@ -1160,8 +1147,6 @@ class Container implements ArrayAccess, ContainerContract
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Fire all of the resolving callbacks.
      *
      * @param  string  $abstract

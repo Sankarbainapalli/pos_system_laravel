@@ -84,7 +84,6 @@ class Stringable
     }
 
     /**
-<<<<<<< HEAD
      * Get the basename of the class path.
      *
      * @return static
@@ -95,8 +94,6 @@ class Stringable
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Get the portion of a string before the first occurrence of a given value.
      *
      * @param  string  $search
@@ -208,28 +205,19 @@ class Stringable
     }
 
     /**
-<<<<<<< HEAD
      * Split a string using a regular expression or by length.
      *
      * @param  string|int  $pattern
-=======
-     * Split a string using a regular expression.
-     *
-     * @param  string  $pattern
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  int  $limit
      * @param  int  $flags
      * @return \Illuminate\Support\Collection
      */
     public function split($pattern, $limit = -1, $flags = 0)
     {
-<<<<<<< HEAD
         if (filter_var($pattern, FILTER_VALIDATE_INT) !== false) {
             return collect(mb_str_split($this->value, $pattern));
         }
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $segments = preg_split($pattern, $this->value, $limit, $flags);
 
         return ! empty($segments) ? collect($segments) : collect();

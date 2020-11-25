@@ -108,11 +108,7 @@ class ModelMakeCommand extends GeneratorCommand
     {
         $seeder = Str::studly(class_basename($this->argument('name')));
 
-<<<<<<< HEAD
         $this->call('make:seeder', [
-=======
-        $this->call('make:seed', [
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'name' => "{$seeder}Seeder",
         ]);
     }

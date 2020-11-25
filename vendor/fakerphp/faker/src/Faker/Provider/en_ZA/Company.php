@@ -2,24 +2,12 @@
 
 namespace Faker\Provider\en_ZA;
 
-<<<<<<< HEAD
 class Company extends \Faker\Provider\Company
 {
     protected static $legalEntities = [
         '01', '02', '06', '07', '08', '09', '10', '11', '12', '14', '15', '16', '17', '20', '21', '22', '23', '24', '25',
         '26', '30', '31', '80',
     ];
-=======
-/**
- * Class Company.
- */
-class Company extends \Faker\Provider\Company
-{
-    protected static $legalEntities = array(
-        '01', '02', '06', '07', '08', '09', '10', '11', '12', '14', '15', '16', '17', '20', '21', '22', '23', '24', '25',
-        '26', '30', '31', '80',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Return a valid company registration number.

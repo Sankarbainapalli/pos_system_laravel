@@ -46,17 +46,11 @@ class EmailVerificationRequest extends FormRequest
      */
     public function fulfill()
     {
-<<<<<<< HEAD
         if (! $this->user()->hasVerifiedEmail()) {
             $this->user()->markEmailAsVerified();
 
             event(new Verified($this->user()));
         }
-=======
-        $this->user()->markEmailAsVerified();
-
-        event(new Verified($this->user()));
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**

@@ -4,7 +4,6 @@ namespace Faker\Provider\en_GB;
 
 class Person extends \Faker\Provider\Person
 {
-<<<<<<< HEAD
     protected static $maleNameFormats = [
         '{{firstNameMale}} {{lastName}}',
     ];
@@ -12,24 +11,11 @@ class Person extends \Faker\Provider\Person
     protected static $femaleNameFormats = [
         '{{firstNameFemale}} {{lastName}}',
     ];
-=======
-    protected static $maleNameFormats = array(
-        '{{firstNameMale}} {{lastName}}',
-    );
-
-    protected static $femaleNameFormats = array(
-        '{{firstNameFemale}} {{lastName}}',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.ons.gov.uk/ons/rel/vsob1/baby-names--england-and-wales/2013/index.html
      */
-<<<<<<< HEAD
     protected static $firstNameMale = [
-=======
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aaron', 'Adam', 'Adrian', 'Aiden', 'Alan', 'Alex', 'Alexander', 'Alfie', 'Andrew', 'Andy', 'Anthony', 'Archie', 'Arthur',
         'Barry', 'Ben', 'Benjamin', 'Bradley', 'Brandon', 'Bruce',
         'Callum', 'Cameron', 'Charles', 'Charlie', 'Chris', 'Christian', 'Christopher', 'Colin', 'Connor', 'Craig',
@@ -52,15 +38,9 @@ class Person extends \Faker\Provider\Person
         'Theo', 'Thomas', 'Tim', 'Toby', 'Tom', 'Tony', 'Tyler',
         'Wayne', 'Will', 'William',
         'Zachary', 'Zach'
-<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
-=======
-    );
-
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abbie', 'Abigail', 'Adele', 'Alexa', 'Alexandra', 'Alice', 'Alison', 'Amanda', 'Amber', 'Amelia', 'Amy', 'Anna', 'Ashley', 'Ava',
         'Beth', 'Bethany', 'Becky',
         'Caitlin', 'Candice', 'Carlie', 'Carmen', 'Carole', 'Caroline', 'Carrie', 'Charlotte', 'Chelsea', 'Chloe', 'Claire', 'Courtney',
@@ -84,20 +64,12 @@ class Person extends \Faker\Provider\Person
         'Wendy',
         'Yasmine', 'Yvette', 'Yvonne',
         'Zoe',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://surname.sofeminine.co.uk/w/surnames/most-common-surnames-in-great-britain.html
      */
-<<<<<<< HEAD
     protected static $lastName = [
-=======
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Adams', 'Allen', 'Anderson',
         'Bailey', 'Baker', 'Bell', 'Bennett', 'Brown', 'Butler',
         'Campbell', 'Carter', 'Chapman', 'Clark', 'Clarke', 'Collins', 'Cook', 'Cooper', 'Cox',
@@ -117,9 +89,5 @@ class Person extends \Faker\Provider\Person
         'Taylor', 'Thomas', 'Thompson', 'Turner',
         'Walker', 'Walsh', 'Ward', 'Watson', 'White', 'Wilkinson', 'Williams', 'Wilson', 'Wood', 'Wright',
         'Young',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

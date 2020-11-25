@@ -4,7 +4,6 @@ namespace Faker\Provider\el_CY;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $citySuffix = ['Λευκωσία', 'Λεμεσός', 'Λάρνακα', 'Πάφος'];
     protected static $streetSuffix = [];
     protected static $streetPrefix = [
@@ -14,22 +13,10 @@ class Address extends \Faker\Provider\Address
         '{{citySuffix}}',
     ];
     protected static $streetNameFormats = [
-=======
-    protected static $citySuffix = array('Λευκωσία', 'Λεμεσός', 'Λάρνακα', 'Πάφος');
-    protected static $streetSuffix = array();
-    protected static $streetPrefix = array(
-        'Όδος', 'Οδός', 'Λεωφόρος',
-    );
-    protected static $cityFormats = array(
-        '{{citySuffix}}',
-    );
-    protected static $streetNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{streetPrefix}} {{lastName}}',
         '{{streetPrefix}} {{lastName}} {{lastName}}',
         '{{streetPrefix}} Αγίου {{lastName}}',
         '{{streetPrefix}} Βασιλέως {{lastName}}',
-<<<<<<< HEAD
     ];
     protected static $streetAddressFormats = [
         '{{streetName}}, {{buildingNumber}}',
@@ -37,15 +24,6 @@ class Address extends \Faker\Provider\Address
     protected static $buildingNumber = ['##', '#'];
     protected static $postcode = ['####'];
     protected static $country = [
-=======
-    );
-    protected static $streetAddressFormats = array(
-        '{{streetName}}, {{buildingNumber}}',
-    );
-    protected static $buildingNumber = array('##', '#');
-    protected static $postcode = array('####');
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Ανγκόλα', 'Αζερμπαϊτζάν', 'Αίγυπτος', 'Αιθιοπία', 'Αϊτή', 'Αλβανία', 'Αλγερία', 'Αργεντινή', 'Αρμενία', 'Αυστραλία', 'Αυστρία', 'Αφγανιστάν',
         'Βέλγιο', 'Βενεζουέλα', 'Βιετνάμ', 'Βολιβία', 'Βοσνία και Ερζεγοβίνη', 'Βουλγαρία', 'Βραζιλία',
         'Γαλλία', 'Γερμανία', 'Γεωργία', 'Γροιλανδία',
@@ -65,11 +43,7 @@ class Address extends \Faker\Provider\Address
         'Υεμένη',
         'Φιλιππίνες', 'Φινλανδία',
         'Χιλή',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Όδος'

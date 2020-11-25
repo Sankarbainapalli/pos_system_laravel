@@ -7,17 +7,11 @@ use Faker\Generator;
 use Illuminate\Container\Container;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Database\Eloquent\Model;
-<<<<<<< HEAD
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Throwable;
-=======
-use Illuminate\Support\Collection;
-use Illuminate\Support\Str;
-use Illuminate\Support\Traits\ForwardsCalls;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 abstract class Factory
 {
@@ -635,17 +629,11 @@ abstract class Factory
         $resolver = static::$modelNameResolver ?: function (self $factory) {
             $factoryBasename = Str::replaceLast('Factory', '', class_basename($factory));
 
-<<<<<<< HEAD
             $appNamespace = static::appNamespace();
 
             return class_exists($appNamespace.'Models\\'.$factoryBasename)
                         ? $appNamespace.'Models\\'.$factoryBasename
                         : $appNamespace.$factoryBasename;
-=======
-            return class_exists('App\\Models\\'.$factoryBasename)
-                        ? 'App\\Models\\'.$factoryBasename
-                        : 'App\\'.$factoryBasename;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         };
 
         return $this->model ?: $resolver($this);
@@ -716,17 +704,11 @@ abstract class Factory
     public static function resolveFactoryName(string $modelName)
     {
         $resolver = static::$factoryNameResolver ?: function (string $modelName) {
-<<<<<<< HEAD
             $appNamespace = static::appNamespace();
 
             $modelName = Str::startsWith($modelName, $appNamespace.'Models\\')
                 ? Str::after($modelName, $appNamespace.'Models\\')
                 : Str::after($modelName, $appNamespace);
-=======
-            $modelName = Str::startsWith($modelName, 'App\\Models\\')
-                ? Str::after($modelName, 'App\\Models\\')
-                : Str::after($modelName, 'App\\');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
             return static::$namespace.$modelName.'Factory';
         };
@@ -735,7 +717,6 @@ abstract class Factory
     }
 
     /**
-<<<<<<< HEAD
      * Get the application namespace for the application.
      *
      * @return string
@@ -752,8 +733,6 @@ abstract class Factory
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Proxy dynamic factory methods onto their proper methods.
      *
      * @param  string  $method

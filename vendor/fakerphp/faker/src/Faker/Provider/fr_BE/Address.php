@@ -4,7 +4,6 @@ namespace Faker\Provider\fr_BE;
 
 class Address extends \Faker\Provider\fr_FR\Address
 {
-<<<<<<< HEAD
     protected static $postcode = ['####'];
 
     protected static $streetAddressFormats = [
@@ -22,36 +21,13 @@ class Address extends \Faker\Provider\fr_FR\Address
     protected static $streetSuffix = [
         'rue', 'avenue', 'boulevard', 'chemin', 'chaussée', 'impasse', 'place'
     ];
-=======
-    protected static $postcode = array('####');
-
-    protected static $streetAddressFormats = array(
-        '{{streetName}} {{buildingNumber}}'
-    );
-
-    protected static $streetNameFormats = array('{{streetSuffix}} {{lastName}}');
-
-    protected static $cityFormats = array('{{cityName}}');
-
-    protected static $addressFormats = array(
-        "{{streetAddress}}\n {{postcode}} {{city}}",
-    );
-
-    protected static $streetSuffix = array(
-        'rue', 'avenue', 'boulevard', 'chemin', 'chaussée', 'impasse', 'place'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Source: http://fr.wikipedia.org/wiki/Ville_de_Belgique
      *
      * @var array
      */
-<<<<<<< HEAD
     protected static $cityNames = [
-=======
-    protected static $cityNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aarschot','Alost','Andenne','Antoing','Anvers','Arlon','Ath','Audenarde','Bastogne','Beaumont','Beauraing','Beringen','Bilzen','Binche',
         'Blankenberge','Bouillon','Braine-le-Comte','Bree','Bruges','Bruxelles','Charleroi','Châtelet','Chièvres','Chimay','Chiny','Ciney','Comines-Warneton','Courtrai',
         'Couvin','Damme','Deinze','Diest','Dilsen-Stokkem','Dinant','Dixmude','Durbuy','Eeklo','Enghien','Eupen','Fleurus','Florenville','Fontaine-l\'Évêque','Fosses-la-Ville',
@@ -63,7 +39,6 @@ class Address extends \Faker\Provider\fr_FR\Address
         'Saint-Ghislain','Saint-Hubert','Saint-Nicolas','Saint-Trond','Saint-Vith','Seraing','Soignies','Stavelot','Termonde','Thuin',
         'Tielt','Tirlemont','Tongres','Torhout','Tournai','Turnhout','Verviers','Vilvorde','Virton','Visé','Walcourt','Waregem','Waremme','Wavre','Wervik',
         'Ypres','Zottegem'
-<<<<<<< HEAD
     ];
 
     protected static $region = [
@@ -74,18 +49,6 @@ class Address extends \Faker\Provider\fr_FR\Address
         'Anvers', 'Limbourg', 'Flandre orientale', 'Brabant flamand', 'Flandre occidentale',
         'Hainaut', 'Liège', 'Luxembourg', 'Namur', 'Brabant wallon'
     ];
-=======
-    );
-
-    protected static $region = array(
-        'Wallonie', 'Flandre', 'Bruxelles-Capitale'
-    );
-
-    protected static $province = array(
-        'Anvers', 'Limbourg', 'Flandre orientale', 'Brabant flamand', 'Flandre occidentale',
-        'Hainaut', 'Liège', 'Luxembourg', 'Namur', 'Brabant wallon'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Randomly returns a belgian province.

@@ -4,50 +4,28 @@ namespace Faker\Provider\fa_IR;
 
 class Internet extends \Faker\Provider\Internet
 {
-<<<<<<< HEAD
     protected static $userNameFormats = [
-=======
-    protected static $userNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastNameAscii}}.{{firstNameAscii}}',
         '{{firstNameAscii}}.{{lastNameAscii}}',
         '{{firstNameAscii}}##',
         '?{{lastNameAscii}}',
-<<<<<<< HEAD
     ];
 
     protected static $safeEmailTld = [
         'com', 'ir', 'me', 'net', 'org',
     ];
-=======
-    );
-
-    protected static $safeEmailTld = array(
-        'com', 'ir', 'me', 'net', 'org',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/.ir
      */
-<<<<<<< HEAD
     protected static $tld = [
         'biz', 'com', 'info', 'ac.ir', 'sch.ir', 'co.ir', 'ir', 'net', 'org',
     ];
-=======
-    protected static $tld = array(
-        'biz', 'com', 'info', 'ac.ir', 'sch.ir', 'co.ir', 'ir', 'net', 'org',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://en.wikipedia.org/wiki/Category:Iranian-language_surnames
      */
-<<<<<<< HEAD
     protected static $lastNameAscii = [
-=======
-    protected static $lastNameAscii = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'abdullahi', 'abbasi', 'abedini', 'ahadi', 'ahmadi', 'akbari', 'alizadeh', 'asadi',
         'baraghani', 'babaei',
         'chamran',
@@ -66,20 +44,12 @@ class Internet extends \Faker\Provider\Internet
         'tabatabaei', 'talebi', 'tousi',
         'yazdani', 'yazdi', 'yousefi',
         'zandi', 'zare',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /*
      * @link http://en.wikipedia.org/wiki/Persian_name
      */
-<<<<<<< HEAD
     protected static $firstNameAscii = [
-=======
-    protected static $firstNameAscii = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'abbas', 'afshin', 'ahmad', 'ali', 'amir', 'anahita', 'anousheh', 'arash', 'ardeshir', 'arezu', 'aria', 'arian', 'arman', 'ashraf', 'atoosa', 'azadeh', 'azar',
         'babak', 'bahar', 'bahare', 'bardia', 'behnaz', 'benyamin', 'bita',
         'dalir', 'dariush', 'davoud', 'donya',
@@ -100,11 +70,7 @@ class Internet extends \Faker\Provider\Internet
         'vahid',
         'yaghoub', 'yahya', 'yasamin', 'yasaman', 'younes', 'yousef',
         'zahra', 'zarine', 'zeynab', 'zhila',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function lastNameAscii()
     {

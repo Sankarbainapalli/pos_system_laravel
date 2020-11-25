@@ -7,7 +7,6 @@ namespace Faker\Provider;
  */
 class Color extends Base
 {
-<<<<<<< HEAD
     protected static $safeColorNames = [
         'black', 'maroon', 'green', 'navy', 'olive',
         'purple', 'teal', 'lime', 'blue', 'silver',
@@ -15,15 +14,6 @@ class Color extends Base
     ];
 
     protected static $allColorNames = [
-=======
-    protected static $safeColorNames = array(
-        'black', 'maroon', 'green', 'navy', 'olive',
-        'purple', 'teal', 'lime', 'blue', 'silver',
-        'gray', 'yellow', 'fuchsia', 'aqua', 'white'
-    );
-
-    protected static $allColorNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine',
         'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond',
         'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue',
@@ -50,11 +40,7 @@ class Color extends Base
         'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue',
         'SlateGray', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato',
         'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example '#fa3cc2'
@@ -81,19 +67,11 @@ class Color extends Base
     {
         $color = static::hexColor();
 
-<<<<<<< HEAD
         return [
             hexdec(substr($color, 1, 2)),
             hexdec(substr($color, 3, 2)),
             hexdec(substr($color, 5, 2))
         ];
-=======
-        return array(
-            hexdec(substr($color, 1, 2)),
-            hexdec(substr($color, 3, 2)),
-            hexdec(substr($color, 5, 2))
-        );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -156,18 +134,10 @@ class Color extends Base
      */
     public static function hslColorAsArray()
     {
-<<<<<<< HEAD
         return [
             static::numberBetween(0, 360),
             static::numberBetween(0, 100),
             static::numberBetween(0, 100)
         ];
-=======
-        return array(
-            static::numberBetween(0, 360),
-            static::numberBetween(0, 100),
-            static::numberBetween(0, 100)
-        );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 }

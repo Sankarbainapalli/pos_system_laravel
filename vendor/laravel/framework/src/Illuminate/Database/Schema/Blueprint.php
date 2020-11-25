@@ -5,10 +5,6 @@ namespace Illuminate\Database\Schema;
 use BadMethodCallException;
 use Closure;
 use Illuminate\Database\Connection;
-<<<<<<< HEAD
-=======
-use Illuminate\Database\Eloquent\Model;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 use Illuminate\Database\Query\Expression;
 use Illuminate\Database\Schema\Grammars\Grammar;
 use Illuminate\Database\SQLiteConnection;
@@ -863,11 +859,7 @@ class Blueprint
             $model = new $model;
         }
 
-<<<<<<< HEAD
         return $model->getKeyType() === 'int' && $model->getIncrementing()
-=======
-        return $model->getKeyType() === 'int' && $model->incrementing
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     ? $this->foreignId($column ?: $model->getForeignKey())
                     : $this->foreignUuid($column ?: $model->getForeignKey());
     }

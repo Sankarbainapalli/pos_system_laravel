@@ -2,7 +2,6 @@
 
 All notable changes of the PHPUnit 9.4 release series are documented in this file using the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
-<<<<<<< HEAD
 ## [9.4.3] - 2020-11-10
 
 ### Fixed
@@ -11,8 +10,6 @@ All notable changes of the PHPUnit 9.4 release series are documented in this fil
 * [#4499](https://github.com/sebastianbergmann/phpunit/pull/4499): Restore support for case-insensitive namespaced class names when invoking the test runner with the test case file name
 * [#4514](https://github.com/sebastianbergmann/phpunit/issues/4514): `--fail-on-skipped` does not work
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 ## [9.4.2] - 2020-10-19
 
 ### Added
@@ -41,10 +38,7 @@ All notable changes of the PHPUnit 9.4 release series are documented in this fil
 
 * The PHPUnit XML configuration generator (that is invoked using the `--generate-configuration` CLI option) now asks for a cache directory (default: `.phpunit.cache`)
 
-<<<<<<< HEAD
 [9.4.3]: https://github.com/sebastianbergmann/phpunit/compare/9.4.2...9.4.3
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 [9.4.2]: https://github.com/sebastianbergmann/phpunit/compare/9.4.1...9.4.2
 [9.4.1]: https://github.com/sebastianbergmann/phpunit/compare/9.4.0...9.4.1
 [9.4.0]: https://github.com/sebastianbergmann/phpunit/compare/9.3.11...9.4.0

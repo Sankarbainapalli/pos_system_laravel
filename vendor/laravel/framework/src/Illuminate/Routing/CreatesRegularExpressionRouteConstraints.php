@@ -18,7 +18,6 @@ trait CreatesRegularExpressionRouteConstraints
     }
 
     /**
-<<<<<<< HEAD
      * Specify that the given route parameters must be alphanumeric.
      *
      * @param  array|string  $parameters
@@ -30,8 +29,6 @@ trait CreatesRegularExpressionRouteConstraints
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Specify that the given route parameters must be numeric.
      *
      * @param  array|string  $parameters

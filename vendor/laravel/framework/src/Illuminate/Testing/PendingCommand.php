@@ -134,7 +134,6 @@ class PendingCommand
     }
 
     /**
-<<<<<<< HEAD
      * Specify output that should never be printed when the command runs.
      *
      * @param  string  $output
@@ -148,8 +147,6 @@ class PendingCommand
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Specify a table that should be printed when the command runs.
      *
      * @param  array  $headers
@@ -224,10 +221,7 @@ class PendingCommand
         }
 
         $this->verifyExpectations();
-<<<<<<< HEAD
         $this->flushExpectations();
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         return $exitCode;
     }
@@ -258,13 +252,10 @@ class PendingCommand
         if (count($this->test->expectedOutput)) {
             $this->test->fail('Output "'.Arr::first($this->test->expectedOutput).'" was not printed.');
         }
-<<<<<<< HEAD
 
         if ($output = array_search(true, $this->test->unexpectedOutput)) {
             $this->test->fail('Output "'.$output.'" was printed.');
         }
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -326,7 +317,6 @@ class PendingCommand
                 });
         }
 
-<<<<<<< HEAD
         foreach ($this->test->unexpectedOutput as $output => $displayed) {
             $mock->shouldReceive('doWrite')
                 ->once()
@@ -337,8 +327,6 @@ class PendingCommand
                 });
         }
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         return $mock;
     }
 
@@ -350,11 +338,7 @@ class PendingCommand
      */
     private function applyTableOutputExpectations($mock)
     {
-<<<<<<< HEAD
         foreach ($this->test->expectedTables as $i => $consoleTable) {
-=======
-        foreach ($this->test->expectedTables as $consoleTable) {
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $table = (new Table($output = new BufferedOutput))
                 ->setHeaders($consoleTable['headers'])
                 ->setRows($consoleTable['rows'])
@@ -367,26 +351,18 @@ class PendingCommand
             $table->render();
 
             $lines = array_filter(
-<<<<<<< HEAD
                 explode("\n", $output->fetch())
-=======
-                preg_split("/\n/", $output->fetch())
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             );
 
             foreach ($lines as $line) {
                 $this->expectsOutput($line);
             }
-<<<<<<< HEAD
 
             unset($this->test->expectedTables[$i]);
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
     }
 
     /**
-<<<<<<< HEAD
      * Flush the expectations from the test case.
      *
      * @return void
@@ -401,8 +377,6 @@ class PendingCommand
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Handle the object's destruction.
      *
      * @return void

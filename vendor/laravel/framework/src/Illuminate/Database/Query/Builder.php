@@ -244,11 +244,7 @@ class Builder
     /**
      * Add a subselect expression to the query.
      *
-<<<<<<< HEAD
      * @param  \Closure|\Illuminate\Database\Query\Builder|string  $query
-=======
-     * @param  \Closure|$this|string  $query
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string  $as
      * @return $this
      *

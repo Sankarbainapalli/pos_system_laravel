@@ -543,7 +543,6 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
-<<<<<<< HEAD
      * Eager load relation's column aggregations on the model.
      *
      * @param  array|string  $relations
@@ -559,8 +558,6 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Eager load relation counts on the model.
      *
      * @param  array|string  $relations
@@ -570,7 +567,6 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     {
         $relations = is_string($relations) ? func_get_args() : $relations;
 
-<<<<<<< HEAD
         return $this->loadAggregate($relations, '*', 'count');
     }
 
@@ -632,21 +628,6 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
      * @return $this
      */
     public function loadMorphAggregate($relation, $relations, $column, $function = null)
-=======
-        $this->newCollection([$this])->loadCount($relations);
-
-        return $this;
-    }
-
-    /**
-     * Eager load relationship counts on the polymorphic relation of a model.
-     *
-     * @param  string  $relation
-     * @param  array  $relations
-     * @return $this
-     */
-    public function loadMorphCount($relation, $relations)
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     {
         if (! $this->{$relation}) {
             return $this;
@@ -654,17 +635,12 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
 
         $className = get_class($this->{$relation});
 
-<<<<<<< HEAD
         $this->{$relation}->loadAggregate($relations[$className] ?? [], $column, $function);
-=======
-        $this->{$relation}->loadCount($relations[$className] ?? []);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         return $this;
     }
 
     /**
-<<<<<<< HEAD
      * Eager load relationship counts on the polymorphic relation of a model.
      *
      * @param  string  $relation
@@ -729,8 +705,6 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Increment a column's value by a given amount.
      *
      * @param  string  $column
@@ -1392,11 +1366,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
             return;
         }
 
-<<<<<<< HEAD
         return $this->setKeysForSelectQuery($this->newQueryWithoutScopes())
-=======
-        return $this->setKeysForSelectQuery(static::newQueryWithoutScopes())
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                         ->with(is_string($with) ? func_get_args() : $with)
                         ->first();
     }
@@ -1413,11 +1383,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
         }
 
         $this->setRawAttributes(
-<<<<<<< HEAD
             $this->setKeysForSelectQuery($this->newQueryWithoutScopes())->firstOrFail()->attributes
-=======
-            $this->setKeysForSelectQuery(static::newQueryWithoutScopes())->firstOrFail()->attributes
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         );
 
         $this->load(collect($this->relations)->reject(function ($relation) {

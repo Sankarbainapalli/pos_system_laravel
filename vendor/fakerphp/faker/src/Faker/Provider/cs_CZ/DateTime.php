@@ -7,7 +7,6 @@ namespace Faker\Provider\cs_CZ;
  */
 class DateTime extends \Faker\Provider\DateTime
 {
-<<<<<<< HEAD
     protected static $days = [
         'neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'
     ];
@@ -22,22 +21,6 @@ class DateTime extends \Faker\Provider\DateTime
     protected static $formattedDateFormat = [
         '{{dayOfMonth}}. {{monthNameGenitive}} {{year}}',
     ];
-=======
-    protected static $days = array(
-        'neděle', 'pondělí', 'úterý', 'středa', 'čtvrtek', 'pátek', 'sobota'
-    );
-    protected static $months = array(
-        'leden', 'únor', 'březen', 'duben', 'květen', 'červen', 'červenec',
-        'srpen', 'září', 'říjen', 'listopad', 'prosinec'
-    );
-    protected static $monthsGenitive  = array(
-        'ledna', 'února', 'března', 'dubna', 'května', 'června', 'července',
-        'srpna', 'září', 'října', 'listopadu', 'prosince'
-    );
-    protected static $formattedDateFormat = array(
-        '{{dayOfMonth}}. {{monthNameGenitive}} {{year}}',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function monthName($max = 'now')
     {

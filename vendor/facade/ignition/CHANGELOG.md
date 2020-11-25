@@ -2,7 +2,6 @@
 
 All notable changes to `ignition` will be documented in this file
 
-<<<<<<< HEAD
 ## 2.5.2 - 2020-11-14
 
 - fix `MakeViewVariableOptionalSolution` to disallow stream wrappers and files that do not end in ".blade.php" (#334)
@@ -11,8 +10,6 @@ All notable changes to `ignition` will be documented in this file
 
 - add support for LiveWire component urls
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 ## 2.5.0 - 2020-10-27
 
 - add PHP 8.0-dev support

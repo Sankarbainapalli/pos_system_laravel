@@ -34,11 +34,7 @@ class Luhn
     }
 
     /**
-<<<<<<< HEAD
      * @param string $partialNumber
-=======
-     * @param $partialNumber
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return string
      */
     public static function computeCheckDigit($partialNumber)

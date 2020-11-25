@@ -4,7 +4,6 @@ namespace Faker\Provider\ar_JO;
 
 class Company extends \Faker\Provider\Company
 {
-<<<<<<< HEAD
     protected static $formats = [
         '{{lastName}} {{companySuffix}}',
         '{{companyPrefix}} {{lastName}} {{companySuffix}}',
@@ -26,29 +25,6 @@ class Company extends \Faker\Provider\Company
     protected static $companyPrefix = ['شركة','مؤسسة','مجموعة','مكتب','أكاديمية','معرض'];
 
     protected static $companySuffix = ['وأولاده', 'للمساهمة المحدودة', ' ذ.م.م', 'مساهمة عامة', 'وشركائه'];
-=======
-    protected static $formats = array(
-        '{{lastName}} {{companySuffix}}',
-        '{{companyPrefix}} {{lastName}} {{companySuffix}}',
-        '{{companyPrefix}} {{lastName}}',
-    );
-
-    protected static $bsWords = array(
-        array()
-    );
-
-    protected static $catchPhraseWords = array(
-        array('الخدمات','الحلول','الانظمة'),
-        array(
-            'الذهبية','الذكية','المتطورة','المتقدمة', 'الدولية', 'المتخصصه', 'السريعة',
-            'المثلى', 'الابداعية', 'المتكاملة', 'المتغيرة', 'المثالية'
-            ),
-    );
-
-    protected static $companyPrefix = array('شركة','مؤسسة','مجموعة','مكتب','أكاديمية','معرض');
-
-    protected static $companySuffix = array('وأولاده', 'للمساهمة المحدودة', ' ذ.م.م', 'مساهمة عامة', 'وشركائه');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'مؤسسة'
@@ -64,20 +40,12 @@ class Company extends \Faker\Provider\Company
      */
     public function catchPhrase()
     {
-<<<<<<< HEAD
         $result = [];
-=======
-        $result = array();
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         foreach (static::$catchPhraseWords as &$word) {
             $result[] = static::randomElement($word);
         }
 
-<<<<<<< HEAD
         return implode(' ', $result);
-=======
-        return join(' ', $result);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -85,19 +53,11 @@ class Company extends \Faker\Provider\Company
      */
     public function bs()
     {
-<<<<<<< HEAD
         $result = [];
-=======
-        $result = array();
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         foreach (static::$bsWords as &$word) {
             $result[] = static::randomElement($word);
         }
 
-<<<<<<< HEAD
         return implode(' ', $result);
-=======
-        return join(' ', $result);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 }

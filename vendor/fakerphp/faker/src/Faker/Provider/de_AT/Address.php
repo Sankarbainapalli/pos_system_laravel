@@ -4,7 +4,6 @@ namespace Faker\Provider\de_AT;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $buildingNumber = ['###', '##', '#', '##[abc]', '#[abc]'];
 
     protected static $streetSuffixLong = [
@@ -16,19 +15,6 @@ class Address extends \Faker\Provider\Address
 
     // As per https://en.wikipedia.org/wiki/List_of_postal_codes_in_Austria (@todo implement more strict postal code values according to wikipedia)
     protected static $postcode = [
-=======
-    protected static $buildingNumber = array('###', '##', '#', '##[abc]', '#[abc]');
-
-    protected static $streetSuffixLong = array(
-        'Gasse', 'Platz', 'Ring', 'Straße', 'Weg',
-    );
-    protected static $streetSuffixShort = array(
-        'gasse', 'platz', 'ring', 'straße', 'weg',
-    );
-
-    // As per https://en.wikipedia.org/wiki/List_of_postal_codes_in_Austria (@todo implement more strict postal code values according to wikipedia)
-    protected static $postcode = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '1###',
         '2###',
         '3###',
@@ -38,15 +24,9 @@ class Address extends \Faker\Provider\Address
         '7###',
         '8###',
         '9###',
-<<<<<<< HEAD
     ];
 
     protected static $cityNames = [
-=======
-    );
-
-    protected static $cityNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Allentsteig', 'Altheim', 'Althofen', 'Amstetten', 'Ansfelden', 'Attnang-Puchheim',
         'Bad Aussee', 'Bad Hall', 'Bad Ischl', 'Bad Leonfelden', 'Bad Radkersburg', 'Bad Sankt Leonhard im Lavanttal', 'Bad Vöslau', 'Baden', 'Bärnbach', 'Berndorf', 'Bischofshofen', 'Bleiburg', 'Bludenz', 'Braunau am Inn', 'Bregenz', 'Bruck an der Leitha', 'Bruck an der Mur',
         'Deutsch-Wagram', 'Deutschlandsberg', 'Dornbirn', 'Drosendorf-Zissersdorf 1', 'Dürnstein',
@@ -69,7 +49,6 @@ class Address extends \Faker\Provider\Address
         'Waidhofen an der Thaya', 'Waidhofen an der Ybbs', 'Weitra', 'Weiz', 'Wels', 'Wien', 'Wiener Neustadt', 'Wieselburg', 'Wilhelmsburg', 'Wolfsberg', 'Wolkersdorf', 'Wörgl',
         'Ybbs an der Donau',
         'Zell am See', 'Zeltweg', 'Zistersdorf', 'Zwettl',
-<<<<<<< HEAD
     ];
 
     protected static $state = [
@@ -77,15 +56,6 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $country = [
-=======
-    );
-
-    protected static $state = array(
-        'Burgenland', 'Kärnten', 'Niederösterreich', 'Oberösterreich', 'Salzburg', 'Steiermark', 'Tirol', 'Vorarlberg', 'Wien'
-    );
-
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Alandinseln', 'Albanien', 'Algerien', 'Amerikanisch-Ozeanien', 'Amerikanisch-Samoa', 'Amerikanische Jungferninseln', 'Andorra', 'Angola', 'Anguilla', 'Antarktis', 'Antigua und Barbuda', 'Argentinien', 'Armenien', 'Aruba', 'Aserbaidschan', 'Australien', 'Ägypten', 'Äquatorialguinea', 'Äthiopien', 'Äußeres Ozeanien',
         'Bahamas', 'Bahrain', 'Bangladesch', 'Barbados', 'Belarus', 'Belgien', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivien', 'Bosnien und Herzegowina', 'Botsuana', 'Bouvetinsel', 'Brasilien', 'Britische Jungferninseln', 'Britisches Territorium im Indischen Ozean', 'Brunei Darussalam', 'Bulgarien', 'Burkina Faso', 'Burundi',
         'Chile', 'China', 'Cookinseln', 'Costa Rica', 'Côte d’Ivoire',
@@ -109,7 +79,6 @@ class Address extends \Faker\Provider\Address
         'Vanuatu', 'Vatikanstadt', 'Venezuela', 'Vereinigte Arabische Emirate', 'Vereinigte Staaten', 'Vereinigtes Königreich', 'Vietnam',
         'Wallis und Futuna', 'Weihnachtsinsel', 'Westsahara',
         'Zentralafrikanische Republik', 'Zypern',
-<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -127,25 +96,6 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
-=======
-    );
-
-    protected static $cityFormats = array(
-        '{{cityName}}',
-    );
-
-    protected static $streetNameFormats = array(
-        '{{lastName}}{{streetSuffixShort}}',
-        '{{firstName}}-{{lastName}}-{{streetSuffixLong}}'
-    );
-
-    protected static $streetAddressFormats = array(
-        '{{streetName}} {{buildingNumber}}',
-    );
-    protected static $addressFormats = array(
-        "{{streetAddress}}\n{{postcode}} {{city}}",
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function cityName()
     {

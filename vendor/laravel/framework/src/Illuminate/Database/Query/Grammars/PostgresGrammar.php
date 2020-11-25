@@ -221,19 +221,11 @@ class PostgresGrammar extends Grammar
     /**
      * Compile an "upsert" statement into SQL.
      *
-<<<<<<< HEAD
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
      * @param  array  $uniqueBy
      * @param  array  $update
      * @return string
-=======
-     * @param  \Illuminate\Database\Query\Builder $query
-     * @param  array $values
-     * @param  array $uniqueBy
-     * @param  array $update
-     * @return  string
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function compileUpsert(Builder $query, array $values, array $uniqueBy, array $update)
     {

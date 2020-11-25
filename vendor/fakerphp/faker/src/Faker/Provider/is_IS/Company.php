@@ -10,11 +10,7 @@ class Company extends \Faker\Provider\Company
     /**
      * @var array Danish company name formats.
      */
-<<<<<<< HEAD
     protected static $formats = [
-=======
-    protected static $formats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastName}} {{companySuffix}}',
         '{{lastName}} {{companySuffix}}',
         '{{lastName}} {{companySuffix}}',
@@ -31,20 +27,12 @@ class Company extends \Faker\Provider\Company
         '{{middleName}} og {{middleName}} {{companySuffix}}',
         '{{middleName}} & {{lastName}}',
         '{{middleName}} og {{lastName}}',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Company suffixes.
      */
-<<<<<<< HEAD
     protected static $companySuffix = ['ehf.', 'hf.', 'sf.'];
-=======
-    protected static $companySuffix = array('ehf.', 'hf.', 'sf.');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.rsk.is/atvinnurekstur/virdisaukaskattur/

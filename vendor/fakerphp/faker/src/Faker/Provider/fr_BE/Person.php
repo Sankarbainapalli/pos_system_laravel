@@ -4,11 +4,7 @@ namespace Faker\Provider\fr_BE;
 
 class Person extends \Faker\Provider\Person
 {
-<<<<<<< HEAD
     protected static $firstNameMale = [
-=======
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aaron', 'Adam', 'Adrien', 'Alessio', 'Alexander', 'Alexandre', 'Antoine', 'Arne', 'Arthur', 'Axel', 'Ayoub', 'Baptiste', 'Benjamin',
         'Bo', 'Clément', 'Daan', 'David', 'Diego', 'Dylan', 'Elias', 'Emiel', 'Emile', 'Enzo', 'Ethan', 'Finn',
         'Florian', 'Gabriel', 'Gilles', 'Guillaume', 'Hamza', 'Hugo', 'Ilias', 'Janne', 'Jasper', 'Jelle', 'Jonas', 'Jules',
@@ -17,15 +13,9 @@ class Person extends \Faker\Provider\Person
         'Nicolas', 'Niels', 'Noah', 'Nolan', 'Quinten', 'Raphaël', 'Rayan', 'Robbe', 'Romain', 'Ruben', 'Rune', 'Sacha',
         'Sam', 'Samuel', 'Sander', 'Simon', 'Stan', 'Thomas', 'Théo', 'Tibo', 'Tom', 'Tristan', 'Vic', 'Victor',
         'Vince', 'Wout', 'Xander', 'Yanis', 'Jarne', 'Lowie', 'Mathys', 'Senne', 'Seppe', 'Siebe', 'Tuur', 'Warre'
-<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
-=======
-    );
-
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Alexia', 'Alexis', 'Alice', 'Alicia', 'Alyssa', 'Amber', 'Amy', 'Amélie', 'Anaïs', 'Anna', 'Anouk', 'Axelle', 'Aya',
         'Camille', 'Charlotte', 'Chiara', 'Chloé', 'Clara', 'Clémence', 'Célia', 'Elena', 'Eline', 'Elisa', 'Elise', 'Ella',
         'Eloïse', 'Emilie', 'Emma', 'Estelle', 'Eva', 'Febe', 'Femke', 'Fien', 'Fleur', 'Giulia', 'Hajar', 'Hanne',
@@ -35,15 +25,9 @@ class Person extends \Faker\Provider\Person
         'Marion', 'Maya', 'Maëlle', 'Merel', 'Mila', 'Nina', 'Noa', 'Noor', 'Nora', 'Nore', 'Noé', 'Noémie',
         'Océane', 'Olivia', 'Pauline', 'Rania', 'Robin', 'Romane', 'Salma', 'Sara', 'Sarah', 'Sofia', 'Tess', 'Victoria',
         'Yana', 'Yasmine', 'Zoé', 'Zoë', 'Ferre', 'Roos'
-<<<<<<< HEAD
     ];
 
     protected static $lastName = [
-=======
-    );
-
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Adam', 'Aerts', 'Amrani', 'André', 'Antoine', 'Baert', 'Bah', 'Barry', 'Bastin', 'Bauwens', 'Benali', 'Bernard', 'Bertrand', 'Bodart', 'Bogaert', 'Bogaerts', 'Borremans', 'Bosmans',
         'Boulanger', 'Bourgeois', 'Brasseur', 'Carlier', 'Celik', 'Ceulemans', 'Charlier', 'Christiaens', 'Claes', 'Claessens', 'Claeys', 'Collard', 'Collignon', 'Collin', 'Cools', 'Coppens',
         'Cornelis', 'Cornet', 'Cuvelier', 'Daems', 'De Backer', 'De Clercq', 'De Cock', 'De Coninck', 'De Coster', 'De Greef', 'De Groote', 'De Meyer', 'De Pauw', 'De Ridder', 'De Smedt',
@@ -57,17 +41,9 @@ class Person extends \Faker\Provider\Person
         'Simons', 'Smet', 'Smets', 'Somers', 'Stevens', 'Thijs', 'Thiry', 'Thomas', 'Thys', 'Timmermans', 'Toussaint', 'Tran', 'Urbain', 'Van Acker', 'Van Damme', 'Van de Velde', 'Van den Bossche',
         'Van den Broeck', 'Van Dyck', 'Van Hecke', 'Van Hoof', 'Vandamme', 'Vandenberghe', 'Verbeeck', 'Verbeke', 'Verbruggen', 'Vercammen', 'Verhaegen', 'Verhaeghe', 'Verhelst', 'Verheyen',
         'Verhoeven', 'Verlinden', 'Vermeersch', 'Vermeiren', 'Vermeulen', 'Verschueren', 'Verstraete', 'Verstraeten', 'Vervoort', 'Wauters', 'Willems', 'Wouters', 'Wuyts', 'Yildirim', 'Yilmaz'
-<<<<<<< HEAD
     ];
 
     protected static $titleMale = ['M.', 'Dr.', 'Pr.', 'Me.', 'Mgr'];
 
     protected static $titleFemale = ['Mme.', 'Mlle', 'Dr.', 'Pr.', 'Me.'];
-=======
-    );
-
-    protected static $titleMale = array('M.', 'Dr.', 'Pr.', 'Me.', 'Mgr');
-
-    protected static $titleFemale = array('Mme.', 'Mlle', 'Dr.', 'Pr.', 'Me.');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

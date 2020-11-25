@@ -299,7 +299,6 @@ class Factory
     }
 
     /**
-<<<<<<< HEAD
      * Create a new pending request instance for this factory.
      *
      * @return \Illuminate\Http\Client\PendingRequest
@@ -310,8 +309,6 @@ class Factory
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Execute a method against a new pending request instance.
      *
      * @param  string  $method
@@ -324,11 +321,7 @@ class Factory
             return $this->macroCall($method, $parameters);
         }
 
-<<<<<<< HEAD
         return tap($this->newPendingRequest(), function ($request) {
-=======
-        return tap(new PendingRequest($this), function ($request) {
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $request->stub($this->stubCallbacks);
         })->{$method}(...$parameters);
     }

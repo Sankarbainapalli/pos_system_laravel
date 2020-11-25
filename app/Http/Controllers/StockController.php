@@ -105,7 +105,6 @@ class StockController extends Controller
 
 
 
-
      public function show(Stock $stock){
 
         // Todo::where('id',$id)->delete();

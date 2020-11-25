@@ -4,24 +4,14 @@ namespace Faker\Provider\en_UG;
 
 class Address extends \Faker\Provider\en_US\Address
 {
-<<<<<<< HEAD
     protected static $cityFormats = [
         '{{cityName}}'
     ];
-=======
-    protected static $cityFormats = array(
-        '{{cityName}}'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://en.wikipedia.org/wiki/List_of_cities_and_towns_in_Uganda
      */
-<<<<<<< HEAD
     protected static $cityName = [
-=======
-    protected static $cityName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Alebtong','Abim','Adjumani','Amolatar','Amuria','Amuru','Apac','Arua',
         'Bombo','Budaka','Bugembe','Bugiri','Bukedea','Bulisa','Buikwe','Bundibugyo',
         'Busembatya','Bushenyi','Busia','Busolwe','Butaleja','Buwenge',
@@ -48,20 +38,12 @@ class Address extends \Faker\Provider\en_US\Address
         'Tororo',
         'Wakiso','Wobulenzi',
         'Yumbe'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://en.wikipedia.org/wiki/Category:Districts_of_Uganda
      */
-<<<<<<< HEAD
     protected static $district = [
-=======
-    protected static $district = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abim','Adjumani','Agago','Alebtong','Amolatar','Amudat','Amuria','Amuru','Apac','Arua',
         'Budaka','Bududa','Bugiri','Buhweju','Buikwe','Bukedea','Bukomansimbi','Bukwo','Bulambuli',
         'Buliisa','Bundibugyo','Bushenyi','Busia','Butaleja','Butambala','Buvuma','Buyende',
@@ -87,19 +69,11 @@ class Address extends \Faker\Provider\en_US\Address
         'Wakiso',
         'Yumbe',
         'Zombo'
-<<<<<<< HEAD
     ];
 
     protected static $postcode = [ '#', "##", "###", "####", "#####" ];
 
     protected static $region = [ 'Central', 'East', 'North', 'West' ];
-=======
-    );
-
-    protected static $postcode = array( '#', "##", "###", "####", "#####" );
-
-    protected static $region = array( 'Central', 'East', 'North', 'West' );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Fort Portal'

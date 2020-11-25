@@ -4,11 +4,7 @@ namespace Faker\Provider\en_IN;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $city = [
-=======
-    protected static $city = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Agra','Ahmedabad','Ajmer','Alwar',
         'Bengaluru','Bhubhaneshwar','Bhopal','Bikaner',
         'Chennai','Chandigarh',
@@ -29,15 +25,9 @@ class Address extends \Faker\Provider\Address
         'Udaipur',
         'Vishakhapattanam','Vadodara',
         'Warangal',
-<<<<<<< HEAD
     ];
 
     protected static $state = [
-=======
-    );
-
-    protected static $state = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         // States
         'Andhra Pradesh', 'Arunachal Pradesh', 'Assam',
@@ -64,7 +54,6 @@ class Address extends \Faker\Provider\Address
         'Dadra and Nagar Haveli', 'Daman and Diu', 'Delhi',
         'Lakshadweep',
         'Puducherry'
-<<<<<<< HEAD
     ];
 
     protected static $stateAbbr = [
@@ -72,15 +61,6 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $country = [
-=======
-    );
-
-    protected static $stateAbbr = array(
-       'AP', 'AR', 'AS', 'BR', 'CG', 'GA', 'GJ', 'HR', 'HP', 'JK', 'JH', 'KA', 'KL', 'MP', 'MH', 'MN', 'ML', 'MZ', 'NL', 'OD', 'PB', 'RJ', 'SK', 'TN', 'TS', 'TR', 'UP', 'UK', 'WB', 'AN', 'CH', 'DN', 'DD', 'DL', 'LD', 'PY'
-    );
-
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica (the territory South of 60 deg S)', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan',
         'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Bouvet Island (Bouvetoya)', 'Brazil', 'British Indian Ocean Territory (Chagos Archipelago)', 'British Virgin Islands', 'Brunei Darussalam', 'Bulgaria', 'Burkina Faso', 'Burundi',
         'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Christmas Island', 'Cocos (Keeling) Islands', 'Colombia', 'Comoros', 'Congo', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote d\'Ivoire', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic',
@@ -106,13 +86,8 @@ class Address extends \Faker\Provider\Address
         'Wallis and Futuna', 'Western Sahara',
         'Yemen',
         'Zambia', 'Zimbabwe'
-<<<<<<< HEAD
     ];
     protected static $localityName = [
-=======
-    );
-    protected static $localityName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aundh','Andheri',
         'Borivali','Bandra',
         'Chinchwad','Chandpole','Churchgate','Cyber City',
@@ -124,7 +99,6 @@ class Address extends \Faker\Provider\Address
         'Sodala',
         'Virar','Vikhroli',
         'Yerwada','Yeshwanthpura',
-<<<<<<< HEAD
     ];
     protected static $areaSuffix = [
         ' Nagar','Pur','Garh','Gunj',' Chowk',
@@ -150,33 +124,6 @@ class Address extends \Faker\Provider\Address
         '{{buildingNumber}}, {{locality}},',
         '{{buildingNumber}}, {{societyName}}, {{locality}}',
     ];
-=======
-    );
-    protected static $areaSuffix = array(
-        ' Nagar','Pur','Garh','Gunj',' Chowk',
-    );
-    protected static $postcode = array(
-        '1#####','2#####','3#####','4#####','5#####',
-    );
-    protected static $localityFormats = array(
-        '{{firstName}}{{areaSuffix}}',
-        '{{localityName}}'
-    );
-    protected static $addressFormats = array(
-        '{{streetAddress}} {{city}} - {{postcode}}',
-    );
-    protected static $societySuffix = array(
-        'Society','Apartments','Heights','Villas',
-    );
-    protected static $societyNameFormat = array(
-        '{{firstName}} {{societySuffix}}'
-    );
-    protected static $streetAddressFormats = array(
-
-        '{{buildingNumber}}, {{locality}},',
-        '{{buildingNumber}}, {{societyName}}, {{locality}}',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     public function societySuffix()
     {
         return static::randomElement(static::$societySuffix);

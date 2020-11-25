@@ -7,7 +7,6 @@ class Person extends Base
     public const GENDER_MALE = 'male';
     public const GENDER_FEMALE = 'female';
 
-<<<<<<< HEAD
     protected static $titleFormat = [
         '{{titleMale}}',
         '{{titleFemale}}',
@@ -39,39 +38,6 @@ class Person extends Base
     protected static $titleMale = ['Mr.', 'Dr.', 'Prof.'];
 
     protected static $titleFemale = ['Mrs.', 'Ms.', 'Miss', 'Dr.', 'Prof.'];
-=======
-    protected static $titleFormat = array(
-      '{{titleMale}}',
-      '{{titleFemale}}',
-    );
-
-    protected static $firstNameFormat = array(
-      '{{firstNameMale}}',
-      '{{firstNameFemale}}',
-    );
-
-    protected static $maleNameFormats = array(
-        '{{firstNameMale}} {{lastName}}',
-    );
-
-    protected static $femaleNameFormats = array(
-        '{{firstNameFemale}} {{lastName}}',
-    );
-
-    protected static $firstNameMale = array(
-        'John',
-    );
-
-    protected static $firstNameFemale = array(
-        'Jane',
-    );
-
-    protected static $lastName = array('Doe');
-
-    protected static $titleMale = array('Mr.', 'Dr.', 'Prof.');
-
-    protected static $titleFemale = array('Mrs.', 'Ms.', 'Miss', 'Dr.', 'Prof.');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @param string|null $gender 'male', 'female' or null for any

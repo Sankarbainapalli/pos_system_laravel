@@ -8,13 +8,8 @@ class Text extends \Faker\Provider\Text
      * generates text string in arabic
      *
      * @example 'از تاریخ‌الشعرا را بکوبند روی نبش دیوار کوچه‌شان. تابلوی مدرسه.'
-<<<<<<< HEAD
      * @param  int                   $maxNbChars
      * @param  int                   $indexSize
-=======
-     * @param  integer                   $maxNbChars
-     * @param  integer                   $indexSize
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return string
      * @throws \InvalidArgumentException
      */
@@ -33,11 +28,7 @@ class Text extends \Faker\Provider\Text
         }
 
         $words = $this->getConsecutiveWords($indexSize);
-<<<<<<< HEAD
         $result = [];
-=======
-        $result = array();
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $resultLength = 0;
         // take a random starting point
         $next = static::randomKey($words);

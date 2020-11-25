@@ -3,7 +3,6 @@
 namespace Illuminate\Cache;
 
 use Exception;
-<<<<<<< HEAD
 use Illuminate\Contracts\Cache\LockProvider;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Contracts\Filesystem\LockTimeoutException;
@@ -14,15 +13,6 @@ use Illuminate\Support\InteractsWithTime;
 class FileStore implements Store, LockProvider
 {
     use InteractsWithTime, HasCacheLock, RetrievesMultipleKeys;
-=======
-use Illuminate\Contracts\Cache\Store;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\InteractsWithTime;
-
-class FileStore implements Store
-{
-    use InteractsWithTime, RetrievesMultipleKeys;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * The Illuminate Filesystem instance.
@@ -97,7 +87,6 @@ class FileStore implements Store
     }
 
     /**
-<<<<<<< HEAD
      * Store an item in the cache if the key doesn't exist.
      *
      * @param  string  $key
@@ -137,8 +126,6 @@ class FileStore implements Store
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Create the file cache directory if necessary.
      *
      * @param  string  $path

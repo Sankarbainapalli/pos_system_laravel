@@ -8,53 +8,33 @@ class Person extends \Faker\Provider\Person
      * CNE is the official national election registry org.
      * @link http://www.cne.gob.ve/web/registro_electoral/ciudadanos_111_129_2011.php
      */
-<<<<<<< HEAD
     protected static $maleNameFormats = [
-=======
-    protected static $maleNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{firstNameMale}} {{lastName}} {{lastName}}',
         '{{titleMale}} {{firstNameMale}} {{lastName}}',
         '{{titleMale}} {{firstNameMale}} {{lastName}} {{suffix}}',
         '{{firstNameMale}} {{lastName}} {{suffix}}',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * CNE is the official national election registry org.
      * @link http://www.cne.gob.ve/web/registro_electoral/ciudadanos_111_129_2011.php
      */
-<<<<<<< HEAD
     protected static $femaleNameFormats = [
-=======
-    protected static $femaleNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}} {{lastName}}',
         '{{titleFemale}} {{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}} {{suffix}}',
         '{{titleFemale}} {{firstNameFemale}} {{lastName}} {{suffix}}',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * CNE is the official national election registry org.
      * @link http://www.cne.gob.ve/web/registro_electoral/ciudadanos_111_129_2011.php
      */
-<<<<<<< HEAD
     protected static $firstNameMale = [
-=======
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aaron', 'Adam', 'Adria', 'Adrian', 'Alberto', 'Aleix', 'Alejandro', 'Alex', 'Alonso', 'Alvaro', 'Ander', 'Andres',
         'Angel', 'Antonio', 'Bruno', 'Carlos', 'Cesar', 'Cristian', 'Daniel', 'Dario', 'David', 'Domingo',
         'Diego', 'Eduardo', 'Enrique', 'Eric', 'Erik', 'Fernando', 'Francisco', 'Francisco Javier', 'Gabriel', 'Gonzalo',
@@ -63,21 +43,13 @@ class Person extends \Faker\Provider\Person
         'Leo', 'Lucas', 'Luis', 'Manuel', 'Marc', 'Marco', 'Marcos', 'Mario', 'Martin', 'Mateo', 'Miguel', 'Miguel',
         'Mohamed', 'Nicolas', 'Oliver', 'Omar', 'Oswaldo', 'Oscar', 'Pablo', 'Pedro', 'Pol', 'Rafael', 'Raul', 'Rayan',
         'Roberto', 'Rodrigo', 'Ruben', 'Samuel', 'Santiago', 'Saul', 'Sergio', 'Sebastian', 'Victor', 'Yorman',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * CNE is the official national election registry org.
      * @link http://www.cne.gob.ve/web/registro_electoral/ciudadanos_111_129_2011.php
      */
-<<<<<<< HEAD
     protected static $firstNameFemale = [
-=======
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abril', 'Adriana', 'Africa', 'Ainara', 'Antonia', 'Alba', 'Alejandra', 'Alexandra', 'Alexia', 'Alicia', 'Alma',
         'Ana', 'Andrea', 'Ane', 'Angela', 'Anna', 'Ariadna', 'Aroa', 'Bella', 'Beatriz', 'Berta', 'Blanca', 'Candela',
         'Carla', 'Carlota', 'Carmen', 'Carolina', 'Celia', 'Clara', 'Claudia', 'Cristina', 'Daniela', 'Diana', 'Elena', 'Elsa',
@@ -87,21 +59,13 @@ class Person extends \Faker\Provider\Person
         'Naia', 'Naiara', 'Natalia', 'Nayara', 'Nerea', 'Nil', 'Noa', 'Noelia', 'Nora', 'Nuria', 'Olivia', 'Ona',
         'Paola', 'Patricia', 'Pau', 'Paula', 'Raquel', 'Rocio', 'Salma', 'Sandra', 'Sara', 'Silvia', 'Sofia', 'Teresa',
         'Valentina', 'Valeria', 'Vega', 'Vera', 'Victoria', 'Yaiza', 'Zulay',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * CNE is the official national election registry org.
      * @link http://www.cne.gob.ve/web/registro_electoral/ciudadanos_111_129_2011.php
      */
-<<<<<<< HEAD
     protected static $lastName = [
-=======
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abad', 'Abeyta', 'Abrego', 'Abreu', 'Acevedo', 'Acosta', 'Acuña', 'Adame', 'Adorno', 'Agosto', 'Aguado', 'Aguayo',
         'Aguilar', 'Aguilera', 'Aguirre', 'Alanis', 'Alaniz', 'Alarcón', 'Alba', 'Alcala', 'Alcaraz', 'Alcántar', 'Alejandro',
         'Alemán', 'Alfaro', 'Alfonso', 'Alicea', 'Almanza', 'Almaraz', 'Almonte', 'Alonso', 'Alonzo', 'Altamirano', 'Alva',
@@ -166,7 +130,6 @@ class Person extends \Faker\Provider\Person
         'Vigil', 'Vila', 'Villa', 'Villagómez', 'Villalba', 'Villalobos', 'Villalpando', 'Villanueva', 'Villar', 'Villareal', 'Villarreal',
         'Villaseñor', 'Villegas', 'Vásquez', 'Vázquez', 'Vélez', 'Véliz', 'Ybarra', 'Yáñez', 'Zambrano', 'Zamora', 'Zamudio', 'Zapata',
         'Zaragoza', 'Zarate', 'Zavala', 'Zayas', 'Zelaya', 'Zepeda', 'Zúñiga', 'de Anda', 'de Jesús', 'Águilar', 'Álvarez', 'Ávalos', 'Ávila'
-<<<<<<< HEAD
     ];
 
     protected static $titleMale = ['Sr.', 'Dn.', 'Dr.', 'Lcdo.', 'Ing.'];
@@ -176,17 +139,6 @@ class Person extends \Faker\Provider\Person
     private static $suffix = ['Hijo'];
 
     private static $nationalityId = ['V', 'E'];
-=======
-    );
-
-    protected static $titleMale = array('Sr.', 'Dn.', 'Dr.', 'Lcdo.', 'Ing.');
-
-    protected static $titleFemale = array('Sra.', 'Srita.', 'Dra.', 'Lcda.', 'Ing.');
-
-    private static $suffix = array('Hijo');
-
-    private static $nationalityId = array('V', 'E');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Hijo'

@@ -8,43 +8,25 @@ class Person extends \Faker\Provider\Person
      * It is very common in Uganda for people to arrange their names as
      * lastname(surname) firstname
      */
-<<<<<<< HEAD
     protected static $maleNameFormats = [
-=======
-    protected static $maleNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameMale}} {{lastName}}',
         '{{lastName}} {{firstNameMale}}',
         '{{firstNameMale}} {{lastNameMale}}',
         '{{lastNameMale}} {{firstNameMale}}'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * It is very common in Uganda for people to arrange their names as
      * lastname(surname) firstname
      */
-<<<<<<< HEAD
     protected static $femaleNameFormats = [
-=======
-    protected static $femaleNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameFemale}} {{lastName}}',
         '{{lastName}} {{firstNameFemale}}',
         '{{firstNameFemale}} {{lastNameFemale}}',
         '{{lastNameFemale}} {{firstNameFemale}}'
-<<<<<<< HEAD
     ];
 
     protected static $firstNameMale = [
-=======
-    );
-
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aaron','Abdul','Abdullah','Abraham','Adam','Agustin','Ahmad','Ahmed','Akeem','Albert','Alex','Alfred','Ali','Allan','Allen','Alvin','Amani','Ambrose','Amos','Anderson','Andrew','Angel','Anthony','Arnold','Arthur','Austin',
         'Barnet','Barry','Ben','Benjamin','Bennie','Benny','Bernard','Berry','Berta','Bertha','Bill','Billy','Bobby','Boyd','Bradley','Brian','Bruce',
         'Caesar','Caleb','Carol','Cecil','Charles','Charlie','Chris','Christian','Christopher','Cleveland','Clifford','Clinton','Collin','Conrad',
@@ -66,15 +48,9 @@ class Person extends \Faker\Provider\Person
         'Taylor','Theodore','Thomas','Timmy','Timothy','Titus','Tom','Tony','Travis','Trevor','Troy','Trystan','Tyler','Tyson',
         'Victor','Vince','Vincent','Vinnie',
         'Walter','Warren','Wilford','Wilfred','Will','William','Willis','Willy','Wilson'
-<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
-=======
-    );
-
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abigail','Adela','Adrianna','Adrienne','Aisha','Alice','Alisha','Alison','Amanda','Amelia','Amina','Amy','Anabel','Anabelle','Angela','Angelina','Angie','Anita','Anna','Annamarie','Anne','Annette','April','Arianna','Ariela','Asha','Ashley','Ashly','Audrey','Aurelia',
         'Barbara','Beatrice','Bella','Bernadette','Beth','Bethany','Bethel','Betsy','Bette','Bettie','Betty','Blanche','Bonita','Bonnie','Brenda','Bridget','Bridgette','Carissa','Carol','Carole','Carolina','Caroline','Carolyn','Carolyne','Catharine','Catherine','Cathrine','Cathryn','Cathy','Cecelia','Cecile','Cecilia','Charity','Charlotte','Chloe','Christina','Christine','Cindy','Claire','Clara','Clarissa','Claudine','Cristal','Crystal','Cynthia',
         'Dahlia','Daisy','Daniela','Daniella','Danielle','Daphne','Daphnee','Daphney','Darlene','Deborah','Destiny','Diana','Dianna','Dina','Dolly','Dolores','Donna','Dora','Dorothy','Dorris',
@@ -97,28 +73,16 @@ class Person extends \Faker\Provider\Person
         'Wanda','Wendy','Whitney','Wilma','Winifred',
         'Yvette','Yvonne',
         'Zita','Zoe'
-<<<<<<< HEAD
     ];
 
     protected static $lastNameMale = [
-=======
-    );
-
-    protected static $lastNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Mubiru','Muwanguzi','Muwonge',
         'Nsamba',
         'Obol','Odeke','Okumu','Okumuringa','Opega','Opio','Orishaba','Osiki','Ouma',
         'Sekandi','Semande','Serwanga','Ssebatta','Ssebugulu','Ssebunya','Ssebuuma','Ssebyala','Ssegawa','Ssekabira','Ssekanjako','Ssekate','Ssekibuule','Ssekidde','Ssekiranda','Ssekitooleko','Ssekubulwa','Ssempija','Ssempungu','Ssemwezi','Ssendege','Ssenjovu','Ssenkaali','Ssentezza','Ssentongo','Sserubiri','Sseruyinda','Ssettende',
-<<<<<<< HEAD
     ];
 
     protected static $lastNameFemale = [
-=======
-    );
-
-    protected static $lastNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abol','Adeke','Aketch','Akoth','Akumu','Aol','Apega','Apio','Auma','Awori','Ayo',
         'Babirye',
         'Chandiru',
@@ -126,15 +90,9 @@ class Person extends \Faker\Provider\Person
         'Kabatesi','Kabonesa','Kaitesi','Kakiiza','Kakuze','Kaliisa','Karungi','Katusiime','Kebirungi','Kyomi','Kyoshabire',
         'Mahoro','Murungi',
         'Nabaale','Nabaggala','Nabakooza','Nabaloga','Nabankema','Nabasirye','Nabaweesi','Nabayunga','Nabbona','Nabise','Nabukeera','Nabunya','Nabuufu','Nabuuso','Nabwami','Nakaayi','Nakabugo','Nakabuye','Nakafeero','Nakalanzi','Nakalunda','Nakasinde','Nakasolya','Nakasumba','Nakato','Nakaweesa','Nakazibwe','Nakiboneka','Nakidde','Nakigozi','Nakiguli','Nakimbugwe','Nakimuli','Nakinobe','Nakiridde','Nakisige','Nakitende','Nakiyemba','Nakku','Nakyagaba','Nakyanzi','Nalubuga','Nalubwama','Nalukwago','Naluyima','Nalweyiso','Nalwoga','Namaganda','Namagembe','Namatovu','Nambi','Nambogo','Nambooze','Nambuusi','Namenya','Namiiro','Namirembe','Nampemba','Nampijja','Namubiru','Namuddu','Namugenyi','Namugwanya','Namukwaya','Namuleme','Namulindwa','Namutebi','Nankindu','Nankinga','Nanteeza','Nantongo','Nanvule','Nanyanzi','Nanyombi','Nanyondo','Nanyonjo','Nassimwba','Nazziwa','Ndagire'
-<<<<<<< HEAD
     ];
 
     protected static $lastName = [
-=======
-    );
-
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abayisenga','Agaba','Ahebwe','Aisu','Akankunda','Akankwasa','Akashaba','Akashabe','Ampumuza','Ankunda','Asasira','Asiimwe','Atuhe','Atuhire','Atukunda','Atukwase','Atwine','Aurishaba',
         'Badru','Baguma','Bakabulindi','Bamwiine','Barigye','Bbosa','Bisheko','Biyinzika','Bugala','Bukenya','Buyinza','Bwana','Byanyima','Byaruhanga',
         'Ddamulira',
@@ -148,11 +106,7 @@ class Person extends \Faker\Provider\Person
         'Rubalema','Rusiimwa','Rwabyoma',
         'Tamale','Tendo','Tizikara','Tuhame','Tumusiime','Tumwebaze','Tumwesigye','Tumwiine','Turyasingura','Tusiime','Twasiima','Twesigomwe',
         'Wasswa','Wavamuno','Were'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function lastName($gender = null)
     {

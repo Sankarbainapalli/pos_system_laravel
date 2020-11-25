@@ -276,11 +276,7 @@ trait ManagesFrequencies
      */
     public function weekdays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::MONDAY.'-'.Schedule::FRIDAY);
-=======
-        return $this->days('1-5');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -290,11 +286,7 @@ trait ManagesFrequencies
      */
     public function weekends()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::SATURDAY.','.Schedule::SUNDAY);
-=======
-        return $this->days('0,6');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -304,11 +296,7 @@ trait ManagesFrequencies
      */
     public function mondays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::MONDAY);
-=======
-        return $this->days(1);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -318,11 +306,7 @@ trait ManagesFrequencies
      */
     public function tuesdays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::TUESDAY);
-=======
-        return $this->days(2);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -332,11 +316,7 @@ trait ManagesFrequencies
      */
     public function wednesdays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::WEDNESDAY);
-=======
-        return $this->days(3);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -346,11 +326,7 @@ trait ManagesFrequencies
      */
     public function thursdays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::THURSDAY);
-=======
-        return $this->days(4);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -360,11 +336,7 @@ trait ManagesFrequencies
      */
     public function fridays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::FRIDAY);
-=======
-        return $this->days(5);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -374,11 +346,7 @@ trait ManagesFrequencies
      */
     public function saturdays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::SATURDAY);
-=======
-        return $this->days(6);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -388,11 +356,7 @@ trait ManagesFrequencies
      */
     public function sundays()
     {
-<<<<<<< HEAD
         return $this->days(Schedule::SUNDAY);
-=======
-        return $this->days(0);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**

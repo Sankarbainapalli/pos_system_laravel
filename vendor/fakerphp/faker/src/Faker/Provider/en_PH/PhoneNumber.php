@@ -5,11 +5,7 @@ namespace Faker\Provider\en_PH;
 class PhoneNumber extends \Faker\Provider\PhoneNumber
 {
     // http://en.wikipedia.org/wiki/Telephone_numbers_in_the_Philippines
-<<<<<<< HEAD
     protected static $mobileFormats = [
-=======
-    protected static $mobileFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '+63 (813) ###-####', '+63 (817) ###-####', '+63 (900) ###-####',
         '+63 (905) ###-####', '+63 (906) ###-####', '+63 (907) ###-####',
         '+63 (908) ###-####', '+63 (909) ###-####', '+63 (910) ###-####',
@@ -49,11 +45,7 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '(0978) ###-####', '(0979) ###-####', '(0980) ###-####',
         '(0989) ###-####', '(0994) ###-####', '(0996) ###-####',
         '(0997) ###-####', '(0998) ###-####', '(0999) ###-####',
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Return a en_PH mobile phone number

@@ -4,7 +4,6 @@ namespace Faker\Provider\ro_MD;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $buildingNumber = ['###', '##', '#', '#/#', '#A', '#B'];
     protected static $apartmentNumber = ['#', '##'];
     protected static $floor = ['#', '##'];
@@ -17,20 +16,6 @@ class Address extends \Faker\Provider\Address
 
     // random selection of seemingly frequently used streets and naming categories
     protected static $streetPlainName = [
-=======
-    protected static $buildingNumber = array('###', '##', '#', '#/#', '#A', '#B');
-    protected static $apartmentNumber = array('#', '##');
-    protected static $floor = array('#', '##');
-    protected static $block = array('#', '##', 'A', 'B', 'C', 'D');
-    protected static $blockSegment = array('A', 'B', 'C', 'D');
-
-    protected static $streetPrefix = array(
-        'Str.', 'B-dul.', 'Aleea', 'Calea', 'P-ța', 'Str-la'
-    );
-
-    // random selection of seemingly frequently used streets and naming categories
-    protected static $streetPlainName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         // historical events
         'Eroilor', 'Independenței', 'Lenin', 'Unirii', '31 August 1989', 'Sovietului',
         // historical people
@@ -43,21 +28,12 @@ class Address extends \Faker\Provider\Address
         'Croitorilor', 'Meșterilor', 'Zidarilor', 'Păcurari', 'Muncii', 'Învățătorului',
         // geography related
         'Chisinau', 'Paris'
-<<<<<<< HEAD
     ];
 
     protected static $postcode = ['####'];
 
     // http://ro.wikipedia.org/wiki/Lista_ora%C8%99elor_din_Republica_Moldova
     protected static $cityNames = [
-=======
-    );
-
-    protected static $postcode = array('####');
-
-    // http://ro.wikipedia.org/wiki/Lista_ora%C8%99elor_din_Republica_Moldova
-    protected static $cityNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Chișinău', 'Tiraspol', 'Bălți', 'Tighina', 'Râbnița', 'Cahul', 'Ungheni', 'Soroca',
         'Orhei', 'Dubăsari', 'Comrat', 'Ceadâr-Lunga', 'Strășeni', 'Căușeni', 'Drochia', 'Slobozia',
         'Edineț', 'Vulcănești', 'Durlești', 'Hâncești', 'Ialoveni', 'Fălești', 'Călărași', 'Codru',
@@ -67,17 +43,10 @@ class Address extends \Faker\Provider\Address
         'Telenești', 'Șoldănești', 'Tvardița', 'Lipcani', 'Vadul lui Vodă', 'Iargara', 'Căinari',
         'Cantemir', 'Vatra', 'Biruința', 'Crasnoe', 'Cornești', 'Costești', 'Mărculești', 'Ghindești',
         'Tiraspolul Nou', 'Frunză', 'Bucovăț', 'Maiac'
-<<<<<<< HEAD
     ];
 
     // http://ro.wikipedia.org/wiki/Lista_statelor_lumii#Lista_statelor_lumii
     protected static $country = [
-=======
-    );
-
-    // http://ro.wikipedia.org/wiki/Lista_statelor_lumii#Lista_statelor_lumii
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afganistan', 'Africa de Sud', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua și Barbuda', 'Arabia Saudită', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaidjan',
         'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgia', 'Belize', 'Benin', 'Bhutan', 'Birmania', 'Bolivia', 'Bosnia și Herțegovina', 'Botswana', 'Brazilia', 'Brunei', 'Bulgaria',
         'Burkina Faso', 'Burundi', 'Cambodgia', 'Camerun', 'Canada', 'Capul Verde', 'Cehia', 'Republica Centrafricană', 'Chile', 'Republica Populară Chineză', 'Ciad', 'Cipru', 'Columbia', 'Comore',
@@ -92,7 +61,6 @@ class Address extends \Faker\Provider\Address
         'Sfântul Cristofor și Nevis', 'Saint Vincent and the Grenadines', 'Sierra Leone', 'Singapore', 'Siria', 'Slovacia', 'Slovenia', 'Insulele Solomon', 'Somalia', 'Spania', 'Sri Lanka',
         'Statele Unite ale Americii', 'Sudan', 'Sudanul de Sud', 'Suedia', 'Surinam', 'Swaziland', 'Tadjikistan', 'Tanzania', 'Thailanda', 'Timorul de Est', 'Togo', 'Tonga', 'Trinidad-Tobago',
         'Tunisia', 'Turcia', 'Turkmenistan', 'Tuvalu', 'Ucraina', 'Uganda', 'Ungaria', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican', 'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
-<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -105,39 +73,17 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $streetAddressFormats = [
-=======
-    );
-
-    protected static $cityFormats = array(
-        '{{cityName}}',
-        'Mun. {{cityName}}',
-    );
-
-    protected static $streetNameFormats = array(
-        '{{streetPrefix}} {{streetPlainName}}',
-    );
-
-    protected static $streetAddressFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{streetName}} {{buildingNumber}}',
         '{{streetName}} {{buildingNumber}}',
         '{{streetName}} {{buildingNumber}}',
         '{{streetName}} nr. {{buildingNumber}}, bl. {{block}}, ap. {{apartmentNumber}}',
         '{{streetName}} nr. {{buildingNumber}}, bl. {{block}}, et. {{floor}}, ap. {{apartmentNumber}}',
         '{{streetName}} nr. {{buildingNumber}}, bl. {{block}}, sc. {{blockSegment}}, et. {{floor}}, ap. {{apartmentNumber}}',
-<<<<<<< HEAD
     ];
 
     protected static $addressFormats = [
         "{{streetAddress}}, {{city}}, CP {{postcode}}",
     ];
-=======
-    );
-
-    protected static $addressFormats = array(
-        "{{streetAddress}}, {{city}}, CP {{postcode}}",
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function cityName()
     {

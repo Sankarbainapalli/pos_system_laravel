@@ -10,11 +10,7 @@ class Address extends \Faker\Provider\Address
     /**
      * @var array Countries in icelandic
      */
-<<<<<<< HEAD
     protected static $country = [
-=======
-    protected static $country = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afganistan', 'Albanía', 'Alsír', 'Andorra', 'Angóla', 'Angvilla', 'Antígva og Barbúda', 'Argentína',
         'Armenía', 'Arúba', 'Aserbaídsjan', 'Austur-Kongó', 'Austurríki', 'Austur-Tímor', 'Álandseyjar',
         'Ástralía', 'Bahamaeyjar', 'Bandaríkin', 'Bandaríska Samóa', 'Bangladess', 'Barbados', 'Barein',
@@ -47,20 +43,12 @@ class Address extends \Faker\Provider\Address
         'Tékkland', 'Tonga', 'Tógó', 'Tókelá', 'Trínidad og Tóbagó', 'Tsjad', 'Tsjetsjenía', 'Turks- og Caicos-eyjar',
         'Túnis', 'Túrkmenistan', 'Túvalú', 'Tyrkland', 'Ungverjaland', 'Úganda', 'Úkraína', 'Úrúgvæ', 'Úsbekistan',
         'Vanúatú', 'Venesúela', 'Vestur-Kongó', 'Vestur-Sahara', 'Víetnam', 'Wales', 'Wallis- og Fútúnaeyjar', 'Þýskaland'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic cities.
      */
-<<<<<<< HEAD
     protected static $cityNames = [
-=======
-    protected static $cityNames = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Reykjavík', 'Seltjarnarnes', 'Vogar', 'Kópavogur', 'Garðabær', 'Hafnarfjörður', 'Reykjanesbær', 'Grindavík',
         'Sandgerði', 'Garður', 'Reykjanesbær', 'Mosfellsbær', 'Akranes', 'Borgarnes', 'Reykholt', 'Stykkishólmur',
         'Flatey', 'Grundarfjörður', 'Ólafsvík', 'Snæfellsbær', 'Hellissandur', 'Búðardalur', 'Reykhólahreppur',
@@ -73,44 +61,27 @@ class Address extends \Faker\Provider\Address
         'Stöðvarfjörður', 'Breiðdalsvík', 'Djúpivogur', 'Höfn', 'Selfoss', 'Hveragerði', 'Þorlákshöfn', 'Ölfus',
         'Eyrarbakki', 'Stokkseyri', 'Laugarvatn', 'Flúðir', 'Hella', 'Hvolsvöllur', 'Vík', 'Kirkjubæjarklaustur',
         'Vestmannaeyjar'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Street name suffix.
      */
-<<<<<<< HEAD
     protected static $streetSuffix = [
-=======
-    protected static $streetSuffix = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'ás', 'bakki', 'braut', 'bær', 'brún', 'berg', 'fold', 'gata', 'gróf',
         'garðar', 'höfði', 'heimar', 'hamar', 'hólar', 'háls', 'kvísl', 'lækur',
         'leiti', 'land', 'múli', 'nes', 'rimi', 'stígur', 'stræti', 'stekkur',
         'slóð', 'skógar', 'sel', 'teigur', 'tún', 'vangur', 'vegur', 'vogur',
         'vað'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Street name prefix.
      */
-<<<<<<< HEAD
     protected static $streetPrefix = [
-=======
-    protected static $streetPrefix = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aðal', 'Austur', 'Bakka', 'Braga', 'Báru', 'Brunn', 'Fiski', 'Leifs',
         'Týs', 'Birki', 'Suður', 'Norður', 'Vestur', 'Austur', 'Sanda', 'Skógar',
         'Stór', 'Sunnu', 'Tungu', 'Tangar', 'Úlfarfells', 'Vagn', 'Vind', 'Ysti',
         'Þing', 'Hamra', 'Hóla', 'Kríu', 'Iðu', 'Spóa', 'Starra', 'Uglu', 'Vals'
-<<<<<<< HEAD
     ];
 
     /**
@@ -119,99 +90,51 @@ class Address extends \Faker\Provider\Address
     protected static $postcode = [
         '%##'
     ];
-=======
-    );
-
-    /**
-     * @var Icelandic zip code.
-    **/
-    protected static $postcode = array(
-        '%##'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic regions.
      */
-<<<<<<< HEAD
     protected static $regionNames = [
         'Höfuðborgarsvæðið', 'Norðurland', 'Suðurland', 'Vesturland', 'Vestfirðir', 'Austurland', 'Suðurnes'
     ];
-=======
-    protected static $regionNames = array(
-        'Höfuðborgarsvæðið', 'Norðurland', 'Suðurland', 'Vesturland', 'Vestfirðir', 'Austurland', 'Suðurnes'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic building numbers.
      */
-<<<<<<< HEAD
     protected static $buildingNumber = [
         '%##', '%#', '%#', '%', '%', '%', '%?', '% ?',
     ];
-=======
-    protected static $buildingNumber = array(
-        '%##', '%#', '%#', '%', '%', '%', '%?', '% ?',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic city format.
      */
-<<<<<<< HEAD
     protected static $cityFormats = [
         '{{cityName}}',
     ];
-=======
-    protected static $cityFormats = array(
-        '{{cityName}}',
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic street's name formats.
      */
-<<<<<<< HEAD
     protected static $streetNameFormats = [
-=======
-    protected static $streetNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{streetPrefix}}{{streetSuffix}}',
         '{{streetPrefix}}{{streetSuffix}}',
         '{{firstNameMale}}{{streetSuffix}}',
         '{{firstNameFemale}}{{streetSuffix}}'
-<<<<<<< HEAD
     ];
-=======
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic street's address formats.
      */
-<<<<<<< HEAD
     protected static $streetAddressFormats = [
         '{{streetName}} {{buildingNumber}}'
     ];
-=======
-    protected static $streetAddressFormats = array(
-        '{{streetName}} {{buildingNumber}}'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Icelandic address format.
      */
-<<<<<<< HEAD
     protected static $addressFormats = [
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
-=======
-    protected static $addressFormats = array(
-        "{{streetAddress}}\n{{postcode}} {{city}}",
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Randomly return a real city name.

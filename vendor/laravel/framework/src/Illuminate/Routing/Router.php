@@ -1049,11 +1049,7 @@ class Router implements BindingRegistrar, RegistrarContract
     /**
      * Get the currently dispatched route instance.
      *
-<<<<<<< HEAD
      * @return \Illuminate\Routing\Route|null
-=======
-     * @return \Illuminate\Routing\Route
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function getCurrentRoute()
     {

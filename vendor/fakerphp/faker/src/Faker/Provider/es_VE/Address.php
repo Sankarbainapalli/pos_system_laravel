@@ -4,7 +4,6 @@ namespace Faker\Provider\es_VE;
 
 class Address extends \Faker\Provider\es_ES\Address
 {
-<<<<<<< HEAD
     protected static $cityPrefix = ['San', 'Santa', 'Puerto', 'Valle', 'Villa', 'Parroquia', 'El', 'Los', 'La', 'Las'];
     protected static $citySuffix = ['del Valle', 'de Mara', 'de Altagracia', 'de Asis', 'del Tuy', 'de Mata'];
     protected static $buildingNumber = ['###', '##', '#'];
@@ -19,27 +18,10 @@ class Address extends \Faker\Provider\es_ES\Address
         'Sucre', 'Táchira', 'Trujillo', 'Vargas', 'Yaracuy', 'Zulia'
     ];
     protected static $cityFormats = [
-=======
-    protected static $cityPrefix = array('San', 'Santa', 'Puerto', 'Valle', 'Villa', 'Parroquia', 'El', 'Los', 'La', 'Las');
-    protected static $citySuffix = array('del Valle', 'de Mara', 'de Altagracia', 'de Asis', 'del Tuy', 'de Mata');
-    protected static $buildingNumber = array('###', '##', '#');
-    protected static $streetPrefix = array(
-        'Calle', 'Avenida', 'Av.', 'Cl.', 'Carretera', 'Callejón', 'Vereda'
-    );
-    protected static $streetSuffix = array('Norte', 'Este', ' Sur', ' Oeste');
-    protected static $postcode = array('####');
-    protected static $state = array(
-        'Amazonas', 'Anzoátegui', 'Apure', 'Aragua', 'Barinas', 'Bolívar', 'Carabobo', 'Cojedes', 'Delta Amacuro',
-        'Distrito Capital', 'Falcón', 'Guárico', 'Lara', 'Mérida', 'Miranda', 'Monagas', 'Nueva Esparta', 'Portuguesa',
-        'Sucre', 'Táchira', 'Trujillo', 'Vargas', 'Yaracuy', 'Zulia'
-    );
-    protected static $cityFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{cityPrefix}} {{firstName}}{{citySuffix}}',
         '{{cityPrefix}} {{firstName}}',
         '{{firstName}} {{citySuffix}}',
         '{{lastName}} {{citySuffix}}',
-<<<<<<< HEAD
     ];
     protected static $streetNameFormats = [
         '{{streetPrefix}} {{firstName}}',
@@ -55,23 +37,6 @@ class Address extends \Faker\Provider\es_ES\Address
         "{{streetAddress}}, {{city}} Edo. {{state}}, {{postcode}}"
     ];
     protected static $secondaryAddressFormats = ['Nro #', 'Piso #', 'Casa #', 'Hab. #', 'Apto #', 'Nro ##', 'Piso ##', 'Casa ##', 'Hab. ##', 'Apto ##'];
-=======
-    );
-    protected static $streetNameFormats = array(
-        '{{streetPrefix}} {{firstName}}',
-        '{{streetPrefix}} {{lastName}}',
-        '{{streetPrefix}} {{firstName}} {{lastName}}'
-    );
-    protected static $streetAddressFormats = array(
-        '{{streetName}}, {{buildingNumber}}, {{secondaryAddress}}',
-        '{{streetName}}, {{secondaryAddress}}',
-    );
-    protected static $addressFormats = array(
-        "{{streetAddress}}, {{city}} Edo. {{state}}",
-        "{{streetAddress}}, {{city}} Edo. {{state}}, {{postcode}}"
-    );
-    protected static $secondaryAddressFormats = array('Nro #', 'Piso #', 'Casa #', 'Hab. #', 'Apto #', 'Nro ##', 'Piso ##', 'Casa ##', 'Hab. ##', 'Apto ##');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Avenida'

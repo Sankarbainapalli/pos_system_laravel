@@ -8,7 +8,6 @@ namespace Faker\Provider\en_CA;
 
 class Address extends \Faker\Provider\en_US\Address
 {
-<<<<<<< HEAD
     protected static $postcode = ['?#? #?#', '?#?-#?#', '?#?#?#'];
 
     protected static $postcodeLetters = ['A','B','C','E','G','H','J','K','L','M','N','P','R','S','T','V','X','Y'];
@@ -24,23 +23,6 @@ class Address extends \Faker\Provider\en_US\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{city}}, {{provinceAbbr}}  {{postcode}}",
     ];
-=======
-    protected static $postcode = array('?#? #?#', '?#?-#?#', '?#?#?#');
-
-    protected static $postcodeLetters = array('A','B','C','E','G','H','J','K','L','M','N','P','R','S','T','V','X','Y');
-
-    protected static $province = array(
-        'Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland and Labrador', 'Northwest Territories', 'Nova Scotia', 'Nunavut', 'Ontario', 'Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon Territory',
-    );
-
-    protected static $provinceAbbr = array(
-        'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT'
-    );
-
-    protected static $addressFormats = array(
-        "{{streetAddress}}\n{{city}}, {{provinceAbbr}}  {{postcode}}",
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Ontario'

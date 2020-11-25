@@ -100,15 +100,10 @@ final class Builder
         'stop-on-risky',
         'stop-on-skipped',
         'fail-on-empty-test-suite',
-<<<<<<< HEAD
         'fail-on-incomplete',
         'fail-on-risky',
         'fail-on-skipped',
         'fail-on-warning',
-=======
-        'fail-on-warning',
-        'fail-on-risky',
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'strict-coverage',
         'disable-coverage-ignore',
         'strict-global-state',
@@ -570,11 +565,7 @@ final class Builder
 
                     break;
 
-<<<<<<< HEAD
                 case '--fail-on-skipped':
-=======
-                case '--fail-on-Skipped':
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     $failOnSkipped = true;
 
                     break;

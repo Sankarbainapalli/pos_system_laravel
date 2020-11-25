@@ -4,11 +4,7 @@ namespace Faker\Provider\ne_NP;
 
 class Person extends \Faker\Provider\Person
 {
-<<<<<<< HEAD
     protected static $maleNameFormats = [
-=======
-    protected static $maleNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
@@ -20,15 +16,9 @@ class Person extends \Faker\Provider\Person
         '{{titleMale}} {{firstNameMale}} {{middleNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
-<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
-=======
-    );
-
-    protected static $femaleNameFormats = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
@@ -40,15 +30,9 @@ class Person extends \Faker\Provider\Person
         '{{titleFemale}} {{firstNameFemale}} {{middleNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
-<<<<<<< HEAD
     ];
 
     protected static $firstNameMale = [
-=======
-    );
-
-    protected static $firstNameMale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aadarsh', 'Aadesh', 'Aaditya', 'Aakash', 'Aanand', 'Abud', 'Achyut', 'Ajay', 'Ajit', 'Akhil', 'Akshar', 'Akshay', 'Amar', 'Amir', 'Amit', 'Amod', 'Amrit', 'Amulya', 'Ananta', 'Angel', 'Angikar', 'Anil', 'Ankit', 'Ankur', 'Anmol', 'Anshu', 'Anuj', 'Arjun', 'Arun', 'Ashish', 'Ashok', 'Ashutosh', 'Atal', 'Avinash', 'Ayush',
         'Babish', 'Badal', 'Badri', 'Baibhav', 'Bhagwam', 'Bhakti', 'Bhanu', 'Bibek', 'Bicky', 'Bidur', 'Bidwan', 'Bikal', 'Bikash', 'Bikesh', 'Bikram', 'Bimal', 'Binamra', 'Binay', 'Bipin', 'Biplav', 'Bipul', 'Biraj', 'Birendra', 'Bishal', 'Bisu', 'Biswas', 'Brijesh', 'Buddha',
         'Chaitanya', 'Chandan', 'Chandra', 'Chirag',
@@ -69,15 +53,9 @@ class Person extends \Faker\Provider\Person
         'Tej', 'Tilak', 'Tirtha', 'Trailokya', 'Trilochan',
         'Udit', 'Ujjwal', 'Umesh', 'Uttam',
         'Yogendra', 'Yogesh', 'Yuvaraj',
-<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
-=======
-    );
-
-    protected static $firstNameFemale = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aakansha', 'Aanchal', 'Aarati', 'Aashika', 'Aayusha', 'Alisha', 'Ambika', 'Amrita', 'Anamika', 'Anita', 'Anjali', 'Anjana', 'Anjela', 'Anju', 'Ankita', 'Ansu', 'Anu', 'Anupa', 'Anushree', 'Anuska', 'Apeksha', 'Archana', 'Arpita', 'Aruna', 'Asha',
         'Bandita', 'Barsa', 'Bhawana', 'Bimala', 'Bina', 'Bindu', 'Binita', 'Bipana',
         'Chadani', 'Chameli', 'Champa', 'Chandana',
@@ -97,15 +75,9 @@ class Person extends \Faker\Provider\Person
         'Uma', 'Urbasi', 'Urmila', 'Usha',
         'Vandana',
         'Yami', 'Yasodha', 'Yushma',
-<<<<<<< HEAD
     ];
 
     protected static $lastName = [
-=======
-    );
-
-    protected static $lastName = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Acharya', 'Adhikari', 'Agarwal', 'Amatya', 'Aryal',
         'Baidya', 'Bajracharya', 'Balami', 'Banepali', 'Baniya', 'Banjade', 'Baral', 'Basnet', 'Bastakoti', 'Bastola', 'Basyal', 'Belbase', 'Bhandari', 'Bhatta', 'Bhattarai', 'Bhusal', 'Bijukchhe', 'Bisht', 'Bohara', 'Budathoki', 'Byanjankar',
         'Chalise', 'Chamling', 'Chapagain', 'Chaudhary', 'Chhetri',
@@ -126,17 +98,10 @@ class Person extends \Faker\Provider\Person
         'Veswakar',
         'Wagle',
         'Yadav',
-<<<<<<< HEAD
     ];
 
     private static $middleNameMale = ['Bahadur', 'Dev', 'Kumar', 'Man', 'Mani', 'Nath', 'Prasad', 'Raj', 'Ratna'];
     private static $middleNameFemale = ['Devi', 'Kumari'];
-=======
-    );
-
-    private static $middleNameMale = array('Bahadur', 'Dev', 'Kumar', 'Man', 'Mani', 'Nath', 'Prasad', 'Raj', 'Ratna');
-    private static $middleNameFemale = array('Devi', 'Kumari');
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Bahadur'

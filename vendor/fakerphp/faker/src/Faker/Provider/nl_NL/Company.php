@@ -7,11 +7,7 @@ class Company extends \Faker\Provider\Company
     /**
      * @see https://nl.wikipedia.org/wiki/Lijst_van_beroepen
      */
-<<<<<<< HEAD
     protected static $jobTitleFormat = [
-=======
-    protected static $jobTitleFormat = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aankondiger', 'Acceptant', 'Accountant', 'Accountmanager', 'Acrobaat', 'Acteur', 'Activiteitenbegeleider', 'Actuaris', 'Acupuncturist', 'Adjudant', 'Administrateur', 'Advertentiezetter', 'Adviseur', 'Advocaat', 'Agent', 'Agrariër', 'Akoepedist', 'Akoesticus', 'Alchemist', 'Allergoloog', 'Altist', 'Amanuensis', 'Ambtenaar', 'Ambulancebegeleider', 'Ambulancechauffeur', 'Ambulanceverpleegkundige', 'Analist', 'Anatoom', 'Andragoog', 'Androloog', 'Anesthesist', 'Anesthesiemedewerker', 'Animeermeisje', 'Antiquaar', 'Antiquair', 'Apotheker', 'Apothekersassistent', 'Applicatieontwikkelaar', 'Arbeidsanalist', 'Arbeidsbemiddelaar', 'Arbeidsdeskundige', 'Arbeidsfysioloog', 'Arbeidsgeneesheer', 'Arbeidshygiënist', 'Archeoloog', 'Architect', 'Archivaris', 'Archivist', 'Arrangeur', 'Artdirector', 'Artiest', 'Arts', 'Assuradeur', 'Astrofysicus', 'Astroloog', 'Astronaut', 'Astronoom', 'Audioloog', 'Audiometrist', 'Audiotherapeut', 'Auditor', 'Autohandelaar', 'Automonteur', 'Autoplaatwerker', 'Autospuiter',
         'Bacterioloog', 'Badmeester', 'Baggermachinist', 'Baggermolenarbeider', 'Baker', 'Bakker', 'Baliemedewerker', 'Balletdanser', 'Ballroomdanser', 'Bandagist', 'Bandenmonteur', 'Bankbediende', 'Bankdirecteur', 'Banketbakker', 'Bankmakelaar', 'Bankwerker', 'Barbediende', 'Barhouder', 'Barman', 'Basketballer', 'Bassist', 'Beademingsassistent', 'Bedienaar', 'Bediener', 'Bedrijfsbrandweer', 'Bedrijfseconoom', 'Bedrijfshoofd', 'Bedrijfsjurist', 'Bedrijfskassier', 'Bedrijfskundige', 'Bedrijfsleermeester', 'Bedrijfsleider', 'Bedrijfsorganisatiedeskundige', 'Bedrijfspolitieagent', 'Bedrijfsrecherche', 'Bedrijfsverpleegkundige', 'Beeldapparatuurbediener', 'Beeldhouwer', 'Beenhouwer', 'Begeleider', 'Begrafenispersoneel', 'Begrotingscalculator', 'Behanger', 'Beheerder', 'Beiaardier', 'Bejaardenverzorgende', 'Belastingambtenaar', 'Belastingconsulent', 'Beleidsambtenaar', 'Beleidsmedewerker', 'Belichter', 'Bergingsduiker', 'Beroepskeuzeadviseur', 'Beroepsmilitair', 'Beroepssporter', 'Bestekschrijver', 'Besteksorteerder', 'Bestekzoeker', 'Bestuurder', 'Bestuurskundige', 'Betonmolenbaas', 'Betontimmerman', 'Betonstaalvlechter', 'Betonwerker', 'Beul', 'Beveiligingsapparatuur', 'Beveiligingsbeambte', 'Bewaarder', 'Bewaker', 'Bewegingstherapeut', 'Bezorger', 'Bibliothecaris', 'Bibliotheekassistent', 'Bierbrouwer', 'Bijenkorfvlechter', 'Bijenkweker', 'Bijkantoorhouder', 'Binderijpersoneel', 'Binnenhuisarchitect', 'Biochemicus', 'Biograaf', 'Bioloog', 'Bioscoopoperateur', 'Bitumineerder', 'Bloemist', 'Bloemkweker', 'Bloemschikker', 'Bloemsierkunstenaar', 'Bode', 'Boekbinder', 'Boekhouder', 'Boekillustrator', 'Boer', 'Bontkleermaker', 'Bontsnijder', 'Bookmaker', 'Boomchirurg', 'Boomkweker', 'Boomverzorger', 'Boordwerktuigkundige', 'Boormachinist', 'Boorpersoneel', 'Bootsman', 'Bosbaas', 'Bosbouwkundige', 'Boswachter', 'Botenbouwer', 'Bouwcalculator', 'Bouwhistoricus', 'Bouwkundig tekenaar', 'Bouwliftbediener', 'Bouwpromotor', 'Bouwopzichter', 'Bouwvakker', 'Bouwvaktimmerman', 'Brandmeester', 'Brandveiligheidsdeskundige', 'Brandwacht', 'Brandweerman', 'Brandweercommandant', 'Brandweeronderofficier', 'Breimachinesteller', 'Bromfietshersteller', 'Bronboorder', 'Buffetbediende', 'Buikspreker', 'Buitenbandenvulkaniseur', 'Buitendienstmedewerker', 'Burgemeester', 'Buschauffeur', 'Budgetcoach', 'Butler',
         'Cabaretier', 'Caféhouder', 'Cafetariamedewerker', 'Caissière', 'Calculator', 'Callgirl', 'Cameraman', 'Cardioloog', 'Cargadoor', 'Carrosseriebouwer', 'Cartograaf', 'Cellist', 'Chauffeur', 'Chef', 'Chemicus', 'Chiropodist', 'Chirurg', 'Chocolademaker', 'Chocolatier', 'Choreograaf', 'Cilindermaker', 'Cineast', 'Cipier', 'Circusartiest', 'Circusdirecteur', 'Civiel ingenieur', 'Classicus', 'Clown', 'Coach', 'Codeur', 'Collationist', 'Colporteur', 'Columnist', 'Combinatiefunctionaris', 'Commentator', 'Commissaris', 'Commissionair', 'Completeerder', 'Compliance officer', 'Componist', 'Computeroperator', 'Computerprogrammeur', 'Conciërge', 'Conducteur', 'Conservator', 'Constructeur', 'Constructiebankwerker', 'Constructiesamenbouwer', 'Constructieschilder', 'Consulent', 'Contactlensspecialist', 'Controleur', 'Controller', 'Coördinator', 'Copywriter', 'Counselor', 'Corrector', 'Correpetitor', 'Correspondent', 'Creatief therapeut', 'Crècheleidster', 'Criminoloog', 'Criticus', 'Croupeur', 'Croupier', 'Cultuurtechnicus', 'Curator', 'Cursuscoördinator', 'Cursusleider',
@@ -38,7 +34,6 @@ class Company extends \Faker\Provider\Company
         'Xylofonist',
         'Yogaleraar',
         'Zaakwaarnemer', 'Zakenman', 'Zanger', 'Zeefdrukker', 'Zeeman', 'Zeepzieder', 'Zeilmaker', 'Zelfstandig ondernemer', 'Zetter', 'Ziekenhuisapotheker', 'Ziekenhuishygiënist', 'Ziekenverzorgende', 'Zilversmid', 'Zweminstructeur', 'Zoöloog',
-<<<<<<< HEAD
     ];
 
     protected static $companySuffix = [
@@ -46,22 +41,12 @@ class Company extends \Faker\Provider\Company
     ];
 
     protected static $product = [
-=======
-    );
-
-    protected static $companySuffix = array(
-        'VOF', 'CV', 'LLP', 'BV', 'NV', 'IBC', 'CSL','EESV', 'SE', 'CV', 'Stichting', '& Zonen', '& Zn'
-    );
-
-    protected static $product = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Keuken', 'Media', 'Meubel', 'Sanitair', 'Elektronica', 'Schoenen',
         'Zorg', 'Muziek', 'Audio', 'Televisie', 'Pasta', 'Lunch', 'Boeken', 'Cadeau', 'Kunst', 'Tuin', 'Klus',
         'Video', 'Sieraden', 'Kook', 'Woon', 'Pizza', 'Mode', 'Haar', 'Kleding', 'Antiek', 'Interieur', 'Gadget',
         'Foto', 'Computer', 'Witgoed', 'Bruingoed', 'Broeken', 'Pakken', 'Maatpak', 'Fietsen', 'Speelgoed',
         'Barbecue', 'Sport', 'Fitness', 'Brillen', 'Bakkers', 'Drank', 'Zuivel', 'Pret', 'Vis', 'Wijn', 'Salade',
         'Terras', 'Borrel', 'Dieren', 'Aquaria', 'Verf', 'Behang', 'Tegel', 'Badkamer', 'Decoratie'
-<<<<<<< HEAD
     ];
 
     protected static $type = [
@@ -75,21 +60,6 @@ class Company extends \Faker\Provider\Company
         'Smederij', 'Bakkerij', 'Bierbrouwer', 'Kapperszaak', 'Groenteboer', 'Bioboer', 'Fietsenmaker', 'Opticien',
         'Café', 'Garage'
     ];
-=======
-    );
-
-    protected static $type = array(
-        'Markt', 'Kampioen', 'Expert', 'Concurrent', 'Shop', 'Expert', 'Magazijn',
-        'Dump', 'Store', 'Studio', 'Boulevard', 'Fabriek', 'Groep', 'Huis', 'Salon', 'Vakhuis', 'Winkel', 'Gigant',
-        'Reus', 'Plaza', 'Park', 'Tuin'
-    );
-
-    protected static $store = array(
-        'Boekhandel', 'Super', 'Tabakzaak', 'Schoenmaker', 'Kaashandel', 'Slagerij',
-        'Smederij', 'Bakkerij', 'Bierbrouwer', 'Kapperszaak', 'Groenteboer', 'Bioboer', 'Fietsenmaker', 'Opticien',
-        'Café', 'Garage'
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 
     /**

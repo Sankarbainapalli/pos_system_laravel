@@ -30,11 +30,7 @@ class ColumnTypeGuesser
                     return $generator->boolean;
                 };
             case 'decimal':
-<<<<<<< HEAD
                 $size = $class->fieldMappings[$fieldName]['precision'] ?? 2;
-=======
-                $size = isset($class->fieldMappings[$fieldName]['precision']) ? $class->fieldMappings[$fieldName]['precision'] : 2;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
                 return function () use ($generator, $size) {
                     return $generator->randomNumber($size + 2) / 100;
@@ -53,17 +49,10 @@ class ColumnTypeGuesser
                 };
             case 'float':
                 return function () {
-<<<<<<< HEAD
                     return mt_rand(0, intval('4294967295')) / mt_rand(1, intval('4294967295'));
                 };
             case 'string':
                 $size = $class->fieldMappings[$fieldName]['length'] ?? 255;
-=======
-                    return mt_rand(0, intval('4294967295'))/mt_rand(1, intval('4294967295'));
-                };
-            case 'string':
-                $size = isset($class->fieldMappings[$fieldName]['length']) ? $class->fieldMappings[$fieldName]['length'] : 255;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
                 return function () use ($generator, $size) {
                     return $generator->text($size);

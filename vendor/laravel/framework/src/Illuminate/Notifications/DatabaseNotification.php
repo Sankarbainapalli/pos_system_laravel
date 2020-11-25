@@ -2,10 +2,7 @@
 
 namespace Illuminate\Notifications;
 
-<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Builder;
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 use Illuminate\Database\Eloquent\Model;
 
 class DatabaseNotification extends Model
@@ -103,7 +100,6 @@ class DatabaseNotification extends Model
     }
 
     /**
-<<<<<<< HEAD
      * Scope a query to only include read notifications.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
@@ -126,8 +122,6 @@ class DatabaseNotification extends Model
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Create a new database notification collection instance.
      *
      * @param  array  $models

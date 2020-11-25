@@ -11,19 +11,10 @@ use Propel\Runtime\Map\ColumnMap;
 class EntityPopulator
 {
     protected $class;
-<<<<<<< HEAD
     protected $columnFormatters = [];
     protected $modifiers = [];
 
     /**
-=======
-    protected $columnFormatters = array();
-    protected $modifiers = array();
-
-    /**
-     * Class constructor.
-     *
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param string $class A Propel ActiveRecord classname
      */
     public function __construct($class)
@@ -63,11 +54,7 @@ class EntityPopulator
      */
     public function guessColumnFormatters(\Faker\Generator $generator)
     {
-<<<<<<< HEAD
         $formatters = [];
-=======
-        $formatters = array();
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $class = $this->class;
         $peerClass = $class::TABLE_MAP;
         $tableMap = $peerClass::getTableMap();
@@ -112,21 +99,13 @@ class EntityPopulator
             $columnName = Base::toLower($columnMap->getName());
             switch ($name) {
                 case 'nested_set':
-<<<<<<< HEAD
                     $columnNames = [$params['left_column'], $params['right_column'], $params['level_column']];
-=======
-                    $columnNames = array($params['left_column'], $params['right_column'], $params['level_column']);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     if (in_array($columnName, $columnNames)) {
                         return true;
                     }
                     break;
                 case 'timestampable':
-<<<<<<< HEAD
                     $columnNames = [$params['create_column'], $params['update_column']];
-=======
-                    $columnNames = array($params['create_column'], $params['update_column']);
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     if (in_array($columnName, $columnNames)) {
                         return true;
                     }
@@ -161,11 +140,7 @@ class EntityPopulator
      */
     public function guessModifiers(\Faker\Generator $generator)
     {
-<<<<<<< HEAD
         $modifiers = [];
-=======
-        $modifiers = array();
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $class = $this->class;
         $peerClass = $class::TABLE_MAP;
         $tableMap = $peerClass::getTableMap();

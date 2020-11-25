@@ -120,7 +120,6 @@ final class NameFilterIterator extends RecursiveFilterIterator
 
             // Escape delimiters in regular expression. Do NOT use preg_quote,
             // to keep magic characters.
-<<<<<<< HEAD
             $filter = sprintf(
                 '/%s/i',
                 str_replace(
@@ -129,13 +128,6 @@ final class NameFilterIterator extends RecursiveFilterIterator
                     $filter
                 )
             );
-=======
-            $filter = sprintf('/%s/i', str_replace(
-                '/',
-                '\\/',
-                $filter
-            ));
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
         $this->filter = $filter;

@@ -4,7 +4,6 @@ namespace Faker\Provider\kk_KZ;
 
 class Address extends \Faker\Provider\Address
 {
-<<<<<<< HEAD
     protected static $citySuffix = ['қаласы'];
 
     protected static $regionSuffix = ['облысы'];
@@ -21,24 +20,6 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $region = [
-=======
-    protected static $citySuffix = array('қаласы');
-
-    protected static $regionSuffix = array('облысы');
-    protected static $streetSuffix = array(
-        'көшесі', 'даңғылы',
-    );
-
-    protected static $buildingNumber = array('###');
-    protected static $postcode = array('0#####');
-    // TODO list all country names in the world
-    protected static $country = array(
-        'Қазақстан',
-        'Ресей',
-    );
-
-    protected static $region = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Алматы',
         'Ақтау',
         'Ақтөбе',
@@ -57,15 +38,9 @@ class Address extends \Faker\Provider\Address
         'Орал',
         'Өскемен',
         'Шымкент',
-<<<<<<< HEAD
     ];
 
     protected static $city = [
-=======
-    );
-
-    protected static $city = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Алматы',
         'Ақтау',
         'Ақтөбе',
@@ -84,22 +59,15 @@ class Address extends \Faker\Provider\Address
         'Орал',
         'Өскемен',
         'Шымкент',
-<<<<<<< HEAD
     ];
 
     protected static $street = [
-=======
-    );
-
-    protected static $street = array(
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Абай',
         'Гоголь',
         'Кенесары',
         'Бейбітшілік',
         'Достық',
         'Бұқар жырау',
-<<<<<<< HEAD
     ];
 
     protected static $addressFormats = [
@@ -109,17 +77,6 @@ class Address extends \Faker\Provider\Address
     protected static $streetAddressFormats = [
         "{{street}} {{streetSuffix}}, {{buildingNumber}}"
     ];
-=======
-    );
-
-    protected static $addressFormats = array(
-        "{{postcode}}, {{region}} {{regionSuffix}}, {{city}} {{citySuffix}}, {{street}} {{streetSuffix}}, {{buildingNumber}}",
-    );
-
-    protected static $streetAddressFormats = array(
-        "{{street}} {{streetSuffix}}, {{buildingNumber}}"
-    );
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function buildingNumber()
     {

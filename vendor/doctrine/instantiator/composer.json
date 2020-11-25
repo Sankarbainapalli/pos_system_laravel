@@ -12,39 +12,20 @@
         {
             "name":     "Marco Pivetta",
             "email":    "ocramius@gmail.com",
-<<<<<<< HEAD
             "homepage": "https://ocramius.github.io/"
         }
     ],
-=======
-            "homepage": "http://ocramius.github.com/"
-        }
-    ],
-    "config": {
-        "platform": {
-            "php": "7.1.27"
-        }
-    },
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     "require": {
         "php": "^7.1 || ^8.0"
     },
     "require-dev": {
         "ext-phar":                  "*",
         "ext-pdo":                   "*",
-<<<<<<< HEAD
         "doctrine/coding-standard":  "^8.0",
         "phpbench/phpbench":         "^0.13 || 1.0.0-alpha2",
         "phpstan/phpstan":           "^0.12",
         "phpstan/phpstan-phpunit":   "^0.12",
         "phpunit/phpunit":           "^7.0 || ^8.0 || ^9.0"
-=======
-        "doctrine/coding-standard":  "^6.0",
-        "phpbench/phpbench":         "^0.13",
-        "phpstan/phpstan-phpunit":   "^0.11",
-        "phpstan/phpstan-shim":      "^0.11",
-        "phpunit/phpunit":           "^7.0"
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     },
     "autoload": {
         "psr-4": {
@@ -57,13 +38,5 @@
             "DoctrineTest\\InstantiatorTest\\": "tests",
             "DoctrineTest\\InstantiatorTestAsset\\": "tests"
         }
-<<<<<<< HEAD
-=======
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.2.x-dev"
-        }
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 }

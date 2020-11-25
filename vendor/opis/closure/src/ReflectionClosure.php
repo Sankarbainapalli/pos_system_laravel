@@ -35,19 +35,11 @@ class ReflectionClosure extends ReflectionFunction
     /**
      * ReflectionClosure constructor.
      * @param Closure $closure
-<<<<<<< HEAD
      * @param string|null $code This is ignored. Do not use it
-=======
-     * @param string|null $code
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @throws \ReflectionException
      */
     public function __construct(Closure $closure, $code = null)
     {
-<<<<<<< HEAD
-=======
-        $this->code = $code;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         parent::__construct($closure);
     }
 
@@ -88,15 +80,6 @@ class ReflectionClosure extends ReflectionFunction
         $fileName = $this->getFileName();
         $line = $this->getStartLine() - 1;
 
-<<<<<<< HEAD
-=======
-        $match = ClosureStream::STREAM_PROTO . '://';
-
-        if ($line === 1 && substr($fileName, 0, strlen($match)) === $match) {
-            return $this->code = substr($fileName, strlen($match));
-        }
-
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $className = null;
 
         if (null !== $className = $this->getClosureScopeClass()) {

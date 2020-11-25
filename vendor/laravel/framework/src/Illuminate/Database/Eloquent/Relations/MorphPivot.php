@@ -38,7 +38,6 @@ class MorphPivot extends Pivot
     }
 
     /**
-<<<<<<< HEAD
      * Set the keys for a select query.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
@@ -52,8 +51,6 @@ class MorphPivot extends Pivot
     }
 
     /**
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Delete the pivot model record from the database.
      *
      * @return int
@@ -154,11 +151,8 @@ class MorphPivot extends Pivot
      */
     protected function newQueryForCollectionRestoration(array $ids)
     {
-<<<<<<< HEAD
         $ids = array_values($ids);
 
-=======
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
         if (! Str::contains($ids[0], ':')) {
             return parent::newQueryForRestoration($ids);
         }

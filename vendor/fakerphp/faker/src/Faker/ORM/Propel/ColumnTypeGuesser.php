@@ -2,13 +2,8 @@
 
 namespace Faker\ORM\Propel;
 
-<<<<<<< HEAD
 use ColumnMap;
 use PropelColumnTypes;
-=======
-use PropelColumnTypes;
-use ColumnMap;
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 class ColumnTypeGuesser
 {
@@ -72,20 +67,12 @@ class ColumnTypeGuesser
                 };
             case PropelColumnTypes::FLOAT:
                 return function () {
-<<<<<<< HEAD
                     return mt_rand(0, intval('2147483647')) / mt_rand(1, intval('2147483647'));
-=======
-                    return mt_rand(0, intval('2147483647'))/mt_rand(1, intval('2147483647'));
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                 };
             case PropelColumnTypes::DOUBLE:
             case PropelColumnTypes::REAL:
                 return function () {
-<<<<<<< HEAD
                     return mt_rand(0, intval('9223372036854775807')) / mt_rand(1, intval('9223372036854775807'));
-=======
-                    return mt_rand(0, intval('9223372036854775807'))/mt_rand(1, intval('9223372036854775807'));
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
                 };
             case PropelColumnTypes::CHAR:
             case PropelColumnTypes::VARCHAR:
