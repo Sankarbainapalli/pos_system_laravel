@@ -183,60 +183,7 @@
           </a>
         </li>
 
-        <!-- <li class="nav-item">
-          <a href="{{route('role.index')}}" class="nav-link">
-            <i class="nav-icon far fa-object-group"></i>
-            <p>
-              Roles
-            </p>
-          </a>
-        </li> -->
-       <!--  <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-chart-pie"></i>
-            <p>
-              POS
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Add POS</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>POS List</p>
-              </a>
-            </li>
-          </ul>
-        </li> -->
-       <!--  <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon far fa-file-alt"></i>
-            <p>
-              Accounts
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Add Account</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Accounts List</p>
-              </a>
-            </li>
-          </ul>
-        </li> -->
+
           <li class="nav-item">
             <a href="{{route('accountList')}}" class="nav-link">
               <i class="nav-icon far fa-file-alt"></i>
@@ -397,17 +344,17 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{route('live_stock_report')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Add Report</p>
+                <p>Live Stock Report</p>
               </a>
             </li>
-            <li class="nav-item">
+           <!--  <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
                 <p>Reports List</p>
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
         <li class="nav-item">

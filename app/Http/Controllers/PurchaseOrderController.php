@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Branch;
 use App\Models\Exformrate;
 use App\Models\Franchisee;
-use App\Models\Purchaseorder;
+use App\Models\PurchaseOrder;
 use Illuminate\Http\Request;
 
 class PurchaseOrderController extends Controller
@@ -14,13 +14,13 @@ class PurchaseOrderController extends Controller
     public function index()
     {
 
-        $pur_list = Purchaseorder::all();
+        $pur_list = PurchaseOrder::all();
 
         $franchisee_list = Franchisee::all();
         $banch_list = Branch::all();
         $product_rate = Exformrate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
 
-        return view('admin.purchaseorder.list', compact('franchisee_list', 'product_rate', 'banch_list', 'pur_list'));
+        return view('admin.PurchaseOrder.list', compact('franchisee_list', 'product_rate', 'banch_list', 'pur_list'));
     }
 
     public function getFranchisee(Request $request)
@@ -58,23 +58,23 @@ class PurchaseOrderController extends Controller
 
         // dd($request->all());
 
-        Purchaseorder::create($request->all());
+        PurchaseOrder::create($request->all());
 
         return redirect()->route('purchaseorder.index')->with('message', 'Purchase Has been added Successfully');
     }
 
-    public function edit(Purchaseorder $purchaseorder)
+    public function edit(PurchaseOrder $purchaseorder)
     {
 
         $franchisee_list = Franchisee::all();
         $banch_list = Branch::all();
         $product_rate = ExFormRate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
 
-        return view('admin.purchaseorder.edit', compact('franchisee_list', 'product_rate', 'banch_list', 'purchaseorder'));
+        return view('admin.PurchaseOrder.edit', compact('franchisee_list', 'product_rate', 'banch_list', 'purchaseorder'));
 
     }
 
-    public function update(Request $request, Purchaseorder $purchaseorder)
+    public function update(Request $request, PurchaseOrder $purchaseorder)
     {
 
         $purchaseorder->update($request->all());
@@ -82,7 +82,7 @@ class PurchaseOrderController extends Controller
         return redirect(route('purchaseorder.index'))->with('message', 'Updated Successfully');
     }
 
-    public function show(Purchaseorder $purchaseorder)
+    public function show(PurchaseOrder $purchaseorder)
     {
 
         // Todo::where('id',$id)->delete();
@@ -92,7 +92,7 @@ class PurchaseOrderController extends Controller
 
     }
 
-    public function destroy(Purchaseorder $purchaseorder)
+    public function destroy(PurchaseOrder $purchaseorder)
     {
 
         // Todo::where('id',$id)->delete();

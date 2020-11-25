@@ -65,7 +65,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Live Stocks</span>
-                <span class="info-box-number">{{$total_dressed_stock}}(Kgs)</span>
+                <span class="info-box-number">{{$total_lived_stock}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -78,7 +78,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Dressed Stocks</span>
-                <span class="info-box-number">{{$total_lived_stock}}(Kgs)</span>
+                <span class="info-box-number">{{$total_dressed_stock}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->
             </div>

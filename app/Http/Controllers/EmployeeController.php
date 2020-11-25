@@ -27,7 +27,7 @@ class EmployeeController extends Controller
         $role_list=Role::all();
         $franchisee_list=Franchisee::all();
 
-        return view('admin.employees.list',compact('employee_list','role_list','franchisee_list'));
+        return view('admin.Employees.list',compact('employee_list','role_list','franchisee_list'));
     }
 
     public function store(Request $request){
@@ -47,7 +47,7 @@ class EmployeeController extends Controller
        $post->status = $request->input('status');
        $post->save();
 
-         send_sms('7661910404', "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
+         // send_sms('7661910404', "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
 
          return redirect()->back()->with('message','Employee Added Has been Successfully');
     }
@@ -56,7 +56,7 @@ class EmployeeController extends Controller
 
         $role_list=Role::all();
 
-        return view('admin.employees.edit_employee',compact('employee','role_list'));
+        return view('admin.Employees.edit_employee',compact('employee','role_list'));
     }
 
      public function update(Request $request,User $employee){

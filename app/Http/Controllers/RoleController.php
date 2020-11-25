@@ -14,7 +14,7 @@ class RoleController extends Controller
 
     	$role_list=Role::all();
 
-        return view('admin.roles.list',compact('role_list'));
+        return view('admin.Roles.list',compact('role_list'));
     }
 
     public function store(Request $request){
@@ -30,7 +30,7 @@ class RoleController extends Controller
 
     public function edit(Role $role){
 
-        return view('admin.roles.edit_role',compact('role'));
+        return view('admin.Roles.edit_role',compact('role'));
     }
 
     public function update(Request $request,Role $role){

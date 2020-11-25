@@ -18,7 +18,7 @@ class CustomerController extends Controller
 
     	// $customer_list=auth()->user()->customers()->get();
 
-        return view('admin.customers.list',compact('customer_list'));
+        return view('admin.Customers.list',compact('customer_list'));
     }
 
      public function store(CustomerCreateRequest $request){
@@ -66,7 +66,7 @@ class CustomerController extends Controller
 
         // dd($todo->title);
 
-        return view('admin.customers.edit_customer',compact('customer'));
+        return view('admin.Customers.edit_customer',compact('customer'));
     }
 
     public function update(CustomerCreateRequest $request,Customer $customer){

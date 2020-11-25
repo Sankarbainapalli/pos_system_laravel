@@ -15,7 +15,7 @@ class CategoryController extends Controller
     public function index(){
 
          $category_list=Category::all();
-        return view('admin.categories.list',compact('category_list'));
+        return view('admin.Categories.list',compact('category_list'));
     }
 
     public function store(Request $request){
@@ -27,7 +27,7 @@ class CategoryController extends Controller
 
      public function edit(Category $category){
 
-        return view('admin.categories.edit_category',compact('category'));
+        return view('admin.Categories.edit_category',compact('category'));
     }
 
      public function update(Request $request,Category $category){

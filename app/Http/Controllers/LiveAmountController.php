@@ -25,7 +25,7 @@ class LiveAmountController extends Controller
 
       $product_list=Product::where('category_id',$type)->get()->all();
       
-     return view('admin.liveamount.list',compact('liveamount_list','category_list','product_list','type'));
+     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','product_list','type'));
 
         
     }
@@ -88,7 +88,7 @@ class LiveAmountController extends Controller
 
     public function edit(Liveamount $liveamount){
         
-        return view('admin.liveamount.edit',compact('liveamount'));
+        return view('admin.LiveAmount.edit',compact('liveamount'));
     }
 
      public function update(Request $request,Liveamount $liveamount){

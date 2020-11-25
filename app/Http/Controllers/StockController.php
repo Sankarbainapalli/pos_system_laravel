@@ -54,7 +54,7 @@ class StockController extends Controller
                             // var_dump($components);exit();
                           $first_part = $components[2];
 
-       return redirect()->route('stock.index')->with('message','stock Has been added Successfully');
+       return redirect()->back()->with('message','stock Has been added Successfully');
     }
 
 

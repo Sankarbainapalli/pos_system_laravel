@@ -24,8 +24,9 @@
     <!-- Main content -->
     <section class="content" id="div1">
       <div class="container-fluid">
+<x-alert />
         <div class="row">
-
+          
           <div class="col-md-5">
             <div class="card">
               <div class="card-header mt-3">
@@ -34,7 +35,8 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: 300px;">
-
+              <form action="{{route('order.store')}}" method="POST">
+                @csrf
                 <table class="table table-head-fixed text-nowrap" >
                   <thead>
                     <tr>
@@ -68,6 +70,7 @@
                   </tbody>
                 </table>
               </div>
+          
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -80,21 +83,21 @@
                     <table class="table">
                       <tr>
                         <th style="width:50%; border-top: 0px;">Total Items</th>
-                        <td style="border-top: 0px;"><input type="text" id="total_item" size="6"></td>
+                        <td style="border-top: 0px;"><input type="text" id="total_item" size="6" name="total_items"></td>
                         <th style="width:50%; border-top: 0px;">Total</th>
-                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" ></td>
+                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal"></td>
                       </tr>
                       <tr>
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
-                           <input size="50" type="text" name="disct" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()">
+                           <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
                         </td>
                         <th style="border-top: 0px;">Tax (18.00%)</th>
                         <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="" onkeyup="sum()"></td>
                       </tr>
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
-                        <td style="border-top: 1px solid #dee2e6;"><b><input type="text" id="total_payble" readonly=""></b></td>
+                        <td style="border-top: 1px solid #dee2e6;"><b><input type="text" id="total_payble" readonly="" name="grandtotal"></b></td>
                       </tr>
                     </table>
                   </div>
@@ -143,7 +146,7 @@
                   <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-danger" onclick="window.location.reload()"> Cancel</button>
                     <!-- <button type="button" class="btn btn-block bg-gradient-warning"> Hold</button> -->
-                    <button type="button" class="btn btn-block bg-gradient-primary" data-toggle="modal" data-target="#modal-default"> Payment</button>
+                    <button type="button" class="btn btn-block bg-gradient-primary" data-toggle="modal" data-target="#modal-default" > Payment</button>
                   </div>
                 </div>
               
@@ -165,17 +168,16 @@
               </button>
             </div>
             <div class="modal-body">
-            <form class="form-horizontal">
+            <!-- <form class="form-horizontal" action="{{route('order.store')}}" method="POST">
+              @csrf -->
                 <div class="card-body">
-                  <div class="form-group row">
+                  <!-- <div class="form-group row">
                     <div class="col-sm-5">
-                      <label  class="col-form-label">Customer Mobile</label>
-                    </div>
+                      <label  class="col-form-label">Customers</label>
+                    </div> -->
 
-                    <div class="col-sm-7">
-                      <!-- <input type="text" class="form-control" id="mobile" placeholder="Customer Mobile" name="c_name"> -->
-                       <select class="form-control select2bs4" style="width: 100%;" id="paidby" onchange="customerType(this.value)">
-                        <!-- select2bs4 -->
+                   <!--  <div class="col-sm-7">
+                       <select class="form-control select2bs4" style="width: 100%;" id="paidby" onchange="customerType(this.value)" name="cust_id">
                                 <option value="">Select</option>
                                 <option value="0">New</option>
                                 @foreach($customer_list as $customer)
@@ -184,19 +186,36 @@
                                
                       </select>
 
-                      <div id="customerinput">
-                        
-                      </div>
+                        <div id="customerinput">
+                        </div>
 
                     </div>
+                  </div> -->
 
+                   <div class="form-group row" >
+                    <div class="col-sm-5">
+                      <label  class="col-form-label">Customer Name</label>
+                    </div>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="cus_name"  placeholder="" name="cus_name">
+                    </div>
                   </div>
-                  <div class="form-group row">
+
+                   <div class="form-group row" >
+                    <div class="col-sm-5">
+                      <label  class="col-form-label">Customer Mobile</label>
+                    </div>
+                    <div class="col-sm-7">
+                      <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile">
+                    </div>
+                  </div>
+
+                  <div class="form-group row" >
                     <div class="col-sm-5">
                       <label  class="col-form-label">Total Payable Amount</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="total_payment"  placeholder="">
+                      <input type="text" class="form-control" id="total_payment"  placeholder="" >
                     </div>
                   </div>
                   <div class="form-group row">
@@ -212,16 +231,16 @@
                       <label  class="col-form-label">Paid By</label>
                     </div>
                     <div class="col-sm-7">
-                      <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)">
+                      <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)" name="payment_method">
                         <!-- select2bs4 -->
-                                <option value="1">Cash</option>
-                                <option value="2">Nett</option>
-                                <option value="3">VISA</option>
+                                <option value="Cash">Cash</option>
+                                <option value="Nett">Nett</option>
+                                <option value="VISA">VISA</option>
                                 <option value="4">Master Card</option>
-                                <option value="5">Cheque</option>
-                                <option value="6">Debit</option>
-                                <option value="10">credit</option>
-                                <option value="11">ONLINE PAYMENT</option>
+                                <option value="Cheque">Cheque</option>
+                                <option value="Debit">Debit</option>
+                                <option value="credit">credit</option>
+                                <option value="ONLINE PAYMENT">ONLINE PAYMENT</option>
                       </select>
                     </div>
                   </div>
@@ -233,7 +252,7 @@
                       <label  class="col-form-label">Paid Amount</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="paid_amount" placeholder="" onkeyup="returnAmount(this.value)">
+                      <input type="text" class="form-control" id="paid_amount" placeholder="" onkeyup="returnAmount(this.value)" name="paid_amt" >
                     </div>
                   </div>
                   <div class="form-group row">
@@ -241,15 +260,16 @@
                       <label  class="col-form-label">Return Change</label>
                     </div>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="return_amount" readonly placeholder="₹0.00" >
+                      <input type="text" class="form-control" id="return_amount" readonly placeholder="₹0.00" name="return_change" >
                     </div>
                   </div>
                 </div>
-              </form>
+              
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="submit" class="btn btn-primary" >Save changes</button>
+              </form>
             </div>
           </div>
         </div>
@@ -260,6 +280,30 @@
 @section('script')
 
 <script>
+
+   function customer_details() {
+
+  var cust_name = document.getElementById("cust_name").value;
+  var cust_mobile = document.getElementById("cust_mobile").value;
+  var cust_email = document.getElementById("cust_email").value;
+  var card_number = document.getElementById("card_number").value;
+
+    var token = "{{ csrf_token() }}";
+    $.ajax({
+
+            url: "{{route('order.store')}}",
+            // url: "liveamount",
+            method: "POST",
+            data: {cust_name:cust_name,cust_mobile:cust_mobile, _token: token},
+            success:function(data){
+
+             console.log('inserted');
+             }
+
+            })
+}
+
+
 $(document).ready(function(){
 
     // var token = "{{ csrf_token() }}";
@@ -313,6 +357,8 @@ function add_product(id){
                  }else{
 
                 $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">'+data[0].rate+'</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" ></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
+
+                
                  sum(data[0].product_id);
               }
             }
@@ -494,7 +540,7 @@ function decrementValue(id)
  
               }
 
-               $(".tableBox").append(tab);
+               $(".tableBox").html(tab);
 
 
             }
@@ -540,16 +586,16 @@ function decrementValue(id)
   
 
   function customerType(value){
-
+    
     var tab='';
 
     if(value=='0'){
 
-      tab+='<div class="col-sm-2"><label  class="col-form-label"> Name</label></div><div class="col-sm-10"><input type="text" class="form-control" id="name" placeholder="Enter Name"></div>';
+      tab+='<div class="col-sm-2"><label  class="col-form-label"> Name</label></div><div class="col-sm-10"><input type="text" class="form-control" id="cus_name" placeholder="Enter Name" name="cust_name"></div>';
 
-      tab+='<div class="col-sm-2"><label  class="col-form-label"> Number</label></div><div class="col-sm-10"><input type="text" class="form-control" id="mobile" placeholder="Enter mobile"></div>';
+      tab+='<div class="col-sm-2"><label  class="col-form-label"> Mobile</label></div><div class="col-sm-10"><input type="text" class="form-control" id="cus_mobile" placeholder="Enter mobile" name="cust_mobile"></div>';
 
-      tab+='<div class="col-sm-2"><label  class="col-form-label"> Email</label></div><div class="col-sm-10"><input type="text" class="form-control" id="Email" placeholder="Enter Email"></div>';
+      tab+='<div class="col-sm-2"><label  class="col-form-label"> Email</label></div><div class="col-sm-10"><input type="text" class="form-control" id="cus_email" placeholder="Enter Email" name="cust_email"></div>';
 
        $("#customerinput").html(tab).show();
 
@@ -566,7 +612,7 @@ function decrementValue(id)
 
     if(value=='4'){
 
-      tab='<div class="col-sm-5"><label  class="col-form-label">Card Number</label></div><div class="col-sm-7"><input type="text" class="form-control" id="cardnumber" placeholder="Enter Card Number"></div>';
+      tab='<div class="col-sm-5"><label  class="col-form-label">Card Number</label></div><div class="col-sm-7"><input type="text" class="form-control" id="card_number" placeholder="Enter Card Number" name="card_number"></div>';
 
        $(".cardinput").html(tab).show();
 
@@ -587,9 +633,14 @@ function decrementValue(id)
 
     $('#return_amount').val(return_amount);
 
+    // customer_details();
+
   }
+
+  $(document).ready(function(){
+    $(".toast").toast('show');
+  });
   
- 
 
 </script>
 

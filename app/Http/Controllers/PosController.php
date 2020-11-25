@@ -10,6 +10,9 @@ use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Liveamount;
 use App\Models\Customer;
+use App\Models\Apidata;
+use App\Models\Orderitem;
+use App\Models\Order;
 use DB;
 
 class PosController extends Controller
@@ -23,8 +26,18 @@ class PosController extends Controller
     	$product_list=Product::all();
         $customer_list=Customer::all();
 
-    	return view('admin.pos.list',compact('category_list','total_sum','product_list','customer_list'));
+    	return view('admin.Pos.list',compact('category_list','total_sum','product_list','customer_list'));
     }
+
+ 
+    public function invoice($id){
+
+    $order_list=Orderitem::where('order_id',$id)->get();
+    $order_r=Order::where('id',$id)->get();
+
+    return view('invoice_print',compact('order_list','order_r'));
+
+     }
 
      public function getProduct()
     {
@@ -42,6 +55,19 @@ class PosController extends Controller
         $product_list=Cart::all();
 
         echo json_encode($product_list);
+
+    }
+
+     public function getApiData()
+    {
+
+        // $apidata=Apidata::orderBy('id', 'DESC')->get();
+
+        $data1=file_get_contents('http://askmeguru.com/APISETUP/api.php');
+
+          $data=json_decode($data1);
+
+          echo json_encode($data);
 
     }
 

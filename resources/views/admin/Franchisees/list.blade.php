@@ -139,7 +139,7 @@
                         <!-- <input type="text" name="city" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town"> -->
                         <select class="form-control" name="city">
                           @foreach($branch_list as $branch)
-                            <option value="{{$branch->id}}">{{$branch->location}}</option>
+                            <option value="{{$branch->id}}">{{$branch->name}}</option>
                           @endforeach
                         </select>
                       </div>

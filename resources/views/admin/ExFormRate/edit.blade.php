@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Live Amount</h1>
+            <h1 class="m-0">ExForm rate</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Update Live amount</a></li>
-              <li class="breadcrumb-item active">Live Amount</li>
+              <li class="breadcrumb-item active">ExForm rate</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->

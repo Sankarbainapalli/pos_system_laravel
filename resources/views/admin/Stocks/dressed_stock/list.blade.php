@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Chicken Stocks List</h1>
+            <h1 class="m-0">Dressed Stocks List</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-              <li class="breadcrumb-item active">Stocks</li>
+              <li class="breadcrumb-item active">Dressed</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -88,7 +88,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Total weight(kg)</label>
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()" >
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()"  readonly=""><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
                       </div>
                     </div>
                   </div>
@@ -159,7 +159,7 @@
                     <td>{{$loop->index+1}}</td>
                     <td>FRD00{{$stock->franchisee_id}}</td>
                      <td>{{$stock->Franchisee->name}}</td>
-                    <td>{{$stock->Product->product_name}}</td>
+                    <!-- <td>{{$stock->Product->product_name}}</td> -->
                     <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
                            
                           </a></td>
@@ -363,6 +363,23 @@
              }
 
             })
+}
+
+function getWeight()
+{
+$.ajax({
+  type: "GET",
+  url: "getApiData",
+  // url: "http://askmeguru.com/APISETUP/api.php",
+ dataType: "json",
+// async:false,
+// cache: false,
+success: function(data){
+
+  document.getElementById("qty").value=data.total_weight;
+ sum();
+}
+});
 }
 
 </script>

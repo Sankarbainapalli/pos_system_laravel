@@ -17,7 +17,7 @@ class ProductController extends Controller
     	$category_list=Category::all();
     	$branch_list=Branch::all();
 
-        return view('admin.products.list',compact('product_list','category_list','branch_list'));
+        return view('admin.Products.list',compact('product_list','category_list','branch_list'));
     }
 
      public function store(Request $request){
@@ -34,7 +34,7 @@ class ProductController extends Controller
         $category_list=Category::all();
         $branch_list=Branch::all();
         
-        return view('admin.products.edit_product',compact('product','category_list','branch_list'));
+        return view('admin.Products.edit_product',compact('product','category_list','branch_list'));
     }
 
      public function update(Request $request,Product $product){

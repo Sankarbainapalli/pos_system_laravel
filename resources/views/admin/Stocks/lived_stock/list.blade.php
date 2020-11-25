@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Chicken Stocks List</h1>
+            <h1 class="m-0">Lived Stocks List</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-              <li class="breadcrumb-item active">Stocks</li>
+              <li class="breadcrumb-item active">Lived Stocks</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -33,6 +33,7 @@
               <div class="card-header">
                <!--  <h3 class="card-title justify-content-center ">Stocks List</h3>
                 <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-stock">Add Stock</button> -->
+                
                 <form action="{{route('stock.store')}}" method="POST">
                   @csrf
                   <div class="row col-md-12" >
@@ -88,7 +89,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Total weight(kg)</label>
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()" >
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" readonly=""><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
                       </div>
                     </div>
                   </div>
@@ -97,7 +98,7 @@
                       <div class="form-group">
                         
                            <label>Ex-Form Rate</label>                         
-                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value="{{$product_rate}}" readonly="">
+                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" onkeyup="sum()" value="{{$product_rate}}" readonly="">
                        
 
                     
@@ -115,7 +116,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Amount</label>
-                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()">
+                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount"  id="total" onkeyup="sum()">
                       </div>
                     </div>
 
@@ -358,6 +359,23 @@
              }
 
             })
+}
+
+function getWeight()
+{
+$.ajax({
+  type: "GET",
+  url: "getApiData",
+  // url: "http://askmeguru.com/APISETUP/api.php",
+ dataType: "json",
+// async:false,
+// cache: false,
+success: function(data){
+
+  document.getElementById("qty").value=data.total_weight;
+ sum();
+}
+});
 }
 
 </script>

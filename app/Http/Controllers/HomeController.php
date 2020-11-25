@@ -9,6 +9,7 @@ use App\Models\Product;
 use App\Models\Stock;
 use App\Models\Franchisee;
 use App\Models\Exformrate;
+use App\Models\Liveamount;
 
 class HomeController extends Controller
 {
@@ -31,14 +32,15 @@ class HomeController extends Controller
      public function index()
     {    
 
-    $today_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+    // $today_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+    $today_rate=Liveamount::where('product_id','1')->where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
         $total_emp=User::count();
         $product_list_l=Product::where('product_name','live')->get()->all();
-        $total_lived_stock='0';
+        $total_lived_stock1='0';
         foreach ($product_list_l as $product) {
         
-          $total_lived_stock=Stock::where('product_id',$product->id)->sum('qty');  
+          $total_lived_stock1=Stock::where('product_id',$product->id)->sum('qty');  
 
         }
 
@@ -49,6 +51,10 @@ class HomeController extends Controller
           $total_dressed_stock=Stock::where('product_id',$product->id)->sum('qty');  
 
         }
+
+        $total_lived_stock=$total_lived_stock1-$total_dressed_stock;
+
+
         
         // $total_dressed_stock=Stock::where('')count();
         $total_franchisee=Franchisee::count();

@@ -63,7 +63,7 @@ class ExFormRateController extends Controller
 
         // dd($todo->title);
 
-        return view('admin.exformrate.edit',compact('exformrate'));
+        return view('admin.ExFormRate.edit',compact('exformrate'));
     }
 
     public function update(Request $request,Exformrate $exformrate){

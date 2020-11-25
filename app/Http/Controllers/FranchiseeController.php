@@ -26,7 +26,7 @@ class FranchiseeController extends Controller
 
         }
 
-        return view('admin.franchisees.list',compact('franchisee_list','fran_code','branch_list'));
+        return view('admin.Franchisees.list',compact('franchisee_list','fran_code','branch_list'));
     }
 
      public function store(Request $request){
@@ -35,7 +35,7 @@ class FranchiseeController extends Controller
         
        Franchisee::create($request->all());
 
-       send_sms($request->mobile, "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
+       // send_sms($request->mobile, "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
 
     return redirect()->route('franchisee.index')->with('message','franchisee Has been added Successfully');
     }
@@ -45,7 +45,7 @@ class FranchiseeController extends Controller
         // $category_list=Category::ls();
         // $branch_list=Branch::all();
         
-        return view('admin.franchisees.edit_franchisee',compact('franchisee'));
+        return view('admin.Franchisees.edit_franchisee',compact('franchisee'));
     }
 
      public function update(Request $request,Franchisee $franchisee){

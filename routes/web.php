@@ -37,7 +37,6 @@ Route::resource('branch', App\Http\Controllers\BranchController::class);
 
 Route::resource('product', App\Http\Controllers\ProductController::class);
 
-
 Route::resource('category', App\Http\Controllers\CategoryController::class);
 
 Route::resource('stock', App\Http\Controllers\StockController::class);
@@ -46,9 +45,13 @@ Route::resource('purchaseorder', App\Http\Controllers\PurchaseOrderController::c
 
 Route::resource('pos', App\Http\Controllers\PosController::class);
 
+Route::get('/pos/invoice_print/{id}', [App\Http\Controllers\PosController::class, 'invoice'])->name('pos/invoice_print');
+
 Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
 
 Route::get('/delete_all_cart', [App\Http\Controllers\PosController::class, 'delete_all_cart'])->name('delete_all_cart');
+
+Route::get('/getApiData', [App\Http\Controllers\PosController::class, 'getApiData'])->name('getApiData');
 
 Route::get('/getCart', [App\Http\Controllers\PosController::class, 'getCart'])->name('getCart');
 
@@ -74,8 +77,12 @@ Route::resource('liveamount', App\Http\Controllers\LiveAmountController::class);
 
 Route::resource('exformrate', App\Http\Controllers\ExFormRateController::class);
 
+Route::resource('order', App\Http\Controllers\OrderController::class);
+
 
 Route::post('/getProduct', [App\Http\Controllers\LiveAmountController::class, 'getProduct'])->name('getProduct');
+
+Route::get('/live_stock_report', [App\Http\Controllers\ReportController::class, 'live_stock_report'])->name('live_stock_report');
 
 //*************dashboard***************/
 
@@ -123,7 +130,7 @@ Route::get('/accountList', [App\Http\Controllers\AccountController::class, 'acco
 
 // Route::post('/employee/store', [App\Http\Controllers\EmployeeController::class, 'store'])->name('employee.store');
 
-// Route::get('/employee/{employee}/edit', [App\Http\Controllers\EmployeeController::class, 'edit'])->name('employee.edit');
+// Route::get('/employee/ee{employ}/edit', [App\Http\Controllers\EmployeeController::class, 'edit'])->name('employee.edit');
 
 // Route::patch('/employee/{employee}/update', [App\Http\Controllers\EmployeeController::class, 'update'])->name('employee.update');
 

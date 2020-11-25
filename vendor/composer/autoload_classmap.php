@@ -50,6 +50,7 @@ return array(
     'App\\Models\\Franchisee' => $baseDir . '/app/Models/Franchisee.php',
     'App\\Models\\Liveamount' => $baseDir . '/app/Models/Liveamount.php',
     'App\\Models\\Order' => $baseDir . '/app/Models/Order.php',
+    'App\\Models\\Orderitem' => $baseDir . '/app/Models/Orderitem.php',
     'App\\Models\\Product' => $baseDir . '/app/Models/Product.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
     'App\\Models\\Stock' => $baseDir . '/app/Models/Stock.php',
