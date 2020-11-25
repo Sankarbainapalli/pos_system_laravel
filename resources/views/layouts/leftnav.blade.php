@@ -267,7 +267,20 @@
           </a>
         </li>
         -->
-        <li class="nav-item">
+
+            <li class="nav-item">
+              <a href="{{route('expenses.index')}}" class="nav-link">
+                <i class="nav-icon fas fa-code-branch"></i>
+                <p>
+                  Expenses
+                </p>
+              </a>
+            </li>
+
+            
+
+
+            <li class="nav-item">
               <a href="{{route('branch.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-code-branch"></i>
                 <p>

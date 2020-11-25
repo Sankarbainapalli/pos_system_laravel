@@ -41,6 +41,8 @@ Route::resource('category', App\Http\Controllers\CategoryController::class);
 
 Route::resource('stock', App\Http\Controllers\StockController::class);
 
+Route::resource('expenses', App\Http\Controllers\ExpenseController::class);
+
 Route::resource('purchaseorder', App\Http\Controllers\PurchaseOrderController::class);
 
 Route::resource('pos', App\Http\Controllers\PosController::class);
