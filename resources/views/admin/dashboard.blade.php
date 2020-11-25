@@ -64,7 +64,7 @@
               <span class="info-box-icon bg-success elevation-1"><i class="far fa-check-square"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Live Stocks</span>
+                <span class="info-box-text">Live Stocks &nbsp; <i class="fas fa-hand-point-left blink bg-info" >New</i></span>
                 <span class="info-box-number">{{$total_lived_stock}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->
@@ -77,7 +77,7 @@
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-check-square"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Dressed Stocks</span>
+                <span class="info-box-text">Dressed Stocks  &nbsp;<i class="fas fa-hand-point-left blink bg-info" >New</i></span>
                 <span class="info-box-number">{{$total_dressed_stock}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->

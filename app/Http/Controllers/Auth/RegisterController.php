@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = '/';
     // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
@@ -69,7 +69,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'mobile' => $data['mobile'],
-            'role' => $data['role'],
+            // 'role' => $data['role'],
             'password' => Hash::make($data['password']),
         ]);
     }

@@ -53,7 +53,7 @@
                     @foreach($expenses_list as $expenses)
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>{{$expenses->franchise_id}}</td>
+                    <td>FRD00{{$expenses->franchisee_id}}</td>
                     <td>{{$expenses->cur_date}}</td>
                     <td>{{$expenses->name}}</td>
                     <td>{{$expenses->mobile}}</td>
@@ -65,10 +65,10 @@
                    
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('expenses.edit',$expenses->payment_mode)}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('expenses.edit',$expenses->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                        <a href="{{route('expenses.destroy',$expenses->payment_mode)}}">  <button type="button" class="btn btn-primary">
+                        <a href="{{route('expenses.destroy',$expenses->id)}}">  <button type="button" class="btn btn-primary">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
                       </div>
@@ -122,7 +122,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Franchisee</label>
-                        <select class="form-control select2bs4" style="width: 100%;" name="payment_mode">
+                        <select class="form-control select2bs4" style="width: 100%;" name="franchisee_id" >
                             <option selected="selected" >Select</option>
                             @foreach($franchisee_list as $franchisee)
                             <option value="{{$franchisee->id}}">{{$franchisee->name}}</option>

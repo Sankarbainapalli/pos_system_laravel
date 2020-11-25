@@ -41,72 +41,81 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                    <label>Name Of Candidate</label>
-                    <input type="text" class="form-control" placeholder="Enter Candidate's/Business Name" id="business" required>
-                </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>Date</label>
-                    <input type="date" class="form-control" placeholder="Date" id="dte">
-                </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>Source From</label>
-                    <input type="text" class="form-control" placeholder="Enter Source" id="Source" required>
-                </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>Mobile No.</label>
-                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required>
-                </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email" class="form-control" placeholder="Enter Your Email-Id" id="emailid" required>
-                </div>
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
-              <div class="col-md-6">
-                <div class="form-group">
-                    <label>Purpose</label>
-                    <input type="text" class="form-control" placeholder="Enter Purpose" id="prpse" required>
-                </div>
-                <!-- /.form-group -->
-                <div class="form-group">
-                    <label>Amount</label>
-                    <input type="text" class="form-control" placeholder="Enter Amount" id="amount" required>
-                </div>
-                <!-- /.form-group -->
-
-                <div class="form-group">
-                    <label>In Words</label>
-                    <input type="text" class="form-control" placeholder="Enter Amount In Words" id="amountwords" required>
-                </div>
-                <!-- /.form-group -->
-
-                <div class="form-group">
-                    <label>Mode Of Payment</label>
-                    <select class="form-control select2bs4" style="width: 100%;">
-                        <option selected="selected">Bank</option>
-                        <option>Cash</option>
-                        <option>Bank Transfer</option>
-                    </select>
-                </div>
-                <!-- /.form-group -->
-              </div>
-              <!-- /.col -->
+               <form action="{{route('income.update', $income->id)}}" method="POST">
+                       @csrf
+                    @method('patch')
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                         <label>Source From</label>
+                        <input type="text" class="form-control" placeholder="From Which Source" id="source" name="source_from" value="{{$income->source_from}}">
+                        
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" class="form-control" placeholder="Date" id="dte" name="cur_date" value="{{$income->cur_date}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                       <label>Name Of Candidate</label>
+                        <input type="text" class="form-control" placeholder="Enter Candidate's/Business Name" id="business" name="name"  value="{{$income->name}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" name="mobile"  value="{{$income->mobile}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" class="form-control" placeholder="Enter Your Email-Id" id="emailid" name="email"  value="{{$income->email}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Purpose</label>
+                        <input type="text" class="form-control" placeholder="Enter Purpose" id="prpse" name="purpose"  value="{{$income->purpose}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Amount</label>
+                        <input type="text" class="form-control" placeholder="Enter Amount" id="amount" name="amount"  value="{{$income->amount}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>In Words</label>
+                        <input type="text" class="form-control" placeholder="Enter Amount In Words" id="amountwords" name="in_words"  value="{{$income->in_words}}">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Mode Of Payment</label>
+                        <select class="form-control select2bs4" style="width: 100%;" name="payment_mode">
+                            <option {{ ( $income->payment_mode=='Bank') ? 'selected' : '' }}>Bank</option>
+                            <option value="Cash" {{ ( $income->payment_mode=='Cash') ? 'selected' : '' }}>Cash</option>
+                            <option value="Bank Transfer" {{ ( $income->payment_mode=='Bank Transfer') ? 'selected' : '' }}>Bank Transfer</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+            
             </div>
             <!-- /.row -->
-            <button type="button" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             <!-- /.button -->
           </div>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
       </div>
+          </form>
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->

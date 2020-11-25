@@ -21,8 +21,6 @@ class ExpenseController extends Controller
 
      public function store(Request $request){
 
-    
-
          Expenses::create($request->all());
 
        return redirect()->route('expenses.index')->with('message','Expenses Has been added Successfully');
@@ -32,7 +30,10 @@ class ExpenseController extends Controller
 
     public function edit(Expenses $expense){
 
-        return view('admin.Expensess.edit',compact('expense'));
+
+    	$franchisee_list=Franchisee::all();
+
+        return view('admin.Expenses.edit',compact('expense','franchisee_list'));
     }
 
     public function update(Request $request,Expenses $Expenses){

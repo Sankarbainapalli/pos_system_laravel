@@ -39,6 +39,23 @@
   <!-- dropzonejs -->
   <link rel="stylesheet" href="{{asset('public/plugins/dropzone/min/dropzone.min.css')}}">
 
+  <style type="text/css">
+    .blink {
+      animation: blink 2s steps(5, start) infinite;
+      -webkit-animation: blink 1s steps(5, start) infinite;
+    }
+    @keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+    @-webkit-keyframes blink {
+      to {
+        visibility: hidden;
+      }
+    }
+  </style>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">

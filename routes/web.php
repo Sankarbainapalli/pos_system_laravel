@@ -43,6 +43,8 @@ Route::resource('stock', App\Http\Controllers\StockController::class);
 
 Route::resource('expenses', App\Http\Controllers\ExpenseController::class);
 
+Route::resource('income', App\Http\Controllers\IncomeController::class);
+
 Route::resource('purchaseorder', App\Http\Controllers\PurchaseOrderController::class);
 
 Route::resource('pos', App\Http\Controllers\PosController::class);
@@ -85,6 +87,10 @@ Route::resource('order', App\Http\Controllers\OrderController::class);
 Route::post('/getProduct', [App\Http\Controllers\LiveAmountController::class, 'getProduct'])->name('getProduct');
 
 Route::get('/live_stock_report', [App\Http\Controllers\ReportController::class, 'live_stock_report'])->name('live_stock_report');
+
+Route::get('/sales_report', [App\Http\Controllers\ReportController::class, 'sales_report'])->name('sales_report');
+
+Route::post('/sales_report', [App\Http\Controllers\ReportController::class, 'sales_report'])->name('sales_report');
 
 //*************dashboard***************/
 

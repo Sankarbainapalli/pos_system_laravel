@@ -97,10 +97,10 @@
 
                 <div class="form-group">
                     <label>Mode Of Payment</label>
-                    <select class="form-control select2bs4" style="width: 100%;">
-                        <option selected="selected">Bank</option>
-                        <option>Cash</option>
-                        <option>Bank Transfer</option>
+                    <select class="form-control select2bs4" name="payment_mode" style="width: 100%;">
+                       <option {{ ( $expense->payment_mode=='Bank') ? 'selected' : '' }}>Bank</option>
+                            <option value="Cash" {{ ( $expense->payment_mode=='Cash') ? 'selected' : '' }}>Cash</option>
+                            <option value="Bank Transfer" {{ ( $expense->payment_mode=='Bank Transfer') ? 'selected' : '' }}>Bank Transfer</option>
                     </select>
                 </div>
                 <!-- /.form-group -->

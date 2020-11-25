@@ -154,7 +154,7 @@
                         <label>Role</label>
                         <select name="role_id" class="form-control select2bs4" style="width: 100%;" id="stat">
                             @foreach($role_list as $role)
-                            <option value="{{$role->id}}">{{$role->name}}</option>
+                            <option value="{{$role->name}}">{{$role->name}}</option>
                             @endforeach
                         </select>
                       </div>

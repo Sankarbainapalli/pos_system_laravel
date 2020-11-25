@@ -676,24 +676,6 @@ function decrementValue(id)
   
 
 </script>
-=======
-                      <input type="text" class="form-control" id="return" readonly placeholder="₹0.00" >
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-              </form>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
->>>>>>> ab78874abac341c06d6224c7b68289052444df61
+
 
 @endsection

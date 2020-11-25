@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Liveamount;
 use App\Models\Exformrate;
 use App\Models\Franchisee;
+use App\Models\Order;
 
 class ReportController extends Controller
 {
@@ -44,6 +45,48 @@ class ReportController extends Controller
         return view('admin.Report.live_stock_report',compact('liveamount_list','product_list','stock_list','franchisee_list','total_lived_stock1','total_lived_stock_amt'));
 
 
+    }
+
+    public function sales_report(Request $request){
+
+        // dd($request->from_date);
+
+       
+
+        if($request->from_date && $request->to_date){
+
+        $order_list=Order::whereBetween('created_at', [$request->from_date, $request->to_date])->get();
+
+        $subtotal=Order::whereBetween('created_at', [$request->from_date, $request->to_date])->sum('subtotal');
+        
+        $tax=Order::whereBetween('created_at', [$request->from_date, $request->to_date])->sum('tax');
+
+        $grandtotal=Order::whereBetween('created_at', [$request->from_date, $request->to_date])->sum('grandtotal');
+
+    }elseif($request->from_date){
+
+      $order_list=Order::where('created_at',$request->from_date)->get();
+        $subtotal=Order::where('created_at',$request->from_date)->sum('subtotal');
+        $tax=Order::where('created_at',$request->from_date)->sum('tax');
+        $grandtotal=Order::where('created_at',$request->from_date)->sum('grandtotal');
+
+    }elseif($request->to_date){
+
+      $order_list=Order::where('created_at',$request->to_date)->get();
+        $subtotal=Order::where('created_at',$request->to_date)->sum('subtotal');
+        $tax=Order::where('created_at',$request->to_date)->sum('tax');
+        $grandtotal=Order::where('created_at',$request->to_date)->sum('grandtotal');
+
+      }else{
+
+        $order_list=Order::all();
+        $subtotal=Order::sum('subtotal');
+        $tax=Order::sum('tax');
+        $grandtotal=Order::sum('grandtotal');
+
+      }
+
+        return view('admin.Report.sales',compact('order_list','subtotal','tax','grandtotal'));
     }
 
 }

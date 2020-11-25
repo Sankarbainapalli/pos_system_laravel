@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\CustomerCreateRequest;
 use App\Models\Customer;
+use App\Models\Order;
 
 class CustomerController extends Controller
 {
@@ -14,7 +15,7 @@ class CustomerController extends Controller
 
     public function index(Customer $customer){
 
-    	$customer_list=Customer::all();
+    	$customer_list=Order::all();
 
     	// $customer_list=auth()->user()->customers()->get();
 

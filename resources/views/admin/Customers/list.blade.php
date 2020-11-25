@@ -28,7 +28,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title justify-content-center ">Customers List</h3>
-                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-customer">Add Customer</button>
+               <!--  <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-customer">Add Customer</button> -->
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -37,18 +37,21 @@
                   <tr>
                     <th>Customer Name</th>
                     <th>Location</th>
+                    <th>Email</th>
                     <th>Mobile No.</th>
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                   </tr>
                   </thead>
                   <tbody>
                      @foreach($customer_list as $customer)
                   <tr>
 
-                    <td>{{$customer->name}}</td>
-                    <td>{{$customer->location}}</td>
-                    <td>{{$customer->mobile}}</td>
-                    <td> 
+                    <td>{{$customer->cus_name}}</td>
+                    <td>{{$customer->user_id}}</td>
+                    <td>{{$customer->cus_email}}</td>
+                    <td>{{$customer->cus_mobile}}</td>
+                 
+                   <!--  <td> 
                       <div class="btn-group">
                           <a href="{{route('customer.edit',$customer->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
@@ -60,7 +63,7 @@
                           
                           
                       </div>
-                    </td>
+                    </td> -->
                   </tr>
                   
                  

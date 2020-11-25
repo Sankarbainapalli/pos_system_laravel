@@ -22,14 +22,14 @@
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
     <!-- Messages Dropdown Menu -->
-    <li class="nav-item dropdown">
+    <!-- <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-comments"></i>
         <span class="badge badge-danger navbar-badge">3</span>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <a href="#" class="dropdown-item">
-          <!-- Message Start -->
+      
           <div class="media">
             <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
             <div class="media-body">
@@ -41,46 +41,13 @@
               <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
             </div>
           </div>
-          <!-- Message End -->
+   
         </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <!-- Message Start -->
-          <div class="media">
-            <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-            <div class="media-body">
-              <h3 class="dropdown-item-title">
-              John Pierce
-              <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-              </h3>
-              <p class="text-sm">I got your message bro</p>
-              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-            </div>
-          </div>
-          <!-- Message End -->
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <!-- Message Start -->
-          <div class="media">
-            <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-            <div class="media-body">
-              <h3 class="dropdown-item-title">
-              Nora Silvester
-              <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-              </h3>
-              <p class="text-sm">The subject goes here</p>
-              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-            </div>
-          </div>
-          <!-- Message End -->
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+   
       </div>
-    </li>
+    </li> -->
     <!-- Notifications Dropdown Menu -->
-    <li class="nav-item dropdown">
+   <!--  <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
         <i class="far fa-bell"></i>
         <span class="badge badge-warning navbar-badge">15</span>
@@ -105,7 +72,7 @@
         <div class="dropdown-divider"></div>
         <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
       </div>
-    </li>
+    </li> -->
     <!-- <li class="nav-item">
       <a class="nav-link" data-widget="fullscreen" href="#" role="button">
         <i class="fas fa-expand-arrows-alt"></i>
@@ -114,14 +81,25 @@
     <!-- User Dropdown Menu -->
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="far fa-user"></i>
+        <i class="far fa-user"></i>{{Auth::user()->name}}
       </a>
       <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
         <li><a href="#" class="dropdown-item">Profile </a></li>
         <li><a href="#" class="dropdown-item">Settings</a></li>
         <li class="dropdown-divider"></li>
         <!-- Level two dropdown-->
-        <li><a href="./login.html" class="dropdown-item">Logout</a></li>
+        <li>
+          <!-- <a href="./login.html" class="dropdown-item">Logout</a> -->
+           <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+        </li>
         <!-- End Level two -->
       </ul>
     </li>
@@ -185,14 +163,50 @@
 
 
 
-          <li class="nav-item">
+         <!--  <li class="nav-item">
             <a href="{{route('accountList')}}" class="nav-link">
               <i class="nav-icon far fa-file-alt"></i>
               <p>
                 Accounts
               </p>
             </a>
-          </li>
+          </li> -->
+
+            <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-box"></i>
+
+            <p>
+              Accounts
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+           <ul class="nav nav-treeview">
+
+          
+                  <li class="nav-item">
+              <a href="{{route('expenses.index')}}" class="nav-link">
+                <i class="nav-icon fas fa-code-branch"></i>
+                <p>
+                  Expenses
+                </p>
+              </a>
+            </li>
+
+             <li class="nav-item">
+              <a href="{{route('income.index')}}" class="nav-link">
+                <i class="nav-icon fas fa-code-branch"></i>
+                <p>
+                Income
+                </p>
+              </a>
+            </li>
+
+          
+          </ul>
+        </li>
+
+     
 
           <li class="nav-item">
             <a href="{{route('liveamount.index')}}" class="nav-link">
@@ -268,14 +282,7 @@
         </li>
         -->
 
-            <li class="nav-item">
-              <a href="{{route('expenses.index')}}" class="nav-link">
-                <i class="nav-icon fas fa-code-branch"></i>
-                <p>
-                  Expenses
-                </p>
-              </a>
-            </li>
+           
 
             
 
@@ -363,12 +370,12 @@
                 <p>Live Stock Report</p>
               </a>
             </li>
-           <!--  <li class="nav-item">
-              <a href="#" class="nav-link">
+            <li class="nav-item">
+              <a href="{{route('sales_report')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Reports List</p>
+                <p>Sales Reports</p>
               </a>
-            </li> -->
+            </li>
           </ul>
         </li>
         <li class="nav-item">
