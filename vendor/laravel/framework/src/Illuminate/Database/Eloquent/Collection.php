@@ -64,6 +64,7 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+<<<<<<< HEAD
      * Load a set of aggregations over relationship's column onto the collection.
      *
      * @param  array|string  $relations
@@ -72,6 +73,14 @@ class Collection extends BaseCollection implements QueueableCollection
      * @return $this
      */
     public function loadAggregate($relations, $column, $function = null)
+=======
+     * Load a set of relationship counts onto the collection.
+     *
+     * @param  array|string  $relations
+     * @return $this
+     */
+    public function loadCount($relations)
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     {
         if ($this->isEmpty()) {
             return $this;
@@ -80,7 +89,11 @@ class Collection extends BaseCollection implements QueueableCollection
         $models = $this->first()->newModelQuery()
             ->whereKey($this->modelKeys())
             ->select($this->first()->getKeyName())
+<<<<<<< HEAD
             ->withAggregate($relations, $column, $function)
+=======
+            ->withCount(...func_get_args())
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             ->get()
             ->keyBy($this->first()->getKeyName());
 
@@ -99,6 +112,7 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+<<<<<<< HEAD
      * Load a set of relationship counts onto the collection.
      *
      * @param  array|string  $relations
@@ -158,6 +172,8 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Load a set of relationships onto the collection if they are not already eager loaded.
      *
      * @param  array|string  $relations
@@ -342,6 +358,7 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+<<<<<<< HEAD
      * Run an associative map over each of the items.
      *
      * The callback should return an associative array with a single key / value pair.
@@ -359,6 +376,8 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Reload a fresh model instance from the database for all the entities.
      *
      * @param  array|string  $with

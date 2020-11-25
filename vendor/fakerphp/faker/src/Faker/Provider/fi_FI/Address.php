@@ -4,6 +4,7 @@ namespace Faker\Provider\fi_FI;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $cityPrefix = ['Pohjois', 'Etelä', 'Itä', 'Länsi', 'Uusi', 'Uus'];
     protected static $citySuffix = ['kylä', 'niemi', 'järvi', 'joki', 'lampi', 'mäki', 'vesi', 'niemi', 'harju', 'lahti', 'harju', 'salmi', 'koski', 'pudas', 'saari'];
     protected static $buildingNumber = ['####', '###', '##', '#', '#'];
@@ -15,6 +16,19 @@ class Address extends \Faker\Provider\Address
         'Ahvenanmaa', 'Etelä-Karjala', 'Etelä-Pohjanmaa', 'Etelä-Savo', 'Kainuu', 'Kanta-Häme', 'Keski-Pohjanmaa', 'Keski-Suomi', 'Kymenlaakso', 'Lappi', 'Pirkanmaa', 'Pohjanmaa', 'Pohjois-Karjala', 'Pohjois-Pohjanmaa', 'Pohjois-Savo', 'Päijät-Häme', 'Satakunta', 'Uusimaa', 'Varsinais-Suomi'
     ];
     protected static $country = [
+=======
+    protected static $cityPrefix = array('Pohjois', 'Etelä', 'Itä', 'Länsi', 'Uusi', 'Uus');
+    protected static $citySuffix = array('kylä', 'niemi', 'järvi', 'joki', 'lampi', 'mäki', 'vesi', 'niemi', 'harju', 'lahti', 'harju', 'salmi', 'koski', 'pudas', 'saari');
+    protected static $buildingNumber = array('####', '###', '##', '#', '#');
+    protected static $streetSuffix = array(
+        'tie', 'kuja', 'polku', 'kierros', 'kulma', 'katu', 'kaarre', 'kaari', 'rinne', 'kaarto', 'haka', 'silta', 'rinne', 'töyry'
+    );
+    protected static $postcode = array('#####');
+    protected static $state = array(
+        'Ahvenanmaa', 'Etelä-Karjala', 'Etelä-Pohjanmaa', 'Etelä-Savo', 'Kainuu', 'Kanta-Häme', 'Keski-Pohjanmaa', 'Keski-Suomi', 'Kymenlaakso', 'Lappi', 'Pirkanmaa', 'Pohjanmaa', 'Pohjois-Karjala', 'Pohjois-Pohjanmaa', 'Pohjois-Savo', 'Päijät-Häme', 'Satakunta', 'Uusimaa', 'Varsinais-Suomi'
+    );
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afganistan', 'Alankomaat', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua ja Barbuda', 'Argentiina', 'Armenia', 'Australia', 'Azerbaidẑan',
         'Bahama', 'Bahrain', 'Bangladesh', 'Barbados', 'Belgia', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia ja Hertsegovina', 'Botswana', 'Brasilia', 'Brunel', 'Bulgaria', 'Burkina Faso', 'Burundi',
         'Chile', 'Costa Rica',
@@ -38,12 +52,18 @@ class Address extends \Faker\Provider\Address
         'Valko-Venäjä', 'Vanuatu', 'Vatikaanivaltio', 'Venzuela', 'Venäjä', 'Vietnam', 'Viro',
         'Yhdistyneet Arabiemiirikunnat', 'Yhdistynyt kuningaskunta', 'Yhdysvallat',
         'Zimbabwe'
+<<<<<<< HEAD
     ];
     protected static $cityFormats = [
+=======
+    );
+    protected static $cityFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{cityPrefix}}-{{firstName}}{{citySuffix}}',
         '{{cityPrefix}}-{{firstName}}',
         '{{firstName}}{{citySuffix}}',
         '{{lastName}}{{citySuffix}}',
+<<<<<<< HEAD
     ];
     protected static $streetNameFormats = [
         '{{firstName}}{{streetSuffix}}',
@@ -58,6 +78,22 @@ class Address extends \Faker\Provider\Address
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
     protected static $secondaryAddressFormats = ['###'];
+=======
+    );
+    protected static $streetNameFormats = array(
+        '{{firstName}}{{streetSuffix}}',
+        '{{lastName}}{{streetSuffix}}'
+    );
+    protected static $streetAddressFormats = array(
+        '{{streetName}} {{buildingNumber}}',
+        '{{streetName}} {{buildingNumber}} {{secondaryAddress}}'
+    );
+    protected static $addressFormats = array(
+        "{{streetAddress}}\n{{postcode}} {{city}}, {{state}}",
+        "{{streetAddress}}\n{{postcode}} {{city}}",
+    );
+    protected static $secondaryAddressFormats = array('###');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Pohjois'

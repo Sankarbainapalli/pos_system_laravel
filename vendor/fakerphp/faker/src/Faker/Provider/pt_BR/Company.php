@@ -6,15 +6,25 @@ require_once "check_digit.php";
 
 class Company extends \Faker\Provider\Company
 {
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastName}} {{companySuffix}}',
         '{{lastName}}-{{lastName}}',
         '{{lastName}} e {{lastName}}',
         '{{lastName}} e {{lastName}} {{companySuffix}}',
         '{{lastName}} Comercial Ltda.'
+<<<<<<< HEAD
     ];
 
     protected static $companySuffix = ['e Filhos', 'e Associados', 'Ltda.', 'S.A.'];
+=======
+    );
+
+    protected static $companySuffix = array('e Filhos', 'e Associados', 'Ltda.', 'S.A.');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * A random CNPJ number.

@@ -4,6 +4,7 @@ namespace Faker\Provider\hy_AM;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
@@ -15,12 +16,29 @@ class Person extends \Faker\Provider\Person
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}}',
     ];
+=======
+    protected static $maleNameFormats = array(
+        '{{firstNameMale}} {{lastName}}',
+        '{{firstNameMale}} {{lastName}}',
+        '{{firstNameMale}} {{lastName}}',
+    );
+
+    protected static $femaleNameFormats = array(
+        '{{firstNameFemale}} {{lastName}}',
+        '{{firstNameFemale}} {{lastName}}',
+        '{{firstNameFemale}} {{lastName}}',
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /*
      *
      * {@link} http://www.armeniapedia.org/wiki/Armenian_Male_Names
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Աբգար', 'Աբէլ', 'Ազատ', 'Ազնաւուր', 'Ազնուական', 'Ալիշան', 'Ակնունի', 'Աղան', 'Աղասի', 'Ամարաս', 'Այգեկ', 'Անակ',
         'Անդրանիկ', 'Անուշաւան', 'Աշոտ', 'Ապիրատ', 'Արանձեր', 'Առատ', 'Արաքել', 'Առէն', 'Առուծ', 'Աժնակ', 'Ասողիկ', 'Ասպետ', 'Աստուածատուր',
         'Ասատուր', 'Ատուր', 'Ատրուշան', 'Արա', 'Արագած', 'Արայիկ', 'Արամ', 'Արամազդ', 'Արամայիս', 'Արարատ', 'Արբուն', 'Արէգ', 'Արեւ', 'Արուշատ',
@@ -53,13 +71,21 @@ class Person extends \Faker\Provider\Person
         'Վրթանէս', 'Վրոյր', 'Տաթեւ', 'Տաճատ', 'Տատուր', 'Տարօն', 'Տաւրոս', 'Տէրուն', 'Տիգրան', 'Տիրազան', 'Տիրայր', 'Տիրան', 'Տիրատուր', 'Տիրիթ', 'Տորք',
         'Տրդատ', 'Տօնապետ', 'ՐաՖՖի', 'Ցաւակ', 'Ցոլակ', 'Փայլակ', 'Փանիկ', 'Փանոս', 'Փառէն', 'Փառնակ', 'Փարամազ', 'Փիլիպպոս', 'Քաջիկ', 'Քաջազուն', 'Քաջազօր',
         'Քաջայր', 'Քերովբէ', 'Քրիստափոր', 'Օգսէն', 'Օհան', 'Օնէ', 'Օննիկ', 'Օշին', 'Օշական', 'Օտա'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /*
      *
      * {@link} http://www.armeniapedia.org/wiki/Armenian_Female_Names
      */
+<<<<<<< HEAD
     protected static $firstNameFemale = [
+=======
+    protected static $firstNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Ազատուհի', 'Ազգանոյշ', 'Ազնիւ', 'Ալիծ', 'Ալին', 'Ալիս', 'Ալիք', 'Ալվարդ', 'Աղաւնի', 'Աղբիւր', 'Աղուոր', 'Ամանոր', 'Այծեամ', 'Այծեմնիկ',
         'Ալծիկ', 'Այտա', 'Անահիտ', 'Անայիս', 'Անգինէ', 'Անթառամ', 'Անի', 'Աննա', 'Աննիկ', 'Անծրեւիկ', 'Աննման', 'Անոյշ', 'Աշխէն', 'Աստղիկ',
         'Ատրինէ', 'Արազ', 'Արաքս', 'Արաքսի', 'Արեգնազ', 'Արեգնազան', 'Արեւիկ', 'Արեւահատ', 'Արծնի', 'Արծուիկ', 'Արմենուհի', 'Արմենուշ',
@@ -86,14 +112,21 @@ class Person extends \Faker\Provider\Person
         'Վանէ', 'Վանուհի', 'Վասկանոյշ', 'Վարդանոյշ', 'Վարդուհի', 'Վարդենի', 'Վարդերես', 'Վարդիթեր', 'Վարդինէ', 'Վարսենիկ', 'Վեհանոյշ', 'Վեհանձնուհի', 'Վեհուհի', 'Վերգինէ', 'Վերժին',
         'Վերջալոյս', 'Վրէժուհի', 'Տաթեւիկ', 'Տալիթա', 'Տենչալի', 'Տեսիլ', 'Տիգրանուհի', 'Տիրուկ', 'Տիրուհի', 'Ցօլինէ', 'Ցողիկ', 'Փաթիլ', 'Փայլուն', 'Փառանձեմ', 'Փասիան',
         'Փերուզ', 'Փիւնիկ', 'Քաղրուհի', 'Քնար', 'Քնքուշ', 'Քրիստինէ'
+<<<<<<< HEAD
     ];
 
     protected static $lastName = [
+=======
+    );
+
+    protected static $lastName = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Կարապետյան','Ասատրյան','Հովսեփյան','Մուրադյան','Հովհաննիսյան',
         'Աբգարյան','Գրիգորյան','Կարապետյան','Հայրապետյան','Ավագյան',
         'Պետրոսյան','Պողոսյան','Աբդալյան','Բադալյան','Մելիքյան','Մկրտչյան',
         'Դարբինյան','Կիրակոսյան','Հակոբյան','Խաչատրյան','Վարդանյան',
         'Համբարձումյան','Սարգսյան',
+<<<<<<< HEAD
     ];
 
     protected static $titleMale = ['Պարոն'];
@@ -101,6 +134,15 @@ class Person extends \Faker\Provider\Person
     protected static $titleFemale = ['տիկին','օրիորդ'];
 
     private static $suffix = ['',];
+=======
+    );
+
+    protected static $titleMale = array('Պարոն');
+
+    protected static $titleFemale = array('տիկին','օրիորդ');
+
+    private static $suffix = array('',);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'PhD'

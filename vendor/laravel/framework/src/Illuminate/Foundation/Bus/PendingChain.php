@@ -143,6 +143,7 @@ class PendingChain
             $firstJob = $this->job;
         }
 
+<<<<<<< HEAD
         if ($this->connection) {
             $firstJob->chainConnection = $this->connection;
             $firstJob->connection = $firstJob->connection ?: $this->connection;
@@ -158,6 +159,12 @@ class PendingChain
         }
 
         $firstJob->chain($this->chain);
+=======
+        $firstJob->allOnConnection($this->connection);
+        $firstJob->allOnQueue($this->queue);
+        $firstJob->chain($this->chain);
+        $firstJob->delay($this->delay);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $firstJob->chainCatchCallbacks = $this->catchCallbacks();
 
         return app(Dispatcher::class)->dispatch($firstJob);

@@ -24,9 +24,14 @@ class ScheduledTaskFailed
     /**
      * Create a new event instance.
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Console\Scheduling\Event  $task
      * @param  \Throwable  $exception
      * @return void
+=======
+     * @param \Illuminate\Console\Scheduling\Event $task
+     * @param \Throwable $exception
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function __construct(Event $task, Throwable $exception)
     {

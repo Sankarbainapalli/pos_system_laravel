@@ -4,6 +4,7 @@ namespace Faker\Provider\de_CH;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $buildingNumber = ['###', '##', '#', '##[abc]', '#[abc]'];
 
     protected static $streetSuffixLong = [
@@ -14,11 +15,27 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $postcode = ['####'];
+=======
+    protected static $buildingNumber = array('###', '##', '#', '##[abc]', '#[abc]');
+
+    protected static $streetSuffixLong = array(
+        'Gasse', 'Platz', 'Ring', 'Strasse', 'Weg', 'Allee'
+    );
+    protected static $streetSuffixShort = array(
+        'gasse', 'platz', 'ring', 'strasse', 'str.', 'weg', 'allee'
+    );
+
+    protected static $postcode = array('####');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://de.wikipedia.org/wiki/Liste_der_St%C3%A4dte_in_der_Schweiz
      */
+<<<<<<< HEAD
     protected static $cityNames = [
+=======
+    protected static $cityNames = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aarau', 'Aarberg', 'Aarburg', 'Adliswil', 'Aesch', 'Affoltern am Albis', 'Agno', 'Aigle', 'Allschwil', 'Altdorf', 'Altstätten', 'Amriswil', 'Appenzell', 'Arbon', 'Arth', 'Ascona', 'Aubonne', 'Avenches',
         'Baar', 'Bad Zurzach', 'Baden', 'Basel', 'Bassersdorf', 'Bellinzona', 'Belp', 'Bern', 'Beromünster', 'Biasca', 'Biel/Bienne', 'Binningen', 'Birsfelden', 'Bischofszell', 'Boudry', 'Bourg-Saint-Pierre', 'Bremgarten', 'Brig-Glis', 'Brig', 'Brugg', 'Buchs', 'Bulle', 'Burgdorf', 'Bülach',
         'Carouge', 'Cham', 'Chur', 'Châtel-Saint-Denis', 'Chêne-Bougeries', 'Conthey', 'Coppet', 'Cossonay', 'Croglio', 'Cudrefin', 'Cully',
@@ -41,11 +58,16 @@ class Address extends \Faker\Provider\Address
         'Waldenburg', 'Walenstadt', 'Wallisellen', 'Wangen an der Aare', 'Weinfelden', 'Werdenberg', 'Wettingen', 'Wetzikon', 'Wiedlisbach', 'Willisau', 'Wil', 'Winterthur', 'Wohlen', 'Worb', 'Wädenswil',
         'Yverdon-les-Bains',
         'Zofingen', 'Zollikon', 'Zug', 'Zürich'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://de.wikipedia.org/wiki/Kanton_(Schweiz)
      */
+<<<<<<< HEAD
     protected static $canton = [
         ['AG' => 'Aargau'],
         ['AI' => 'Appenzell Innerrhoden'],
@@ -76,6 +98,38 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $country = [
+=======
+    protected static $canton = array(
+        array('AG' => 'Aargau'),
+        array('AI' => 'Appenzell Innerrhoden'),
+        array('AR' => 'Appenzell Ausserrhoden'),
+        array('BE' => 'Bern'),
+        array('BL' => 'Basel-Landschaft'),
+        array('BS' => 'Basel-Stadt'),
+        array('FR' => 'Freiburg'),
+        array('GE' => 'Genf'),
+        array('GL' => 'Glarus'),
+        array('GR' => 'Graubünden'),
+        array('JU' => 'Jura',),
+        array('LU' => 'Luzern'),
+        array('NE' => 'Neuenburg'),
+        array('NW' => 'Nidwalden'),
+        array('OW' => 'Obwalden'),
+        array('SG' => 'St. Gallen'),
+        array('SH' => 'Schaffhausen'),
+        array('SO' => 'Solothurn'),
+        array('SZ' => 'Schwyz'),
+        array('TG' => 'Thurgau'),
+        array('TI' => 'Tessin'),
+        array('UR' => 'Uri'),
+        array('VD' => 'Waadt'),
+        array('VS' => 'Wallis'),
+        array('ZG' => 'Zug'),
+        array('ZH' => 'Zürich')
+    );
+
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Alandinseln', 'Albanien', 'Algerien', 'Amerikanisch-Ozeanien', 'Amerikanisch-Samoa', 'Amerikanische Jungferninseln', 'Andorra', 'Angola', 'Anguilla', 'Antarktis', 'Antigua und Barbuda', 'Argentinien', 'Armenien', 'Aruba', 'Aserbaidschan', 'Australien', 'Ägypten', 'Äquatorialguinea', 'Äthiopien', 'Äusseres Ozeanien',
         'Bahamas', 'Bahrain', 'Bangladesch', 'Barbados', 'Belarus', 'Belgien', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivien', 'Bosnien und Herzegowina', 'Botsuana', 'Bouvetinsel', 'Brasilien', 'Britische Jungferninseln', 'Britisches Territorium im Indischen Ozean', 'Brunei Darussalam', 'Bulgarien', 'Burkina Faso', 'Burundi',
         'Chile', 'China', 'Cookinseln', 'Costa Rica', 'Côte d’Ivoire',
@@ -99,6 +153,7 @@ class Address extends \Faker\Provider\Address
         'Vanuatu', 'Vatikanstadt', 'Venezuela', 'Vereinigte Arabische Emirate', 'Vereinigte Staaten', 'Vereinigtes Königreich', 'Vietnam',
         'Wallis und Futuna', 'Weihnachtsinsel', 'Westsahara',
         'Zentralafrikanische Republik', 'Zypern',
+<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -117,6 +172,26 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
+=======
+    );
+
+    protected static $cityFormats = array(
+        '{{cityName}}',
+    );
+
+    protected static $streetNameFormats = array(
+        '{{lastName}}{{streetSuffixShort}}',
+        '{{cityName}}{{streetSuffixShort}}',
+        '{{firstName}}-{{lastName}}-{{streetSuffixLong}}'
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{streetName}} {{buildingNumber}}',
+    );
+    protected static $addressFormats = array(
+        "{{streetAddress}}\n{{postcode}} {{city}}",
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Returns a random city name.

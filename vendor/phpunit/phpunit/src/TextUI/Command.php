@@ -812,7 +812,11 @@ class Command
 
             print 'Migrated configuration: ' . $filename . PHP_EOL;
         } catch (Throwable $t) {
+<<<<<<< HEAD
             print 'Migration failed: ' . $t->getMessage() . PHP_EOL;
+=======
+            print 'Migration failed' . PHP_EOL;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
             exit(TestRunner::EXCEPTION_EXIT);
         }

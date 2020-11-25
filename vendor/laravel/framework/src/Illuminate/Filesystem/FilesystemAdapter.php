@@ -52,10 +52,16 @@ class FilesystemAdapter implements CloudFilesystemContract
      * Assert that the given file exists.
      *
      * @param  string|array  $path
+<<<<<<< HEAD
      * @param  string|null  $content
      * @return $this
      */
     public function assertExists($path, $content = null)
+=======
+     * @return $this
+     */
+    public function assertExists($path)
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     {
         $paths = Arr::wrap($path);
 
@@ -63,6 +69,7 @@ class FilesystemAdapter implements CloudFilesystemContract
             PHPUnit::assertTrue(
                 $this->exists($path), "Unable to find a file at path [{$path}]."
             );
+<<<<<<< HEAD
 
             if (! is_null($content)) {
                 $actual = $this->get($path);
@@ -73,6 +80,8 @@ class FilesystemAdapter implements CloudFilesystemContract
                     "File [{$path}] was found, but content [{$actual}] does not match [{$content}]."
                 );
             }
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
         return $this;

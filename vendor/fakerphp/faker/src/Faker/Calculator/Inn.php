@@ -14,10 +14,17 @@ class Inn
      */
     public static function checksum($inn)
     {
+<<<<<<< HEAD
         $multipliers = [1 => 2, 2 => 4, 3 => 10, 4 => 3, 5 => 5, 6 => 9, 7 => 4, 8 => 6, 9 => 8];
         $sum = 0;
         for ($i = 1; $i <= 9; $i++) {
             $sum += intval(substr($inn, $i - 1, 1)) * $multipliers[$i];
+=======
+        $multipliers = array(1 => 2, 2 => 4, 3 => 10, 4 => 3, 5 => 5, 6 => 9, 7 => 4, 8 => 6, 9 => 8);
+        $sum = 0;
+        for ($i = 1; $i <= 9; $i++) {
+            $sum += intval(substr($inn, $i-1, 1)) * $multipliers[$i];
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
         return strval(($sum % 11) % 10);
     }
@@ -26,7 +33,11 @@ class Inn
      * Checks whether an INN has a valid checksum
      *
      * @param string $inn
+<<<<<<< HEAD
      * @return bool
+=======
+     * @return boolean
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public static function isValid($inn)
     {

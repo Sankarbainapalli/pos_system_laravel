@@ -28,8 +28,11 @@ namespace Illuminate\Support\Facades;
  * @method static array only(array|mixed $keys)
  * @method static array segments()
  * @method static array toArray()
+<<<<<<< HEAD
  * @method static array validate(array $rules, ...$params)
  * @method static array validateWithBag(string $errorBag, array $rules, ...$params)
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
  * @method static bool accepts(string|array $contentTypes)
  * @method static bool acceptsAnyContentType()
  * @method static bool acceptsHtml()
@@ -45,7 +48,10 @@ namespace Illuminate\Support\Facades;
  * @method static bool hasCookie(string $key)
  * @method static bool hasFile(string $key)
  * @method static bool hasHeader(string $key)
+<<<<<<< HEAD
  * @method static bool hasValidSignature(bool $absolute = true)
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
  * @method static bool is(mixed ...$patterns)
  * @method static bool isJson()
  * @method static bool matchesType(string $actual, string $type)

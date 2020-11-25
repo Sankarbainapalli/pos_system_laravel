@@ -31,7 +31,11 @@ class ColumnTypeGuesser
                 };
             case 'float':
                 return function () {
+<<<<<<< HEAD
                     return mt_rand(0, intval('4294967295')) / mt_rand(1, intval('4294967295'));
+=======
+                    return mt_rand(0, intval('4294967295'))/mt_rand(1, intval('4294967295'));
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                 };
             case 'string':
                 return function () use ($generator) {

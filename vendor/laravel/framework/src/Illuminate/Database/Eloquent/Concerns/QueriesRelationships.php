@@ -9,6 +9,10 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Support\Str;
+<<<<<<< HEAD
+=======
+use RuntimeException;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 trait QueriesRelationships
 {
@@ -35,7 +39,11 @@ trait QueriesRelationships
         }
 
         if ($relation instanceof MorphTo) {
+<<<<<<< HEAD
             return $this->hasMorph($relation, ['*'], $operator, $count, $boolean, $callback);
+=======
+            throw new RuntimeException('Please use whereHasMorph() for MorphTo relationships.');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
         // If we only need to check for the existence of the relation, then we can optimize
@@ -188,7 +196,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query.
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  string  $operator
      * @param  int  $count
@@ -198,9 +210,13 @@ trait QueriesRelationships
      */
     public function hasMorph($relation, $types, $operator = '>=', $count = 1, $boolean = 'and', Closure $callback = null)
     {
+<<<<<<< HEAD
         if (is_string($relation)) {
             $relation = $this->getRelationWithoutConstraints($relation);
         }
+=======
+        $relation = $this->getRelationWithoutConstraints($relation);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         $types = (array) $types;
 
@@ -255,7 +271,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query with an "or".
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  string  $operator
      * @param  int  $count
@@ -269,7 +289,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query.
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  string  $boolean
      * @param  \Closure|null  $callback
@@ -283,7 +307,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query with an "or".
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @return \Illuminate\Database\Eloquent\Builder|static
      */
@@ -295,7 +323,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query with where clauses.
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  \Closure|null  $callback
      * @param  string  $operator
@@ -310,7 +342,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query with where clauses and an "or".
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  \Closure|null  $callback
      * @param  string  $operator
@@ -325,7 +361,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query with where clauses.
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  \Closure|null  $callback
      * @return \Illuminate\Database\Eloquent\Builder|static
@@ -338,7 +378,11 @@ trait QueriesRelationships
     /**
      * Add a polymorphic relationship count / exists condition to the query with where clauses and an "or".
      *
+<<<<<<< HEAD
      * @param  \Illuminate\Database\Eloquent\Relations\MorphTo|string  $relation
+=======
+     * @param  string  $relation
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  string|array  $types
      * @param  \Closure|null  $callback
      * @return \Illuminate\Database\Eloquent\Builder|static
@@ -382,6 +426,7 @@ trait QueriesRelationships
 
             $relation = $this->getRelationWithoutConstraints($name);
 
+<<<<<<< HEAD
             if ($function) {
                 $expression = sprintf('%s(%s)', $function, $this->getQuery()->getGrammar()->wrap(
                     $column === '*' ? $column : $relation->getRelated()->qualifyColumn($column)
@@ -389,6 +434,11 @@ trait QueriesRelationships
             } else {
                 $expression = $column;
             }
+=======
+            $expression = $function
+                ? sprintf('%s(%s)', $function, $this->getQuery()->getGrammar()->wrap($column))
+                : $column;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
             // Here, we will grab the relationship sub-query and prepare to add it to the main query
             // as a sub-select. First, we'll get the "has" query and use that to get the relation
@@ -419,10 +469,14 @@ trait QueriesRelationships
                 preg_replace('/[^[:alnum:][:space:]_]/u', '', "$name $function $column")
             );
 
+<<<<<<< HEAD
             $this->selectSub(
                 $function ? $query : $query->limit(1),
                 $alias
             );
+=======
+            $this->selectSub($query->limit(1), $alias);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
         return $this;

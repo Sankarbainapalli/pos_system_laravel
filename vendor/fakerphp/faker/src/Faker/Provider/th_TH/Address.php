@@ -4,6 +4,7 @@ namespace Faker\Provider\th_TH;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $cityPrefix = [
         'เมือง', 'หมู่บ้าน', 'ท่า',
     ];
@@ -21,6 +22,25 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $streetSuffix  = [
+=======
+    protected static $cityPrefix = array(
+        'เมือง', 'หมู่บ้าน', 'ท่า',
+    );
+
+    protected static $citySuffix = array(
+        'เหนือ', 'ใต้', 'บุรี',
+    );
+
+    protected static $buildingNumber = array(
+        '#####', '####', '###', '##', '##/###',
+    );
+
+    protected static $streetPrefix = array(
+        'ซอย', 'ถนน', 'สะพาน', 'วงเวียน', 'แยก',
+    );
+
+    protected static $streetSuffix  = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'กรุงเกษม', 'กรุงเทพกรีฑา', 'กรุงเทพ-นนทบุรี', 'กรุงธนบุรี', 'กรุงแมน', 'กล้วยน้ำไทตัดใหม่', 'กลันตัน', 'กะออม', 'กระออม', 'กัลปพฤกษ์', 'กัลยาณไมตรี', 'กาญจนาภิเษก', 'กำนันแม้น', 'กำแพงเพชร', 'กำแพงเพชร 1', 'กำแพงเพชร 2', 'กำแพงเพชร 3', 'กำแพงเพชร 4', 'กำแพงเพชร 5', 'กำแพงเพชร 6', 'กำแพงเพชร 7', 'กิ่งแก้ว', 'กิจพานิช', 'เกษมราษฎร์', 'แก้ว', 'แก้วเงินทอง', 'โกสุมรวมใจ', 'ไกรสีห์',
         'ขวัญ', 'ขาว', 'ข้าวสาร', 'ข้าวหลาม', 'ขุมทอง-ลำต้อยติ่ง', 'เขียวไข่กา',
         'ครุใน', 'คลองเก้า', 'คลองถมวัดพิเรนทร์', 'คลองถมวัดสระเกศ', 'คลองถมวัดโสมนัส', 'คลองลำเจียก', 'คลองลำปัก', 'คลองสิบ-คลองสิบสี่', 'คอนแวนต์', 'คุ้มเกล้า', 'คู้บอน', 'คู้-คลองสิบ', 'เคหะร่มเกล้า',
@@ -49,15 +69,25 @@ class Address extends \Faker\Provider\Address
         'หทัยมิตร', 'หทัยราษฎร์', 'หนองแขม-วัดศรีนวล', 'หนองระแหง', 'หน้าพระธาตุ', 'หน้าพระลาน', 'หน้าหับเผย', 'หม่อมเจ้าสง่างาม สุประดิษฐ์', 'หมู่บ้านเศรษฐกิจ', 'หลวง', 'หลวงพรตพิทยพยัต', 'หลวงแพ่ง', 'หลักเมือง', 'หลังสวน', 'หลานหลวง', 'หอวัง', 'หัวหมาก',
         'อนันตนาค', 'อนามัยงามเจริญ', 'อนุวงศ์', 'อยู่เย็น', 'อยู่วิทยา', 'อรุณอมรินทร์', 'อโศก-ดินแดง', 'อโศกมนตรี', 'อ่อนนุช', 'อังรีดูนังต์', 'อัศวพิเชษฐ์', 'อัษฎางค์', 'อัสสัมชัญ', 'อาจณรงค์', 'อำนวยสงคราม', 'อินทรพิทักษ์', 'อินทราวาส', 'อิสรภาพ', 'อุณากรรณ', 'อุดมสุข', 'อุทยาน', 'อู่ทองนอก', 'อู่ทองใน', 'เอกชัย',
         '60 พรรษามหาราชินี'
+<<<<<<< HEAD
     ];
 
     protected static $postcode = ['#####'];
+=======
+    );
+
+    protected static $postcode = array('#####');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Thai province names
      * @link https://th.wikipedia.org/wiki/%E0%B8%88%E0%B8%B1%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%83%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8%E0%B9%84%E0%B8%97%E0%B8%A2
      */
+<<<<<<< HEAD
     protected static $province = [
+=======
+    protected static $province = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'กระบี่', 'กรุงเทพมหานคร', 'กาญจนบุรี', 'กาฬสินธุ์', 'กำแพงเพชร', 'ขอนแก่น',
         'จันทบุรี', 'ฉะเชิงเทรา', 'ชลบุรี', 'ชัยนาท', 'ชัยภูมิ', 'ชุมพร',
         'ตรัง', 'ตราด', 'ตาก', 'นครนายก', 'นครปฐม', 'นครพนม', 'นครราชสีมา',
@@ -69,13 +99,21 @@ class Address extends \Faker\Provider\Address
         'สมุทรสาคร', 'สระบุรี', 'สระแก้ว', 'สิงห์บุรี', 'สุพรรณบุรี', 'สุราษฎร์ธานี', 'สุรินทร์', 'สุโขทัย',
         'หนองคาย', 'หนองบัวลำภู', 'อำนาจเจริญ', 'อุดรธานี', 'อุตรดิตถ์', 'อุทัยธานี', 'อุบลราชธานี', 'อ่างทอง',
         'เชียงราย', 'เชียงใหม่', 'เพชรบุรี', 'เพชรบูรณ์', 'เลย', 'แพร่', 'แม่ฮ่องสอน',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Country names in Thai
      * @link https://th.wikipedia.org/wiki/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%A8_%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B9%81%E0%B8%94%E0%B8%99_%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87
      */
+<<<<<<< HEAD
     protected static $country = [
+=======
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'กรีซ', 'กัมพูชา', 'กัวเตมาลา', 'กาตาร์', 'คอซอวอ', 'คาซัคสถาน', 'คิริบาส', 'คิวบา', 'คีร์กีซสถาน', 'คูเวต',
         'จอร์เจีย', 'จอร์แดน', 'จาเมกา', 'จีน','ชิลี', 'ซานมารีโน', 'ซามัว', 'ซาอุดีอาระเบีย', 'ซีเรีย', 'ซูรินาม',
         'ญี่ปุ่น', 'ดอมินีกา', 'ตรินิแดดและโตเบโก', 'ตองกา', 'ติมอร์-เลสเต', 'ตุรกี', 'ตูวาลู', 'ทาจิกิสถาน',
@@ -92,13 +130,20 @@ class Address extends \Faker\Provider\Address
         'เยอรมนี', 'เยเมน', 'เลบานอน', 'เวียดนาม', 'เวเนซุเอลา', 'เอกวาดอร์', 'เอลซัลวาดอร์', 'เอสโตเนีย', 'เฮติ',  'แคนาดา',
         'แอนติกาและบาร์บูดา', 'แอลเบเนีย', 'โครเอเชีย', 'โคลอมเบีย', 'โบลิเวีย', 'โปรตุเกส', 'โปแลนด์', 'โมนาโก', 'โรมาเนีย',
         'โอมาน', 'ไซปรัส', 'ไทย', 'ไมโครนีเซีย', 'ไอซ์แลนด์', 'ไอร์แลนด์',
+<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
+=======
+    );
+
+    protected static $cityFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{cityPrefix}} {{firstName}}{{citySuffix}}',
         '{{cityPrefix}} {{firstName}}',
         '{{firstName}}{{citySuffix}}',
         '{{lastName}}{{citySuffix}}',
+<<<<<<< HEAD
     ];
 
     protected static $streetNameFormats = [
@@ -112,6 +157,21 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{city}}, {{postcode}}",
     ];
+=======
+    );
+
+    protected static $streetNameFormats = array(
+        '{{streetPrefix}} {{streetSuffix}}'
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{buildingNumber}} {{streetName}}',
+    );
+
+    protected static $addressFormats = array(
+        "{{streetAddress}}\n{{city}}, {{postcode}}",
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'เมือง'
@@ -122,8 +182,13 @@ class Address extends \Faker\Provider\Address
     }
 
     /**
+<<<<<<< HEAD
      * @example 'ถนน'
      */
+=======
+    * @example 'ถนน'
+    */
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     public static function streetPrefix()
     {
         return static::randomElement(static::$streetPrefix);

@@ -215,7 +215,10 @@ class PendingBatch
      * Dispatch the batch.
      *
      * @return \Illuminate\Bus\Batch
+<<<<<<< HEAD
      *
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @throws \Throwable
      */
     public function dispatch()

@@ -4,30 +4,51 @@ namespace Faker\Provider\sk_SK;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $lastNameFormat = [
         '{{lastNameMale}}',
         '{{lastNameFemale}}',
     ];
 
     protected static $maleNameFormats = [
+=======
+    protected static $lastNameFormat = array(
+        '{{lastNameMale}}',
+        '{{lastNameFemale}}',
+    );
+
+    protected static $maleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameMale}} {{lastNameMale}}',
         '{{firstNameMale}} {{lastNameMale}}',
         '{{firstNameMale}} {{lastNameMale}}',
         '{{firstNameMale}} {{lastNameMale}}',
         '{{titleMale}} {{firstNameMale}} {{lastNameMale}}',
         '{{titleMale}} {{firstNameMale}} {{lastNameMale}} {{suffix}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameFemale}} {{lastNameFemale}}',
         '{{firstNameFemale}} {{lastNameFemale}}',
         '{{firstNameFemale}} {{lastNameFemale}}',
         '{{firstNameFemale}} {{lastNameFemale}}',
         '{{titleFemale}} {{firstNameFemale}} {{lastNameFemale}}',
         '{{titleFemale}} {{firstNameFemale}} {{lastNameFemale}} {{suffix}}'
+<<<<<<< HEAD
     ];
 
     protected static $firstNameMale = [
+=======
+    );
+
+    protected static $firstNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Drahoslav', 'Severín', 'Alexej', 'Ernest', 'Rastislav', 'Radovan', 'Dobroslav', 'Dalibor', 'Vincent', 'Miloš', 'Timotej', 'Gejza', 'Bohuš',
         'Alfonz', 'Gašpar', 'Emil', 'Erik', 'Blažej', 'Zdenko', 'Dezider', 'Arpád', 'Valentín', 'Pravoslav', 'Jaromír', 'Roman', 'Matej', 'Frederik',
         'Viktor', 'Alexander', 'Radomír', 'Albín', 'Bohumil', 'Kazimír', 'Fridrich', 'Radoslav', 'Tomáš', 'Alan', 'Branislav', 'Bruno', 'Gregor',
@@ -44,9 +65,15 @@ class Person extends \Faker\Provider\Person
         'Leopold', 'Eugen', 'Félix', 'Klement', 'Kornel', 'Milan', 'Vratko', 'Ondrej', 'Andrej', 'Edmund', 'Oldrich', 'Oto', 'Mikuláš', 'Ambróz',
         'Radúz', 'Bohdan', 'Adam', 'Štefan', 'Dávid', 'Silvester'
 
+<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
+=======
+    );
+
+    protected static $firstNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Alexandra', 'Karina', 'Daniela', 'Andrea', 'Antónia', 'Bohuslava', 'Dáša', 'Malvína', 'Kristína', 'Nataša', 'Bohdana', 'Drahomíra',
         'Sára', 'Zora', 'Tamara', 'Ema', 'Tatiana', 'Erika', 'Veronika', 'Agáta', 'Dorota', 'Vanda', 'Zoja', 'Gabriela', 'Perla', 'Ida', 'Liana',
         'Miloslava', 'Vlasta', 'Lívia', 'Eleonóra', 'Etela', 'Romana', 'Zlatica', 'Anežka', 'Bohumila', 'Františka', 'Angela', 'Matilda',
@@ -64,9 +91,15 @@ class Person extends \Faker\Provider\Person
         'Lucia', 'Branislava', 'Bronislava', 'Ivica', 'Albína', 'Kornélia', 'Sláva', 'Slávka', 'Judita', 'Dagmara', 'Adela', 'Nadežda', 'Eva',
         'Filoména', 'Ivana', 'Milada'
 
+<<<<<<< HEAD
     ];
 
     protected static $lastNameMale = [
+=======
+    );
+
+    protected static $lastNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Sloboda', 'Novotný', 'Kučera', 'Veselý', 'Horák', 'Marek', 'Pokorný', 'Král', 'Růžička', 'Zeman', 'Kolár', 'Urban', 'Bartoš', 'Vlček',
         'Polák', 'Kopecký', 'Konečný', 'Malý', 'Holub', 'Abrahám', 'Adam', 'Adamec', 'Almáši', 'Anderle', 'Antal', 'Babka', 'Bahna', 'Bahno',
         'Bajnok', 'Balaša', 'Balog', 'Balogh', 'Baláž', 'Baran', 'Baranka', 'Bartovič', 'Bartoš', 'Bača', 'Beck', 'Beihofner', 'Bella', 'Beran',
@@ -89,9 +122,15 @@ class Person extends \Faker\Provider\Person
         'Čarnogurský', 'Čierny', 'Ďaďo', 'Ďurica', 'Ďuriš', 'Šimonovič', 'Škriniar', 'Šouc', 'Šoustal', 'Štefan', 'Štefanka', 'Šulc', 'Šurka',
         'Švehla', 'Šťastný'
 
+<<<<<<< HEAD
     ];
 
     protected static $lastNameFemale = [
+=======
+    );
+
+    protected static $lastNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Slobodová', 'Novotná', 'Čierna', 'Kučerová', 'Veselá', 'Krajčíová', 'Nemcová', 'Králová', 'Růžičková', 'Fialová', 'Zemanová',
         'Kolárová', 'Kováčová', 'Vlčková', 'Poláková', 'Kopecká', 'Šimková', 'Konečná', 'Malá', 'Holubová', 'Staneková', 'Šťastná',
         'Vargová', 'Tóthová', 'Horváthová', 'Balážová', 'Szabová', 'Molnárová', 'Balogová', 'Lukáčová', 'Vícenová', 'Ringlóciová', 'Popovičová',
@@ -101,6 +140,7 @@ class Person extends \Faker\Provider\Person
         'Holubová', 'Kubáňová', 'Ondrišová', 'Šoltisová', 'Molnárová', 'Rezníčková', 'Dubníčková', 'Karolčíková', 'Máliková', 'Malíková', 'Litajová',
         'Kolrusová', 'Košíková', 'Kušnírová', 'Kravjarová', 'Hotová', 'Hajzerová', 'Ferjenčíková', 'Senková', 'Adamcová', 'Pirošová', 'Šimonová',
         'Finková', 'Hrdá', 'Murčová'
+<<<<<<< HEAD
     ];
 
     protected static $title = [
@@ -111,6 +151,18 @@ class Person extends \Faker\Provider\Person
     private static $suffix = [
         'CSc.', 'DrSc.', 'DSc.', 'Ph.D.', 'Th.D.'
     ];
+=======
+    );
+
+    protected static $title = array(
+        'Bc.', 'Ing.', 'MUDr.', 'MVDr.', 'Mgr.', 'JUDr.', 'PhDr.', 'RNDr.', 'doc.', 'Dr.', 'BcA.', 'ICDr.', 'Ing.', 'Ing. arch.', 'JUDr.',
+        'Mgr. art.', 'MSDr.', 'PaedDr.', 'PharmDr.', 'PhDr.', 'PhMr.', 'RNDr.', 'RSDr.', 'ThDr.', 'ThLic.', 'prof.', 'Dr. h. c.'
+    );
+
+    private static $suffix = array(
+        'CSc.', 'DrSc.', 'DSc.', 'Ph.D.', 'Th.D.'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function title($gender = null)
     {

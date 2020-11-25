@@ -41,12 +41,15 @@ class PropertyTypeMatcher implements Matcher
 
         $reflectionProperty->setAccessible(true);
 
+<<<<<<< HEAD
         // Uninitialized properties (for PHP >7.4)
         if (method_exists($reflectionProperty, 'isInitialized') && !$reflectionProperty->isInitialized($object)) {
             // null instanceof $this->propertyType
             return false;
         }
 
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         return $reflectionProperty->getValue($object) instanceof $this->propertyType;
     }
 }

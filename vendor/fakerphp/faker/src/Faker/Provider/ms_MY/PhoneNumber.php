@@ -4,6 +4,7 @@ namespace Faker\Provider\ms_MY;
 
 class PhoneNumber extends \Faker\Provider\PhoneNumber
 {
+<<<<<<< HEAD
     protected static $formats = [
         '{{mobileNumber}}',
         '{{fixedLineNumber}}',
@@ -17,18 +18,43 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     protected static $countryCodePrefix = [
         '6'
     ];
+=======
+    protected static $formats = array(
+        '{{mobileNumber}}',
+        '{{fixedLineNumber}}',
+        '{{voipNumber}}'
+    );
+
+    protected static $plusSymbol = array(
+        '+'
+    );
+
+    protected static $countryCodePrefix = array(
+        '6'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/Telephone_numbers_in_Malaysia#Mobile_phone_codes_and_IP_telephony
      */
+<<<<<<< HEAD
     protected static $zeroOneOnePrefix = ['10','11','12','13','14','15','16','17','18','19','20','22','23','32'];
     protected static $zeroOneFourPrefix = ['2','3','4','5','6','7','8','9'];
     protected static $zeroOneFivePrefix = ['1','2','3','4','5','6','9'];
+=======
+    protected static $zeroOneOnePrefix = array('10','11','12','13','14','15','16','17','18','19','20','22','23','32');
+    protected static $zeroOneFourPrefix = array('2','3','4','5','6','7','8','9');
+    protected static $zeroOneFivePrefix = array('1','2','3','4','5','6','9');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/Telephone_numbers_in_Malaysia#Mobile_phone_codes_and_IP_telephony
      */
+<<<<<<< HEAD
     protected static $mobileNumberFormatsWithFormatting = [
+=======
+    protected static $mobileNumberFormatsWithFormatting = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '010-### ####',
         '011-{{zeroOneOnePrefix}}## ####',
         '012-### ####',
@@ -38,9 +64,15 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '017-### ####',
         '018-### ####',
         '019-### ####',
+<<<<<<< HEAD
     ];
 
     protected static $mobileNumberFormats = [
+=======
+    );
+
+    protected static $mobileNumberFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '010#######',
         '011{{zeroOneOnePrefix}}######',
         '012#######',
@@ -50,12 +82,20 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '017#######',
         '018#######',
         '019#######',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/Telephone_numbers_in_Malaysia#Geographic_area_codes
      */
+<<<<<<< HEAD
     protected static $fixedLineNumberFormatsWithFormatting = [
+=======
+    protected static $fixedLineNumberFormatsWithFormatting = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '03-#### ####',
         '04-### ####',
         '05-### ####',
@@ -63,9 +103,15 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '07-### ####',
         '08#-## ####',
         '09-### ####',
+<<<<<<< HEAD
     ];
 
     protected static $fixedLineNumberFormats = [
+=======
+    );
+
+    protected static $fixedLineNumberFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '03########',
         '04#######',
         '05#######',
@@ -73,11 +119,16 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '07#######',
         '08#######',
         '09#######',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/Telephone_numbers_in_Malaysia#Mobile_phone_codes_and_IP_telephony
      */
+<<<<<<< HEAD
     protected static $voipNumberWithFormatting = [
         '015-{{zeroOneFivePrefix}}## ####'
     ];
@@ -85,6 +136,15 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     protected static $voipNumber = [
         '015{{zeroOneFivePrefix}}######'
     ];
+=======
+    protected static $voipNumberWithFormatting = array(
+        '015-{{zeroOneFivePrefix}}## ####'
+    );
+
+    protected static $voipNumber = array(
+        '015{{zeroOneFivePrefix}}######'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Return a Malaysian Mobile Phone Number.

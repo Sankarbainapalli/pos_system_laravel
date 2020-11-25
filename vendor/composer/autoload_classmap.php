@@ -8,13 +8,17 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\AccountController' => $baseDir . '/app/Http/Controllers/AccountController.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\BranchController' => $baseDir . '/app/Http/Controllers/BranchController.php',
     'App\\Http\\Controllers\\CategoryController' => $baseDir . '/app/Http/Controllers/CategoryController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
@@ -31,6 +35,10 @@ return array(
     'App\\Http\\Controllers\\PurchaseOrderController' => $baseDir . '/app/Http/Controllers/PurchaseOrderController.php',
     'App\\Http\\Controllers\\RoleController' => $baseDir . '/app/Http/Controllers/RoleController.php',
     'App\\Http\\Controllers\\StockController' => $baseDir . '/app/Http/Controllers/StockController.php',
+=======
+    'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -40,6 +48,7 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
     'App\\Http\\Requests\\CustomerCreateRequest' => $baseDir . '/app/Http/Requests/CustomerCreateRequest.php',
     'App\\Models\\Branch' => $baseDir . '/app/Models/Branch.php',
     'App\\Models\\Cart' => $baseDir . '/app/Models/Cart.php',
@@ -54,14 +63,19 @@ return array(
     'App\\Models\\Product' => $baseDir . '/app/Models/Product.php',
     'App\\Models\\Role' => $baseDir . '/app/Models/Role.php',
     'App\\Models\\Stock' => $baseDir . '/app/Models/Stock.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+<<<<<<< HEAD
     'App\\Providers\\TelescopeServiceProvider' => $baseDir . '/app/Providers/TelescopeServiceProvider.php',
     'App\\View\\Components\\Alert' => $baseDir . '/app/View/Components/Alert.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -874,7 +888,10 @@ return array(
     'Faker\\Provider\\sr_RS\\Person' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sr_RS/Person.php',
     'Faker\\Provider\\sv_SE\\Address' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sv_SE/Address.php',
     'Faker\\Provider\\sv_SE\\Company' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sv_SE/Company.php',
+<<<<<<< HEAD
     'Faker\\Provider\\sv_SE\\Municipality' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sv_SE/Municipality.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Faker\\Provider\\sv_SE\\Payment' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sv_SE/Payment.php',
     'Faker\\Provider\\sv_SE\\Person' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sv_SE/Person.php',
     'Faker\\Provider\\sv_SE\\PhoneNumber' => $vendorDir . '/fakerphp/faker/src/Faker/Provider/sv_SE/PhoneNumber.php',
@@ -1159,7 +1176,10 @@ return array(
     'Illuminate\\Cache\\ApcWrapper' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/ApcWrapper.php',
     'Illuminate\\Cache\\ArrayLock' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/ArrayLock.php',
     'Illuminate\\Cache\\ArrayStore' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/ArrayStore.php',
+<<<<<<< HEAD
     'Illuminate\\Cache\\CacheLock' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/CacheLock.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Cache\\CacheManager' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/CacheManager.php',
     'Illuminate\\Cache\\CacheServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/CacheServiceProvider.php',
     'Illuminate\\Cache\\Console\\CacheTableCommand' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/Console/CacheTableCommand.php',
@@ -1175,13 +1195,19 @@ return array(
     'Illuminate\\Cache\\Events\\KeyForgotten' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/Events/KeyForgotten.php',
     'Illuminate\\Cache\\Events\\KeyWritten' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/Events/KeyWritten.php',
     'Illuminate\\Cache\\FileStore' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/FileStore.php',
+<<<<<<< HEAD
     'Illuminate\\Cache\\HasCacheLock' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/HasCacheLock.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Cache\\Lock' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/Lock.php',
     'Illuminate\\Cache\\LuaScripts' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/LuaScripts.php',
     'Illuminate\\Cache\\MemcachedConnector' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/MemcachedConnector.php',
     'Illuminate\\Cache\\MemcachedLock' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/MemcachedLock.php',
     'Illuminate\\Cache\\MemcachedStore' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/MemcachedStore.php',
+<<<<<<< HEAD
     'Illuminate\\Cache\\NoLock' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/NoLock.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Cache\\NullStore' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/NullStore.php',
     'Illuminate\\Cache\\RateLimiter' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/RateLimiter.php',
     'Illuminate\\Cache\\RateLimiting\\GlobalLimit' => $vendorDir . '/laravel/framework/src/Illuminate/Cache/RateLimiting/GlobalLimit.php',
@@ -1281,7 +1307,10 @@ return array(
     'Illuminate\\Contracts\\Filesystem\\FileExistsException' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Filesystem/FileExistsException.php',
     'Illuminate\\Contracts\\Filesystem\\FileNotFoundException' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Filesystem/FileNotFoundException.php',
     'Illuminate\\Contracts\\Filesystem\\Filesystem' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Filesystem/Filesystem.php',
+<<<<<<< HEAD
     'Illuminate\\Contracts\\Filesystem\\LockTimeoutException' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Filesystem/LockTimeoutException.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Contracts\\Foundation\\Application' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Foundation/Application.php',
     'Illuminate\\Contracts\\Foundation\\CachesConfiguration' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Foundation/CachesConfiguration.php',
     'Illuminate\\Contracts\\Foundation\\CachesRoutes' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Foundation/CachesRoutes.php',
@@ -1306,7 +1335,10 @@ return array(
     'Illuminate\\Contracts\\Queue\\Queue' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/Queue.php',
     'Illuminate\\Contracts\\Queue\\QueueableCollection' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/QueueableCollection.php',
     'Illuminate\\Contracts\\Queue\\QueueableEntity' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/QueueableEntity.php',
+<<<<<<< HEAD
     'Illuminate\\Contracts\\Queue\\ShouldBeUnique' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldBeUnique.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Contracts\\Queue\\ShouldQueue' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueue.php',
     'Illuminate\\Contracts\\Redis\\Connection' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Redis/Connection.php',
     'Illuminate\\Contracts\\Redis\\Connector' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Redis/Connector.php',
@@ -1447,6 +1479,7 @@ return array(
     'Illuminate\\Database\\Migrations\\MigrationRepositoryInterface' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Migrations/MigrationRepositoryInterface.php',
     'Illuminate\\Database\\Migrations\\Migrator' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php',
     'Illuminate\\Database\\MySqlConnection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/MySqlConnection.php',
+<<<<<<< HEAD
     'Illuminate\\Database\\PDO\\Concerns\\ConnectsToDatabase' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PDO/Concerns/ConnectsToDatabase.php',
     'Illuminate\\Database\\PDO\\Connection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PDO/Connection.php',
     'Illuminate\\Database\\PDO\\MySqlDriver' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PDO/MySqlDriver.php',
@@ -1454,6 +1487,8 @@ return array(
     'Illuminate\\Database\\PDO\\SQLiteDriver' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PDO/SQLiteDriver.php',
     'Illuminate\\Database\\PDO\\SqlServerConnection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PDO/SqlServerConnection.php',
     'Illuminate\\Database\\PDO\\SqlServerDriver' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PDO/SqlServerDriver.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Database\\PostgresConnection' => $vendorDir . '/laravel/framework/src/Illuminate/Database/PostgresConnection.php',
     'Illuminate\\Database\\QueryException' => $vendorDir . '/laravel/framework/src/Illuminate/Database/QueryException.php',
     'Illuminate\\Database\\Query\\Builder' => $vendorDir . '/laravel/framework/src/Illuminate/Database/Query/Builder.php',
@@ -1506,7 +1541,10 @@ return array(
     'Illuminate\\Filesystem\\FilesystemAdapter' => $vendorDir . '/laravel/framework/src/Illuminate/Filesystem/FilesystemAdapter.php',
     'Illuminate\\Filesystem\\FilesystemManager' => $vendorDir . '/laravel/framework/src/Illuminate/Filesystem/FilesystemManager.php',
     'Illuminate\\Filesystem\\FilesystemServiceProvider' => $vendorDir . '/laravel/framework/src/Illuminate/Filesystem/FilesystemServiceProvider.php',
+<<<<<<< HEAD
     'Illuminate\\Filesystem\\LockableFile' => $vendorDir . '/laravel/framework/src/Illuminate/Filesystem/LockableFile.php',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     'Illuminate\\Foundation\\AliasLoader' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/AliasLoader.php',
     'Illuminate\\Foundation\\Application' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Application.php',
     'Illuminate\\Foundation\\Auth\\Access\\Authorizable' => $vendorDir . '/laravel/framework/src/Illuminate/Foundation/Auth/Access/Authorizable.php',

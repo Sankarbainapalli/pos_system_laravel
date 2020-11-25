@@ -4,7 +4,11 @@ namespace Faker\Provider\nl_BE;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $postcodes = [
+=======
+    protected static $postcodes = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '2970', '3700', '7510', '9420', '8511', '3800', '9300', '9880', '3200', '8700', '8211', '2630', '4557',
         '4280', '3930', '5590', '5362', '4219', '6280', '9991', '8660', '1790', '9051', '5544', '4317', '5310',
         '6250', '5070', '3570', '5550', '4432', '1652', '8690', '4540', '6680', '6953', '4770', '6997', '7750',
@@ -17,6 +21,7 @@ class Address extends \Faker\Provider\Address
         '6464', '6460', '5555', '7730', '5377', '7380', '1470', '5190', '9860', '2490', '6951', '6500', '4671',
         '5570', '7534', '5370', '6940', '7971', '4983', '4690', '9968', '7830', '6600', '3870', '4651', '7130',
         '7331', '7870', '7604', '1401', '9520', '8531', '9150', '4052', '6980', '1320', '6594', '7532', '3960',
+<<<<<<< HEAD
     ];
 
     protected static $streetAddressFormats = [
@@ -34,6 +39,25 @@ class Address extends \Faker\Provider\Address
     protected static $streetSuffix = [
         'baan', 'boulevard', 'dreef', 'hof', 'laan', 'pad', 'ring', 'singel', 'steeg', 'straat', 'weg',
     ];
+=======
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{streetName}} {{buildingNumber}}'
+    );
+
+    protected static $streetNameFormats = array('{{lastName}}{{streetSuffix}}');
+
+    protected static $cityFormats = array('{{cityName}}');
+
+    protected static $addressFormats = array(
+        "{{streetAddress}}\n {{postcode}} {{city}}",
+    );
+
+    protected static $streetSuffix = array(
+        'baan', 'boulevard', 'dreef', 'hof', 'laan', 'pad', 'ring', 'singel', 'steeg', 'straat', 'weg',
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Export of BAG (http://bag.vrom.nl/)
@@ -41,7 +65,11 @@ class Address extends \Faker\Provider\Address
      *
      * @var array
      */
+<<<<<<< HEAD
     protected static $cityNames = [
+=======
+    protected static $cityNames = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aalst', 'Aarlen', 'Aarschot', 'Aat', 'Andenne', 'Antoing', 'Antwerpen', 'Bastenaken', 'Beringen',
         'Beaumont', 'Beauraing', 'Bergen', 'Bilzen', 'Binche', 'Blankenberge', 'Borgloon', 'Borgworm', 'Bouillon',
         'Bree', 'Brugge', 'Brussel', 'Charleroi', 'Châtelet', 'Chièvres', 'Chimay', 'Chiny', 'Ciney', 'Couvin',
@@ -58,6 +86,7 @@ class Address extends \Faker\Provider\Address
         'Sint-Niklaas', 'Sint-Truiden', 'Spa', 'Stavelot', 'Thuin', 'Tielt', 'Tienen', 'Tongeren', 'Torhout',
         'Turnhout', 'Verviers', 'Veurne', 'Vilvoorde', 'Virton', 'Walcourt', 'Waregem', 'Waver', 'Wervik', 'Wezet',
         'Zinnik', 'Zottegem', 'Zoutleeuw'
+<<<<<<< HEAD
     ];
 
     protected static $state = [
@@ -66,6 +95,16 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $country = [
+=======
+    );
+
+    protected static $state = array(
+        'Antwerpen', 'Limburg', 'Oost-Vlaanderen', 'Vlaams-Brabant', 'West-Vlaanderen',
+        'Henegouwen', 'Luik', 'Luxemburg', 'Namen', 'Waals-Brabant'
+    );
+
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Albanië', 'Algerije', 'Amerikaans-Samoa', 'Andorra', 'Angola', 'Amerikaanse Virgineilanden',
         'Anguilla', 'Antartica', 'Antigua en Barbuda', 'Argentinië', 'Armenië', 'Aruba', 'Australië', 'Azerbeidzjan',
         'Bahamas', 'Bahrein', 'Bangladesh', 'Barbados', 'België', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
@@ -99,7 +138,11 @@ class Address extends \Faker\Provider\Address
         'Uruguay', 'Vanuatu', 'Venezuela', 'Verenigde Arabische Emiraten', 'Verenigd Koninkrijk',
         'Verenigde Staten van Amerika', 'Vaticaanstad', 'Vietnam', 'Wallis en Futuna', 'Westerlijke Shara',
         'Wit-Rusland', 'Zambia', 'Zuid-Afrika', 'Zuid-Georgia en de Zuidelijke Sandwicheilanden', 'Zimbabwe'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function postcode()
     {

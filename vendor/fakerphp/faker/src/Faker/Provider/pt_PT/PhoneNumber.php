@@ -7,7 +7,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
     /*
     * @link http://en.wikipedia.org/wiki/Telephone_numbers_in_Portugal
     */
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '+351 91#######',
         '+351 92#######',
         '+351 93#######',
@@ -34,14 +38,24 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '27#######',
         '28#######',
         '29#######',
+<<<<<<< HEAD
     ];
 
     protected static $mobileNumberPrefixes = [
+=======
+    );
+
+    protected static $mobileNumberPrefixes = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '91#######',
         '92#######',
         '93#######',
         '96#######',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function mobileNumber()
     {

@@ -244,3 +244,12 @@ Route::get('/profitloss', [App\Http\Controllers\ProfitlossController::class, 'pr
 
 // Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');
 
+<<<<<<< HEAD
+=======
+
+//************* POS ***************/
+
+Route::resource('pos', App\Http\Controllers\PosController::class);
+
+// Route::get('/edit_category', [App\Http\Controllers\ProfitlossController::class, 'edit_category'])->name('edit_category');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61

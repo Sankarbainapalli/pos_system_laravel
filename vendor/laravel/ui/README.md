@@ -1,5 +1,6 @@
 # Laravel UI
 
+<<<<<<< HEAD
 <a href="https://packagist.org/packages/laravel/ui"><img src="https://img.shields.io/packagist/dt/laravel/ui" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/ui"><img src="https://img.shields.io/packagist/v/laravel/ui" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/ui"><img src="https://img.shields.io/packagist/l/laravel/ui" alt="License"></a>
@@ -160,6 +161,23 @@ Then, you may call the new preset via the `ui` command:
 ```bash
 php artisan ui nextjs
 ```
+=======
+<a href="https://packagist.org/packages/laravel/ui"><img src="https://poser.pugx.org/laravel/ui/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/ui"><img src="https://poser.pugx.org/laravel/ui/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/ui"><img src="https://poser.pugx.org/laravel/ui/license.svg" alt="License"></a>
+
+## Introduction
+
+### This project should no longer be used on new Laravel projects. Please use [Laravel Jetstream](https://github.com/laravel/jetstream) instead.
+
+While Laravel does not dictate which JavaScript or CSS pre-processors you use, it does provide a basic starting point using [Bootstrap](https://getbootstrap.com/), [React](https://reactjs.org/), and / or [Vue](https://vuejs.org/) that will be helpful for many applications. By default, Laravel uses [NPM](https://www.npmjs.org/) to install both of these frontend packages.
+
+**We are not accepting new presets.**
+
+## Official Documentation
+
+Documentation can be found on the [Laravel website](https://laravel.com/docs/frontend).
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 ## Contributing
 

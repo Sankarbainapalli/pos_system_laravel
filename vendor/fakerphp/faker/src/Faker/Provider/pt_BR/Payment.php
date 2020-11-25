@@ -4,6 +4,7 @@ namespace Faker\Provider\pt_BR;
 
 class Payment extends \Faker\Provider\Payment
 {
+<<<<<<< HEAD
     protected static $cardVendors = [
         'Visa', 'Visa', 'Visa', 'Visa', 'Visa',
         'MasterCard', 'MasterCard', 'MasterCard', 'MasterCard', 'MasterCard',
@@ -23,12 +24,38 @@ class Payment extends \Faker\Provider\Payment
             "37############"
         ],
         'Discover Card' => [
+=======
+    protected static $cardVendors = array(
+        'Visa', 'Visa', 'Visa', 'Visa', 'Visa',
+        'MasterCard', 'MasterCard', 'MasterCard', 'MasterCard', 'MasterCard',
+        'American Express', 'Discover Card', 'Diners', 'Elo', 'Hipercard'
+    );
+
+    // see https://gist.github.com/erikhenrique/5931368 / http://pt.stackoverflow.com/q/3715/26461
+    protected static $cardParams = array(
+        'Visa' => array(
+            "4##############"
+        ),
+        'MasterCard' => array(
+            "5##############"
+        ),
+        'American Express' => array(
+            "34############",
+            "37############"
+        ),
+        'Discover Card' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             "6011###########",
             "622############",
             "64#############",
             "65#############"
+<<<<<<< HEAD
         ],
         'Diners' => [
+=======
+        ),
+        'Diners' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             "301############",
             "301##########",
             "305############",
@@ -37,8 +64,13 @@ class Payment extends \Faker\Provider\Payment
             "36###########",
             "38#############",
             "38###########",
+<<<<<<< HEAD
         ],
         'Elo' => [
+=======
+        ),
+        'Elo' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             "636368#########",
             "438935#########",
             "504175#########",
@@ -47,6 +79,7 @@ class Payment extends \Faker\Provider\Payment
             "5067###########",
             "4576###########",
             "4011###########",
+<<<<<<< HEAD
         ],
         'Hipercard' => [
             "38#############",
@@ -56,13 +89,28 @@ class Payment extends \Faker\Provider\Payment
             "50#############"
         ]
     ];
+=======
+        ),
+        'Hipercard' => array(
+            "38#############",
+            "60#############",
+        ),
+        "Aura" => array(
+            "50#############"
+        )
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * International Bank Account Number (IBAN)
      * @link http://en.wikipedia.org/wiki/International_Bank_Account_Number
      * @param  string  $prefix      for generating bank account number of a specific bank
      * @param  string  $countryCode ISO 3166-1 alpha-2 country code
+<<<<<<< HEAD
      * @param  int $length      total length without country code and 2 check digits
+=======
+     * @param  integer $length      total length without country code and 2 check digits
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return string
      */
     public static function bankAccountNumber($prefix = '', $countryCode = 'BR', $length = null)
@@ -74,7 +122,11 @@ class Payment extends \Faker\Provider\Payment
     /**
      * @see list of Brazilians banks (2018-02-15), source: https://pt.wikipedia.org/wiki/Lista_de_bancos_do_Brasil
      */
+<<<<<<< HEAD
     protected static $banks = [
+=======
+    protected static $banks = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'BADESUL Desenvolvimento S.A. – Agência de Fomento/RS',
         'Banco Central do Brasil',
         'Banco da Amazônia',
@@ -134,7 +186,11 @@ class Payment extends \Faker\Provider\Payment
         'Banco Neon',
         'Nu Pagamentos S.A',
         'XP Investimentos Corretora de Câmbio Títulos e Valores Mobiliários S.A',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Banco Neon'

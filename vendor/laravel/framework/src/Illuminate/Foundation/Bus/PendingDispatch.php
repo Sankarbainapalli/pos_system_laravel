@@ -2,10 +2,14 @@
 
 namespace Illuminate\Foundation\Bus;
 
+<<<<<<< HEAD
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
+=======
+use Illuminate\Contracts\Bus\Dispatcher;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 class PendingDispatch
 {
@@ -125,6 +129,7 @@ class PendingDispatch
     }
 
     /**
+<<<<<<< HEAD
      * Determine if the job should be dispatched.
      *
      * @return bool
@@ -150,6 +155,8 @@ class PendingDispatch
     }
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Dynamically proxy methods to the underlying job.
      *
      * @param  string  $method
@@ -170,9 +177,13 @@ class PendingDispatch
      */
     public function __destruct()
     {
+<<<<<<< HEAD
         if (! $this->shouldDispatch()) {
             return;
         } elseif ($this->afterResponse) {
+=======
+        if ($this->afterResponse) {
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             app(Dispatcher::class)->dispatchAfterResponse($this->job);
         } else {
             app(Dispatcher::class)->dispatch($this->job);

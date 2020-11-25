@@ -72,7 +72,11 @@ function __phpunit_run_isolated_test()
 
     ini_set('xdebug.scream', '0');
     @rewind(STDOUT); /* @ as not every STDOUT target stream is rewindable */
+<<<<<<< HEAD
     if ($stdout = @stream_get_contents(STDOUT)) {
+=======
+    if ($stdout = stream_get_contents(STDOUT)) {
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $output = $stdout . $output;
         $streamMetaData = stream_get_meta_data(STDOUT);
         if (!empty($streamMetaData['stream_type']) && 'STDIO' === $streamMetaData['stream_type']) {

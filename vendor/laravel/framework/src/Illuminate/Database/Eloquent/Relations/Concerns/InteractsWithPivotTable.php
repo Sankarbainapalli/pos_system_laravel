@@ -475,7 +475,11 @@ trait InteractsWithPivotTable
     protected function getCurrentlyAttachedPivots()
     {
         return $this->newPivotQuery()->get()->map(function ($record) {
+<<<<<<< HEAD
             $class = $this->using ?: Pivot::class;
+=======
+            $class = $this->using ? $this->using : Pivot::class;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
             $pivot = $class::fromRawAttributes($this->parent, (array) $record, $this->getTable(), true);
 

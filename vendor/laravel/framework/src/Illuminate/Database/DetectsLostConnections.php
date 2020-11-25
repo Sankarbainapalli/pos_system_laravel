@@ -45,8 +45,11 @@ trait DetectsLostConnections
             'The connection is broken and recovery is not possible. The connection is marked by the client driver as unrecoverable. No attempt was made to restore the connection.',
             'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Try again',
             'SQLSTATE[HY000]: General error: 7 SSL SYSCALL error: EOF detected',
+<<<<<<< HEAD
             'SQLSTATE[HY000] [2002] Connection timed out',
             'SSL: Connection timed out',
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         ]);
     }
 }

@@ -999,10 +999,17 @@ class Grammar extends BaseGrammar
      * Compile an "upsert" statement into SQL.
      *
      * @param  \Illuminate\Database\Query\Builder $query
+<<<<<<< HEAD
      * @param  array  $values
      * @param  array  $uniqueBy
      * @param  array  $update
      * @return string
+=======
+     * @param  array $values
+     * @param  array $uniqueBy
+     * @param  array $update
+     * @return  string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      *
      * @throws \RuntimeException
      */

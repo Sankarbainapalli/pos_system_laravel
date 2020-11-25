@@ -54,6 +54,7 @@ class LaravelRequestContext extends RequestContext
         ];
     }
 
+<<<<<<< HEAD
     public function getRequest(): array
     {
         $properties = parent::getRequest();
@@ -66,6 +67,8 @@ class LaravelRequestContext extends RequestContext
         return $properties;
     }
 
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     protected function getRouteParameters(): array
     {
         try {

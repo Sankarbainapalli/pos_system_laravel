@@ -7,7 +7,11 @@ class Address extends \Faker\Provider\Address
     /**
      * @link http://bandung.go.id/images/download/daftarruasjalan.htm
      **/
+<<<<<<< HEAD
     protected static $street = [
+=======
+    protected static $street = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "Abang", "Abdul", "Abdul Muis", "Abdul Rahmat", "Abdul. Muis", "Abdullah",
         "Aceh", "Achmad", "Achmad Yani", "Acordion", "Adisucipto",
         "Adisumarmo", "Agus Salim", "Ahmad Dahlan", "Antapani Lama", "Arifin",
@@ -63,16 +67,28 @@ class Address extends \Faker\Provider\Address
         "Wahid Hasyim", "Wahidin", "Wahidin Sudirohusodo", "Warga", "Wora Wari",
         "Yap Tjwan Bing", "Yoga", "Yogyakarta", "Yohanes", "Yos",
         "Yos Sudarso", "Yosodipuro", "Zamrud",
+<<<<<<< HEAD
     ];
 
     protected static $streetPrefix = [
         "Ds.", "Dk.", "Gg.", "Jln.", "Jr.", "Kpg.", "Ki.", "Psr."
     ];
+=======
+    );
+
+    protected static $streetPrefix = array(
+        "Ds.", "Dk.", "Gg.", "Jln.", "Jr.", "Kpg.", "Ki.", "Psr."
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://kodepos.nomor.net/_kodepos.php?_i=provinsi-kodepos
      */
+<<<<<<< HEAD
     protected static $state = [
+=======
+    protected static $state = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aceh', 'Sumatera Utara', 'Sumatera Barat', 'Jambi', 'Bangka Belitung', 'Riau',
         'Kepulauan Riau', 'Bengkulu', 'Sumatera Selatan', 'Lampung', 'Banten',
         'DKI Jakarta', 'Jawa Barat', 'Jawa Tengah', 'Jawa Timur', 'Nusa Tenggara Timur',
@@ -81,13 +97,18 @@ class Address extends \Faker\Provider\Address
         'Kalimantan Utara', 'Sulawesi Selatan', 'Sulawesi Utara', 'Gorontalo',
         'Sulawesi Tengah', 'Sulawesi Barat', 'Sulawesi Tenggara', 'Maluku',
         'Maluku Utara', 'Papua Barat', 'Papua'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Abbreviated State Names.
      * Currently this is all just a guesswork, but should be highly accurate
      * @var array
      */
+<<<<<<< HEAD
     protected static $stateAbbr = [
         'Aceh', 'SumUt', 'SumBar', 'Jambi', 'BaBel', 'Riau', 'KepR', 'Bengkulu', 'SumSel',
         'Lampung', 'Banten', 'DKI', 'JaBar', 'JaTeng', 'JaTim', 'NTT', 'DIY',
@@ -100,6 +121,20 @@ class Address extends \Faker\Provider\Address
      * @link http://id.wikipedia.org/wiki/Daftar_negara-negara_di_dunia
      **/
     protected static $country = [
+=======
+    protected static $stateAbbr = array(
+       'Aceh', 'SumUt', 'SumBar', 'Jambi', 'BaBel', 'Riau', 'KepR', 'Bengkulu', 'SumSel',
+       'Lampung', 'Banten', 'DKI', 'JaBar', 'JaTeng', 'JaTim', 'NTT', 'DIY',
+       'Bali', 'NTB', 'KalBar', 'KalTeng', 'KalSel', 'KalTim', 'KalUt', 'SulSel',
+       'SulUt', 'Gorontalo', 'SulTeng', 'SulBar', 'SulTra', 'Maluku', 'MalUt',
+       'PapBar', 'Papua'
+    );
+
+    /**
+    * @link http://id.wikipedia.org/wiki/Daftar_negara-negara_di_dunia
+    **/
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afganistan', 'Afrika Selatan', 'Albania', 'Aljazair',
         'Amerika Serikat', 'Andorra', 'Angola', 'Anguilla',
 
@@ -219,12 +254,20 @@ class Address extends \Faker\Provider\Address
         'Wilayah Samudra Hindia Britania',
 
         'Wilayah Selatan Perancis', 'Yaman', 'Yunani', 'Zambia', 'Zimbabwe'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://id.wikipedia.org/wiki/Daftar_kabupaten_dan_kota_Indonesia#Daftar_kota
      */
+<<<<<<< HEAD
     protected static $cityNames = [
+=======
+    protected static $cityNames = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "Administrasi Jakarta Barat", "Administrasi Jakarta Pusat",
         "Administrasi Jakarta Selatan", "Administrasi Jakarta Timur",
         "Administrasi Jakarta Utara", "Ambon", "Balikpapan", "Banda Aceh",
@@ -251,6 +294,7 @@ class Address extends \Faker\Provider\Address
         "Tarakan", "Tasikmalaya", "Tebing Tinggi", "Tegal",
         "Ternate", "Tidore Kepulauan", "Tomohon", "Tual",
         "Yogyakarta",
+<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -270,6 +314,27 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $postcode = ['%####'];
+=======
+    );
+
+    protected static $cityFormats = array(
+        '{{cityName}}',
+    );
+
+    protected static $streetNameFormats = array(
+        '{{street}}'
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{streetPrefix}} {{street}} No. {{buildingNumber}}',
+    );
+
+    protected static $addressFormats = array(
+        "{{streetAddress}}, {{city}} {{postcode}}, {{stateAbbr}}",
+    );
+
+    protected static $postcode = array('%####');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Kalimantan Tengah'

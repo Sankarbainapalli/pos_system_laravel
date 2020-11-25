@@ -67,6 +67,11 @@ class ResetCommand extends BaseCommand
                 $this->getMigrationPaths(), $this->option('pretend')
             );
         });
+<<<<<<< HEAD
+=======
+
+        return 0;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**

@@ -132,4 +132,17 @@ class MigrateMakeCommand extends BaseCommand
 
         return parent::getMigrationPath();
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Determine if the given path(s) are pre-resolved "real" paths.
+     *
+     * @return bool
+     */
+    protected function usingRealPath()
+    {
+        return $this->input->hasOption('realpath') && $this->option('realpath');
+    }
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

@@ -23,6 +23,7 @@ abstract class SchemaState
     protected $files;
 
     /**
+<<<<<<< HEAD
      * The name of the application's migration table.
      *
      * @var string
@@ -30,6 +31,8 @@ abstract class SchemaState
     protected $migrationTable = 'migrations';
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * The process factory callback.
      *
      * @var callable
@@ -95,6 +98,7 @@ abstract class SchemaState
     }
 
     /**
+<<<<<<< HEAD
      * Specify the name of the application's migration table.
      *
      * @param  string  $table
@@ -108,6 +112,8 @@ abstract class SchemaState
     }
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Specify the callback that should be used to handle process output.
      *
      * @param  callable  $output

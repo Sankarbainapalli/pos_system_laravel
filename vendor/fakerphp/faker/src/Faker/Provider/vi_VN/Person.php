@@ -4,29 +4,52 @@ namespace Faker\Provider\vi_VN;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
+=======
+    protected static $maleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastName}} {{firstNameMale}}',
         '{{titleMale}}. {{lastName}} {{firstNameMale}}',
         '{{lastName}} {{middleNameMale}} {{firstNameMale}}',
         '{{titleMale}}. {{lastName}} {{middleNameMale}} {{firstNameMale}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastName}} {{firstNameFemale}}',
         '{{titleFemale}}. {{lastName}} {{firstNameFemale}}',
         '{{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
         '{{titleFemale}}. {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
+<<<<<<< HEAD
     ];
 
     protected static $middleNameFormat = [
         '{{firstNameMale}}',
         '{{firstNameFemale}}',
     ];
+=======
+    );
+
+    protected static $middleNameFormat = array(
+      '{{firstNameMale}}',
+      '{{firstNameFemale}}',
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'An', 'Anh',
         'Bào', 'Bình', 'Bạch', 'Bảo', 'Bắc', 'Bằng', 'Bổng', 'Bửu',
         'Ca', 'Canh', 'Chiến', 'Chiểu', 'Châu', 'Chính', 'Chương', 'Chưởng', 'Chấn', 'Công', 'Cơ', 'Cương', 'Cường', 'Cảnh', 'Cần', 'Cẩn',
@@ -48,12 +71,20 @@ class Person extends \Faker\Provider\Person
         'Án', 'Ân',
         'Đan', 'Điền', 'Điệp', 'Đoàn', 'Đình', 'Đôn', 'Đăng', 'Đại', 'Đạo', 'Đạt', 'Định', 'Đồng', 'Độ', 'Đức', 'Đức',
         'Ẩn',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
      */
+<<<<<<< HEAD
     protected static $middleNameMale = [
+=======
+    protected static $middleNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'An', 'Anh',
         'Bá', 'Bách', 'Bình', 'Bích', 'Bảo', 'Bằng', 'Bửu', 'Bữu',
         'Cao', 'Chiêu', 'Chiến', 'Chung', 'Chuẩn', 'Chánh', 'Chí', 'Chính', 'Chấn', 'Chế', 'Cát', 'Công', 'Cương', 'Cường', 'Cảnh',
@@ -70,12 +101,20 @@ class Person extends \Faker\Provider\Person
         'Tài', 'Tạ',
         'Ân',
         'Đan', 'Đinh', 'Đoàn', 'Đình', 'Đông', 'Đăng', 'Đại', 'Đạt', 'Đắc', 'Định', 'Đồng', 'Đức', 'Đăng', 'Đức',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-gai.htm
      */
+<<<<<<< HEAD
     protected static $firstNameFemale = [
+=======
+    protected static $firstNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'An', 'Anh',
         'Bình', 'Bích', 'Băng', 'Bạch', 'Bảo',
         'Ca', 'Chi', 'Chinh', 'Chiêu', 'Chung', 'Châu', 'Cát', 'Cúc', 'Cương', 'Cầm',
@@ -100,12 +139,20 @@ class Person extends \Faker\Provider\Person
         'Ái', 'Ánh', 'Ân',
         'Đan', 'Điệp', 'Đoan', 'Đài', 'Đàn', 'Đào', 'Đình', 'Đường', 'Đan',
         'Ý',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-gai.htm
      */
+<<<<<<< HEAD
     protected static $middleNameFemale = [
+=======
+    protected static $middleNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'An', 'Anh',
         'Ban', 'Bích', 'Băng', 'Bạch', 'Bảo', 'Bội',
         'Cam', 'Chi', 'Chiêu', 'Cát', 'Cẩm',
@@ -128,12 +175,20 @@ class Person extends \Faker\Provider\Person
         'Ái', 'Ánh',
         'Đan', 'Đinh', 'Đoan', 'Đài', 'Đông', 'Đồng', 'Đan', 'Đoan',
         'Ý',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://vi.wikipedia.org/wiki/H%E1%BB%8D_ng%C6%B0%E1%BB%9Di_Vi%E1%BB%87t_Nam
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'An', 'Ánh',
         'Ân', 'Âu', 'Ấu',
         'Biện', 'Bàng', 'Bành', 'Bá', 'Bì', 'Bình', 'Bùi', 'Bạc', 'Bạch', 'Bảo', 'Bế', 'Bồ', 'Bửu',
@@ -155,11 +210,19 @@ class Person extends \Faker\Provider\Person
         'Ung', 'Uông',
         'Vi', 'Viên', 'Võ', 'Văn', 'Vũ', 'Vương', 'Vừ', 'Xa',
         'Yên',
+<<<<<<< HEAD
     ];
 
     protected static $titleMale = ['Cụ', 'Ông', 'Bác', 'Chú', 'Anh', 'Em'];
 
     protected static $titleFemale = ['Cụ', 'Bà', 'Bác', 'Cô', 'Chị', 'Em'];
+=======
+    );
+
+    protected static $titleMale = array('Cụ', 'Ông', 'Bác', 'Chú', 'Anh', 'Em');
+
+    protected static $titleFemale = array('Cụ', 'Bà', 'Bác', 'Cô', 'Chị', 'Em');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function middleName($gender = null)
     {

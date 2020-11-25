@@ -14,7 +14,10 @@ class EmailLexer extends AbstractLexer
     const S_DOT              = 46;
     const S_DQUOTE           = 34;
     const S_SQUOTE           = 39;
+<<<<<<< HEAD
     const S_BACKTICK         = 96;
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     const S_OPENPARENTHESIS  = 49;
     const S_CLOSEPARENTHESIS = 261;
     const S_OPENBRACKET      = 262;
@@ -61,7 +64,10 @@ class EmailLexer extends AbstractLexer
         ','    => self::S_COMMA,
         '.'    => self::S_DOT,
         "'"    => self::S_SQUOTE,
+<<<<<<< HEAD
         "`"    => self::S_BACKTICK,
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '"'    => self::S_DQUOTE,
         '-'    => self::S_HYPHEN,
         '::'   => self::S_DOUBLECOLON,

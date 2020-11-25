@@ -18,11 +18,15 @@ use Illuminate\Support\Testing\Fakes\BusFake;
  * @method static mixed dispatchNow($command, $handler = null)
  * @method static void assertDispatched(string $command, callable|int $callback = null)
  * @method static void assertDispatchedTimes(string $command, int $times = 1)
+<<<<<<< HEAD
  * @method static void assertNotDispatched(string $command, callable $callback = null)
  * @method static void assertDispatchedAfterResponse(string $command, callable|int $callback = null)
  * @method static void assertDispatchedAfterResponseTimes(string $command, int $times = 1)
  * @method static void assertNotDispatchedAfterResponse(string $command, callable $callback = null)
  * @method static void assertBatched(callable $callback)
+=======
+ * @method static void assertNotDispatched(string $command, callable|int $callback = null)
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
  *
  * @see \Illuminate\Contracts\Bus\Dispatcher
  */

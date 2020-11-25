@@ -3,7 +3,10 @@
 namespace {{ namespace }};
 
 use Illuminate\Bus\Queueable;
+<<<<<<< HEAD
 use Illuminate\Contracts\Queue\ShouldBeUnique;
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;

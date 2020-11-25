@@ -8,7 +8,10 @@ use Illuminate\Database\Connection;
 use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Database\Events\SchemaDumped;
 use Illuminate\Filesystem\Filesystem;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Config;
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 class DumpCommand extends Command
 {
@@ -64,7 +67,10 @@ class DumpCommand extends Command
     protected function schemaState(Connection $connection)
     {
         return $connection->getSchemaState()
+<<<<<<< HEAD
                 ->withMigrationTable(Config::get('database.migrations', 'migrations'))
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                 ->handleOutputUsing(function ($type, $buffer) {
                     $this->output->write($buffer);
                 });

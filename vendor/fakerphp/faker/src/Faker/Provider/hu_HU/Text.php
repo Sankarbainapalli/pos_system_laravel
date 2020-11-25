@@ -5,6 +5,10 @@ namespace Faker\Provider\hu_HU;
 class Text extends \Faker\Provider\Text
 {
     /**
+<<<<<<< HEAD
+=======
+     *
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Author: Rejtő Jenő
      * Title: Piszkos Fred, a kapitány
      *

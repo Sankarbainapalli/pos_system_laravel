@@ -941,7 +941,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
     public function getAnnotations(): array
     {
         return TestUtil::parseTestMethodAnnotations(
+<<<<<<< HEAD
             static::class,
+=======
+            get_class($this),
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $this->name
         );
     }
@@ -970,7 +974,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
     public function getSize(): int
     {
         return TestUtil::getSize(
+<<<<<<< HEAD
             static::class,
+=======
+            get_class($this),
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $this->getName(false)
         );
     }
@@ -1115,7 +1123,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         clearstatcache();
         $currentWorkingDirectory = getcwd();
 
+<<<<<<< HEAD
         $hookMethods = TestUtil::getHookMethods(static::class);
+=======
+        $hookMethods = TestUtil::getHookMethods(get_class($this));
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         $hasMetRequirements = false;
 
@@ -1477,7 +1489,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         $id = $this->name;
 
         if (strpos($id, '::') === false) {
+<<<<<<< HEAD
             $id = static::class . '::' . $id;
+=======
+            $id = get_class($this) . '::' . $id;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
         if ($this->usesDataProvider()) {
@@ -2029,7 +2045,11 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         }
 
         $missingRequirements = TestUtil::getMissingRequirements(
+<<<<<<< HEAD
             static::class,
+=======
+            get_class($this),
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $this->name
         );
 

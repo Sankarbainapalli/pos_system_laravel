@@ -6,6 +6,10 @@ use Illuminate\Container\Container;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Mail\Markdown;
+<<<<<<< HEAD
+=======
+use Traversable;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 class MailMessage extends SimpleMessage implements Renderable
 {
@@ -296,7 +300,13 @@ class MailMessage extends SimpleMessage implements Renderable
      */
     protected function arrayOfAddresses($address)
     {
+<<<<<<< HEAD
         return is_iterable($address) || $address instanceof Arrayable;
+=======
+        return is_array($address) ||
+               $address instanceof Arrayable ||
+               $address instanceof Traversable;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -314,7 +324,10 @@ class MailMessage extends SimpleMessage implements Renderable
 
         return Container::getInstance()
             ->make(Markdown::class)
+<<<<<<< HEAD
             ->theme($this->theme ?: 'default')
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             ->render($this->markdown, $this->data());
     }
 

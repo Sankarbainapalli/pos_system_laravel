@@ -23,6 +23,7 @@ trait InteractsWithConsole
     public $expectedOutput = [];
 
     /**
+<<<<<<< HEAD
      * All of the output lines that aren't expected to be displayed.
      *
      * @var array
@@ -30,6 +31,8 @@ trait InteractsWithConsole
     public $unexpectedOutput = [];
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * All of the expected ouput tables.
      *
      * @var array

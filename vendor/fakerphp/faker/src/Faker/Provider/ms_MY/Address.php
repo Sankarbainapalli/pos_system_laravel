@@ -2,11 +2,17 @@
 
 namespace Faker\Provider\ms_MY;
 
+<<<<<<< HEAD
+=======
+use Faker\Generator;
+
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 class Address extends \Faker\Provider\Address
 {
     /**
      * @link https://en.wikipedia.org/wiki/Addresses_in_Malaysia
      */
+<<<<<<< HEAD
     protected static $addressFormats = [
         '{{streetAddress}}, {{township}}, {{townState}}',
     ];
@@ -14,10 +20,20 @@ class Address extends \Faker\Provider\Address
     protected static $streetAddressFormats = [
         '{{buildingPrefix}}{{buildingNumber}}, {{streetName}}'
     ];
+=======
+    protected static $addressFormats = array(
+        '{{streetAddress}}, {{township}}, {{townState}}',
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{buildingPrefix}}{{buildingNumber}}, {{streetName}}'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Most of the time 'No.' is not needed, and 'Lot' is less used.
      */
+<<<<<<< HEAD
     protected static $buildingPrefix = [
         '','','','','','',
         'No. ','No. ','No. ',
@@ -25,15 +41,30 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $buildingNumber = [
+=======
+    protected static $buildingPrefix = array(
+        '','','','','','',
+        'No. ','No. ','No. ',
+        'Lot ',
+    );
+
+    protected static $buildingNumber = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '%','%','%',
         '%#','%#','%#','%#',
         '%##',
         '%-%',
         '?-##-##',
         '%?-##'
+<<<<<<< HEAD
     ];
 
     protected static $streetNameFormats = [
+=======
+    );
+
+    protected static $streetNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{streetPrefix}} %',
         '{{streetPrefix}} %/%',
         '{{streetPrefix}} %/%#',
@@ -49,9 +80,15 @@ class Address extends \Faker\Provider\Address
         '{{streetPrefix}} {{streetSuffix}} %/%#?',
         '{{streetPrefix}} {{streetSuffix}} %?',
         '{{streetPrefix}} {{streetSuffix}} %#?',
+<<<<<<< HEAD
     ];
 
     protected static $townshipFormats = [
+=======
+    );
+
+    protected static $townshipFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{townshipPrefix}} {{townshipSuffix}}',
         '{{townshipPrefix}} {{townshipSuffix}}',
         '{{townshipPrefix}} {{townshipSuffix}}',
@@ -61,18 +98,30 @@ class Address extends \Faker\Provider\Address
         '{{townshipPrefixAbbr}}%',
         '{{townshipPrefixAbbr}}%#',
         '{{townshipPrefixAbbr}}%#?',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * 'Jalan' & 'Jln' are more frequently used than 'Lorong'
      *
      * @link https://en.wikipedia.org/wiki/List_of_roads_in_Kuala_Lumpur#Standard_translations
      */
+<<<<<<< HEAD
     protected static $streetPrefix = [
         'Jln','Jln',
         'Jalan','Jalan','Jalan',
         'Lorong'
     ];
+=======
+    protected static $streetPrefix = array(
+        'Jln','Jln',
+        'Jalan','Jalan','Jalan',
+        'Lorong'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/List_of_roads_in_Kuala_Lumpur
@@ -80,7 +129,11 @@ class Address extends \Faker\Provider\Address
      * @link https://en.wikipedia.org/wiki/Transportation_in_Seremban#Inner_city_roads
      * @link https://en.wikipedia.org/wiki/List_of_streets_in_George_Town,_Penang
      */
+<<<<<<< HEAD
     protected static $streetSuffix = [
+=======
+    protected static $streetSuffix = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Air Itam','Alor','Ampang','Ampang Hilir','Anson','Ariffin',
         'Bangsar','Baru','Bellamy','Birch','Bijih Timah','Bukit Aman','Bukit Bintang','Bukit Petaling','Bukit Tunku',
         'Cantonment','Cenderawasih','Chan Sow Lin','Chow Kit','Cinta','Cochrane','Conlay',
@@ -103,15 +156,25 @@ class Address extends \Faker\Provider\Address
         'Wan Kadir','Wesley','Wisma Putra',
         'Yaacob Latif','Yap Ah Loy','Yap Ah Shak','Yap Kwan Seng','Yew',
         'Zaaba','Zainal Abidin'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/List_of_Petaling_Jaya_city_sections
      * @link https://en.wikipedia.org/wiki/UEP_Subang_Jaya#History
      */
+<<<<<<< HEAD
     protected static $townshipPrefixAbbr = [
         'SS','Seksyen ','PJS','PJU','USJ ',
     ];
+=======
+    protected static $townshipPrefixAbbr = array(
+        'SS','Seksyen ','PJS','PJU','USJ ',
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * 'Bandar' and 'Taman' are the most common township prefix
@@ -127,7 +190,11 @@ class Address extends \Faker\Provider\Address
      * @link https://en.wikipedia.org/wiki/Template:Selangor > Townships
      * @link https://en.wikipedia.org/wiki/Template:Terengganu > Townships
      */
+<<<<<<< HEAD
     protected static $townshipPrefix = [
+=======
+    protected static $townshipPrefix = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Alam','Apartment','Ara',
         'Bandar','Bandar','Bandar','Bandar','Bandar','Bandar',
         'Bandar Bukit','Bandar Seri','Bandar Sri','Bandar Baru','Batu','Bukit',
@@ -139,8 +206,13 @@ class Address extends \Faker\Provider\Address
         'Seri','Sri',
         'Taman','Taman','Taman','Taman','Taman','Taman',
         'Taman Desa',
+<<<<<<< HEAD
     ];
     protected static $townshipSuffix = [
+=======
+    );
+    protected static $townshipSuffix = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aman','Amanjaya','Anggerik','Angkasa','Antarabangsa','Awan',
         'Bahagia','Bangsar','Baru','Belakong','Bendahara','Bestari','Bintang','Brickfields',
         'Casa','Changkat','Country Heights',
@@ -159,7 +231,11 @@ class Address extends \Faker\Provider\Address
         'Tasik Puteri','Tengah','Timur','Tinggi','Tropika','Tun Hussein Onn','Tun Perak','Tunku',
         'Ulu','Utama','Utara',
         'Wangi',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/Template:Greater_Kuala_Lumpur
@@ -178,8 +254,13 @@ class Address extends \Faker\Provider\Address
      * @link https://en.wikipedia.org/wiki/Template:Selangor
      * @link https://en.wikipedia.org/wiki/Template:Terengganu
      */
+<<<<<<< HEAD
     protected static $towns = [
         'johor' => [
+=======
+    protected static $towns = array(
+        'johor' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Ayer Hitam',
             'Batu Pahat','Bukit Gambir','Bukit Kepong','Bukit Naning',
             'Desaru',
@@ -196,8 +277,13 @@ class Address extends \Faker\Provider\Address
             'Tangkak','Tebrau',
             'Ulu Tiram',
             'Yong Peng',
+<<<<<<< HEAD
         ],
         'kedah' => [
+=======
+        ),
+        'kedah' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Alor Setar',
             'Baling','Bukit Kayu Hitam',
             'Changlun',
@@ -211,8 +297,13 @@ class Address extends \Faker\Provider\Address
             'Serdang','Sintok','Sungai Petani',
             'Tawar, Baling',
             'Yan',
+<<<<<<< HEAD
         ],
         'kelantan' => [
+=======
+        ),
+        'kelantan' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Bachok','Bunut Payong',
             'Dabong',
             'Gua Musang',
@@ -225,8 +316,13 @@ class Address extends \Faker\Provider\Address
             'Salor',
             'Tok Bali',
             'Wakaf Bharu','Wakaf Che Yeh',
+<<<<<<< HEAD
         ],
         'kl' => [
+=======
+        ),
+        'kl' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Ampang',
             'Bandar Tasik Selatan','Bandar Tun Razak','Bangsar','Batu','Brickfields','Bukit Bintang','Bukit Jalil','Bukit Tunku',
             'Cheras','Chow Kit',
@@ -239,14 +335,24 @@ class Address extends \Faker\Provider\Address
             'Salak South','Segambut','Semarak','Sentul','Setapak','Setiawangsa','Seputeh','Sri Hartamas','Sri Petaling','Sungai Besi',
             'Taman Desa','Taman Melawati','Taman OUG','Taman Tun Dr Ismail','Taman U-Thant','Taman Wahyu','Titiwangsa','Tun Razak Exchange',
             'Wangsa Maju',
+<<<<<<< HEAD
         ],
         'labuan' => [
+=======
+        ),
+        'labuan' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Batu Manikar',
             'Kiamsam',
             'Layang-Layang',
             'Rancha-Rancha'
+<<<<<<< HEAD
         ],
         'melaka' => [
+=======
+        ),
+        'melaka' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Alor Gajah',
             'Bandaraya Melaka','Batu Berendam','Bukit Beruang','Bukit Katil',
             'Cheng',
@@ -262,8 +368,13 @@ class Address extends \Faker\Provider\Address
             'Simpang Ampat',
             'Tanjung Bidara','Telok Mas',
             'Umbai',
+<<<<<<< HEAD
         ],
         'nsembilan' => [
+=======
+        ),
+        'nsembilan' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Ayer Kuning','Ampangan',
             'Bahau','Batang Benar',
             'Chembong',
@@ -278,8 +389,13 @@ class Address extends \Faker\Provider\Address
             'Rantau','Rompin',
             'Senawang','Seremban','Sungai Gadut',
             'Tampin','Tiroi',
+<<<<<<< HEAD
         ],
         'pahang' => [
+=======
+        ),
+        'pahang' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Bandar Tun Razak','Bentong','Brinchang','Bukit Fraser','Bukit Tinggi',
             'Chendor',
             'Gambang','Genting Highlands','Genting Sempah',
@@ -293,8 +409,13 @@ class Address extends \Faker\Provider\Address
             'Raub',
             'Sebertak','Sungai Lembing',
             'Tanah Rata','Tanjung Sepat','Tasik Chini','Temerloh','Teriang','Tringkap',
+<<<<<<< HEAD
         ],
         'penang' => [
+=======
+        ),
+        'penang' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Air Itam',
             'Balik Pulau','Batu Ferringhi','Batu Kawan','Bayan Lepas','Bukit Mertajam','Butterworth',
             'Gelugor','George Town',
@@ -304,8 +425,13 @@ class Address extends \Faker\Provider\Address
             'Permatang Pauh','Pulau Tikus',
             'Simpang Ampat',
             'Tanjung Bungah','Tanjung Tokong',
+<<<<<<< HEAD
         ],
         'perak' => [
+=======
+        ),
+        'perak' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Ayer Tawar',
             'Bagan Serai','Batu Gajah','Behrang','Bidor','Bukit Gantang','Bukit Merah',
             'Changkat Jering','Chemor','Chenderiang',
@@ -321,8 +447,13 @@ class Address extends \Faker\Provider\Address
             'Simpang Pulai','Sitiawan','Slim River','Sungai Siput','Sungkai',
             'Taiping','Tambun','Tanjung Malim','Tanjung Rambutan','Tapah','Teluk Intan',
             'Ulu Bernam',
+<<<<<<< HEAD
         ],
         'perlis' => [
+=======
+        ),
+        'perlis' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Arau',
             'Beseri',
             'Chuping',
@@ -331,14 +462,24 @@ class Address extends \Faker\Provider\Address
             'Padang Besar',
             'Sanglang','Simpang Empat',
             'Wang Kelian',
+<<<<<<< HEAD
         ],
         'putrajaya' => [
+=======
+        ),
+        'putrajaya' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Precinct 1','Precinct 4','Precinct 5',
             'Precinct 6','Precinct 8','Precinct 10',
             'Precinct 11','Precinct 12','Precinct 13',
             'Precinct 16','Precinct 18','Precinct 19',
+<<<<<<< HEAD
         ],
         'sabah' => [
+=======
+        ),
+        'sabah' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Beaufort','Bingkor',
             'Donggongon',
             'Inanam',
@@ -351,8 +492,13 @@ class Address extends \Faker\Provider\Address
             'Sandakan','Sapulut','Semporna','Sepanggar',
             'Tambunan','Tanjung Aru','Tawau','Tenom','Tuaran',
             'Weston',
+<<<<<<< HEAD
         ],
         'sarawak' => [
+=======
+        ),
+        'sarawak' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Asajaya',
             'Ba\'kelalan','Bario','Batu Kawa','Batu Niah','Betong','Bintulu',
             'Dalat','Daro',
@@ -365,8 +511,13 @@ class Address extends \Faker\Provider\Address
             'Pakan',
             'Sadong Jaya','Sematan','Sibu','Siburan','Song','Sri Aman','Sungai Tujoh',
             'Tanjung Kidurong','Tanjung Manis','Tatau',
+<<<<<<< HEAD
         ],
         'selangor' => [
+=======
+        ),
+        'selangor' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Ampang','Assam Jawa',
             'Balakong','Bandar Baru Bangi','Bandar Baru Selayang','Bandar Sunway','Bangi','Banting','Batang Kali','Batu Caves','Bestari Jaya','Bukit Lanjan',
             'Cheras','Cyberjaya',
@@ -381,8 +532,13 @@ class Address extends \Faker\Provider\Address
             'Salak Tinggi','Sekinchan','Selayang','Semenyih','Sepang','Serendah','Seri Kembangan','Shah Alam','Subang','Subang Jaya','Sungai Buloh',
             'Tanjung Karang','Tanjung Sepat',
             'Ulu Klang','Ulu Yam',
+<<<<<<< HEAD
         ],
         'terengganu' => [
+=======
+        ),
+        'terengganu' => array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             'Ajil',
             'Bandar Ketengah Jaya','Bandar Permaisuri','Bukit Besi','Bukit Payong',
             'Chukai',
@@ -393,12 +549,18 @@ class Address extends \Faker\Provider\Address
             'Rantau Abang',
             'Teluk Kalung',
             'Wakaf Tapai',
+<<<<<<< HEAD
         ]
     ];
+=======
+        )
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/States_and_federal_territories_of_Malaysia
      */
+<<<<<<< HEAD
     protected static $states = [
         'johor' => [
             'Johor Darul Ta\'zim',
@@ -462,11 +624,80 @@ class Address extends \Faker\Provider\Address
             'Terengganu'
         ]
     ];
+=======
+    protected static $states = array(
+        'johor' => array(
+            'Johor Darul Ta\'zim',
+            'Johor'
+        ),
+        'kedah' => array(
+            'Kedah Darul Aman',
+            'Kedah'
+        ),
+        'kelantan' => array(
+            'Kelantan Darul Naim',
+            'Kelantan'
+        ),
+        'kl' => array(
+            'KL',
+            'Kuala Lumpur',
+            'WP Kuala Lumpur'
+        ),
+        'labuan' => array(
+            'Labuan'
+        ),
+        'melaka' => array(
+            'Malacca',
+            'Melaka'
+        ),
+        'nsembilan' => array(
+            'Negeri Sembilan Darul Khusus',
+            'Negeri Sembilan'
+        ),
+        'pahang' => array(
+            'Pahang Darul Makmur',
+            'Pahang'
+        ),
+        'penang' => array(
+            'Penang',
+            'Pulau Pinang'
+        ),
+        'perak' => array(
+            'Perak Darul Ridzuan',
+            'Perak'
+        ),
+        'perlis' => array(
+            'Perlis Indera Kayangan',
+            'Perlis'
+        ),
+        'putrajaya' => array(
+            'Putrajaya'
+        ),
+        'sabah' => array(
+            'Sabah'
+        ),
+        'sarawak' => array(
+            'Sarawak'
+        ),
+        'selangor' => array(
+            'Selangor Darul Ehsan',
+            'Selangor'
+        ),
+        'terengganu' => array(
+            'Terengganu Darul Iman',
+            'Terengganu'
+        )
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://ms.wikipedia.org/wiki/Senarai_negara_berdaulat
      */
+<<<<<<< HEAD
     protected static $country = [
+=======
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abkhazia','Afghanistan','Afrika Selatan','Republik Afrika Tengah','Akrotiri dan Dhekelia','Albania','Algeria','Amerika Syarikat','Andorra','Angola','Antigua dan Barbuda','Arab Saudi','Argentina','Armenia','Australia','Austria','Azerbaijan',
         'Bahamas','Bahrain','Bangladesh','Barbados','Belanda','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bonaire','Bosnia dan Herzegovina','Botswana','Brazil','Brunei Darussalam','Bulgaria','Burkina Faso','Burundi',
         'Cameroon','Chad','Chile','Republik Rakyat China','Republik China di Taiwan','Colombia','Comoros','Republik Demokratik Congo','Republik Congo','Kepulauan Cook','Costa Rica','Côte d\'Ivoire (Ivory Coast)','Croatia','Cuba','Curaçao','Cyprus','Republik Turki Cyprus Utara','Republik Czech',
@@ -491,14 +722,22 @@ class Address extends \Faker\Provider\Address
         'Vanuatu','Kota Vatican','Venezuela','Vietnam',
         'Yaman',
         'Zambia','Zimbabwe',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Return a building prefix
      *
      * @example 'No.'
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public static function buildingPrefix()
     {
@@ -510,7 +749,11 @@ class Address extends \Faker\Provider\Address
      *
      * @example '123'
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public static function buildingNumber()
     {
@@ -534,7 +777,11 @@ class Address extends \Faker\Provider\Address
      *
      * @example 'Jalan Utama 7'
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function streetName()
     {
@@ -548,7 +795,11 @@ class Address extends \Faker\Provider\Address
      *
      * @example Taman Bahagia
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function township()
     {
@@ -562,7 +813,11 @@ class Address extends \Faker\Provider\Address
      *
      * @example 'USJ'
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function townshipPrefixAbbr()
     {
@@ -574,7 +829,11 @@ class Address extends \Faker\Provider\Address
      *
      * @example 'Taman'
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function townshipPrefix()
     {
@@ -599,6 +858,7 @@ class Address extends \Faker\Provider\Address
      *
      * @param null|string $state 'state' or null
      *
+<<<<<<< HEAD
      * @return string
      */
     public static function postcode($state = null)
@@ -659,6 +919,68 @@ class Address extends \Faker\Provider\Address
 
         $postcode = is_null($state) ? static::randomElement($format) : $format[$state];
         return (string) static::randomElement($postcode);
+=======
+     * @return @string
+     */
+    public static function postcode($state = null)
+    {
+        $format = array(
+            'perlis' => array( // (01000 - 02800)
+                '0' . mt_rand(1000, 2800)
+            ),
+            'kedah' => array( // (05000 - 09810)
+                '0' . mt_rand(5000, 9810)
+            ),
+            'penang' => array( // (10000 - 14400)
+                mt_rand(10000, 14400)
+            ),
+            'kelantan' => array( // (15000 - 18500)
+                mt_rand(15000, 18500)
+            ),
+            'terengganu' => array( // (20000 - 24300)
+                mt_rand(20000, 24300)
+            ),
+            'pahang' => array( // (25000 - 28800 | 39000 - 39200 | 49000, 69000)
+                mt_rand(25000, 28800),
+                mt_rand(39000, 39200),
+                mt_rand(49000, 69000)
+            ),
+            'perak' => array( // (30000 - 36810)
+                mt_rand(30000, 36810)
+            ),
+            'selangor' => array( // (40000 - 48300 | 63000 - 68100)
+                mt_rand(40000, 48300),
+                mt_rand(63000, 68100)
+            ),
+            'kl' => array( // (50000 - 60000)
+                mt_rand(50000, 60000),
+            ),
+            'putrajaya' => array( // (62000 - 62988)
+                mt_rand(62000, 62988)
+            ),
+            'nsembilan' => array( // (70000 - 73509)
+                mt_rand(70000, 73509)
+            ),
+            'melaka' => array( // (75000 - 78309)
+                mt_rand(75000, 78309)
+            ),
+            'johor' => array( // (79000 - 86900)
+                mt_rand(79000, 86900)
+            ),
+            'labuan' => array( // (87000 - 87033)
+                mt_rand(87000, 87033)
+            ),
+            'sabah' => array( // (88000 - 91309)
+                mt_rand(88000, 91309)
+            ),
+            'sarawak' => array( // (93000 - 98859)
+                mt_rand(93000, 98859)
+            )
+        );
+
+        $postcode = is_null($state) ? static::randomElement($format) : $format[$state];
+        return (string)static::randomElement($postcode);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -666,7 +988,11 @@ class Address extends \Faker\Provider\Address
      *
      * @example 55100 Bukit Bintang, Kuala Lumpur
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return @string
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      */
     public function townState()
     {
@@ -683,8 +1009,13 @@ class Address extends \Faker\Provider\Address
      *
      * @example 'Ampang'
      *
+<<<<<<< HEAD
      * @return string
      */
+=======
+     * @return @string
+    */
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     public function city()
     {
         $state = static::randomElement(array_keys(static::$towns));
@@ -696,8 +1027,13 @@ class Address extends \Faker\Provider\Address
      *
      * @example 'Johor'
      *
+<<<<<<< HEAD
      * @return string
      */
+=======
+     * @return @string
+    */
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     public function state()
     {
         $state = static::randomElement(array_keys(static::$states));

@@ -4,7 +4,11 @@ namespace Faker\Provider;
 
 class Lorem extends Base
 {
+<<<<<<< HEAD
     protected static $wordList = [
+=======
+    protected static $wordList = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'alias', 'consequatur', 'aut', 'perferendis', 'sit', 'voluptatem',
         'accusantium', 'doloremque', 'aperiam', 'eaque','ipsa', 'quae', 'ab',
         'illo', 'inventore', 'veritatis', 'et', 'quasi', 'architecto',
@@ -42,7 +46,11 @@ class Lorem extends Base
         'recusandae', 'itaque', 'earum', 'rerum', 'hic', 'tenetur', 'a',
         'sapiente', 'delectus', 'ut', 'aut', 'reiciendis', 'voluptatibus',
         'maiores', 'doloribus', 'asperiores', 'repellat'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 'Lorem'
@@ -57,13 +65,21 @@ class Lorem extends Base
      * Generate an array of random words
      *
      * @example array('Lorem', 'ipsum', 'dolor')
+<<<<<<< HEAD
      * @param  int      $nb     how many words to return
+=======
+     * @param  integer      $nb     how many words to return
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  bool         $asText if true the sentences are returned as one string
      * @return array|string
      */
     public static function words($nb = 3, $asText = false)
     {
+<<<<<<< HEAD
         $words = [];
+=======
+        $words = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         for ($i=0; $i < $nb; $i++) {
             $words []= static::word();
         }
@@ -75,8 +91,13 @@ class Lorem extends Base
      * Generate a random sentence
      *
      * @example 'Lorem ipsum dolor sit amet.'
+<<<<<<< HEAD
      * @param int $nbWords         around how many words the sentence should contain
      * @param bool $variableNbWords set to false if you want exactly $nbWords returned,
+=======
+     * @param integer $nbWords         around how many words the sentence should contain
+     * @param boolean $variableNbWords set to false if you want exactly $nbWords returned,
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      *                                  otherwise $nbWords may vary by +/-40% with a minimum of 1
      * @return string
      */
@@ -99,13 +120,21 @@ class Lorem extends Base
      * Generate an array of sentences
      *
      * @example array('Lorem ipsum dolor sit amet.', 'Consectetur adipisicing eli.')
+<<<<<<< HEAD
      * @param  int      $nb     how many sentences to return
+=======
+     * @param  integer      $nb     how many sentences to return
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  bool         $asText if true the sentences are returned as one string
      * @return array|string
      */
     public static function sentences($nb = 3, $asText = false)
     {
+<<<<<<< HEAD
         $sentences = [];
+=======
+        $sentences = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         for ($i=0; $i < $nb; $i++) {
             $sentences []= static::sentence();
         }
@@ -116,9 +145,15 @@ class Lorem extends Base
     /**
      * Generate a single paragraph
      *
+<<<<<<< HEAD
      * @example 'Sapiente sunt omnis. Ut pariatur ad autem ducimus et. Voluptas rem voluptas sint modi dolorem amet.'
      * @param int $nbSentences         around how many sentences the paragraph should contain
      * @param bool $variableNbSentences set to false if you want exactly $nbSentences returned,
+=======
+      * @example 'Sapiente sunt omnis. Ut pariatur ad autem ducimus et. Voluptas rem voluptas sint modi dolorem amet.'
+     * @param integer $nbSentences         around how many sentences the paragraph should contain
+     * @param boolean $variableNbSentences set to false if you want exactly $nbSentences returned,
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      *                                      otherwise $nbSentences may vary by +/-40% with a minimum of 1
      * @return string
      */
@@ -138,13 +173,21 @@ class Lorem extends Base
      * Generate an array of paragraphs
      *
      * @example array($paragraph1, $paragraph2, $paragraph3)
+<<<<<<< HEAD
      * @param  int      $nb     how many paragraphs to return
+=======
+     * @param  integer      $nb     how many paragraphs to return
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param  bool         $asText if true the paragraphs are returned as one string, separated by two newlines
      * @return array|string
      */
     public static function paragraphs($nb = 3, $asText = false)
     {
+<<<<<<< HEAD
         $paragraphs = [];
+=======
+        $paragraphs = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         for ($i=0; $i < $nb; $i++) {
             $paragraphs []= static::paragraph();
         }
@@ -158,7 +201,11 @@ class Lorem extends Base
      *
      * @example 'Sapiente sunt omnis. Ut pariatur ad autem ducimus et. Voluptas rem voluptas sint modi dolorem amet.'
      *
+<<<<<<< HEAD
      * @param  int $maxNbChars Maximum number of characters the text should contain (minimum 5)
+=======
+     * @param  integer $maxNbChars Maximum number of characters the text should contain (minimum 5)
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      *
      * @return string
      */
@@ -170,7 +217,11 @@ class Lorem extends Base
 
         $type = ($maxNbChars < 25) ? 'word' : (($maxNbChars < 100) ? 'sentence' : 'paragraph');
 
+<<<<<<< HEAD
         $text = [];
+=======
+        $text = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         while (empty($text)) {
             $size = 0;
 

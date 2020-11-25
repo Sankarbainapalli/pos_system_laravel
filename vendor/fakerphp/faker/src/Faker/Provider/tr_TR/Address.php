@@ -4,6 +4,7 @@ namespace Faker\Provider\tr_TR;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $buildingNumber = ['###', '##', '#'];
 
     protected static $streetSuffix = [
@@ -16,6 +17,20 @@ class Address extends \Faker\Provider\Address
      * @var array Cities of Turkey, for future updates please use @link https://tr.wikipedia.org/wiki/T%C3%BCrkiye'nin_illeri
      */
     protected static $cityNames = [
+=======
+    protected static $buildingNumber = array('###', '##', '#');
+
+    protected static $streetSuffix = array(
+        'Sokak', 'Caddesi', 'Kavşağı', 'Durağı', 'İş Hanı', 'Mevkii'
+    );
+
+    protected static $postcode = array('#####');
+
+    /**
+    * @var array Cities of Turkey, for future updates please use @link https://tr.wikipedia.org/wiki/T%C3%BCrkiye'nin_illeri
+    */
+    protected static $cityNames = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Adana','Adıyaman','Afyonkarahisar','Ağrı','Aksaray','Amasya','Ankara','Antalya','Ardahan','Artvin','Aydın',
         'Balıkesir','Bartın','Batman','Bayburt','Bilecik','Bingöl','Bitlis','Bolu','Burdur','Bursa',
         'Çanakkale','Çankırı','Çorum',
@@ -36,6 +51,7 @@ class Address extends \Faker\Provider\Address
         'Van',
         'Yalova','Yozgat',
         'Zonguldak'
+<<<<<<< HEAD
     ];
 
     /**
@@ -43,6 +59,15 @@ class Address extends \Faker\Provider\Address
      * @link https://tr.wikipedia.org/wiki/%C3%9Clkeler_listesi
      */
     protected static $country = [
+=======
+    );
+
+    /**
+    * @var array Countries in Turkish
+    * @link https://tr.wikipedia.org/wiki/%C3%9Clkeler_listesi
+    */
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Almanya','Amerika Birleşik Devletleri','Arjantin','Arnavutluk','Avustralya','Avusturya','Azerbaycan',
         'Bahreyn','Belçika','Beyaz Rusya','Birleşik Arap Emirlikleri','Bosna-hersek','Brezilya','Bulgaristan',
         'Çek Cumhuriyeti','Cezayir','Çin Halk Cumhuriyeti',
@@ -67,6 +92,7 @@ class Address extends \Faker\Provider\Address
         'Venezuela','Vietnam',
         'Yemen','Yeni Zelanda','Yeşil Burun','Yunanistan',
         'Zambiya','Zimbabve'
+<<<<<<< HEAD
     ];
 
     protected static $cityFormats = [
@@ -85,6 +111,26 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
+=======
+    );
+
+    protected static $cityFormats = array(
+        '{{cityName}}',
+    );
+
+    protected static $streetNameFormats = array(
+        '{{lastName}} {{streetSuffix}}',
+        '{{firstName}} {{streetSuffix}}',
+        '{{firstName}} {{streetSuffix}}'
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{streetName}} {{buildingNumber}}',
+    );
+    protected static $addressFormats = array(
+        "{{streetAddress}}\n{{postcode}} {{city}}",
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function cityName()
     {

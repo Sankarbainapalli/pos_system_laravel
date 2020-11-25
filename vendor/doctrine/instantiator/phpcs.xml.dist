@@ -19,6 +19,7 @@
         <exclude name="SlevomatCodingStandard.Exceptions.ReferenceThrowableOnly.ReferencedGeneralException"/>
     </rule>
 
+<<<<<<< HEAD
     <!-- Disable the rules that will require PHP 7.4 -->
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
         <properties>
@@ -34,6 +35,8 @@
         <exclude-pattern>*/src/*</exclude-pattern>
     </rule>
 
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming">
         <exclude-pattern>tests/DoctrineTest/InstantiatorTestAsset/AbstractClassAsset.php</exclude-pattern>
     </rule>

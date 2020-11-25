@@ -1875,7 +1875,11 @@ trait ValidatesAttributes
      * @param  array  $parameters
      * @return array
      */
+<<<<<<< HEAD
     public function parseNamedParameters($parameters)
+=======
+    protected function parseNamedParameters($parameters)
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     {
         return array_reduce($parameters, function ($result, $item) {
             [$key, $value] = array_pad(explode('=', $item, 2), 2, null);

@@ -4,7 +4,11 @@ namespace Faker\Provider\pt_PT;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
+=======
+    protected static $maleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}} {{lastName}}',
         '{{firstNameMale}} {{lastName}} de {{lastName}}',
@@ -13,9 +17,15 @@ class Person extends \Faker\Provider\Person
         '{{firstNameMale}} {{firstNameMale}} {{lastName}} {{lastName}}',
         '{{firstNameMale}} {{firstNameMale}} {{lastName}} de {{lastName}}',
         '{{firstNameMale}} {{firstNameMale}} {{lastName}} {{lastName}} {{lastName}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}} {{lastName}}',
         '{{firstNameFemale}} {{lastName}} de {{lastName}}',
@@ -24,6 +34,7 @@ class Person extends \Faker\Provider\Person
         '{{firstNameFemale}} {{firstNameFemale}} {{lastName}} {{lastName}}',
         '{{firstNameFemale}} {{firstNameFemale}} {{lastName}} de {{lastName}}',
         '{{firstNameFemale}} {{firstNameFemale}} {{lastName}} {{lastName}} {{lastName}}',
+<<<<<<< HEAD
     ];
 
     /** @link http://goo.gl/v6bScG document with all pt abreviations **/
@@ -47,6 +58,31 @@ class Person extends \Faker\Provider\Person
         '98######',
         '99######'
     ];
+=======
+    );
+
+    /** @link http://goo.gl/v6bScG document with all pt abreviations **/
+    protected static $titleMale = array('Sr.', 'Dr.', 'Exmo.', 'Eng.', 'Eng.º', 'Ex.', 'Exº');
+    protected static $titleFemale = array('Sra.', 'Dra.', 'Exma', 'Eng.ª', 'Exª');
+
+    protected static $firstEightDigitsFormat = array(
+      '1#######',
+      '2#######',
+      '3#######',
+      '45######',
+      '5#######',
+      '6#######',
+      '70######',
+      '71######',
+      '72######',
+      '77######',
+      '79######',
+      '8#######' ,
+      '90######',
+      '98######',
+      '99######'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Taxpayer Identification Number (NIF in Portugal)
@@ -99,10 +135,18 @@ class Person extends \Faker\Provider\Person
     }
 
     /**
+<<<<<<< HEAD
      * @link http://nomesportugueses.blogspot.pt/2012/01/lista-dos-cem-nomes-mais-usados-em.html
      */
 
     protected static $firstNameMale = [
+=======
+     *
+     * @link http://nomesportugueses.blogspot.pt/2012/01/lista-dos-cem-nomes-mais-usados-em.html
+     */
+
+    protected static $firstNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Rodrigo', 'João', 'Martim', 'Afonso', 'Tomás', 'Gonçalo', 'Francisco', 'Tiago',
         'Diogo', 'Guilherme', 'Pedro', 'Miguel', 'Rafael', 'Gabriel', 'Santiago', 'Dinis',
         'David', 'Duarte', 'José', 'Simão', 'Daniel', 'Lucas', 'Gustavo', 'André', 'Denis',
@@ -115,9 +159,15 @@ class Person extends \Faker\Provider\Person
         'Joel', 'Fernando', 'Sebastião', 'Tomé', 'César', 'Cláudio', 'Nelson', 'Lisandro', 'Jaime',
         'Gil', 'Mauro', 'Sandro', 'Hélder', 'Matheus', 'William', 'Gaspar', 'Márcio',
         'Martinho', 'Emanuel', 'Marcos', 'Telmo', 'Davi', 'Wilson'
+<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
+=======
+    );
+
+    protected static $firstNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Maria', 'Leonor', 'Matilde', 'Mariana', 'Ana', 'Beatriz', 'Inês', 'Lara', 'Carolina', 'Margarida',
         'Joana', 'Sofia', 'Diana', 'Francisca', 'Laura', 'Sara', 'Madalena', 'Rita', 'Mafalda', 'Catarina',
         'Luana', 'Marta', 'Íris', 'Alice', 'Bianca', 'Constança', 'Gabriela', 'Eva', 'Clara', 'Bruna', 'Daniela',
@@ -128,9 +178,15 @@ class Person extends \Faker\Provider\Person
         'Débora', 'Fabiana', 'Renata', 'Kyara', 'Kelly', 'Irina', 'Mélanie', 'Nádia', 'Cristiana', 'Liliana',
         'Patrícia', 'Vera', 'Doriana', 'Ângela', 'Mia', 'Erica', 'Mónica', 'Isabela', 'Salomé', 'Cátia',
         'Verónica', 'Violeta', 'Lorena', 'Érika', 'Vanessa', 'Iris', 'Anna', 'Viviane', 'Rebeca', 'Neuza',
+<<<<<<< HEAD
     ];
 
     protected static $lastName = [
+=======
+    );
+
+    protected static $lastName = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abreu',  'Almeida',  'Alves', 'Amaral', 'Amorim', 'Andrade', 'Anjos', 'Antunes', 'Araújo', 'Assunção',
         'Azevedo', 'Baptista', 'Barbosa', 'Barros', 'Batista', 'Borges', 'Branco', 'Brito', 'Campos', 'Cardoso',
         'Carneiro', 'Carvalho', 'Castro', 'Coelho', 'Correia', 'Costa', 'Cruz', 'Cunha', 'Domingues', 'Esteves',
@@ -141,5 +197,9 @@ class Person extends \Faker\Provider\Person
         'Nunes', 'Oliveira', 'Pacheco', 'Paiva', 'Pereira', 'Pinheiro', 'Pinho', 'Pinto', 'Pires', 'Ramos',
         'Reis', 'Ribeiro', 'Rocha', 'Rodrigues', 'Santos', 'Silva', 'Simões', 'Soares', 'Sousa',
         'Sá', 'Tavares', 'Teixeira', 'Torres', 'Valente', 'Vaz', 'Vicente', 'Vieira',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

@@ -95,7 +95,11 @@ trait CompilesComponents
      */
     public function compileEndComponentClass()
     {
+<<<<<<< HEAD
         return $this->compileEndComponent()."\n".implode("\n", [
+=======
+        return static::compileEndComponent()."\n".implode("\n", [
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             '<?php endif; ?>',
         ]);
     }

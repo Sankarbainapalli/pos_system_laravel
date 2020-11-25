@@ -117,6 +117,7 @@ trait ResponseTrait
     }
 
     /**
+<<<<<<< HEAD
      * Expire a cookie when sending the response.
      *
      * @param  \Symfony\Component\HttpFoundation\Cookie|mixed  $cookie
@@ -136,6 +137,8 @@ trait ResponseTrait
     }
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Get the callback of the response.
      *
      * @return string|null

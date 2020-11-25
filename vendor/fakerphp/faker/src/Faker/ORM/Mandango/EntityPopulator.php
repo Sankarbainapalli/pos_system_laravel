@@ -2,8 +2,13 @@
 
 namespace Faker\ORM\Mandango;
 
+<<<<<<< HEAD
 use Faker\Provider\Base;
 use Mandango\Mandango;
+=======
+use Mandango\Mandango;
+use Faker\Provider\Base;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 /**
  * Service class for populating a table through a Mandango ActiveRecord class.
@@ -11,9 +16,17 @@ use Mandango\Mandango;
 class EntityPopulator
 {
     protected $class;
+<<<<<<< HEAD
     protected $columnFormatters = [];
 
     /**
+=======
+    protected $columnFormatters = array();
+
+    /**
+     * Class constructor.
+     *
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param string $class A Mandango ActiveRecord classname
      */
     public function __construct($class)
@@ -54,7 +67,11 @@ class EntityPopulator
      */
     public function guessColumnFormatters(\Faker\Generator $generator, Mandango $mandango)
     {
+<<<<<<< HEAD
         $formatters = [];
+=======
+        $formatters = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $nameGuesser = new \Faker\Guesser\Name($generator);
         $columnTypeGuesser = new \Faker\ORM\Mandango\ColumnTypeGuesser($generator);
 
@@ -83,8 +100,11 @@ class EntityPopulator
                 if (isset($insertedEntities[$referenceClass])) {
                     return Base::randomElement($insertedEntities[$referenceClass]);
                 }
+<<<<<<< HEAD
 
                 return null;
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             };
         }
 

@@ -19,7 +19,11 @@
         "php": ">=7.0.0"
     },
     "require-dev": {
+<<<<<<< HEAD
         "phpunit/phpunit": "~6.0 || ~7.0 || ~9.0"
+=======
+        "phpunit/phpunit": "~6.0 || ~7.0"
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     },
     "suggest": {
         "ext-intl": "Use Intl for transliterator_transliterate() support"

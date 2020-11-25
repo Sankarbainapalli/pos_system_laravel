@@ -30,6 +30,14 @@ final class SkippedTestCase extends TestCase
     protected $runTestInSeparateProcess = false;
 
     /**
+<<<<<<< HEAD
+=======
+     * @var bool
+     */
+    protected $useErrorHandler = false;
+
+    /**
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @var string
      */
     private $message;

@@ -4,7 +4,11 @@ namespace Faker\Provider\ja_JP;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $country = [
+=======
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'アフガニスタン', 'アルバニア', 'アルジェリア', 'アメリカ領サモア', 'アンドラ', 'アンゴラ', 'アンギラ', '南極大陸', 'アンティグアバーブーダ', 'アルゼンチン', 'アルメニア', 'アルバ', 'オーストラリア', 'オーストリア', 'アゼルバイジャン',
         'バハマ', 'バーレーン', 'バングラデシュ', 'バルバドス', 'ベラルーシ', 'ベルギー', 'ベリーズ', 'ベナン', 'バミューダ島', 'ブータン', 'ボリビア', 'ボスニア・ヘルツェゴビナ', 'ボツワナ', 'ブーベ島', 'ブラジル', 'イギリス領インド洋地域', 'イギリス領ヴァージン諸島', 'ブルネイ', 'ブルガリア', 'ブルキナファソ', 'ブルンジ',
         'カンボジア', 'カメルーン', 'カナダ', 'カーボベルデ', 'ケイマン諸島', '中央アフリカ共和国', 'チャド', 'チリ', '中国', 'クリスマス島', 'ココス諸島', 'コロンビア', 'コモロ', 'コンゴ共和国', 'クック諸島', 'コスタリカ', 'コートジボワール', 'クロアチア', 'キューバ', 'キプロス共和国', 'チェコ共和国',
@@ -30,8 +34,13 @@ class Address extends \Faker\Provider\Address
         'ウォリス・フツナ', '西サハラ',
         'イエメン',
         'ザンビア', 'ジンバブエ'
+<<<<<<< HEAD
     ];
     protected static $prefecture = [
+=======
+    );
+    protected static $prefecture = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '北海道',
         '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県',
         '茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県',
@@ -41,6 +50,7 @@ class Address extends \Faker\Provider\Address
         '徳島県', '香川県', '愛媛県', '高知県',
         '福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県',
         '沖縄県'
+<<<<<<< HEAD
     ];
     protected static $ward = ['中央', '北', '東', '南', '西'];
 
@@ -66,6 +76,33 @@ class Address extends \Faker\Provider\Address
         'ハイツ{{lastName}}{{buildingNumber}}号',
         'コーポ{{lastName}}{{buildingNumber}}号'
     ];
+=======
+    );
+    protected static $ward = array('中央', '北', '東', '南', '西');
+
+    protected static $citySuffix = array('市');
+    protected static $wardSuffix = array('区');
+    protected static $streetSuffix = array('町');
+
+    protected static $postcodeFormats = array('{{postcode1}}{{postcode2}}');
+    protected static $cityFormats = array(
+        '{{lastName}}{{citySuffix}}',
+    );
+    protected static $streetNameFormats = array(
+        '{{lastName}}{{streetSuffix}}'
+    );
+    protected static $streetAddressFormats = array(
+        '{{streetName}}{{lastName}}{{areaNumber}}-{{areaNumber}}-{{areaNumber}}'
+    );
+    protected static $addressFormats = array(
+        '{{postcode}}  {{prefecture}}{{city}}{{ward}}{{streetAddress}}',
+        '{{postcode}}  {{prefecture}}{{city}}{{ward}}{{streetAddress}} {{secondaryAddress}}'
+    );
+    protected static $secondaryAddressFormats = array(
+        'ハイツ{{lastName}}{{buildingNumber}}号',
+        'コーポ{{lastName}}{{buildingNumber}}号'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @example 111

@@ -124,6 +124,7 @@ trait HasAttributes
     protected static $mutatorCache = [];
 
     /**
+<<<<<<< HEAD
      * The encrypter instance that is used to encrypt attributes.
      *
      * @var \Illuminate\Contracts\Encryption\Encrypter
@@ -131,6 +132,8 @@ trait HasAttributes
     public static $encrypter;
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Convert the model's attributes to an array.
      *
      * @return array
@@ -890,14 +893,25 @@ trait HasAttributes
     }
 
     /**
+<<<<<<< HEAD
      * Decrypt the given encrypted string.
      *
      * @param  string  $value
+=======
+     * Decode the given encrypted string.
+     *
+     * @param  string  $value
+     * @param  bool  $asObject
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return mixed
      */
     public function fromEncryptedString($value)
     {
+<<<<<<< HEAD
         return (static::$encrypter ?? Crypt::getFacadeRoot())->decrypt($value, false);
+=======
+        return Crypt::decryptString($value);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -909,6 +923,7 @@ trait HasAttributes
      */
     protected function castAttributeAsEncryptedString($key, $value)
     {
+<<<<<<< HEAD
         return (static::$encrypter ?? Crypt::getFacadeRoot())->encrypt($value, false);
     }
 
@@ -921,6 +936,9 @@ trait HasAttributes
     public static function encryptUsing($encrypter)
     {
         static::$encrypter = $encrypter;
+=======
+        return Crypt::encryptString($value);
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**

@@ -10,7 +10,11 @@ class Company extends \Faker\Provider\Company
     /**
      * @var array Danish company name formats.
      */
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{lastName}} {{companySuffix}}',
         '{{lastName}} {{companySuffix}}',
         '{{lastName}} {{companySuffix}}',
@@ -27,12 +31,20 @@ class Company extends \Faker\Provider\Company
         '{{middleName}} og {{middleName}} {{companySuffix}}',
         '{{middleName}} & {{lastName}}',
         '{{middleName}} og {{lastName}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Company suffixes.
      */
+<<<<<<< HEAD
     protected static $companySuffix = ['ApS', 'A/S', 'I/S', 'K/S'];
+=======
+    protected static $companySuffix = array('ApS', 'A/S', 'I/S', 'K/S');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://cvr.dk/Site/Forms/CMS/DisplayPage.aspx?pageid=60

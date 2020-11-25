@@ -4,13 +4,18 @@ namespace Faker\Provider\en_IN;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $maleNameFormats = [
+=======
+    protected static $maleNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{lastName}}',
         '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
         '{{firstNameMale}} {{middleNameMale}} {{lastName}}',
         '{{firstNameMale}} {{firstNameMale}} {{lastName}}',
+<<<<<<< HEAD
     ];
 
     protected static $femaleNameFormats = [
@@ -18,11 +23,24 @@ class Person extends \Faker\Provider\Person
         '{{firstNameFemale}} {{lastName}}',
         '{{firstNameFemale}} {{firstNameMale}} {{lastName}}',
     ];
+=======
+    );
+
+    protected static $femaleNameFormats = array(
+        '{{firstNameFemale}} {{lastName}}',
+        '{{firstNameFemale}} {{lastName}}',
+        '{{firstNameFemale}} {{firstNameMale}} {{lastName}}',
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.indiaonlinepages.com/babynames/
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aayushman', 'Amrit', 'Anand', 'Abhinav', 'Anil', 'Animesh', 'Arpit', 'Akhil', 'Ajinkya', 'Aniruddh', 'Arun', 'Atul', 'Ajay', 'Abhishek', 'Aditya', 'Ajeet', 'Akshay', 'Arjun', 'Arvind', 'Aadil', 'Aadish', 'Amir', 'Aarif', 'Aatif', 'Abbas', 'Abdul', 'Aslam', 'Azhar', 'Anees', 'Alex', 'Albert',
         'Bahadur', 'Baldev', 'Baalkrishan', 'Balaji', 'Bharat', 'Bhola', 'Bijoy', 'Binod', 'Biren', 'Bishnu', 'Baber', 'Binoya', 'Brock',
         'Chitranjan', 'Chirag', 'Chinmay', 'Charandeep', 'Chand', 'Charlie',
@@ -48,9 +66,15 @@ class Person extends \Faker\Provider\Person
         'Wahid', 'Wafiq', 'Wafa',
         'Yadu', 'Yadunandan', 'Yash', 'Yogesh',
         'Zaad', 'Zahir', 'Zeeshan',
+<<<<<<< HEAD
     ];
 
     protected static $firstNameFemale = [
+=======
+    );
+
+    protected static $firstNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aabha', 'Aarti', 'Aarushi', 'Aastha', 'Aayushi', 'Aditi', 'Afreen', 'Aisha', 'Aishwarya', 'Akanksha', 'Akhila', 'Alaknanda', 'Alka', 'Alpa', 'Anshu', 'Ambika', 'Ananya', 'Amrita', 'Amolika', 'Anjana', 'Ankita', 'Anshula', 'Anusha', 'Aruna', 'Astha', 'Avantika',
         'Babita', 'Basanti', 'Bagwati', 'Bhaagyasree', 'Bhairavi', 'Bhanupriya', 'Binita', 'Bimla',
         'Chameli', 'Charu', 'Chhavi', 'Chitra', 'Chhaya', 'Chandni',
@@ -73,12 +97,20 @@ class Person extends \Faker\Provider\Person
         'Vineeta', 'Vimala', 'Veena', 'Vaishali',
         'Yamini', 'Yasmin',
         'Zeenat', 'Zara',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://genealogy.familyeducation.com/browse/origin/indian
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Acharya','Agarwal','Agate','Aggarwal','Agrawal','Ahluwalia','Ahuja','Amble','Amin','Anand','Andra','Anne','Anthony','Apte','Arora','Arya','Atwal','Aurora',
         'Babu','Badal','Badami','Bahl','Bahri','Bail','Bains','Bajaj','Bajwa','Bakshi','Bal','Bala','Balakrishnan','Balan','Balasubramanian','Balay','Bali','Bandi','Banerjee','Banik','Bansal','Barad','Baral','Baria','Barman','Basak','Bassi','Basu','Bath','Batra','Batta','Bava','Bawa','Bedi','Beharry','Behl','Ben','Bera','Bhagat','Bhakta','Bhalla','Bhandari','Bhardwaj','Bhargava','Bhasin','Bhat','Bhatia','Bhatnagar','Bhatt','Bhattacharyya','Bhatti','Bhavsar','Bir','Biswas','Biyani','Binnani','Boase','Bobal','Bora','Borah','Borde','Borra','Bose','Brahmbhatt','Brar','Buch','Bumb','Butala',
         'Chacko','Chad','Chada','Chadha','Chahal','Chakrabarti','Chakraborty','Chana','Chand','Chanda','Chander','Chandra','Chandran','Char','Chatterjee','Chaudhari','Chaudhary','Chaudhry','Chaudhuri','Chaudry','Chauhan','Chawla','Cheema','Cherian','Chhabra','Chia','Chohan','Chokshi','Chopra','Choudhary','Choudhry','Choudhury','Chowdhury','Comar','Contractor',
@@ -102,14 +134,24 @@ class Person extends \Faker\Provider\Person
         'Wable','Wadhwa','Wagle','Wali','Walia','Walla','Warrior','Wason',
         'Yadav','Yogi','Yohannan',
         'Zacharia','Zachariah',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.indianchild.com/indian_middle_names.htm
      */
+<<<<<<< HEAD
     protected static $middleNameMale = [
         'Dev','Chandra','Kumar','Lal','Prasad','Raj','Singh','Rao','Ram','Pratap','Bhai',
     ];
+=======
+    protected static $middleNameMale = array(
+        'Dev','Chandra','Kumar','Lal','Prasad','Raj','Singh','Rao','Ram','Pratap','Bhai',
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Return male middle name

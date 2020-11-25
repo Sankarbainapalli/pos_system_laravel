@@ -4,9 +4,15 @@ namespace Faker\Provider\vi_VN;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $buildingNumber = ['####', '###', '##', '#'];
     protected static $postcode = ['#####', '######', '#####-####'];
     protected static $province = [
+=======
+    protected static $buildingNumber = array('####', '###', '##', '#');
+    protected static $postcode = array('#####', '######', '#####-####');
+    protected static $province = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'An Giang', 'Bà Rịa - Vũng Tàu',
         'Bắc Giang', 'Bắc Kạn', 'Bạc Liêu',
         'Bắc Ninh', 'Bến Tre', 'Bình Định',
@@ -27,21 +33,37 @@ class Address extends \Faker\Provider\Address
         'Thừa Thiên Huế', 'Tiền Giang', 'Trà Vinh',
         'Tuyên Quang', 'Vĩnh Long', 'Vĩnh Phúc',
         'Yên Bái', 'Phú Yên',
+<<<<<<< HEAD
     ];
     protected static $city = [
         'Cần Thơ', 'Đà Nẵng', 'Hải Phòng', 'Hà Nội', 'Hồ Chí Minh',
     ];
     protected static $streetNameFormats = [
+=======
+    );
+    protected static $city = array(
+        'Cần Thơ', 'Đà Nẵng', 'Hải Phòng', 'Hà Nội', 'Hồ Chí Minh',
+    );
+    protected static $streetNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Phố {{lastName}} {{middleName}} {{firstName}}',
         'Phố {{lastName}} {{middleName}} {{firstName}}',
         'Phố {{lastName}} {{middleName}} {{firstName}}',
         'Phố {{firstName}}',
         'Phố {{lastName}}',
+<<<<<<< HEAD
     ];
     protected static $streetAddressFormats = [
         '{{buildingNumber}} {{streetName}}',
     ];
     protected static $hamletNameFormats = [
+=======
+    );
+    protected static $streetAddressFormats = array(
+        '{{buildingNumber}} {{streetName}}',
+    );
+    protected static $hamletNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{hamletPrefix}} {{middleName}} {{firstName}}',
         '{{hamletPrefix}} {{lastName}} {{firstName}}',
         '{{hamletPrefix}} {{firstName}} {{lastName}}',
@@ -51,11 +73,19 @@ class Address extends \Faker\Provider\Address
         '{{hamletPrefix}} {{lastName}}',
         '{{hamletPrefix}} ##',
         '{{hamletPrefix}} #',
+<<<<<<< HEAD
     ];
     protected static $hamletPrefix = [
         'Thôn', 'Ấp',
     ];
     protected static $wardNameFormats = [
+=======
+    );
+    protected static $hamletPrefix = array(
+        'Thôn', 'Ấp',
+    );
+    protected static $wardNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{hamletPrefix}} {{middleName}} {{firstName}}',
         '{{hamletPrefix}} {{lastName}} {{firstName}}',
         '{{wardPrefix}} {{firstName}} {{lastName}}',
@@ -65,11 +95,19 @@ class Address extends \Faker\Provider\Address
         '{{wardPrefix}} {{lastName}}',
         '{{wardPrefix}} ##',
         '{{wardPrefix}} #',
+<<<<<<< HEAD
     ];
     protected static $wardPrefix = [
         'Phường', 'Xã',
     ];
     protected static $districtNameFormats = [
+=======
+    );
+    protected static $wardPrefix = array(
+        'Phường', 'Xã',
+    );
+    protected static $districtNameFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{districtPrefix}} {{middleName}} {{firstName}}',
         '{{districtPrefix}} {{lastName}} {{firstName}}',
         '{{districtPrefix}} {{firstName}} {{lastName}}',
@@ -79,6 +117,7 @@ class Address extends \Faker\Provider\Address
         '{{districtPrefix}} {{lastName}}',
         '{{districtPrefix}} ##',
         '{{districtPrefix}} #',
+<<<<<<< HEAD
     ];
     protected static $districtPrefix = [
         'Quận', 'Huyện',
@@ -89,6 +128,18 @@ class Address extends \Faker\Provider\Address
         "{{buildingNumber}}, {{hamletName}}, {{wardName}}, {{districtName}}\n{{province}}",
     ];
     protected static $country = [
+=======
+    );
+    protected static $districtPrefix = array(
+        'Quận', 'Huyện',
+    );
+    protected static $addressFormats = array(
+        "{{streetAddress}}, {{wardName}}, {{districtName}}\n{{city}}",
+        "{{streetAddress}}, {{wardName}}, {{districtName}}\n{{province}}",
+        "{{buildingNumber}}, {{hamletName}}, {{wardName}}, {{districtName}}\n{{province}}",
+    );
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra', 'Angola', 'Anguilla', 'Antarctica (the territory South of 60 deg S)', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan',
         'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Bouvet Island (Bouvetoya)', 'Brazil', 'British Indian Ocean Territory (Chagos Archipelago)', 'British Virgin Islands', 'Brunei Darussalam', 'Bulgaria', 'Burkina Faso', 'Burundi',
         'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Cayman Islands', 'Central African Republic', 'Chad', 'Chile', 'China', 'Christmas Island', 'Cocos (Keeling) Islands', 'Colombia', 'Comoros', 'Congo', 'Cook Islands', 'Costa Rica', 'Cote d\'Ivoire', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic',
@@ -114,7 +165,11 @@ class Address extends \Faker\Provider\Address
         'Wallis and Futuna', 'Western Sahara',
         'Yemen',
         'Zambia', 'Zimbabwe'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function hamletName()
     {

@@ -6,7 +6,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
 {
     // Phone numbers can't start by 00 in France
     // 01 is the most common prefix
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '+33 (0)1 ## ## ## ##',
         '+33 (0)1 ## ## ## ##',
         '+33 (0)2 ## ## ## ##',
@@ -47,11 +51,19 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '07 {{phoneNumber07WithSeparator}}',
         '08 {{phoneNumber08WithSeparator}}',
         '09 ## ## ## ##',
+<<<<<<< HEAD
     ];
 
     // Mobile phone numbers start by 06 and 07
     // 06 is the most common prefix
     protected static $mobileFormats  = [
+=======
+    );
+
+    // Mobile phone numbers start by 06 and 07
+    // 06 is the most common prefix
+    protected static $mobileFormats  = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '+33 (0)6 ## ## ## ##',
         '+33 6 ## ## ## ##',
         '+33 (0)7 {{phoneNumber07WithSeparator}}',
@@ -60,14 +72,24 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '07{{phoneNumber07}}',
         '06 ## ## ## ##',
         '07 {{phoneNumber07WithSeparator}}',
+<<<<<<< HEAD
     ];
 
     protected static $serviceFormats = [
+=======
+    );
+
+    protected static $serviceFormats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '+33 (0)8 {{phoneNumber08WithSeparator}}',
         '+33 8 {{phoneNumber08WithSeparator}}',
         '08 {{phoneNumber08WithSeparator}}',
         '08{{phoneNumber08}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function phoneNumber07()
     {

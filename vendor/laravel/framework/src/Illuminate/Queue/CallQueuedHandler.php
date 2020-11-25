@@ -5,10 +5,15 @@ namespace Illuminate\Queue;
 use Exception;
 use Illuminate\Bus\Batchable;
 use Illuminate\Contracts\Bus\Dispatcher;
+<<<<<<< HEAD
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Queue\Job;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
+=======
+use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Queue\Job;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pipeline\Pipeline;
 use ReflectionClass;
@@ -61,10 +66,13 @@ class CallQueuedHandler
 
         $this->dispatchThroughMiddleware($job, $command);
 
+<<<<<<< HEAD
         if (! $job->isReleased()) {
             $this->ensureUniqueJobLockIsReleased($command);
         }
 
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         if (! $job->hasFailed() && ! $job->isReleased()) {
             $this->ensureNextJobInChainIsDispatched($command);
             $this->ensureSuccessfulBatchJobIsRecorded($command);
@@ -160,6 +168,7 @@ class CallQueuedHandler
     }
 
     /**
+<<<<<<< HEAD
      * Ensure the lock for a unique job is released.
      *
      * @param  mixed  $command
@@ -185,6 +194,8 @@ class CallQueuedHandler
     }
 
     /**
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * Handle a model not found exception.
      *
      * @param  \Illuminate\Contracts\Queue\Job  $job
@@ -223,7 +234,10 @@ class CallQueuedHandler
     {
         $command = unserialize($data['command']);
 
+<<<<<<< HEAD
         $this->ensureUniqueJobLockIsReleased($command);
+=======
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $this->ensureFailedBatchJobIsRecorded($uuid, $command, $e);
         $this->ensureChainCatchCallbacksAreInvoked($uuid, $command, $e);
 

@@ -4,6 +4,7 @@ namespace Faker\Provider\nl_NL;
 
 class Color extends \Faker\Provider\Color
 {
+<<<<<<< HEAD
     protected static $safeColorNames = [
         'zwart', 'kastanjebruin', 'donkergroen', 'marine', 'olijfgroen',
         'purper', 'groenblauw', 'limoen', 'blauw', 'zilver',
@@ -11,6 +12,15 @@ class Color extends \Faker\Provider\Color
     ];
 
     protected static $allColorNames = [
+=======
+    protected static $safeColorNames = array(
+        'zwart', 'kastanjebruin', 'donkergroen', 'marine', 'olijfgroen',
+        'purper', 'groenblauw', 'limoen', 'blauw', 'zilver',
+        'grijs', 'geel', 'fuchsia', 'cyaan', 'wit',
+    );
+
+    protected static $allColorNames = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Cyaan', 'Aquamarijn', 'Aquamarijn', 'Ultramarijn', 'Beige',
         'Zwart', 'Blauw', 'Blauwviolet', 'Bruin', 'Groen', 'Chocoladebruin',
         'Koraal', 'Korenbloemblauw', 'Vermiljoen', 'Cyaan', 'Donkerblauw',
@@ -18,7 +28,11 @@ class Color extends \Faker\Provider\Color
         'Donkerkaki', 'Donkermagenta', 'Donkerolijfgroen', 'Donkeroranje',
         'Donkerrood', 'Donkerzalm', 'Donkerzeegroen', 'Donkerleigrijs',
         'Donkerleigrijs', 'Donkerturkoois', 'Donkerviolet', 'Dieproze',
+<<<<<<< HEAD
         'Diep hemelsblauw', 'Vuurvaste baksteen', 'Fluweelwit', 'Bosgroen',
+=======
+        'Diep hemelsblauw', 'Vuurvaste baksteen', 'Fluweelwit', 'Bosgroen',
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Fuchsia', 'Goud', 'Grijs', 'Donkergroen', 'Groengeel', 'Grijs',
         'Acaciaroze', 'Indisch rood', 'Indigo', 'Ivoor', 'Kaki', 'Lavendel',
         'Grasgroen', 'Lichtblauw', 'Lichtkoraal', 'Lichtcyaan', 'Lichtgrijs',
@@ -32,5 +46,9 @@ class Color extends \Faker\Provider\Color
         'Zilver', 'Hemelsblauw', 'Leigrijs', 'Leigrijs', 'Sneeuwwit', 'Lentegroen',
         'Donkerstaalblauw', 'Groenblauw', 'Distel', 'Tomaat', 'Transparant', 'Turkoois',
         'Violet', 'Wit', 'Rookwit', 'Geel', 'Groengeel',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 }

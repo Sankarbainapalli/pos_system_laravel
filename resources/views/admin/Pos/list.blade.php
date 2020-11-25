@@ -22,11 +22,18 @@
 
 
     <!-- Main content -->
+<<<<<<< HEAD
     <section class="content" id="div1">
       <div class="container-fluid">
 <x-alert />
         <div class="row">
           
+=======
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
           <div class="col-md-5">
             <div class="card">
               <div class="card-header mt-3">
@@ -35,20 +42,32 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: 300px;">
+<<<<<<< HEAD
               <form action="{{route('order.store')}}" method="POST">
                 @csrf
                 <table class="table table-head-fixed text-nowrap" >
+=======
+                <table class="table table-head-fixed text-nowrap">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                   <thead>
                     <tr>
                       <th>#</th>
                       <th>Products</th>
+<<<<<<< HEAD
                       <th style="width: 30%;">Kgs</th>
+=======
+                      <th style="width: 30%;">Quantity</th>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                       <th>Per Item</th>
                       <th><i class="fas fa-window-close"></i></th>
                     </tr>
                   </thead>
                   <tbody class="tableBox">
+<<<<<<< HEAD
                    <!--  <tr class="block">
+=======
+                    <tr class="block">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                       <td>1.</td>
                       <td>Chicken</td>
                       <td>
@@ -65,12 +84,36 @@
                       </td>
                       <td><h4><span class="badge bg-success">₹ 50.00</span></h4></td>
                       <td class="remove-btn"><i class="fas fa-times text-danger"></i></td>
+<<<<<<< HEAD
                     </tr> -->
                   
                   </tbody>
                 </table>
               </div>
           
+=======
+                    </tr>
+                    <tr class="block">
+                      <td>2.</td>
+                      <td>Chicken</td>
+                      <td>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-secondary">
+                              <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="text" class="form-control rounded-0" placeholder="1" >
+                            <button type="button" class="btn btn-sm btn-secondary">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                      </td>
+                      <td><h4><span class="badge bg-success">₹ 50.00</span></h4></td>
+                      <td class="remove-btn"><i class="fas fa-times text-danger"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -83,13 +126,20 @@
                     <table class="table">
                       <tr>
                         <th style="width:50%; border-top: 0px;">Total Items</th>
+<<<<<<< HEAD
                         <td style="border-top: 0px;"><input type="text" id="total_item" size="6" name="total_items"></td>
                         <th style="width:50%; border-top: 0px;">Total</th>
                         <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal"></td>
+=======
+                        <td style="border-top: 0px;">5</td>
+                        <th style="width:50%; border-top: 0px;">Total</th>
+                        <td style="border-top: 0px;">₹70.00</td>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                       </tr>
                       <tr>
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
+<<<<<<< HEAD
                            <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
                         </td>
                         <th style="border-top: 0px;">Tax (18.00%)</th>
@@ -98,6 +148,16 @@
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
                         <td style="border-top: 1px solid #dee2e6;"><b><input type="text" id="total_payble" readonly="" name="grandtotal"></b></td>
+=======
+                           <input size="50" type="text" name="disct" id="disct" placeholder="₹10.00" class="form-control float-right">
+                        </td>
+                        <th style="border-top: 0px;">Tax (18.00%)</th>
+                        <td style="border-top: 0px;">₹10.00</td>
+                      </tr>
+                      <tr>
+                        <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
+                        <td style="border-top: 1px solid #dee2e6;"><b>$250.30</b></td>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                       </tr>
                     </table>
                   </div>
@@ -115,6 +175,7 @@
                 <!-- <h3 class="card-title mb-3">Search Product Name Or Code</h3> -->
                 <input class="form-control" type="text" placeholder="Search Product Name Or Code">
                 <div class="row mt-3">
+<<<<<<< HEAD
                   <!-- <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-info"> All</button>
                   </div> -->
@@ -126,16 +187,50 @@
                   @endforeach
 
                  <!--  <div class="col-md-4">
+=======
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-block bg-gradient-info"> All</button>
+                  </div>
+                  <div class="col-md-4">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     <button type="button" class="btn btn-block bg-gradient-info"> Veg</button>
                   </div>
                   <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-info"> Non-Veg</button>
+<<<<<<< HEAD
                   </div> -->
                 </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body overflow-auto" style="height: 245px" >
                 <span id="add_details"></span>
+=======
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body overflow-auto" style="height: 245px">
+                <a class="btn btn-app add_details">
+                  <span class="badge bg-warning">300kgs</span>
+                  <i class="fas fa-image"></i> Chicken
+                </a>
+                <a class="btn btn-app add_details">
+                  <span class="badge bg-warning">300kgs</span>
+                  <i class="fas fa-image"></i> Mutton
+                </a>
+                <a class="btn btn-app add_details">
+                  <span class="badge bg-warning">891kgs</span>
+                  <i class="fas fa-image"></i> Fish
+                </a>
+                <a class="btn btn-app add_details">
+                  <span class="badge bg-warning">67kgs</span>
+                  <i class="fas fa-image"></i> Eggs
+                </a>
+                <a class="btn btn-app add_details">
+                  <span class="badge bg-warning">12kgs</span>
+                  <i class="fas fa-image"></i> Prawns
+                </a>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
               </div>
               <!-- /.card-body -->
             </div>
@@ -144,9 +239,15 @@
 
                 <div class="card-body row">
                   <div class="col-md-4">
+<<<<<<< HEAD
                     <button type="button" class="btn btn-block bg-gradient-danger" onclick="window.location.reload()"> Cancel</button>
                     <!-- <button type="button" class="btn btn-block bg-gradient-warning"> Hold</button> -->
                     <button type="button" class="btn btn-block bg-gradient-primary" data-toggle="modal" data-target="#modal-default" > Payment</button>
+=======
+                    <button type="button" class="btn btn-block bg-gradient-danger"> Cancel</button>
+                    <button type="button" class="btn btn-block bg-gradient-warning"> Hold</button>
+                    <button type="button" class="btn btn-block bg-gradient-primary" data-toggle="modal" data-target="#modal-default"> Payment</button>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                   </div>
                 </div>
               
@@ -168,6 +269,7 @@
               </button>
             </div>
             <div class="modal-body">
+<<<<<<< HEAD
             <!-- <form class="form-horizontal" action="{{route('order.store')}}" method="POST">
               @csrf -->
                 <div class="card-body">
@@ -202,20 +304,36 @@
                   </div>
 
                    <div class="form-group row" >
+=======
+            <form class="form-horizontal">
+                <div class="card-body">
+                  <div class="form-group row">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     <div class="col-sm-5">
                       <label  class="col-form-label">Customer Mobile</label>
                     </div>
                     <div class="col-sm-7">
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile">
                     </div>
                   </div>
 
                   <div class="form-group row" >
+=======
+                      <input type="text" class="form-control" id="mobile" placeholder="Customer Mobile">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     <div class="col-sm-5">
                       <label  class="col-form-label">Total Payable Amount</label>
                     </div>
                     <div class="col-sm-7">
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="total_payment"  placeholder="" >
+=======
+                      <input type="text" class="form-control" id="payamt" readonly placeholder="₹100.00">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     </div>
                   </div>
                   <div class="form-group row">
@@ -223,7 +341,11 @@
                       <label  class="col-form-label">Total Purchased Items</label>
                     </div>
                     <div class="col-sm-7">
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="total_items"  placeholder="5" name="">
+=======
+                      <input type="text" class="form-control" id="puramt" readonly placeholder="5">
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     </div>
                   </div>
                   <div class="form-group row">
@@ -231,6 +353,7 @@
                       <label  class="col-form-label">Paid By</label>
                     </div>
                     <div class="col-sm-7">
+<<<<<<< HEAD
                       <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)" name="payment_method">
                         <!-- select2bs4 -->
                                 <option value="Cash">Cash</option>
@@ -247,12 +370,25 @@
                   <div class="form-group row cardinput">
 
                   </div>
+=======
+                      <select class="form-control select2bs4" style="width: 100%;" id="paidby">
+                          <option selected="selected">Cash</option>
+                          <option>Online Payment</option>
+                          <option>Net</option>
+                      </select>
+                    </div>
+                  </div>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                   <div class="form-group row">
                     <div class="col-sm-5">
                       <label  class="col-form-label">Paid Amount</label>
                     </div>
                     <div class="col-sm-7">
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="paid_amount" placeholder="" onkeyup="returnAmount(this.value)" name="paid_amt" >
+=======
+                      <input type="text" class="form-control" id="paidamt" placeholder="₹200.00" >
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     </div>
                   </div>
                   <div class="form-group row">
@@ -260,6 +396,7 @@
                       <label  class="col-form-label">Return Change</label>
                     </div>
                     <div class="col-sm-7">
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="return_amount" readonly placeholder="₹0.00" name="return_change" >
                     </div>
                   </div>
@@ -643,5 +780,24 @@ function decrementValue(id)
   
 
 </script>
+=======
+                      <input type="text" class="form-control" id="return" readonly placeholder="₹0.00" >
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+              </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 @endsection

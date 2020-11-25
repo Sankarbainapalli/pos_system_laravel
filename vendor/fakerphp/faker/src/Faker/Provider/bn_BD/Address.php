@@ -4,6 +4,7 @@ namespace Faker\Provider\bn_BD;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $cityPrefix = ['দক্ষিন', 'পূর্ব', 'পশ্চিম', 'উত্তর', 'নতুন', 'লেইক', 'পোর্ট'];
     protected static $citySuffix = ['টাউন', 'তলা', 'হাট', 'খানা'];
 
@@ -19,6 +20,23 @@ class Address extends \Faker\Provider\Address
         'খুলনা', 'বরিশাল', 'চিটাগং', 'ঢাকা', 'রাজশাহী', 'সিলেট', 'কুমিল্লা'
     ];
     protected static $country = [
+=======
+    protected static $cityPrefix = array('দক্ষিন', 'পূর্ব', 'পশ্চিম', 'উত্তর', 'নতুন', 'লেইক', 'পোর্ট');
+    protected static $citySuffix = array('টাউন', 'তলা', 'হাট', 'খানা');
+
+    protected static $streetNames = array(
+        'বরকত', 'হাজী', 'করিমউদ্দিন'
+    );
+
+    protected static $streetSuffix = array(
+        'তলী', 'গলি', 'চিপা', 'ব্রীজ', 'সড়ক', 'বাইপাস', 'ক্যাম্প',
+    );
+    protected static $postcode = array('#####', '#####-####');
+    protected static $state = array(
+        'খুলনা', 'বরিশাল', 'চিটাগং', 'ঢাকা', 'রাজশাহী', 'সিলেট', 'কুমিল্লা'
+    );
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'অস্ট্রিয়া',
         'অস্ট্রেলিয়া',
         'অ্যাঙ্গোলা',
@@ -272,6 +290,7 @@ class Address extends \Faker\Provider\Address
         'হণ্ডুরাস',
         'হাইতি',
         'হাঙ্গেরি',
+<<<<<<< HEAD
     ];
     protected static $cityFormats = [
         '{{cityPrefix}}{{citySuffix}}',
@@ -287,6 +306,23 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{streetAddress}}, {{city}} {{state}}",
     ];
+=======
+    );
+    protected static $cityFormats = array(
+        '{{cityPrefix}}{{citySuffix}}',
+
+    );
+    protected static $streetNameFormats = array(
+        '{{banglaStreetName}} {{streetSuffix}}',
+
+    );
+    protected static $streetAddressFormats = array(
+        '{{streetNumber}} {{streetName}}',
+    );
+    protected static $addressFormats = array(
+        "{{streetAddress}}, {{city}} {{state}}",
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function cityPrefix()
     {

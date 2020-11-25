@@ -183,6 +183,26 @@
           </a>
         </li>
 
+<<<<<<< HEAD
+=======
+          <li class="nav-item">
+            <a href="{{route('pos.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                POS
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('liveamount.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-rupee-sign"></i>
+              <p>
+                Live Amount
+              </p>
+            </a>
+          </li>
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
           <li class="nav-item">
             <a href="{{route('accountList')}}" class="nav-link">

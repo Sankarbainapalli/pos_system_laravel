@@ -4,16 +4,28 @@ namespace Faker\Provider\it_CH;
 
 class Address extends \Faker\Provider\it_IT\Address
 {
+<<<<<<< HEAD
     protected static $buildingNumber = ['###', '##', '#', '#a', '#b', '#c'];
 
     protected static $streetPrefix = ['Piazza', 'Strada', 'Via', 'Borgo', 'Contrada', 'Rotonda', 'Incrocio'];
 
     protected static $postcode = ['####'];
+=======
+    protected static $buildingNumber = array('###', '##', '#', '#a', '#b', '#c');
+
+    protected static $streetPrefix = array('Piazza', 'Strada', 'Via', 'Borgo', 'Contrada', 'Rotonda', 'Incrocio');
+
+    protected static $postcode = array('####');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://it.wikipedia.org/wiki/Citt%C3%A0_svizzere
      */
+<<<<<<< HEAD
     protected static $cityNames = [
+=======
+    protected static $cityNames = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Aarau', 'Adliswil', 'Aesch', 'Affoltern am Albis', 'Allschwil', 'Altstätten', 'Amriswil', 'Arbon', 'Arth',
         'Baar', 'Baden', 'Basilea', 'Bassersdorf', 'Bellinzona', 'Belp', 'Berna', 'Bienne', 'Binningen', 'Birsfelden', 'Briga-Glis', 'Brugg', 'Buchs', 'Bulle', 'Burgdorf', 'Bülach',
         'Carouge', 'Cham', 'Chêne-Bougeries', 'Coira',
@@ -37,11 +49,16 @@ class Address extends \Faker\Provider\it_IT\Address
         'Wallisellen', 'Weinfelden', 'Wettingen', 'Wetzikon', 'Wil', 'Winterthur', 'Wohlen', 'Worb', 'Wädenswil',
         'Yverdon-les-Bains',
         'Zofingen', 'Zollikon', 'Zugo', 'Zurigo'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://it.wikipedia.org/wiki/Cantoni_della_Svizzera
      */
+<<<<<<< HEAD
     protected static $canton = [
         ['AG' => 'Argovia'],
         ['AI' => 'Appenzello Interno'],
@@ -86,6 +103,52 @@ class Address extends \Faker\Provider\it_IT\Address
     protected static $addressFormats = [
         "{{streetAddress}}\n{{postcode}} {{city}}",
     ];
+=======
+    protected static $canton = array(
+        array('AG' => 'Argovia'),
+        array('AI' => 'Appenzello Interno'),
+        array('AR' => 'Appenzello Esterno'),
+        array('BE' => 'Berna'),
+        array('BL' => 'Basilea Campagna'),
+        array('BS' => 'Basilea Città'),
+        array('FR' => 'Friburgo'),
+        array('GE' => 'Ginevra'),
+        array('GL' => 'Glarona'),
+        array('GR' => 'Grigioni'),
+        array('JU' => 'Giura'),
+        array('LU' => 'Lucerna'),
+        array('NE' => 'Neuchâtel'),
+        array('NW' => 'Nidvaldo'),
+        array('OW' => 'Obvaldo'),
+        array('SG' => 'San Gallo'),
+        array('SH' => 'Sciaffusa'),
+        array('SO' => 'Soletta'),
+        array('SZ' => 'Svitto'),
+        array('TG' => 'Turgovia'),
+        array('TI' => 'Ticino'),
+        array('UR' => 'Uri'),
+        array('VD' => 'Vaud'),
+        array('VS' => 'Vallese'),
+        array('ZG' => 'Zugo'),
+        array('ZH' => 'Zurigo')
+    );
+
+    protected static $cityFormats = array(
+        '{{cityName}}',
+    );
+
+    protected static $streetNameFormats = array(
+        '{{streetSuffix}} {{firstName}}',
+        '{{streetSuffix}} {{lastName}}'
+    );
+
+    protected static $streetAddressFormats = array(
+        '{{streetName}} {{buildingNumber}}',
+    );
+    protected static $addressFormats = array(
+        "{{streetAddress}}\n{{postcode}} {{city}}",
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Returns a random street prefix

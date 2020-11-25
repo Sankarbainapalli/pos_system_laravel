@@ -4,31 +4,51 @@ namespace Faker\Provider\ms_MY;
 
 class Company extends \Faker\Provider\Company
 {
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{companyName}} {{companySuffix}}',
         '{{industry}} {{lastNameMalay}} {{companySuffix}}',
         '{{industry}} {{firstNameMaleChinese}} {{companySuffix}}',
         '{{industry}} {{firstNameMaleIndian}} {{companySuffix}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * There are more Private Limited Companies(Sdn Bhd) than Public Listed Companies(Berhad)
      *
      * @link http://www.risscorporateservices.com/types-of-business-entities.html
      */
+<<<<<<< HEAD
     protected static $companySuffix = [
+=======
+    protected static $companySuffix = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Berhad',
         'Bhd',
         'Bhd.',
         'Enterprise',
         'Sdn Bhd','Sdn Bhd','Sdn Bhd','Sdn Bhd',
         'Sdn. Bhd.','Sdn. Bhd.','Sdn. Bhd.','Sdn. Bhd.'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link https://en.wikipedia.org/wiki/List_of_companies_of_Malaysia
      */
+<<<<<<< HEAD
     protected static $companies = [
+=======
+    protected static $companies = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Adventa','AirAsia','AmBank','Astro Malaysia Holdings','Astro Radio','Axiata',
         'Berjaya Group','Bonia','Boustead Holdings','BSA Manufacturing','Bufori','Bumiputra-Commerce Holdings','Bursa Malaysia',
         'Capital Dynamics','Celcom','CIMB',
@@ -52,12 +72,20 @@ class Company extends \Faker\Provider\Company
         'VADS','ViTrox',
         'Wasco Energy',
         'YTL Corporation'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @link http://www.daftarsyarikat.biz/perkhidmatan-dan-konsultasi/pendaftaran-lesen-kementerian-kewangan/senarai-kod-bidang/
      */
+<<<<<<< HEAD
     protected static $industry = [
+=======
+    protected static $industry = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Agen Pengembaraan','Agen Penghantaran','Agen Perkapalan','Agensi Kredit Dan Pemfaktoran','Air','Akseso Kenderaan','Aksesori','Aksesori Jentera Berat','Aksesori Penghubung Dan Telekomunikasi','Aksesori Senjata Api','Akuatik','Akustik Dan Gelombang','Alat Forensik Dan Aksesori','Alat Gani','Alat Ganti','Alat Ganti Dan Kelengkapan Bot','Alat Hawa Dingin','Alat Hawa Dingin Kenderaan','Alat Kebombaan','Alat Kelengkapan Perubatan','Alat Keselamatan, Perlindungan Dan Kawalan Perlindungan Dan Kawalan','Alat Muzik Dan Aksesori','Alat Muzik, Kesenian dan Aksesori','Alat Penghasil Nyalaan','Alat penyelamat','Alat Penyimpan Tenaga Dan Aksesori','Alat Perhubungan','Alat Semboyan','Alat-Alat Marin','Alatganti Dan Kelengkapan Pesawat','Alatulis','Animation','Anti Kakis','Artis Dan Penghibur Profesional','Audio Visual',
         'Bagasi Dan Beg dari kulit','Bahan Api Nuklear','Bahan Bacaan','Bahan Bacaan Terbitan Luar Negara','Bahan Bakar','Bahan Binaan','Bahan dan Peralatan Solekan dan Andaman','Bahan Letupan','Bahan Peledak','Bahan Pelincir','Bahan pembungkusan','Bahan Pencuci Dan Pembersihan','Bahan Pendidikan','Bahan Penerbitan Elektronik Dan Muzik','Bahan Surih, Drafting Dan Alat Lukis','Bahan Tambah','Bahan Tarpaulin Dan Kanvas','Baik Pulih Kasut Dan Barangan Kulit','Baikpulih Barang-Barang Logam','Baja Dan Nutrien Tumbuhan','Baka','Bangunan','Bantuan Kecemasan DanAmbulan','Bantuan Kemanusiaan','Barangan Hiasan Dalaman Dan Aksesori','Barangan PVC','Barge','Bas','Basah','Basikal','Bekalan Pejabat Dan Alatulis','Bekas','Belon Panas','Benih Semaian','Bill Board','Bioteknologi','Bot','Bot Malim','Bot Tunda','Brangan Logam','Broker Insuran','Broker Perkapalan','Bunga Api Dan Mercun','Butang Dan Bekalan Jahitan',
         'Cat','Cenderamata Dan Hadiah','Cetakan Hologram','Cetakan Keselamatan','Chalet','Cloud Seeding','Complete Rounds','Customization and maintenance including data',
@@ -81,7 +109,11 @@ class Company extends \Faker\Provider\Company
         'Ubat Haiwan','Ubat Tidak Berjadual','Ujian Makmal','Ukuran',
         'Varnishing',
         'WAN','Wayar Elektrik Dan Aksesori','Wireless'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * Return a random company name

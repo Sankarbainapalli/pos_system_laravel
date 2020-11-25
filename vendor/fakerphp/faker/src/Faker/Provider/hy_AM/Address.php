@@ -4,6 +4,7 @@ namespace Faker\Provider\hy_AM;
 
 class Address extends \Faker\Provider\Address
 {
+<<<<<<< HEAD
     protected static $cityPrefix = ['քաղաք','գյուղ'];
 
     protected static $regionSuffix = ['մարզ'];
@@ -12,6 +13,16 @@ class Address extends \Faker\Provider\Address
     protected static $buildingNumber = ['##'];
     protected static $postcode = ['00##'];
     protected static $country = [
+=======
+    protected static $cityPrefix = array('քաղաք','գյուղ');
+
+    protected static $regionSuffix = array('մարզ');
+    protected static $streetPrefix = array('փողոց');
+
+    protected static $buildingNumber = array('##');
+    protected static $postcode = array('00##');
+    protected static $country = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Մոնակո','Սինգապուր','Վատիկան','Մալդիվներ',
         'Մալթա','Բահրեյն','Բանգլադեշ','Բարբադոս',
         'Չինաստանի Հանրապետություն','Սան Մարինո',
@@ -50,6 +61,7 @@ class Address extends \Faker\Provider\Address
         'Ղազախստան','Լիբիա','Գայանա','Կանադա','Բոտսվանա',
         'Մավրիտանիա','Իսլանդիա','Սուրինամ','Ավստրալիա',
         'Նամիբիա','Մոնղոլիա',
+<<<<<<< HEAD
     ];
 
     protected static $region = [
@@ -59,6 +71,17 @@ class Address extends \Faker\Provider\Address
     ];
 
     protected static $city = [
+=======
+    );
+
+    protected static $region = array(
+        'Արագածոտնի', 'Արարատի', 'Արմավիրի',
+        'Գեղարքունիքի', 'Լոռու', 'Կոտայքի', 'Շիրակի',
+        'Սյունիքի', 'Վայոց Ձորի', 'Տավուշի',
+    );
+
+    protected static $city = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Աբովյան', 'Ագարակ', 'Ալավերդի', 'Ախթալա', 'Այրում', 'Աշտարակ', 'Ապարան',
         'Արարատ', 'Արթիկ', 'Արմավիր', 'Արտաշատ', 'Բերդ', 'Բյուրեղավան', 'Գավառ',
         'Գյումրի', 'Գորիս', 'Դաստակերտ', 'Դիլիջան', 'Եղեգնաձոր', 'Եղվարդ', 'Երևան',
@@ -67,6 +90,7 @@ class Address extends \Faker\Provider\Address
         'Նոյեմբերյան', 'Շամլուղ', 'Չարենցավան', 'Ջերմուկ', 'Սիսիան', 'Սպիտակ',
         'Ստեփանավան', 'Սևան', 'Վայք', 'Վանաձոր', 'Վարդենիս', 'Վեդի', 'Տաշիր',
         'Քաջարան',
+<<<<<<< HEAD
     ];
 
     protected static $street = [
@@ -77,6 +101,18 @@ class Address extends \Faker\Provider\Address
     protected static $addressFormats = [
         "{{region}} {{regionSuffix}}, {{cityPrefix}} {{city}}, {{street}} {{buildingNumber}} {{streetPrefix}}, {{postcode}}",
     ];
+=======
+    );
+
+    protected static $street = array(
+        'Պուշկին','Տերյան','Աբովյան','Ագաթանգեղոս','Անդրանիկ','Օտյան','Լուկաշին',
+        'Տիչինա','Շինարարներ','Լենինգրադյան','Կիևյան',
+    );
+
+    protected static $addressFormats = array(
+        "{{region}} {{regionSuffix}}, {{cityPrefix}} {{city}}, {{street}} {{buildingNumber}} {{streetPrefix}}, {{postcode}}",
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public static function buildingNumber()
     {

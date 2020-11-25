@@ -6,7 +6,11 @@ use Faker\Calculator\Luhn;
 
 class Person extends \Faker\Provider\Person
 {
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{firstName}} {{lastName}}',
         '{{firstName}} {{lastName}}',
         '{{firstName}} {{lastName}}',
@@ -18,13 +22,21 @@ class Person extends \Faker\Provider\Person
         '{{firstName}} {{lastName}} {{lastName}}',
         '{{firstName}} {{lastName}}-{{lastName}}',
         '{{firstName}} {{firstName}} {{lastName}}-{{lastName}}',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Swedish female first names
      * @link http://spraakbanken.gu.se/statistik/lbfnamnalf.phtml
      */
+<<<<<<< HEAD
     protected static $firstNameFemale = [
+=======
+    protected static $firstNameFemale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         'Ada', 'Adela', 'Adele', 'Adéle', 'Adelia', 'Adina', 'Adolfina', 'Agda', 'Agnes', 'Agneta', 'Aina', 'Aino', 'Albertina', 'Alexandra', 'Alfhild', 'Alfrida', 'Alice', 'Alida', 'Ally', 'Alma', 'Alva', 'Amalia', 'Amanda', 'Andrea', 'Anette', 'Angela', 'Anita', 'Anja', 'Ann', 'Anna', 'Anna-Carin', 'Anna-Greta', 'Anna-Karin', 'Anna-Lena', 'Anna-Lisa', 'Anna-Maria', 'Anna-Stina', 'Anne', 'Anneli', 'Annelie', 'Annette', 'Anne-Charlotte', 'Anne-Marie', 'Anni', 'Annica', 'Annie', 'Annika', 'Annikki', 'Anny', 'Ann-Britt', 'Ann-Charlott', 'Ann-Charlotte', 'Ann-Christin', 'Ann-Christine', 'Ann-Katrin', 'Ann-Kristin', 'Ann-Louise', 'Ann-Margret', 'Ann-Mari', 'Ann-Marie', 'Ann-Sofi', 'Ann-Sofie', 'Antonia', 'Arvida', 'Asta', 'Astrid', 'Augusta', 'Aurora', 'Axelia', 'Axelina',
         'Barbro', 'Beata', 'Beatrice', 'Beda', 'Berit', 'Bernhardina', 'Berta', 'Betty', 'Birgit', 'Birgitta', 'Blenda', 'Bodil', 'Boel', 'Borghild', 'Brita', 'Britt', 'Britta', 'Britt-Inger', 'Britt-Louise', 'Britt-Mari', 'Britt-Marie',
@@ -50,13 +62,21 @@ class Person extends \Faker\Provider\Person
         'Wilhelmina',
         'Ylva', 'Yvonne',
         'Åsa', 'Åse'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Swedish male first names
      * @link http://spraakbanken.gu.se/statistik/lbfnamnalf.phtml
      */
+<<<<<<< HEAD
     protected static $firstNameMale = [
+=======
+    protected static $firstNameMale = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Abraham', 'Adam', 'Adolf', 'Adrian', 'Agaton', 'Agne', 'Albert', 'Albin', 'Aldor', 'Alex', 'Alexander', 'Alexis', 'Alexius', 'Alf', 'Alfons', 'Alfred', 'Algot', 'Allan', 'Alrik', 'Alvar', 'Alve', 'Amandus', 'Anders', 'André', 'Andreas', 'Anselm', 'Anshelm', 'Antero', 'Anton', 'Antonius', 'Arne', 'Arnold', 'Aron', 'Arthur', 'Artur', 'Arvid', 'Assar', 'Astor', 'August', 'Augustin', 'Axel',
         'Bengt', 'Bengt-Göran', 'Bengt-Olof', 'Bengt-Åke', 'Benny', 'Berndt', 'Berne', 'Bernhard', 'Bernt', 'Bert', 'Berth', 'Berthold', 'Bertil', 'Bill', 'Billy', 'Birger', 'Bjarne', 'Björn', 'Bo', 'Boris', 'Bror', 'Bruno', 'Brynolf', 'Börje',
         'Carl', 'Carl-Axel', 'Carl-Erik', 'Carl-Gustaf', 'Carl-Gustav', 'Carl-Johan', 'Charles', 'Christer', 'Christian', 'Claes', 'Claes-Göran', 'Clarence', 'Clas', 'Conny', 'Crister', 'Curt',
@@ -82,13 +102,21 @@ class Person extends \Faker\Provider\Person
         'Yngve',
         'Åke',
         'Örjan', 'Östen'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @var array Swedish common last names
      * @link http://www.scb.se/sv_/Hitta-statistik/Statistik-efter-amne/Befolkning/Amnesovergripande-statistik/Namnstatistik/30898/2012A01x/Samtliga-folkbokforda--Efternamn-topplistor/Efternamn-topp-100/
      */
+<<<<<<< HEAD
     protected static $lastName = [
+=======
+    protected static $lastName = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
         'Abrahamsson', 'Andersson', 'Andreasson', 'Arvidsson', 'Axelsson',
         'Bengtsson', 'Berg', 'Berggren', 'Berglund', 'Bergman', 'Bergqvist', 'Bergström', 'Björk', 'Björklund', 'Blom', 'Blomqvist',
@@ -111,7 +139,11 @@ class Person extends \Faker\Provider\Person
         'Wallin', 'Wikström',
         'Åberg', 'Åkesson', 'Åström',
         'Öberg'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * National Personal Identity number (personnummer)
@@ -128,11 +160,19 @@ class Person extends \Faker\Provider\Person
         $datePart = $birthdate->format('ymd');
 
         if ($gender && $gender == static::GENDER_MALE) {
+<<<<<<< HEAD
             $randomDigits = (string) static::numerify('##') . static::randomElement([1,3,5,7,9]);
         } elseif ($gender && $gender == static::GENDER_FEMALE) {
             $randomDigits = (string) static::numerify('##') . static::randomElement([0,2,4,6,8]);
         } else {
             $randomDigits = (string) static::numerify('###');
+=======
+            $randomDigits = (string)static::numerify('##') . static::randomElement(array(1,3,5,7,9));
+        } elseif ($gender && $gender == static::GENDER_FEMALE) {
+            $randomDigits = (string)static::numerify('##') . static::randomElement(array(0,2,4,6,8));
+        } else {
+            $randomDigits = (string)static::numerify('###');
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         }
 
 

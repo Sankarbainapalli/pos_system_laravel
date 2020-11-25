@@ -8,7 +8,11 @@ abstract class Text extends Base
     protected static $separator = ' ';
     protected static $separatorLen = 1;
     protected $explodedText;
+<<<<<<< HEAD
     protected $consecutiveWords = [];
+=======
+    protected $consecutiveWords = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     protected static $textStartsWithUppercase = true;
 
     /**
@@ -19,8 +23,13 @@ abstract class Text extends Base
      * possible following words as the value.
      *
      * @example 'Alice, swallowing down her flamingo, and began by taking the little golden key'
+<<<<<<< HEAD
      * @param int $maxNbChars Maximum number of characters the text should contain (minimum: 10)
      * @param int $indexSize  Determines how many words are considered for the generation of the next word.
+=======
+     * @param integer $maxNbChars Maximum number of characters the text should contain (minimum: 10)
+     * @param integer $indexSize  Determines how many words are considered for the generation of the next word.
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      *                             The minimum is 1, and it produces a higher level of randomness, although the
      *                             generated text usually doesn't make sense. Higher index sizes (up to 5)
      *                             produce more correct text, at the price of less randomness.
@@ -41,7 +50,11 @@ abstract class Text extends Base
         }
 
         $words = $this->getConsecutiveWords($indexSize);
+<<<<<<< HEAD
         $result = [];
+=======
+        $result = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $resultLength = 0;
         // take a random starting point
         $next = static::randomKey($words);
@@ -78,8 +91,13 @@ abstract class Text extends Base
     {
         if (!isset($this->consecutiveWords[$indexSize])) {
             $parts = $this->getExplodedText();
+<<<<<<< HEAD
             $words = [];
             $index = [];
+=======
+            $words = array();
+            $index = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             for ($i = 0; $i < $indexSize; $i++) {
                 $index[] = array_shift($parts);
             }
@@ -87,7 +105,11 @@ abstract class Text extends Base
             for ($i = 0, $count = count($parts); $i < $count; $i++) {
                 $stringIndex = static::implode($index);
                 if (!isset($words[$stringIndex])) {
+<<<<<<< HEAD
                     $words[$stringIndex] = [];
+=======
+                    $words[$stringIndex] = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                 }
                 $word = $parts[$i];
                 $words[$stringIndex][] = $word;

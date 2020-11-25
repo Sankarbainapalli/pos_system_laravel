@@ -2,8 +2,13 @@
 
 namespace Faker\ORM\Doctrine;
 
+<<<<<<< HEAD
 use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Doctrine\Common\Persistence\ObjectManager;
+=======
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\Persistence\Mapping\ClassMetadata;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
 /**
  * Service class for populating a table through a Doctrine Entity class.
@@ -17,6 +22,7 @@ class EntityPopulator
     /**
      * @var array
      */
+<<<<<<< HEAD
     protected $columnFormatters = [];
     /**
      * @var array
@@ -24,6 +30,17 @@ class EntityPopulator
     protected $modifiers = [];
 
     /**
+=======
+    protected $columnFormatters = array();
+    /**
+     * @var array
+     */
+    protected $modifiers = array();
+
+    /**
+     * Class constructor.
+     *
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @param ClassMetadata $class
      */
     public function __construct(ClassMetadata $class)
@@ -39,6 +56,12 @@ class EntityPopulator
         return $this->class->getName();
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @param $columnFormatters
+     */
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     public function setColumnFormatters($columnFormatters)
     {
         $this->columnFormatters = $columnFormatters;
@@ -87,7 +110,11 @@ class EntityPopulator
      */
     public function guessColumnFormatters(\Faker\Generator $generator)
     {
+<<<<<<< HEAD
         $formatters = [];
+=======
+        $formatters = array();
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         $nameGuesser = new \Faker\Guesser\Name($generator);
         $columnTypeGuesser = new ColumnTypeGuesser($generator);
         foreach ($this->class->getFieldNames() as $fieldName) {
@@ -95,7 +122,11 @@ class EntityPopulator
                 continue;
             }
 
+<<<<<<< HEAD
             $size = $this->class->fieldMappings[$fieldName]['length'] ?? null;
+=======
+            $size = isset($this->class->fieldMappings[$fieldName]['length']) ? $this->class->fieldMappings[$fieldName]['length'] : null;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             if ($formatter = $nameGuesser->guessFormat($fieldName, $size)) {
                 $formatters[$fieldName] = $formatter;
                 continue;
@@ -120,7 +151,11 @@ class EntityPopulator
                     if ($mapping['targetEntity'] == $relatedClass) {
                         if ($mapping['type'] == \Doctrine\ORM\Mapping\ClassMetadata::ONE_TO_ONE) {
                             $unique = true;
+<<<<<<< HEAD
                             $optional = $mapping['joinColumns'][0]['nullable'] ?? false;
+=======
+                            $optional = isset($mapping['joinColumns'][0]['nullable']) ? $mapping['joinColumns'][0]['nullable'] : false;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                             break;
                         }
                     }
@@ -131,7 +166,11 @@ class EntityPopulator
                     if ($mapping['targetDocument'] == $relatedClass) {
                         if ($mapping['type'] == \Doctrine\ODM\MongoDB\Mapping\ClassMetadata::ONE && $mapping['association'] == \Doctrine\ODM\MongoDB\Mapping\ClassMetadata::REFERENCE_ONE) {
                             $unique = true;
+<<<<<<< HEAD
                             $optional = $mapping['nullable'] ?? false;
+=======
+                            $optional = isset($mapping['nullable']) ? $mapping['nullable'] : false;
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                             break;
                         }
                     }
@@ -205,7 +244,11 @@ class EntityPopulator
                 }
                 // Try a standard setter if it's available, otherwise fall back on reflection
                 $setter = sprintf("set%s", ucfirst($field));
+<<<<<<< HEAD
                 if (is_callable([$obj, $setter])) {
+=======
+                if (is_callable(array($obj, $setter))) {
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                     $obj->$setter($value);
                 } else {
                     $this->class->reflFields[$field]->setValue($obj, $value);

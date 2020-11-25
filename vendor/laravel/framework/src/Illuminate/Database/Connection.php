@@ -891,6 +891,7 @@ class Connection implements ConnectionInterface
      */
     public function getDoctrineSchemaManager()
     {
+<<<<<<< HEAD
         $connection = $this->getDoctrineConnection();
 
         // Doctrine v2 expects one parameter while v3 expects two. 2nd will be ignored on v2...
@@ -898,6 +899,9 @@ class Connection implements ConnectionInterface
             $connection,
             $connection->getDatabasePlatform()
         );
+=======
+        return $this->getDoctrineDriver()->getSchemaManager($this->getDoctrineConnection());
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
     }
 
     /**
@@ -913,7 +917,11 @@ class Connection implements ConnectionInterface
             $this->doctrineConnection = new DoctrineConnection(array_filter([
                 'pdo' => $this->getPdo(),
                 'dbname' => $this->getDatabaseName(),
+<<<<<<< HEAD
                 'driver' => method_exists($driver, 'getName') ? $driver->getName() : null,
+=======
+                'driver' => $driver->getName(),
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
                 'serverVersion' => $this->getConfig('server_version'),
             ]), $driver);
         }

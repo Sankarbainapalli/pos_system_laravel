@@ -501,7 +501,11 @@ class Worker
             $this->failJob($job, $e);
         }
 
+<<<<<<< HEAD
         if (! $job->retryUntil() && $maxTries > 0 && $job->attempts() >= $maxTries) {
+=======
+        if ($maxTries > 0 && $job->attempts() >= $maxTries) {
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
             $this->failJob($job, $e);
         }
     }
@@ -746,7 +750,11 @@ class Worker
     /**
      * Set the name of the worker.
      *
+<<<<<<< HEAD
      * @param  string  $name
+=======
+     * @param  string $name
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
      * @return $this
      */
     public function setName($name)

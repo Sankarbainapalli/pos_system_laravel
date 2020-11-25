@@ -10,7 +10,11 @@
         }
     ],
     "require": {
+<<<<<<< HEAD
         "php": "^7.3|^8.0",
+=======
+        "php": "^7.3",
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         "illuminate/console": "^8.0",
         "illuminate/filesystem": "^8.0",
         "illuminate/support": "^8.0"

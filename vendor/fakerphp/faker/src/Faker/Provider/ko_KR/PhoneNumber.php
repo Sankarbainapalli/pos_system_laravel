@@ -6,7 +6,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
 {
     //reference : https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8_%EC%B2%B4%EA%B3%84
 
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         //local area phone format
         '070-####-####',
         '02-####-####',
@@ -22,7 +26,11 @@ class PhoneNumber extends \Faker\Provider\PhoneNumber
         '15##-####',
         '16##-####',
         '18##-####',
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function localAreaPhoneNumber()
     {

@@ -4,11 +4,16 @@ namespace Faker\Provider\uk_UA;
 
 class Company extends \Faker\Provider\Company
 {
+<<<<<<< HEAD
     protected static $formats = [
+=======
+    protected static $formats = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         '{{companyName}}',                                      // Вектор
         '{{companyPrefix}} "{{companyName}}"',                  // ТОВ "Інфоком"
         '{{companyName}}-{{companySuffix}}',                    // Сервіс-Плюс
         '{{companyPrefix}} "{{companyName}}-{{companySuffix}}"',// ПАТ "Альфа-Стиль"
+<<<<<<< HEAD
     ];
 
     protected static $urlFormats = [
@@ -24,11 +29,32 @@ class Company extends \Faker\Provider\Company
         'Інфоком', 'Макс', 'Планета', 'Вектор', 'Приват', 'Еко', 'Мега',
         'Мегамакс', 'Мульти', 'Майнер'
     ];
+=======
+    );
+
+    protected static $urlFormats = array(
+        '{{companyName}}',
+        '{{companyName}}-{{companySuffix}}',
+    );
+
+    protected static $companyPrefix = array('ТОВ', 'ПП', 'ПАТ','ПрАТ');
+    protected static $companySuffix = array('Сервіс','Плюс', 'Груп', 'Стиль', 'Дизайн');
+
+    protected static $companyName = array(
+        'Вектор', 'Едельвейс', 'Смарт', 'Альфа', 'Система', 'Універсал',
+        'Інфоком', 'Макс', 'Планета', 'Вектор', 'Приват', 'Еко', 'Мега',
+        'Мегамакс', 'Мульти', 'Майнер'
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     /**
      * @see list of Ukraine job title (2017-08-09), source: https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%96%D0%B9
      */
+<<<<<<< HEAD
     protected static $jobTitleFormat = [
+=======
+    protected static $jobTitleFormat = array(
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
         'Агроном', 'Адвокат', 'Актор', 'Акушер', 'Антрополог', 'Аптекар', 'Архітектор', 'Археолог', 'Астронавт', 'Астрофізик', 'Автослюсар', 'Агент',
         'Бариста', 'Бармен', 'Бібліограф', 'Біолог', 'Бізнесмен', 'Ботанік', 'Будівельник', 'Будник', 'Бухгалтер', 'Бібліотекар',
         'Вантажник', 'Ведучий', 'Ветеринар', 'Випробувач', 'Водій', 'Вчитель', 'Візажист',
@@ -53,7 +79,11 @@ class Company extends \Faker\Provider\Company
         'Хірург', 'Хімік', 'Художник', 'Хореограф', 'Хормейстер',
         'Шериф', 'Швачка', 'Штукатур',
         'Ювелір','Юрист'
+<<<<<<< HEAD
     ];
+=======
+    );
+>>>>>>> ab78874abac341c06d6224c7b68289052444df61
 
     public function companyUrl()
     {
