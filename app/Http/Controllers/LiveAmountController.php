@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Liveamount;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Branch;
+ 
 
 class LiveAmountController extends Controller
 {
@@ -21,21 +23,33 @@ class LiveAmountController extends Controller
 
         $category_list=Category::all();
 
+        $branch_list=Branch::all();
+
         $type =  $request->session()->get('product_category');
 
       $product_list=Product::where('category_id',$type)->get()->all();
       
-     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','product_list','type'));
+     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','product_list','type','branch_list'));
 
         
     }
 
-    function getProduct(Request $request){
+  //   function getProduct(Request $request){
 
-   $request->session()->put('product_category', $request->product_category);
+  //  $request->session()->put('product_category', $request->product_category);
 
-    echo 'SUCCESS';
+  //   echo 'SUCCESS';
+  // }
+
+   function getProduct(Request $request){
+
+    $product_list=Product::where('category_id',$request->product_category)->get()->all();
+
+    echo json_encode($product_list);
+
+    // echo 'SUCCESS';
   }
+
 
     /**
      * Show the form for creating a new resource.
@@ -57,11 +71,11 @@ class LiveAmountController extends Controller
     {
         //
 
-        // dd($request->all());
 
         $liveamount=new Liveamount;
         $liveamount->category_id= $request->input('category_id');
         $liveamount->product_id= $request->input('product_id');
+        $liveamount->branch_id= $request->input('branch_id');
         $liveamount->rate= $request->input('rate');
         $liveamount->ratedate= date('Y-m-d');
         $liveamount->save();

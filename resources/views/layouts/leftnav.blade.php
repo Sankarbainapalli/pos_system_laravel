@@ -121,6 +121,8 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
         with font-awesome or any other icon font library -->
+
+        @if(Auth::user()->role_id == 'SUPERADMIN')
         <li class="nav-item">
           <a href="{{route('home.index')}}" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -130,8 +132,6 @@
           </a>
         </li>
 
-
-        
          <li class="nav-item">
           <a href="{{route('customer.index')}}" class="nav-link">
             <i class="nav-icon fas fa-user"></i>
@@ -161,16 +161,6 @@
           </a>
         </li>
 
-
-
-         <!--  <li class="nav-item">
-            <a href="{{route('accountList')}}" class="nav-link">
-              <i class="nav-icon far fa-file-alt"></i>
-              <p>
-                Accounts
-              </p>
-            </a>
-          </li> -->
 
             <li class="nav-item">
           <a href="#" class="nav-link">
@@ -205,8 +195,9 @@
           
           </ul>
         </li>
+        @endif
 
-     
+
 
           <li class="nav-item">
             <a href="{{route('liveamount.index')}}" class="nav-link">
@@ -217,6 +208,9 @@
             </a>
           </li>
 
+
+          @if(Auth::user()->role_id == 'SUPERADMIN')
+
            <li class="nav-item">
             <a href="{{route('exformrate.index')}}" class="nav-link">
               <i class="nav-icon fas fa-rupee-sign"></i>
@@ -225,6 +219,7 @@
               </p>
             </a>
           </li>
+          @endif
 
 
 

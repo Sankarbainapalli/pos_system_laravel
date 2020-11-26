@@ -34,9 +34,21 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <div class="form-group">
+                       <label>Branch name</label>
+                        <select class="form-control" name="branch_id">
+                          @foreach($branch_list as $branch)
+                            <option value="{{$branch->id}}">{{$branch->name}}</option>
+                          @endforeach
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+
                         <!-- <input type="text" name="chicken" class="form-control" placeholder="Chicken Rate" id="name1" required>  -->
+
                         <label>Product Category</label>
-                            <select name="category_id" id="product_category"  class="form-control" style="width: 100%;" onchange="product_type()">
+                            <select onchange="product_type(this.value)" name="category_id" id="product_category"  class="form-control" style="width: 100%;" >
                               <option value="0">Select Category</option>
                                @foreach($category_list as $category)
 
@@ -50,27 +62,27 @@
                             </select>
                         </div>
                       </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                       <div class="form-group">
                      
                         <label>Product Type</label>
-                            <select name="product_id"  class="form-control" style="width: 100%;" >
-                               @foreach($product_list as $product)
+                            <select name="product_id"  class="form-control" style="width: 100%;" id="product_id">
+                              <!--  @foreach($product_list as $product)
                                 <option value="{{$product->id}}">{{$product->product_name}}</option>
                                 
-                                @endforeach
+                                @endforeach -->
                             </select>
 
                       </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                       <div class="form-group">
                       
                         <label>Rate</label>
                         <input type="text" name="rate" class="form-control" placeholder="Rate" id="name3" required>
                       </div> 
                     </div>
-                    <div class="col-sm-3 mt-2">
+                    <div class="col-sm-2 mt-2">
                       <div class="form-group">
                          <label></label>
                         <button type="submit" class="btn btn-success w-100">Add</button>
@@ -85,6 +97,7 @@
                   <thead>
                   <tr>
                     <th>S.no</th>
+                    <th>Branch</th>
                     <th>Category</th>
                     <th>Product type</th>
                     <th>Rate</th>
@@ -96,6 +109,7 @@
                     @foreach($liveamount_list as $liveamount)
                   <tr>
                     <td>{{$loop->index+1}}</td>
+                    <td>{{$liveamount->Branch->name}}</td>
                     <td>{{$liveamount->Category->name}}</td>
                     <td>{{$liveamount->Product->product_name}}</td>
                     <td>{{$liveamount->rate}}/-</td>
@@ -133,30 +147,47 @@
 @section('script')
 
 <script type="text/javascript">
-  function product_type() {
+  function product_type(value) {
 
-  var x = document.getElementById("product_category").value;
+    // alert(value);
+
+  var product_id = value;
+  // var product_id = document.getElementById("product_category").value;
 
     var token = "{{ csrf_token() }}";
     $.ajax({
 
             url: "getProduct",
-            // url: "liveamount",
             method: "POST",
-            data: {product_category:x, _token: token},
+            dataType: "json",
+            data: {product_category:product_id, _token: token},
             success:function(data){
-              if(data != 'SUCCESS'){
-                alert('Something Wrong');
-              }else{
-                // alert("fdsdf");
-                    location.reload();
-                    // console.log("success");
 
-              }
+                var tab= "";
+
+                if(data.length==0){
+                  
+                    alert("No Data Found! Please Add product in the product Module");
+                    // window.location.href = "product";
+                  }else{ 
+
+                    tab += "<option value=''>Select Product</option>";}
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        tab += "<option value='"+data[i].id+"'>"+data[i].product_name+"</option>";
+       
+                    }
+
+               $("#product_id").html(tab);
+
              }
 
             })
 }
+
+
+
 
 </script>
 @endsection

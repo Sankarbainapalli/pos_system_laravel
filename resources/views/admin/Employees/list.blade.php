@@ -55,7 +55,7 @@
                     <td>{{$list->name}}</td>
                     <td>{{$list->email}}</td>
                     <td>{{$list->mobile}}</td>
-                    <td style="font-weight: bold;">{{$list->roles->name}}</td>
+                    <td style="font-weight: bold;">{{$list->role_id}}</td>
                     
                       @if($list->frans_id=='0')
                       <td>

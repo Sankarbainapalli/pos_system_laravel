@@ -9,13 +9,19 @@ class Liveamount extends Model
 {
     use HasFactory;
 
-    protected $fillable  = ['category_id','product_id','rate','ratedate'];
+    protected $fillable  = ['category_id','product_id','branch_id','rate','ratedate'];
 
       public function Category(){
    	
     	return $this->belongsTo("App\Models\Category", "category_id");
 
 	} 
+
+   public function Branch(){
+    
+      return $this->belongsTo("App\Models\Branch", "branch_id");
+
+  } 
 
 	  public function Product(){
    	

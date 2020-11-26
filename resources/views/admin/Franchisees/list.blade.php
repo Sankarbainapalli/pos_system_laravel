@@ -136,7 +136,6 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Branch name</label>
-                        <!-- <input type="text" name="city" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town"> -->
                         <select class="form-control" name="city">
                           @foreach($branch_list as $branch)
                             <option value="{{$branch->id}}">{{$branch->name}}</option>

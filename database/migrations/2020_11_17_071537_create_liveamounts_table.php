@@ -17,6 +17,7 @@ class CreateLiveamountsTable extends Migration
             $table->id();
             $table->integer('category_id')->unsigned();
             $table->integer('product_id')->unsigned();
+            $table->integer('branch_id')->unsigned();
             $table->decimal('rate', 10, 2);
             $table->date('ratedate');
             $table->timestamps();

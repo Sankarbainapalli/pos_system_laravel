@@ -172,7 +172,7 @@
 
         <div class="row no-print text-center">
           <div class="col-12">
-            <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
+            <a onclick="window.print()" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
           </div>
         </div>
       </div>

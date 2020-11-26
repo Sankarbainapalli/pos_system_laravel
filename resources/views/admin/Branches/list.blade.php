@@ -37,9 +37,10 @@
                   <thead>
                   <tr>
                     <th>S.no</th>
+                    <th>Branch ID</th>
                     <th>Branch Name</th>
                     <th>Location</th>
-                    <th>Status</th>
+                    <!-- <th>Status</th> -->
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -48,9 +49,10 @@
                   <tr>
 
                     <td>{{$loop->index+1}}</td>
+                    <td>BRN00{{$branch->id}}</td>
                     <td>{{$branch->name}}</td>
                     <td>{{$branch->location}}</td>
-                    <td>{{$branch->status}}</td>
+                    <!-- <td>{{$branch->status}}</td> -->
                     <td> 
                       <div class="btn-group">
                           <a href="{{route('branch.edit',$branch->id)}}"><button type="button" class="btn btn-primary">
@@ -118,7 +120,8 @@
                         <input type="text" class="form-control" placeholder="Enter Location Name" id="locationname" name="location" required>
                       </div>
                     </div>
-                    <div class="col-sm-6">
+
+                   <!--  <div class="col-sm-6">
                       <div class="form-group">
                         <label>Status</label>
                         <select class="form-control select2bs4" name="status" style="width: 100%;">
@@ -126,7 +129,8 @@
                             <option value="0">Deactive</option>
                         </select>
                         </div>
-                    </div>
+                    </div> -->
+                    
                   </div>
                
             </div>

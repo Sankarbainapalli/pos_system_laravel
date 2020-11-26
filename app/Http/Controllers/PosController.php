@@ -50,6 +50,15 @@ class PosController extends Controller
 
     }
 
+    public function getLiveamount(){
+
+         $liveamount_list=Liveamount::all();
+
+        echo json_encode($liveamount_list);
+
+    }
+
+
      public function getCart()
     {
 
@@ -111,6 +120,7 @@ class PosController extends Controller
  }else{
 
     $cart_list=Cart::where('product_id',$request->product_id)->get();
+
            
          foreach ($cart_list as $cart) {
 
@@ -120,14 +130,16 @@ class PosController extends Controller
 
              echo json_encode($response_array);    
 
-     }else{
-
-        Cart::create($request->all());
-
-        $product_list=Liveamount::where('product_id',$request->product_id)->get();
-
-        echo json_encode($product_list);
      }
+     // else{
+
+
+     //    Cart::create($request->all());
+
+     //    $product_list=Liveamount::where('product_id',$request->product_id)->get();
+
+     //    echo json_encode($product_list);
+     // }
  }
      }
         // }

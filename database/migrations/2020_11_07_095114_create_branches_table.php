@@ -17,7 +17,7 @@ class CreateBranchesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('location');
-            $table->enum('status', ['0', '1']);
+            $table->enum('status', ['0', '1'])->default('0');
             $table->timestamps();
         });
     }

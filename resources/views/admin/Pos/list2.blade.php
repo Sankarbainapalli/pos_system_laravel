@@ -20,12 +20,6 @@
     </div>
     <!-- /.content-header -->
 
-     <!-- fetch liveamout rate with input field hidden by jquery -->
-
-     <span id="getLiveamount"></span>
-
-  <!-- Close -->
-
 
     <!-- Main content -->
 
@@ -34,12 +28,7 @@
 <x-alert />
         <div class="row">
 
-
-  
-
-
-
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="card">
               <div class="card-header mt-3">
                 <!-- <h3 class="card-title mb-3">Scan Your Barcode</h3> -->
@@ -134,7 +123,7 @@
 
           </div>
           <!-- /.col -->
-          <div class="col-md-6">
+          <div class="col-md-7">
             <div class="card">
               <div class="card-header mt-3">
                 <!-- <h3 class="card-title mb-3">Search Product Name Or Code</h3> -->
@@ -375,8 +364,6 @@ $(document).ready(function(){
             });
 });
 
-
-
 function add_product(id){
 
 
@@ -403,14 +390,9 @@ function add_product(id){
 
                  }else{
 
-                  var pergram=data[0].rate/1000;
-                  var grams=data[0].rate/pergram;
+                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">'+data[0].rate+'</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" ></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
 
-                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
-
-                // <span class="badge bg-success">'+data[0].rate+'</span>
-
-                // $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">'+data[0].rate+'</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" ></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
+                
 
                 
                  sum(data[0].product_id);
@@ -433,10 +415,9 @@ function add_product(id){
 
     var value = parseInt(document.getElementById('qty'+id).value, 10);
     value = isNaN(value) ? 0 : value;
-    var kg=1000;
-    if(value<10000000){
-        value=value+kg;
-          document.getElementById('qty'+id).value = value;
+    if(value<50000){
+        value++;
+            document.getElementById('qty'+id).value = value;
     }
     sum(id);
 }
@@ -446,41 +427,14 @@ function decrementValue(id)
 
     var value = parseInt(document.getElementById('qty'+id).value, 10);
     value = isNaN(value) ? 0 : value;
-    var kg=1000;
     if(value>1){
-        value=value-kg;
+        value--;
             document.getElementById('qty'+id).value = value;
     }
       sum(id);
 
 }
 
-$(document).ready(function(){
-
-    // var token = "{{ csrf_token() }}";
-    $.ajax({
-
-            url: "getLiveamount",
-            // url: "liveamount",
-            method: "GET",
-            dataType: "json",
-            // data: {franchisee_id:x, _token: token},
-            success:function(data){
-
-               var tab= ""; 
-
-              for (var i = 0; i < data.length; i++) {
-
- tab+='<input type="hidden" name=""  id="product'+data[i].product_id+'" value="'+data[i].rate+'"></div>';
- 
-              }
-
-               $("#getLiveamount").html(tab);
-
-             }
-
-            });
-});
 
 
 
@@ -494,24 +448,14 @@ $(document).ready(function(){
              var qty = parseFloat($('#qty'+product_id).val());
              var rate = parseFloat($('#rate'+product_id).val());
 
-             // alert(rate);
-
-             // $('#qty'+product_id).val(qty);
-
-
-             var dbrate = parseFloat($('#product'+product_id).val());
-
-                  var pergram=dbrate/1000;
-
-                  var grams=rate/pergram;
-
-           $('#qty'+product_id).val(grams);
-
-             var total=rate;
+             var total=qty*rate;
              // alert(total);
              // // total_count
 
                 $('#total_count'+product_id).val(total);
+
+
+            
 
               var arr = document.getElementsByClassName('rate_array');
             var tot_gs = 0;

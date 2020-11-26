@@ -63,6 +63,8 @@ Route::get('/getProduct', [App\Http\Controllers\PosController::class, 'getProduc
 
 Route::post('/removeProduct', [App\Http\Controllers\PosController::class, 'removeProduct'])->name('removeProduct');
 
+Route::get('/getLiveamount', [App\Http\Controllers\PosController::class, 'getLiveamount'])->name('getLiveamount');
+
 Route::post('/addProduct', [App\Http\Controllers\PosController::class, 'addProduct'])->name('addProduct');
 
 Route::post('/getFranchisee', [App\Http\Controllers\PurchaseOrderController::class, 'getFranchisee'])->name('getFranchisee');

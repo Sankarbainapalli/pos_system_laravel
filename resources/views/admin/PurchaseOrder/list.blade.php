@@ -41,7 +41,7 @@
                          <option value="0">Select Branch</option>
                          @foreach($banch_list as $banch)
 
-                          <option value="{{$banch->id}}">{{$banch->location}}</option>
+                          <option value="{{$banch->id}}">{{$banch->name}}</option>
 
                          @endforeach
                          
@@ -113,15 +113,15 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Mobile</label>
+                        <label>Supplier Mobile</label>
                         <input type="text"  name="sup_mobile" class="form-control" placeholder="Enter Your mobile" id="mobile" required maxlength="10">
                       </div>
                     </div>
 
                      <div class="col-sm-6">
                       <div class="form-group">
-                        <label>Date</label>
-                        <input type="text" name="pur_date" class="form-control"  value="<?php echo date('d-m-Y');?>" readonly>
+                        <label>Supplier Date</label>
+                        <input type="date" name="pur_date" class="form-control"  >
                       </div>
                     </div>
                    

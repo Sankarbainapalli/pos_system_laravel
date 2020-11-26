@@ -37,11 +37,13 @@
                     <th>Franchisee Id</th>
                     <th>Live Stock Qty(Kg)</th>
                     <th>Live Stock Prc</th>
+                    
                     <th>Dressed Stock Qty(KG)</th>
                     <th>Dressed Stock Prc</th>
                     <th>Point of Sale </th>
                     <th>Profit</th>
                     <th>Loss</th>
+                    <th>After Wastage</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -50,11 +52,14 @@
                     <td>FRD001</td>
                     <td>{{$total_lived_stock}}</td>
                     <td>{{$exform_rate}}/{{$total_lived_stock*$exform_rate}}</td>
+
                     <td>{{$total_dressed_stock}}</td>
                      <td>{{$today_rate}}/{{$total_dressed_stock*$today_rate}}</td>
+                     
                     <td>{{$pos}}</td>
                     <td>{{$pos-$total_lived_stock*$exform_rate}}</td>
                     <td>{{$total_dressed_stock*$today_rate-$pos}}</td>
+                    <td>{{($pos-$total_lived_stock*$exform_rate)*30/100}}</td>
       
                   </tr>
               
