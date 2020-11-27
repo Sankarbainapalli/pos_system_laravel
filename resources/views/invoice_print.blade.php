@@ -104,9 +104,9 @@
               <tr class="bg-light">
                 <td>{{$loop->index+1}}</td>
                 <td>{{$order->item_name}}</td>
-                <td>{{$order->qty}} Kgs</td>
-                <td>Rs.{{$order->rate_array}}</td>
-                <td>Rs.{{$order->qty*$order->rate_array}}</td>
+                <td>{{$order->qty/1000}} Kgs</td>
+                <td>{{$order->cur_rate}}</td>
+                <td>{{$order->rate_array}}</td>
               </tr> 
               @endforeach 
              
@@ -162,17 +162,17 @@
         </div>
         <!-- /.row -->
 
-        <div class="row">
-          <!-- accepted payments column -->
+      <!--   <div class="row">
           <div class="ml-auto col-12">
             <p class="lead text-center">Chicken Shop</p>
           </div>
-        </div>
+        </div> -->
         <!-- /.row -->
 
         <div class="row no-print text-center">
           <div class="col-12">
             <a onclick="window.print()" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
+             <a onclick="goBack()" rel="noopener" target="_blank" class="btn btn-info"><i class="fas fa-arrow-left"></i> Back</a>
           </div>
         </div>
       </div>
@@ -184,6 +184,11 @@
 <!-- Page specific script -->
 <script>
   window.addEventListener("load", window.print());
+
+function goBack() {
+  window.history.back();
+}
+
 </script>
 </body>
 </html>

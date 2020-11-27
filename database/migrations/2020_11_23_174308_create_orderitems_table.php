@@ -18,6 +18,7 @@ class CreateOrderitemsTable extends Migration
             $table->integer('order_id')->unsigned();
             $table->integer('item_name');
             $table->bigInteger('qty');
+            $table->decimal('cur_rate',5,2);
             $table->decimal('rate_array',10,2);
             $table->timestamps();
         });

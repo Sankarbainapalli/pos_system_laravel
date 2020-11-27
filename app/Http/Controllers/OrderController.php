@@ -40,6 +40,7 @@ class OrderController extends Controller
                 'order_id'=>$order->id,
                 'item_name'=>$request->item_name[$item],
                 'qty'=>$request->qty[$item],
+                'cur_rate'=>$request->cur_rate[$item],
                 'rate_array'=>$request->rate_array[$item]
             );
 

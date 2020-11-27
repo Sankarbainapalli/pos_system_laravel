@@ -8,14 +8,23 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\CustomerCreateRequest;
 use App\Models\Customer;
 use App\Models\Order;
-
+use Auth;
 class CustomerController extends Controller
 {
     //
 
     public function index(Customer $customer){
 
+      if(Auth::user()->role_id=='SUPERADMIN'){
+
     	$customer_list=Order::all();
+
+    }else{
+
+
+     $customer_list=Order::where('user_id',Auth::user()->id)->get();
+
+    }
 
     	// $customer_list=auth()->user()->customers()->get();
 

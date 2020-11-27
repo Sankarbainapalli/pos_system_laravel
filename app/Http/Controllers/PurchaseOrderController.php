@@ -7,6 +7,7 @@ use App\Models\Exformrate;
 use App\Models\Franchisee;
 use App\Models\PurchaseOrder;
 use Illuminate\Http\Request;
+use Auth;
 
 class PurchaseOrderController extends Controller
 {
@@ -14,11 +15,22 @@ class PurchaseOrderController extends Controller
     public function index()
     {
 
-        $pur_list = PurchaseOrder::all();
-
-        $franchisee_list = Franchisee::all();
+         $franchisee_list = Franchisee::all();
         $banch_list = Branch::all();
         $product_rate = Exformrate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
+
+        if(Auth::user()->role_id=="SUPERADMIN"){
+
+        $pur_list = PurchaseOrder::all();
+
+        // $franchisee_list = Franchisee::all();
+        // $banch_list = Branch::all();
+        // $product_rate = Exformrate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
+    }else{
+
+       $pur_list = PurchaseOrder::where('franchisee_id',Auth::user()->frans_id)->get();
+
+  }
 
         return view('admin.PurchaseOrder.list', compact('franchisee_list', 'product_rate', 'banch_list', 'pur_list'));
     }

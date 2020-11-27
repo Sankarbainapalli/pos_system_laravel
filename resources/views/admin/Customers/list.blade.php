@@ -39,7 +39,9 @@
                     <th>Location</th>
                     <th>Email</th>
                     <th>Mobile No.</th>
-                    <!-- <th>Action</th> -->
+                     @if(Auth::user()->role_id == 'SUPERADMIN')
+                    <th>Action</th>
+                    @endif
                   </tr>
                   </thead>
                   <tbody>
@@ -50,8 +52,9 @@
                     <td>{{$customer->user_id}}</td>
                     <td>{{$customer->cus_email}}</td>
                     <td>{{$customer->cus_mobile}}</td>
-                 
-                   <!--  <td> 
+                  
+                   @if(Auth::user()->role_id == 'SUPERADMIN')
+                    <td> 
                       <div class="btn-group">
                           <a href="{{route('customer.edit',$customer->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
@@ -59,11 +62,9 @@
                        <a href="{{route('customer.destroy', $customer->id)}}">  <button type="button" class="btn btn-danger">
                             <i class="far fa-trash-alt"></i>
                           </button></a> 
-
-                          
-                          
                       </div>
-                    </td> -->
+                    </td>
+                    @endif
                   </tr>
                   
                  

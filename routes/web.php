@@ -55,6 +55,8 @@ Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate']
 
 Route::get('/delete_all_cart', [App\Http\Controllers\PosController::class, 'delete_all_cart'])->name('delete_all_cart');
 
+Route::get('byamount', [App\Http\Controllers\PosController::class, 'byamount'])->name('byamount');
+
 Route::get('/getApiData', [App\Http\Controllers\PosController::class, 'getApiData'])->name('getApiData');
 
 Route::get('/getCart', [App\Http\Controllers\PosController::class, 'getCart'])->name('getCart');

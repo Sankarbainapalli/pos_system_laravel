@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-           <h1 class="m-0">POS &nbsp;<a href="{{route('pos.index')}}" class="btn btn-primary bygrams blink" >By Grams</a>&nbsp;<a href="{{route('byamount')}}" class="btn btn-warning byamount" >By Amount</a></h1>
+            <h1 class="m-0">POS &nbsp;<a href="{{route('pos.index')}}" class="btn btn-primary bygrams" >By Grams</a>&nbsp;<a href="{{route('byamount')}}" class="btn btn-warning byamount blink" >By Amount</a></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -147,7 +147,7 @@
 
                   @foreach($category_list as $category)
                   <div class="col-md-4">
-                    <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType('{{$category->name}}')">{{$category->name}}</button>
+                    <button type="button" class="btn btn-block bg-gradient-info">{{$category->name}}</button>
                   </div>
                   @endforeach
 
@@ -243,7 +243,6 @@
                       <input type="text" class="form-control" id="cus_name"  placeholder="" name="cus_name">
                     </div>
                   </div>
-
 
                   <div class="form-group row" >
 
@@ -511,12 +510,12 @@ $(document).ready(function(){
 
                   // if(product_id=='grams'){
 
-                      // $('#qty'+product_id).val(total_grams);
+                      $('#qty'+product_id).val(total_grams);
 
                   // }
 
                   // if(product_id=='amount'){
-                  $('#rate'+product_id).val(total_price);  
+                  // $('#rate'+product_id).val(total_price);  
                   // }
 
 
@@ -752,8 +751,6 @@ $(document).ready(function(){
     $(".toast").toast('show');
   });
 
- 
-  
 
 </script>
 

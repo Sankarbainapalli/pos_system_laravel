@@ -8,16 +8,18 @@
     </li>
   </ul>
   <!-- SEARCH FORM -->
-  <form class="form-inline ml-3">
+  <!-- <form class="form-inline ml-3"> -->
     <div class="input-group input-group-sm">
-      <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-      <div class="input-group-append">
+      <!-- <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search"> -->
+     <!--  <div class="input-group-append">
         <button class="btn btn-navbar" type="submit">
         <i class="fas fa-search"></i>
         </button>
-      </div>
+            </div> -->
+             <i class="fas fa-spinner fa-pulse"></i><badge style="text-decoration-color: blue;">  {{Auth()->user()->role_id}}
+
     </div>
-  </form>
+  <!-- </form> -->
 
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">
@@ -81,7 +83,7 @@
     <!-- User Dropdown Menu -->
     <li class="nav-item dropdown">
       <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="far fa-user"></i>{{Auth::user()->name}}
+        <i class="far fa-user"><?php echo ucwords(Auth()->user()->name);?></i><span></span>
       </a>
       <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
         <li><a href="#" class="dropdown-item">Profile </a></li>
@@ -112,7 +114,9 @@
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
     <!-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-    <span class="brand-text font-weight-light ml-3">Chicken Shop</span>
+    <span class="brand-text font-weight-light ml-3">Chicken Shop</span></br>
+                
+</badge>
   </a>
   <!-- Sidebar -->
   <div class="sidebar">
@@ -122,7 +126,7 @@
         <!-- Add icons to the links using the .nav-icon class
         with font-awesome or any other icon font library -->
 
-        @if(Auth::user()->role_id == 'SUPERADMIN')
+        @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
         <li class="nav-item">
           <a href="{{route('home.index')}}" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -131,6 +135,9 @@
             </p>
           </a>
         </li>
+       
+
+    
 
          <li class="nav-item">
           <a href="{{route('customer.index')}}" class="nav-link">
@@ -141,8 +148,10 @@
           </a>
         </li>
 
-        
+         @endif
 
+        
+         @if(Auth::user()->role_id == 'SUPERADMIN')  
          <li class="nav-item">
           <a href="{{route('purchaseorder.index')}}" class="nav-link">
             <i class="nav-icon fas fa-user"></i>
@@ -151,6 +160,21 @@
             </p>
           </a>
         </li>
+        @endif
+
+        @if(Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')  
+         <li class="nav-item">
+          <a href="{{route('purchaseorder.index')}}" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Request Order
+            </p>
+          </a>
+        </li>
+        @endif
+
+
+         @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')  
 
         <li class="nav-item">
           <a href="{{route('pos.index')}}" class="nav-link">
@@ -160,8 +184,10 @@
             </p>
           </a>
         </li>
+        @endif
 
 
+      @if(Auth::user()->role_id == 'SUPERADMIN')
             <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-box"></i>
@@ -198,7 +224,7 @@
         @endif
 
 
-
+         @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
           <li class="nav-item">
             <a href="{{route('liveamount.index')}}" class="nav-link">
               <i class="nav-icon fas fa-rupee-sign"></i>
@@ -207,6 +233,7 @@
               </p>
             </a>
           </li>
+          @endif
 
 
           @if(Auth::user()->role_id == 'SUPERADMIN')
@@ -223,6 +250,7 @@
 
 
 
+           @if(Auth::user()->role_id == 'SUPERADMIN')
 
           <li class="nav-item">
             <a href="{{route('profitloss')}}" class="nav-link">
@@ -232,6 +260,10 @@
               </p>
             </a>
           </li>
+
+           @endif
+
+           @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
           
         <li class="nav-item">
           <a href="#" class="nav-link">
@@ -266,6 +298,9 @@
             </li>
           </ul>
         </li>
+
+        @endif
+
         <!--
         <li class="nav-item">
           <a href="{{route('category.index')}}" class="nav-link">
@@ -280,7 +315,7 @@
            
 
             
-
+           @if(Auth::user()->role_id == 'SUPERADMIN')
 
             <li class="nav-item">
               <a href="{{route('branch.index')}}" class="nav-link">
@@ -299,6 +334,7 @@
                 </p>
               </a>
             </li>
+
         <li class="nav-item">
           <a href="" class="nav-link">
             <i class="nav-icon far fa-file-alt"></i>
@@ -322,6 +358,9 @@
             </li>
           </ul>
         </li>
+        @endif
+
+         @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
         
         <li class="nav-item">
           <a href="#" class="nav-link">
@@ -348,8 +387,9 @@
             </li>
           </ul>
         </li>
+        @endif
         
-       
+        @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-flag-checkered"></i>
@@ -373,15 +413,9 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a href="./index2.html" class="nav-link">
-            <i class="nav-icon fas fa-bell"></i>
-            <p>
-              Notifications
-            </p>
-          </a>
-        </li>
-        
+        @endif
+       
+         @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-cog"></i>
@@ -404,24 +438,35 @@
               </a>
             </li> -->
 
-             <li class="nav-item">
+             <!-- <li class="nav-item">
             <a href="{{route('liveamount.index')}}" class="nav-link">
               <i class="nav-icon fas fa-rupee-sign"></i>
               <p>
                 Live Amount
               </p>
             </a>
-          </li>
+          </li> -->
+           <!-- <li class="nav-item">
+          <a href="./index2.html" class="nav-link">
+            <i class="nav-icon fas fa-bell"></i>
+            <p>
+              Notifications
+            </p>
+          </a>
+        </li>
+         -->
+
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
                 <p>Profile</p>
               </a>
             </li>
-            
-            
+
+
           </ul>
         </li>
+        @endif
         
       </ul>
     </nav>

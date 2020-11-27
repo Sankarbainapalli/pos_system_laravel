@@ -148,7 +148,9 @@
                     <th>Ex-Form Rate</th>
                     <th>Total Amount</th>
                     <th>Date</th>
+                    @if(Auth::user()->role_id == 'SUPERADMIN')
                     <th>Action</th>
+                    @endif
                   </tr>
                   </thead>
                   <tbody>
@@ -173,6 +175,10 @@
                      @endif
                       @endforeach </td>
                     <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
+
+                    @if(Auth::user()->role_id == 'SUPERADMIN')
+                  
+                    
                     
                     <td> 
                       <div class="btn-group">
@@ -183,6 +189,7 @@
                       </div>
                     </td>
                   </tr>
+                  @endif
                  
                   @endforeach
             

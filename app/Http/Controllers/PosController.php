@@ -30,6 +30,16 @@ class PosController extends Controller
     	return view('admin.Pos.list',compact('category_list','total_sum','product_list','customer_list'));
     }
 
+    public function byamount(){
+
+        $total_sum=Stock::sum('qty');
+        $category_list=Category::all();
+        $product_list=Product::all();
+        $customer_list=Customer::all();
+
+        return view('admin.Pos.list_byamount',compact('category_list','total_sum','product_list','customer_list'));
+    }
+
  
     public function invoice($id){
 
@@ -166,5 +176,6 @@ class PosController extends Controller
         echo json_encode($response_array);
 
     }
+
 
 }

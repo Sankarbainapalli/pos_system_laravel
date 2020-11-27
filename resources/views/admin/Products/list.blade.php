@@ -43,7 +43,9 @@
                     <th>Price</th> -->
                     <!-- <th>Branch</th> -->
                     <!-- <th>Status</th> -->
+                    @if(Auth::user()->role_id == 'SUPERADMIN')
                     <th>Action</th>
+                    @endif
                   </tr>
                   </thead>
                   <tbody>
@@ -62,6 +64,9 @@
                       <span class="badge badge-danger">Deactive</span>
                       @endif
                     </td> -->
+
+                      @if(Auth::user()->role_id == 'SUPERADMIN')
+
                     
                     <td> 
                       <div class="btn-group">
@@ -75,6 +80,7 @@
                           </a>  
                       </div>
                     </td>
+                    @endif
                   </tr>
                   @endforeach
                 

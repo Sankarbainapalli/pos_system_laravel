@@ -40,8 +40,10 @@
                   <tr>
                     <th>S.No</th>
                     <th>Category Name</th>
-                    <th>Status</th>
+                    <!-- <th>Status</th> -->
+                    @if(Auth::user()->role_id == 'SUPERADMIN')
                     <th>Action</th>
+                    @endif
                   </tr>
                   </thead>
                   <tbody>
@@ -50,13 +52,14 @@
                   <tr>
                     <td>{{$loop->index+1}}</td>
                     <td>{{$category->name}}</td>
-                    <td>
+                   <!--  <td>
                       @if($category->status=='1')
                       <span class="badge badge-success">Active</span>
                       @else
                       <span class="badge badge-danger">Deactive</span>
                       @endif
-                    </td>
+                    </td> -->
+                     @if(Auth::user()->role_id == 'SUPERADMIN')
                     <td> 
                       <div class="btn-group">
 
@@ -70,6 +73,7 @@
                          
                       </div>
                     </td>
+                    @endif
                   </tr>
 
                   @endforeach

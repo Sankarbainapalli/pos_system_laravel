@@ -78,7 +78,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Dressed Stocks  &nbsp;<i class="fas fa-hand-point-left blink bg-info" >New</i></span>
-                <span class="info-box-number">{{$total_dressed_stock}}(Kgs)</span>
+                <span class="info-box-number">{{$total_dressed_stock-$total_kgs}}(Kgs)</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -266,11 +266,7 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
-<<<<<<< HEAD
 
-       
-=======
->>>>>>> vishal
       </div><!--/. container-fluid -->
     </section>
     <!-- /.content -->

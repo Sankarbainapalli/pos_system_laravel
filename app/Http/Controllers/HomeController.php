@@ -11,6 +11,7 @@ use App\Models\Franchisee;
 use App\Models\Exformrate;
 use App\Models\Liveamount;
 use App\Models\Order;
+use App\Models\Orderitem;
 
 class HomeController extends Controller
 {
@@ -56,14 +57,17 @@ class HomeController extends Controller
 
         $total_lived_stock=$total_lived_stock1-$total_dressed_stock;
 
-        
+        $tot_kgs=Orderitem::sum('qty'); 
+
+          $total_kgs=$tot_kgs/1000;
+
 
         // $total_dressed_stock=Stock::where('')count();
         $total_franchisee=Franchisee::count();
         $no_of_sales=Order::count('id');
         $total_sales=Order::sum('grandtotal');
 
-        return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate','total_sales','no_of_sales'));
+        return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate','total_sales','no_of_sales','total_kgs'));
     }
 
     // public function dashboard()
