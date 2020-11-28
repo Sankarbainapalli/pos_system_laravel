@@ -23,9 +23,16 @@ class EmployeeController extends Controller
 
       // dd(Auth::user()->id);
 
-    	$employee_list=User::all();
-        $role_list=Role::all();
+       $role_list=Role::all();
         $franchisee_list=Franchisee::all();
+
+      if(Auth::user()->role_id=='SUPERADMIN'){
+
+       	$employee_list=User::all();
+     }else{
+      $employee_list=User::where('frans_id',Auth::user()->frans_id)->get()->all();
+     }
+       
 
         return view('admin.Employees.list',compact('employee_list','role_list','franchisee_list'));
     }

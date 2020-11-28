@@ -33,6 +33,7 @@
                 @csrf
                   <div class="row">
 
+                  @if(Auth::user()->role_id == 'SUPERADMIN')
                     <div class="col-sm-6">
                       <!-- text input -->
                       <div class="form-group">
@@ -48,6 +49,7 @@
                        </select>
                       </div>
                     </div>
+
 
                     <div class="col-sm-6">
                       <!-- text input -->
@@ -66,6 +68,41 @@
                        </select>
                       </div>
                     </div>
+                   @endif
+
+
+                     @if(Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id =='STOREMANAGER')
+
+                      <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>Franchisee</label>
+                       <select class="form-control" name="franchisee_id" id="franchisee_id" onchange="franchisee_type()">
+
+                        <!-- <div id="mySelect"></div> -->
+                         <option>Select Franchisee</option>
+                         @foreach($franchisee_list as $franchisee)
+
+                           @if(Auth::user()->frans_id==$franchisee->id)
+
+                            <option value="{{$franchisee->id}}" {{ (Auth::user()->frans_id==$franchisee->id) ? 'selected' : '' }}>{{$franchisee->name.'('}}FRD00{{$franchisee->id.')'}}</option>
+
+                           @endif
+
+                         
+
+                         
+
+                         @endforeach
+                         
+                       </select>
+                      </div>
+                    </div>
+                 
+
+                      @endif
+
+
                     <div class="col-sm-6">
                       <div class="form-group">
                          <label>Franchisee Name</label>
@@ -78,6 +115,9 @@
                         <input type="text" id="f_mobile" class="form-control"  readonly="">
                       </div>
                     </div>
+                    
+
+                    
                    <!--  <div class="col-sm-6">
                       <div class="form-group">
                         <label>Branch Name</label>
@@ -89,7 +129,7 @@
                         <label>Required Qty</label>
                         <input type="text" name="qty" id="qty" class="form-control" placeholder="Auto"  onkeyup="sum()">
 
-                         <input type="button" onclick="ReadWeight();" value="GET" />
+                         <!-- <input type="button" onclick="ReadWeight();" value="GET" /> -->
                       </div>
                     </div>
                    
@@ -140,7 +180,7 @@
                   <thead>
                   <tr>
                     <th>S.No</th>
-                    <th>Branch Id</th>
+                    <!-- <th>Branch Id</th> -->
                     <th>Franchisee Id</th>
                     <th>Qty</th>
                     <th>Rate</th>
@@ -156,7 +196,7 @@
                     @foreach($pur_list as $purchaseorder)
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>BRN00{{$purchaseorder->branch_id}}({{$purchaseorder->Branch->name}})</td>
+
                     <td>FRD00{{$purchaseorder->franchisee_id}}({{$purchaseorder->Franchisee->name}})</td>
                     <td>{{$purchaseorder->qty}}</td>
                     <td>{{$purchaseorder->rate}}</td>

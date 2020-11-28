@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->integer('category_id')->unsigned();
             $table->string('product_name');
+            $table->string('product_img');
             $table->bigInteger('qty')->default('NULL');
             $table->decimal('amount', 5, 2)->default('NULL');
             $table->integer('branch_id')->unsigned()->default('NULL');

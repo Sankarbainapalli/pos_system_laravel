@@ -8,6 +8,8 @@ use App\Models\Liveamount;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Branch;
+use App\Models\Franchisee;
+use Auth;
  
 
 class LiveAmountController extends Controller
@@ -19,17 +21,27 @@ class LiveAmountController extends Controller
      */
     public function index(Request $request)
     {
+
+         if(Auth::user()->role_id == 'SUPERADMIN'){
+
           $liveamount_list=Liveamount::all();
+          
+      }else{
+
+         $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get()->all();
+      }
+          
 
         $category_list=Category::all();
 
-        $branch_list=Branch::all();
+        $franchisee_list=Franchisee::all();
 
         $type =  $request->session()->get('product_category');
 
       $product_list=Product::where('category_id',$type)->get()->all();
       
-     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','product_list','type','branch_list'));
+     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','product_list','type','franchisee_list'));
+      // }
 
         
     }
@@ -76,6 +88,7 @@ class LiveAmountController extends Controller
         $liveamount->category_id= $request->input('category_id');
         $liveamount->product_id= $request->input('product_id');
         $liveamount->branch_id= $request->input('branch_id');
+        // $liveamount->franchisee_id= Auth::user()->frans_id;
         $liveamount->rate= $request->input('rate');
         $liveamount->ratedate= date('Y-m-d');
         $liveamount->save();

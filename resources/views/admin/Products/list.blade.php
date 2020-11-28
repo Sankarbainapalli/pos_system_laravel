@@ -39,6 +39,7 @@
                     <th>S.no</th>
                     <th>Category</th>
                     <th>Product Name</th>
+                    <th>Product Image</th>
                    <!--  <th>Qty(Kgs)</th>
                     <th>Price</th> -->
                     <!-- <th>Branch</th> -->
@@ -54,6 +55,7 @@
                     <td>{{$loop->index+1}}</td>
                     <td>{{$product->Category->name}}</td>
                     <td>{{$product->product_name}}</td>
+                    <td> <img src="{{asset('storage/app/public/product/' . $product->product_img.'' ) }}" alt="" class="rounded avatar-md" width="100" height="100"></td>
                    <!--  <td>{{$product->qty}}</td>
                     <td>{{$product->amount}}</td>
                     <td>{{$product->product_name}}</td> -->
@@ -119,18 +121,11 @@
               </button>
             </div>
             <div class="modal-body">
-               <form action="{{route('product.store')}}" method="POST">
+               <form action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
               @csrf
                   <div class="row">
 
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="prod">Product Name</label>
-                            <input type="text"  name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <label>Product Category</label>
                             <select name="category_id"  class="form-control" style="width: 100%;" >
@@ -141,6 +136,22 @@
                             </select>
                         </div>
                     </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="prod">Product Name</label>
+                            <input type="text"  name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="prod">Product Image</label>
+                            <input type="file"  name="product_img" class="form-control" id="Prod">
+                        </div>
+                    </div>
+
+                    
                     
                    <!--  <div class="col-sm-6">
                       <div class="form-group">

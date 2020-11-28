@@ -46,15 +46,7 @@
                               <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
-                                 @if($product_id==$product->id)
-
-                               <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
-
-                                @else
-
-                               <option value="{{$product->id}}">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
-
-                                @endif
+                                  <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
                                 
                                 @endforeach
 
@@ -73,11 +65,22 @@
 
                           @foreach($franchisee_list as $franchisee)
 
+                          @if(Auth::user()->role_id == 'SUPERADMIN')
+
                            <option value="{{$franchisee->id}}">FRD00{{$franchisee->id.'('}}{{$franchisee->name.')('}}{{$franchisee->Branch->location.')'}}</option>
 
+                            @else
+
+                             @if(Auth::user()->frans_id==$franchisee->id)
+
+                            <option value="{{$franchisee->id}}" {{ (Auth::user()->frans_id==$franchisee->id) ? 'selected' : '' }}>{{$franchisee->name.'('}}FRD00{{$franchisee->id.')'}}</option>
+
+                           @endif
+                           @endif
+
                           @endforeach
-                         
-                        
+
+
                         </select>
                       </div>
                     </div>

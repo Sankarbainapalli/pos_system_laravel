@@ -50,11 +50,22 @@ class PosController extends Controller
 
      }
 
-     public function getProduct()
+     public function getProduct(Request $request)
     {
 
-        $product_list=Product::all();
+        // echo $request->category_id;
 
+        if($request->category_id==0){
+         $product_list=Product::all();   
+        }else{
+            
+            $product_list=Product::WHERE('category_id',$request->category_id)->get()->all();
+  
+        }
+
+
+        // $product_list=Product::all();
+      
         echo json_encode($product_list);
      
 

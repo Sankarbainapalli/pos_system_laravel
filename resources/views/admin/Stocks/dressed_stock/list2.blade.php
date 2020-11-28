@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Lived Stocks List</h1>
+            <h1 class="m-0">Dressed Stocks List</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-              <li class="breadcrumb-item active">Lived Stocks</li>
+              <li class="breadcrumb-item active">Dressed</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,14 +26,13 @@
         <div class="row">
           <div class="col-12">
 
-             <x-alert />
+ <x-alert />
 
             <div class="card">
 
               <div class="card-header">
                <!--  <h3 class="card-title justify-content-center ">Stocks List</h3>
                 <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#add-stock">Add Stock</button> -->
-                
                 <form action="{{route('stock.store')}}" method="POST">
                   @csrf
                   <div class="row col-md-12" >
@@ -43,17 +42,20 @@
                       <div class="col-sm-6">
                       <div class="form-group">
                        <label>Product Type</label>
-                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
-                               <option >Select Product Type</option>
+                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
+                              <option >Select Product Type</option>
                                @foreach($product_list as $product)
-
 
                                  @if($product_id==$product->id)
 
                                <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
 
-                                @endif
+                                @else
 
+                               <option value="{{$product->id}}">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
+
+                                @endif
+                                
                                 @endforeach
 
 
@@ -62,7 +64,7 @@
                         </div>
                       </div>
 
-                      <div class="row">
+  <div class="row">
                    
                     <div class="col-sm-6">
                       <div class="form-group">
@@ -71,20 +73,7 @@
 
                           @foreach($franchisee_list as $franchisee)
 
-                              @if(Auth::user()->role_id == 'SUPERADMIN')
-
-                                  <option value="{{$franchisee->id}}">FRD00{{$franchisee->id.'('}}{{$franchisee->name.')('}}{{$franchisee->Branch->location.')'}}</option>
-
-                              @else
-
-                             @if(Auth::user()->frans_id==$franchisee->id)
-
-                            <option value="{{$franchisee->id}}" {{ (Auth::user()->frans_id==$franchisee->id) ? 'selected' : '' }}>{{$franchisee->name.'('}}FRD00{{$franchisee->id.')'}}</option>
-
-                           @endif
-                           @endif
-
-                         
+                           <option value="{{$franchisee->id}}">FRD00{{$franchisee->id.'('}}{{$franchisee->name.')('}}{{$franchisee->Branch->location.')'}}</option>
 
                           @endforeach
                          
@@ -99,17 +88,19 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Total weight(kg)</label>
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" readonly=""><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()"  readonly=""><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
                       </div>
                     </div>
                   </div>
                     <div class="row">
                     <div class="col-sm-6">
                       <div class="form-group">
-                        
-                           <label>Ex-Form Rate</label>                         
-                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" onkeyup="sum()" value="{{$product_rate}}" readonly="">
-                       
+                         @foreach($product_rate as $rate)
+                        <label>Rate</label>
+
+                         
+                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value="{{$rate->rate}}" readonly="">
+                          @endforeach
 
                     
                         <!-- <select class="form-control" name="rate" id="rate" disabled="">
@@ -126,7 +117,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Amount</label>
-                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount"  id="total" onkeyup="sum()" readonly="">
+                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()">
                       </div>
                     </div>
 
@@ -155,7 +146,7 @@
                     <th>Franchisee ID</th>
                     <th>Name</th>
                     <th>Total Qty</th>
-                    <th>Ex-Form Rate</th>
+                    <th>Rate</th>
                     <th>Total Amount</th>
                     <th>Date</th>
                     @if(Auth::user()->role_id == 'SUPERADMIN')
@@ -165,32 +156,31 @@
                   </thead>
                   <tbody>
                     @foreach($stock_list as $stock)
+                    
                   <tr>
                     <td>{{$loop->index+1}}</td>
                     <td>FRD00{{$stock->franchisee_id}}</td>
-                    <td>{{$stock->Product->product_name}}</td>
+                     <td>{{$stock->Franchisee->name}}</td>
+                    <!-- <td>{{$stock->Product->product_name}}</td> -->
                     <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
+                           
                           </a></td>
                     <td>
-
+                      <!-- {{$stock->rate}} -->
+                     @foreach($liveamount_list as $live)
+                      @if($live->product_id==$stock->product_id) 
                       {{$stock->rate}}
-                 
-                   
+                     @endif
+                      @endforeach 
                     </td>
-
-                    <td> 
-
-                      {{$stock->amount}}
-                     
-                    </td>
-
-
+                    <td>@foreach($liveamount_list as $live)
+                      @if($live->product_id==$stock->product_id) 
+                      {{$stock->rate*$stock->qty}}
+                     @endif
+                      @endforeach </td>
                     <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
 
                     @if(Auth::user()->role_id == 'SUPERADMIN')
-                  
-                    
-                    
                     <td> 
                       <div class="btn-group">
                     
@@ -199,8 +189,9 @@
                           </button></a>
                       </div>
                     </td>
+                   @endif
                   </tr>
-                  @endif
+              
                  
                   @endforeach
             

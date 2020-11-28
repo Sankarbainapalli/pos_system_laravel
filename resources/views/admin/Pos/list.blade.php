@@ -144,10 +144,14 @@
                   <!-- <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-info"> All</button>
                   </div> -->
-
+                     <div class="col-md-4">
+                    
+                    <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType(0)">ALL</button>
+                   </div>
                   @foreach($category_list as $category)
                   <div class="col-md-4">
-                    <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType('{{$category->name}}')">{{$category->name}}</button>
+                    
+                    <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType('{{$category->id}}')">{{$category->name}}</button><br>
                   </div>
                   @endforeach
 
@@ -349,23 +353,29 @@
 }
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-    // var token = "{{ csrf_token() }}";
+ function getCategoryType(value){
+
+  var category_id=value;
+  // alert(category_id);
+    var token = "{{ csrf_token() }}";
     $.ajax({
 
             url: "getProduct",
-            // url: "liveamount",
-            method: "GET",
+            method: "POST",
             dataType: "json",
-            // data: {franchisee_id:x, _token: token},
+            data: {category_id:category_id, _token: token},
             success:function(data){
+              // alert(data.length);
 
                var tab= ""; 
 
               for (var i = 0; i < data.length; i++) {
 
- tab+='<div class="btn btn-app" onclick="add_product('+data[i].id+')" onkeyup="sum()"><span class="badge bg-warning">5kgs</span> <img src="https://5.imimg.com/data5/WU/AJ/MY-58631066/broiler-live-chicken-500x500.jpg" width="60" height="50" > <span style="font-size: 16px">'+data[i].product_name+'<input type="hidden" name=""  id="product_name'+data[i].id+'" value="'+data[i].product_name+'"><input type="hidden" name="" id="incre" value="'+data[i].id+'"></span></div>';
+ tab+='<div class="btn btn-app" onclick="add_product('+data[i].id+')" onkeyup="sum()"><img src="storage/app/public/product/'+data[i].product_img+'" width="60" height="50" > <span style="font-size: 16px">'+data[i].product_name+'<input type="hidden" name=""  id="product_name'+data[i].id+'" value="'+data[i].product_name+'"><input type="hidden" name="" id="incre" value="'+data[i].id+'"></span></div>';
+
+ // <span class="badge bg-warning">5kgs</span> 
  
               }
 
@@ -374,7 +384,8 @@ $(document).ready(function(){
              }
 
             });
-});
+  }
+// });
 
 
 
@@ -477,6 +488,8 @@ $(document).ready(function(){
               }
 
                $("#getLiveamount").html(tab);
+
+               getCategoryType(0);
 
              }
 
@@ -751,6 +764,8 @@ $(document).ready(function(){
   $(document).ready(function(){
     $(".toast").toast('show');
   });
+
+
 
  
   

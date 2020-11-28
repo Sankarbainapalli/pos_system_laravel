@@ -40,14 +40,14 @@
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-              <form action="{{route('product.update', $product->id)}}" method="POST">
+              <form action="{{route('product.update', $product->id)}}" method="POST" enctype="multipart/form-data">
                        @csrf
                     @method('patch')
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Category</label>
-                    <select name="category"  style="width: 100%;" class="form-control">
+                    <select name="category_id"  style="width: 100%;" class="form-control" >
                       <!-- class="select2" multiple="multiple" data-placeholder="Select a Category" -->
                       @foreach($category_list as $category)
 
@@ -61,6 +61,13 @@
                     <label for="prod">Product Name</label>
                     <input type="text" name="product_name" class="form-control" placeholder="Enter Product Name" id="Prod" required value="{{$product->product_name}}">
                 </div>
+
+
+                <div class="form-group">
+                    <label for="prod">Product Image</label>
+                    <input type="file"  name="product_img" class="form-control" id="Prod" >
+                </div>
+
                 <!-- /.form-group -->
                 <!-- <div class="form-group">
                     <label>Qty(Kgs)</label>

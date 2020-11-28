@@ -15,7 +15,7 @@ class PurchaseOrderController extends Controller
     public function index()
     {
 
-         $franchisee_list = Franchisee::all();
+        $franchisee_list = Franchisee::all();
         $banch_list = Branch::all();
         $product_rate = Exformrate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
 

@@ -27,25 +27,25 @@
           <div class="col-12">
             <x-alert />
             <div class="card">
+                @if(Auth::user()->role_id == 'SUPERADMIN')
               <div class="card-header">
                 <!-- <h3 class="card-title justify-content-center ">Live Amount (Main Shop)</h3> -->
+              
                 <form action="{{route('liveamount.store')}}" method="POST">
                   @csrf
                   <div class="row">
                     <div class="col-sm-3">
                       <div class="form-group">
-                       <label>Branch name</label>
+                       <label>Franchisee name</label>
                         <select class="form-control" name="branch_id">
-                          @foreach($branch_list as $branch)
-                            <option value="{{$branch->id}}">{{$branch->name}}</option>
+                          @foreach($franchisee_list as $franchisee)
+                            <option value="{{$franchisee->id}}">FRN00{{$franchisee->id}}({{$franchisee->name}})</option>
                           @endforeach
                         </select>
                       </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-2">
                       <div class="form-group">
-
-                        <!-- <input type="text" name="chicken" class="form-control" placeholder="Chicken Rate" id="name1" required>  -->
 
                         <label>Product Category</label>
                             <select onchange="product_type(this.value)" name="category_id" id="product_category"  class="form-control" style="width: 100%;" >
@@ -90,7 +90,9 @@
                     </div>
                   </div>
                 </form>
+
               </div>
+              @endif
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped text-center">
@@ -109,7 +111,7 @@
                     @foreach($liveamount_list as $liveamount)
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>{{$liveamount->Branch->name}}</td>
+                    <td>{{$liveamount->Franchisee->name}}</td>
                     <td>{{$liveamount->Category->name}}</td>
                     <td>{{$liveamount->Product->product_name}}</td>
                     <td>{{$liveamount->rate}}/-</td>

@@ -23,6 +23,12 @@ class Liveamount extends Model
 
   } 
 
+   public function Franchisee(){
+    
+      return $this->belongsTo("App\Models\Franchisee", "branch_id");
+
+  } 
+
 	  public function Product(){
    	
     	return $this->belongsTo("App\Models\Product", "product_id");

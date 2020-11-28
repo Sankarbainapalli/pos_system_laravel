@@ -61,7 +61,7 @@ Route::get('/getApiData', [App\Http\Controllers\PosController::class, 'getApiDat
 
 Route::get('/getCart', [App\Http\Controllers\PosController::class, 'getCart'])->name('getCart');
 
-Route::get('/getProduct', [App\Http\Controllers\PosController::class, 'getProduct'])->name('getProduct');
+Route::post('/getProduct', [App\Http\Controllers\PosController::class, 'getProduct'])->name('getProduct');
 
 Route::post('/removeProduct', [App\Http\Controllers\PosController::class, 'removeProduct'])->name('removeProduct');
 
@@ -88,7 +88,7 @@ Route::resource('exformrate', App\Http\Controllers\ExFormRateController::class);
 Route::resource('order', App\Http\Controllers\OrderController::class);
 
 
-Route::post('/getProduct', [App\Http\Controllers\LiveAmountController::class, 'getProduct'])->name('getProduct');
+Route::post('/getProduct1', [App\Http\Controllers\LiveAmountController::class, 'getProduct1'])->name('getProduct1');
 
 Route::get('/live_stock_report', [App\Http\Controllers\ReportController::class, 'live_stock_report'])->name('live_stock_report');
 

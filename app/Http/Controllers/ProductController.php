@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Branch;
@@ -22,9 +23,24 @@ class ProductController extends Controller
 
      public function store(Request $request){
 
-        // dd($request->all());
+            // dd($request->all());
+        $product=new Product;
+        $product->category_id=$request->category_id;
+        $product->product_name=$request->product_name;
 
-       Product::create($request->all());
+
+        if($request->hasFile('product_img')){
+ 
+        $product_img = $request->product_name.'product'.time().'.'.request()->product_img->getClientOriginalExtension();
+
+       request()->product_img->storeAs('public/product', $product_img);
+
+        $product->product_img=$product_img;
+        }
+
+        $product->save();
+   
+       // Product::create($request->all());
 
     return redirect()->route('product.index')->with('message','product Has been added Successfully');
     }
@@ -39,12 +55,52 @@ class ProductController extends Controller
 
      public function update(Request $request,Product $product){
 
+       //  $product = new Product::find($product);
+       //  $product->category_id=$request->category_id;
+       //  $product->product_name=$request->product_name;
+ 
 
-        $product->update($request->all());
+       //    if($request->hasFile('product_img')){
 
-        // $product->update(['name'=>$request->name,'status'=>$request->status]);
+       //   $img = $request->product_img.'product'.time().'.'.request()->img->getClientOriginalExtension();
+
+       // request()->img->storeAs('public/product', $img);
+
+       //   Storage::delete('public/product/'.$product->product_img); 
+
+       //    $product->product_img =$img;
+         
+       //  }
+
+       //  $product->save();
+
+        if($request->hasFile('product_img')){
+
+         $img = $request->product_name.'product'.time().'.'.request()->product_img->getClientOriginalExtension();
+
+       request()->product_img->storeAs('public/product', $img);
+
+         Storage::delete('public/product/'.$product->product_img); 
+
+          // $product->product_img =$img;
+
+           }
+
+
+        // $product->update($request->all());
+
+        $product->update(['category_id'=>$request->category_id,'product_name'=>$request->product_name,'product_img'=>$img]);
 
         return redirect(route('product.index'))->with('message','product Updated Successfully');
+    }
+
+     public function show(Product $product){
+
+        // Todo::where('id',$id)->delete();
+         $product->delete();
+
+         return redirect()->back()->with('error','product Deleted Has been Successfully');
+
     }
 
     public function destroy(Product $product){

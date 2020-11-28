@@ -10,6 +10,7 @@ use App\Models\Product;
 use App\Models\Stock;
 use App\Models\Exformrate;
 use App\Models\Franchisee;
+use Auth;
 
 class StockController extends Controller
 {
@@ -64,16 +65,39 @@ class StockController extends Controller
 
         // $category_list=Category::all();
         $liveamount_list=Liveamount::all();
-        $product_list=Product::where('product_name','Dressed')->get();
+
+         $product_list=Product::where('product_name','DRESSED')->get();
 
         $stock_sum=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product_id)->sum('amount');
+
+
+        // foreach ($product_list as $products) {
+
+        //      $stock_list=Stock::where('product_id',$products->id)->get();
+        // }
+
+         if(Auth::user()->role_id == 'SUPERADMIN'){
 
         foreach ($product_list as $products) {
 
              $stock_list=Stock::where('product_id',$products->id)->get();
-        }
+
+              }
+
+                }else{
+
+                    foreach ($product_list as $products) {
+
+                 $stock_list=Stock::where('product_id',$products->id)->where('franchisee_id',Auth::user()->frans_id)->get();
+                 }
+
+                  }
+
+
     
         $product_rate=Liveamount::where('product_id',$product_id)->get()->all();
+
+        // $product_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
             $franchisee_list=Franchisee::all();
 
@@ -92,10 +116,24 @@ class StockController extends Controller
 
         $stock_sum=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product_id)->sum('amount');
 
+         if(Auth::user()->role_id == 'SUPERADMIN'){
+
         foreach ($product_list as $products) {
 
              $stock_list=Stock::where('product_id',$products->id)->get();
-           }
+
+              }
+
+                }else{
+
+                    foreach ($product_list as $products) {
+
+                 $stock_list=Stock::where('product_id',$products->id)->where('franchisee_id',Auth::user()->frans_id)->get();
+                 }
+
+                  }
+
+          
     
         $product_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
