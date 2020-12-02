@@ -34,22 +34,32 @@
                   <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <label>Branch</label>
-                            <select class="form-control select2bs4" style="width: 100%;" id="Branch">
-                                <option selected="selected">All Branches</option>
-                                <option>Branch 2</option>
-                                <option>Branch 3</option>
+                            <label>Franchisee</label>
+                            <select name="user_id" class="form-control select2bs4" style="width: 100%;" id="Branch">
+                             <option value="0">Select</option>
+                              @foreach($franchisee_list as $franchisee)
+                                @if($franchisee->frans_id=='0')
+                                  <option value="{{$franchisee->frans_id}}" style="display: none;">ADMIN</option>
+                                @else
+
+                              <option value="{{$franchisee->id}}">{{$franchisee->franchisee->name}}</option>
+                              @endif
+                             @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
                             <label>Paid By</label>
-                            <select class="form-control select2bs4" style="width: 100%;" id="Branch">
-                                <option selected="selected">All</option>
-                                <option>Bank</option>
-                                <option>Cash</option>
-                                <option>Bank Transfer</option>
+                            <select name="payment_method" class="form-control select2bs4" style="width: 100%;" id="Branch">
+                                <option value="">Select</option>
+                                <option value="CASH">Cash</option>
+                                <option value="NETT">Nett</option>
+                                <option value="VISA">VISA</option>
+                                <option value="CHEQUE">Cheque</option>
+                                <option value="DEBIT">Debit</option>
+                                <option value="CREDIT">Credit</option>
+                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option>
                             </select>
                         </div>
                     </div>
@@ -71,7 +81,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped text-center">
+                <table id="example" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
                     <th>#</th>
@@ -134,5 +144,38 @@
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+
+@endsection
+
+@section('script')
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.footer()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+ 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    } );
+} );
+
+
+</script>
 
 @endsection

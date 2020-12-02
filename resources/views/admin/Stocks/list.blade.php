@@ -158,10 +158,11 @@
                     
                     <td> 
                       <div class="btn-group">
-                    
-                          <a href="{{route('stock.destroy',$stock->id)}}"><button type="button" class="btn btn-danger">
+
+                          <a href="{{route('stock.destroy',$stock->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
+                          
                       </div>
                     </td>
                   </tr>

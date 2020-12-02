@@ -120,23 +120,31 @@ class PosController extends Controller
      public function addProduct(Request $request)
     {
 
-        
-        $cart_cnt=Cart::where('product_id',$request->product_id)->count();
-            // return $cart_cnt;
+   
+     $cart_cnt=Cart::where('product_id',$request->product_id)->count();
+
         if($cart_cnt==0){
 
-       Cart::create($request->all());
+        $total_stock=Stock::where('product_id',$request->product_id)->sum('qty'); 
 
-       $query="SELECT * FROM `liveamounts` as lv INNER JOIN products as pr on pr.id=lv.product_id  WHERE lv.product_id='".$request->product_id."' ";
+        if($total_stock>1){
 
+         Cart::create($request->all());
+
+        $query="SELECT * FROM `liveamounts` as lv INNER JOIN products as pr on pr.id=lv.product_id  WHERE lv.product_id='".$request->product_id."' ";
 
             $product_list=DB::select(DB::raw($query));  
-
-            // echo $product_list; 
 
         // $product_list=Liveamount::where('product_id',$request->product_id)->get();
 
         echo json_encode($product_list);
+
+       }else{
+
+        $response_array['empty'] = 'empty';
+
+        echo json_encode($response_array);   
+       }
 
  }else{
 

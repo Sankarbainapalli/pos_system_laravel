@@ -25,7 +25,9 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Info boxes -->
+
         <div class="row">
+           @if(Auth::user()->role_id == 'SUPERADMIN')
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box">
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-warehouse"></i></span>
@@ -34,13 +36,31 @@
                 <span class="info-box-text">Total Franchisees</span>
                 <span class="info-box-number">
                   {{$total_franchisee}}
-                  <!-- <small>%</small> -->
                 </span>
               </div>
-              <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
+          @endif
+
+         @if(Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
+
+           <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-warehouse"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Today Sale</span>
+                <span class="info-box-number">
+                  {{$today_sale}}
+                </span>
+              </div>
+            </div>
+            <!-- /.info-box -->
+          </div>
+
+
+          @endif
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
             <div class="info-box mb-3">
@@ -78,7 +98,11 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Dressed Stocks  &nbsp;<i class="fas fa-hand-point-left blink bg-info" >New</i></span>
-                <span class="info-box-number">{{$total_dressed_stock-$total_kgs}}(Kgs)</span>
+                <span class="info-box-number">
+               
+                <!-- {{$total_dressed_stock}}(Kgs) -->
+                {{$dres_stock}}(Kgs)
+              </span>
               </div>
               <!-- /.info-box-content -->
             </div>

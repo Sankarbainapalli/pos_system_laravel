@@ -67,7 +67,7 @@
                             <i class="far fa-edit"></i>
                           </button></a>
 
-                          <a href="{{route('category.destroy', $category->id)}}"> <button type="button" class="btn btn-danger">
+                          <a href="{{route('category.destroy', $category->id)}}"> <button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
                          

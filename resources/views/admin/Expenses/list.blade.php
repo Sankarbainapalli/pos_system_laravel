@@ -68,7 +68,7 @@
                           <a href="{{route('expenses.edit',$expenses->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                        <a href="{{route('expenses.destroy',$expenses->id)}}">  <button type="button" class="btn btn-primary">
+                        <a href="{{route('expenses.destroy',$expenses->id)}}">  <button type="button" class="btn btn-primary" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
                       </div>

@@ -67,7 +67,7 @@
                           <a href="{{route('franchisee.edit',$franchisee->id)}}"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-product">
                             <i class="far fa-edit"></i>
                           </button></a>
-                         <a href="{{route('franchisee.destroy', $franchisee->id)}}"> <button type="button" class="btn btn-primary">
+                         <a href="{{route('franchisee.destroy', $franchisee->id)}}"> <button type="button" class="btn btn-danger" onclick="confirm('Do You Want To Delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
                       </div>
@@ -162,14 +162,15 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
-                          <label>Bank A/c No.</label>
-                          <input type="text" name="account_no" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required maxlength="16">
+                          <label>Bank Details</label>
+                          <!-- <input type="text" name="account_no" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required maxlength="16"> -->
+                          <textarea class="form-control" name="account_no" placeholder=""></textarea>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Remarks/Note</label>
-                        <textarea class="form-control" name="remarks" rows="1" placeholder="Enter Remarks/Note" id="remarks"></textarea>
+                        <textarea class="form-control" name="remarks"  placeholder="Enter Remarks/Note" id="remarks"></textarea>
                       </div>
                     </div>
 

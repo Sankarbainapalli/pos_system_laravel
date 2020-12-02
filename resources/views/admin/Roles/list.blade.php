@@ -55,7 +55,7 @@
                             <i class="far fa-edit"></i>
                           </button></a>
 
-                        <a href="{{route('role.destroy',$role->id)}}"><button type="button" class="btn btn-danger">
+                        <a href="{{route('role.destroy',$role->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button>
                           </a>  

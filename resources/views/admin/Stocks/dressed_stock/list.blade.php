@@ -42,13 +42,16 @@
                       <div class="col-sm-6">
                       <div class="form-group">
                        <label>Product Type</label>
-                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
+                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required>
                               <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
-                                  <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
-                                
+                                  <option value="{{$product->id}}" >{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
+
+
                                 @endforeach
+
+                                <!-- {{ ( $product->product_name == 'DRESSED') ? 'selected' : '' }} -->
 
 
                             </select>
@@ -165,29 +168,27 @@
                     <td>FRD00{{$stock->franchisee_id}}</td>
                      <td>{{$stock->Franchisee->name}}</td>
                     <!-- <td>{{$stock->Product->product_name}}</td> -->
-                    <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
+                    <td>{{$stock->qty}} ||       <!-- <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
                            
-                          </a></td>
+                          </a> --></td>
                     <td>
-                      <!-- {{$stock->rate}} -->
-                     @foreach($liveamount_list as $live)
-                      @if($live->product_id==$stock->product_id) 
+                 
                       {{$stock->rate}}
-                     @endif
-                      @endforeach 
+                    
                     </td>
-                    <td>@foreach($liveamount_list as $live)
-                      @if($live->product_id==$stock->product_id) 
-                      {{$stock->rate*$stock->qty}}
-                     @endif
-                      @endforeach </td>
+                    <td> 
+
+                      {{$stock->amount}}
+
+                    </td>
+
                     <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
 
                     @if(Auth::user()->role_id == 'SUPERADMIN')
                     <td> 
                       <div class="btn-group">
                     
-                          <a href="{{route('stock.destroy',$stock->id)}}"><button type="button" class="btn btn-danger">
+                          <a href="{{route('stock.destroy',$stock->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
                       </div>
@@ -337,10 +338,13 @@
 
   var x = document.getElementById("product_id").value;
 
+  // alert(x);
+
     var token = "{{ csrf_token() }}";
     $.ajax({
 
             url: "getRate",
+            // url: "dressed_stock",
             // url: "liveamount",
             method: "POST",
             data: {product_id:x, _token: token},
@@ -364,8 +368,8 @@
                 alert('Something Wrong');
               }else{
                 // alert("fdsdf");
-                    location.reload();
-                    // console.log("success");
+                    // location.reload();
+                    console.log("success");
 
               }
              }

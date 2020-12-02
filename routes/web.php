@@ -75,6 +75,8 @@ Route::post('/getBranch', [App\Http\Controllers\PurchaseOrderController::class, 
 
 Route::get('/dressed_stock', [App\Http\Controllers\StockController::class, 'dressed_stock'])->name('stock.dressed_stock');
 
+Route::post('/dressed_stock', [App\Http\Controllers\StockController::class, 'dressed_stock'])->name('stock.dressed_stock');
+
 Route::get('/lived_stock', [App\Http\Controllers\StockController::class, 'lived_stock'])->name('stock.lived_stock');
 
 // Route::post('/store_dressed_stock', [App\Http\Controllers\StockController::class, 'store_dressed_stock'])->name('stock.store_dressed_stock');
@@ -91,6 +93,8 @@ Route::resource('order', App\Http\Controllers\OrderController::class);
 Route::post('/getProduct1', [App\Http\Controllers\LiveAmountController::class, 'getProduct1'])->name('getProduct1');
 
 Route::get('/live_stock_report', [App\Http\Controllers\ReportController::class, 'live_stock_report'])->name('live_stock_report');
+
+Route::get('/dressed_stock_report', [App\Http\Controllers\ReportController::class, 'dressed_stock_report'])->name('dressed_stock_report');
 
 Route::get('/sales_report', [App\Http\Controllers\ReportController::class, 'sales_report'])->name('sales_report');
 

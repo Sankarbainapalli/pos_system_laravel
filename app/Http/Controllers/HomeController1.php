@@ -58,8 +58,7 @@ class HomeController extends Controller
          $total_dressed_stock='0';
         foreach ($product_list_d as $product) {
         
-          // $total_dressed_stock=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product->id)->sum('qty'); 
-          $total_dressed_stock=Stock::where('product_id',$product->id)->sum('qty'); 
+          $total_dressed_stock=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product->id)->sum('qty'); 
           
            // $total_dressed_stock=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product->id)->where('franchisee_id',Auth::user()->frans_id)->sum('qty'); 
 
@@ -70,25 +69,32 @@ class HomeController extends Controller
 
         // $total_lived_stock=$total_lived_stock1-$total_dressed_stock;
 
-           $total_lived_stock=$total_lived_stock1;
-            $dres_stock=$total_dressed_stock;
+        if($total_lived_stock1>0){
+           // $total_lived_stock=$total_lived_stock1;
            // $total_lived_stock=$total_lived_stock1-$total_dressed_stock;
-
            // $total_lived_stock=$total_lived_stock1-($total_dressed_stock+($total_order_qty)/1000);
 
-         // $tot_kgs=Orderitem::sum('qty'); 
+             if($total_dressed_stock=='0'){
+            $total_lived_stock=$total_lived_stock1-($total_order_qty/1000);
+          }else{
+            $total_lived_stock=$total_lived_stock1-($total_dressed_stock+($total_order_qty)/1000);
+          }
 
-         //  $total_kgs=$tot_kgs/1000;
+         }else{
+          $total_lived_stock=0;
+         }
 
-         //  if($total_dressed_stock>$total_kgs){
+         $tot_kgs=Orderitem::sum('qty'); 
 
-         //  $dres_stock=$total_dressed_stock-$total_kgs;
+          $total_kgs=$tot_kgs/1000;
 
-         //  }else{
-         //    $dres_stock=0;
-         //  }
+          if($total_dressed_stock>$total_kgs){
 
-        
+          $dres_stock=$total_dressed_stock-$total_kgs;
+
+          }else{
+            $dres_stock=0;
+          }
 
       // $total_dressed_stock=Stock::where('')count();
 
@@ -122,9 +128,7 @@ class HomeController extends Controller
         
           // $total_dressed_stock=Stock::where('product_id',$product->id)->where('franchisee_id',Auth::user()->frans_id)->sum('qty');  
 
-          // $total_dressed_stock=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product->id)->where('franchisee_id',Auth::user()->frans_id)->sum('qty');  
-
-          $total_dressed_stock=Stock::where('product_id',$product->id)->where('franchisee_id',Auth::user()->frans_id)->sum('qty');  
+          $total_dressed_stock=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product->id)->where('franchisee_id',Auth::user()->frans_id)->sum('qty');  
 
           $total_order_qty=Orderitem::where('item_name',$product->id)->where('user_id',Auth::user()->id)->sum('qty'); 
 
@@ -133,23 +137,28 @@ class HomeController extends Controller
 
         // $total_lived_stock=$total_lived_stock1-$total_dressed_stock;
 
-       
+        if($total_lived_stock1>0){
+          
            // $total_lived_stock=$total_lived_stock1-$total_dressed_stock;
+          if($total_dressed_stock=='0'){
+            $total_lived_stock=$total_lived_stock1-($total_order_qty/1000);
+          }else{
+            $total_lived_stock=$total_lived_stock1-($total_dressed_stock+($total_order_qty)/1000);
+          }
 
-           $total_lived_stock=$total_lived_stock1;
-            $dres_stock=$total_dressed_stock;
+         }else{
+          $total_lived_stock=0;
+         }
 
-         //    $total_lived_stock=$total_lived_stock1-($total_dressed_stock+($total_order_qty)/1000);
-        
-         // $tot_kgs=Orderitem::where('user_id',Auth::user()->id)->sum('qty'); 
+         $tot_kgs=Orderitem::where('user_id',Auth::user()->id)->sum('qty'); 
 
-         //  $total_kgs=$tot_kgs/1000;
+          $total_kgs=$tot_kgs/1000;
 
-         //  if($total_dressed_stock>0){
-         //  $dres_stock=$total_dressed_stock-$total_kgs;
-         //  }else{
-         //    $dres_stock=0;
-         //  }
+          if($total_dressed_stock>0){
+          $dres_stock=$total_dressed_stock-$total_kgs;
+          }else{
+            $dres_stock=0;
+          }
 
       // $total_dressed_stock=Stock::where('')count();
 
@@ -165,8 +174,7 @@ class HomeController extends Controller
 
       
 
-        return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate','total_sales','no_of_sales','dres_stock','today_sale'));
-        // 'total_kgs',
+        return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate','total_sales','no_of_sales','total_kgs','dres_stock','today_sale'));
     }
 
     // public function dashboard()

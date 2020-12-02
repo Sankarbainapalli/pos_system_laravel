@@ -24,12 +24,17 @@ class EmployeeController extends Controller
       // dd(Auth::user()->id);
 
        $role_list=Role::all();
-        $franchisee_list=Franchisee::all();
+
+
+        // $franchisee_list=Franchisee::all();
 
       if(Auth::user()->role_id=='SUPERADMIN'){
 
+        $franchisee_list=Franchisee::all();
        	$employee_list=User::all();
+
      }else{
+       $franchisee_list=Franchisee::where('id',Auth::user()->frans_id)->get()->all();
       $employee_list=User::where('frans_id',Auth::user()->frans_id)->get()->all();
      }
        

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Franchisee;
 use App\Models\Branch;
+use App\Models\User;
 
 class FranchiseeController extends Controller
 {
@@ -63,6 +64,8 @@ class FranchiseeController extends Controller
         // Todo::where('id',$id)->delete();
 
          $franchisee->delete();
+    
+        User::where('frans_id',$franchisee->id)->delete();
 
          return redirect()->back()->with('error','franchisee Deleted Has been Successfully');
 
@@ -75,6 +78,8 @@ class FranchiseeController extends Controller
         // Todo::where('id',$id)->delete();
 
          $franchisee->delete();
+
+         User::where('frans_id',$franchisee->id)->delete();
 
          return redirect()->back()->with('error','franchisee Deleted Has been Successfully');
 

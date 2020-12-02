@@ -43,7 +43,7 @@
                     <th>Mobile No.</th>
                     <th>Role</th>
                     <th>Franchisee</th>
-                    <th>Status</th>
+                    <!-- <th>Status</th> -->
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -66,17 +66,20 @@
                       <td>{{$list->franchisee->name}}</td>
                       @endif
                       
-                    <td>@if($list->status=='1')
+                    <!-- <td>
+                      @if($list->status=='1')
                       <span class="badge badge-success">Active</span>
                       @else
                       <span class="badge badge-danger">Deactive</span>
-                      @endif</td>
+                      @endif
+                    </td> -->
+
                     <td> 
                       <div class="btn-group">
                           <a href="{{route('employee.edit',$list->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                        <a href="{{route('employee.destroy', $list->id)}}"><button type="button" class="btn btn-danger">
+                        <a href="{{route('employee.destroy', $list->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button>
                       </div>
@@ -154,7 +157,21 @@
                         <label>Role</label>
                         <select name="role_id" class="form-control select2bs4" style="width: 100%;" id="stat">
                             @foreach($role_list as $role)
+
+                            @if(Auth::user()->role_id=='STOREMANAGER' || Auth::user()->role_id=='FRANCHISEEOWNER')
+
+                             @if($role->name=='STOREMANAGER'|| $role->name=='FRANCHISEEOWNER')
+                            <option value="{{$role->name}}" selected="selected">{{$role->name}}</option>
+                          
+                            @endif
+                            @endif
+
+                            @if(Auth::user()->role_id=='SUPERADMIN')
+
                             <option value="{{$role->name}}">{{$role->name}}</option>
+
+                            @endif
+
                             @endforeach
                         </select>
                       </div>
@@ -166,8 +183,9 @@
                         <select name="frans_id" class="form-control" style="width: 100%;">
                             <option value="0">Select</option>
                             @foreach($franchisee_list as $franchisee)
-                          
+                            
                             <option value="{{$franchisee->id}}">{{$franchisee->name}}</option>
+
                             @endforeach
                         </select>
                         </div>

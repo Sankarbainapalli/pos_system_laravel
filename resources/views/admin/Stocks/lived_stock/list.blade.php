@@ -43,12 +43,11 @@
                       <div class="col-sm-6">
                       <div class="form-group">
                        <label>Product Type</label>
-                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()">
+                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required>
                                <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
-
-                                 @if($product_id==$product->id)
+                                 @if($product->product_name=='LIVE')
 
                                <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
 
@@ -169,8 +168,8 @@
                     <td>{{$loop->index+1}}</td>
                     <td>FRD00{{$stock->franchisee_id}}</td>
                     <td>{{$stock->Product->product_name}}</td>
-                    <td>{{$stock->qty}} ||       <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
-                          </a></td>
+                    <td>{{$stock->qty}} ||       <!-- <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
+                          </a> --></td>
                     <td>
 
                       {{$stock->rate}}

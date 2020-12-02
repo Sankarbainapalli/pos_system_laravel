@@ -266,7 +266,7 @@
                     </div>
                     <div class="col-sm-7">
 
-                      <input type="text" class="form-control" id="total_items"  placeholder="5" name="">
+                      <input type="text" class="form-control" id="total_items"  placeholder="" name="">
 
                     </div>
                   </div>
@@ -277,15 +277,16 @@
                     <div class="col-sm-7">
 
                       <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)" name="payment_method">
-                        <!-- select2bs4 -->
-                                <option value="Cash">Cash</option>
-                                <option value="Nett">Nett</option>
+
+                                <option value="CASH">Cash</option>
+                                <option value="NETT">Nett</option>
                                 <option value="VISA">VISA</option>
                                 <option value="4">Master Card</option>
-                                <option value="Cheque">Cheque</option>
-                                <option value="Debit">Debit</option>
-                                <option value="credit">credit</option>
-                                <option value="ONLINE PAYMENT">ONLINE PAYMENT</option>
+                                <option value="CHEQUE">Cheque</option>
+                                <option value="DEBIT">Debit</option>
+                                <option value="CREDIT">Credit</option>
+                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option>
+
                       </select>
                     </div>
                   </div>
@@ -407,6 +408,11 @@ function add_product(id){
             data: {product_id:product_id, _token: token},
             success:function(data){
 
+                  if(data.empty=="empty"){
+
+                    alert("Out of Stock");
+                  }
+
                  if(data.success=='success'){
                   // alert("Producte already Added! Please Chose Other Product");
 
@@ -418,7 +424,7 @@ function add_product(id){
                   var pergram=data[0].rate/1000;
                   var grams=data[0].rate/pergram;
 
-                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
+                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 " value="'+data[0].product_name+'"><input type="hidden" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
 
                 // <span class="badge bg-success">'+data[0].rate+'</span>
 
@@ -578,6 +584,7 @@ $(document).ready(function(){
               tot_item = i;
 
               }
+
               
               $('#total_item').val(i);
 

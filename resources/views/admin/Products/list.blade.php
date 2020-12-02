@@ -55,7 +55,18 @@
                     <td>{{$loop->index+1}}</td>
                     <td>{{$product->Category->name}}</td>
                     <td>{{$product->product_name}}</td>
-                    <td> <img src="{{asset('storage/app/public/product/' . $product->product_img.'' ) }}" alt="" class="rounded avatar-md" width="100" height="100"></td>
+                    <td> 
+                      @if($product->product_name!='')
+                       <img src="{{asset('storage/app/public/product/' . $product->product_img.'' ) }}" alt="" class="rounded avatar-md" width="100" height="100">
+
+                        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png" alt="" class="rounded avatar-md" width="100" height="100"> -->
+
+                       @else
+
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png" alt="" class="rounded avatar-md" width="100" height="100">
+                      @endif
+
+                    </td>
                    <!--  <td>{{$product->qty}}</td>
                     <td>{{$product->amount}}</td>
                     <td>{{$product->product_name}}</td> -->
@@ -76,7 +87,7 @@
                             <i class="far fa-edit"></i>
                           </button></a>
 
-                        <a href="{{route('product.destroy',$product->id)}}"><button type="button" class="btn btn-danger">
+                        <a href="{{route('product.destroy',$product->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button>
                           </a>  

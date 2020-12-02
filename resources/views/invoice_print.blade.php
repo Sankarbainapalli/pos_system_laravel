@@ -19,7 +19,30 @@
     .f-15 {
       font-size: 15px;
     }
+
+
+
+    @page {
+    size: 4.50in 6.0in;
+    margin: 0;
+    }
+    @media print {
+  
+
+   
+    html, body {
+    width: 100mm;
+    height: 230mm;
+    margin-left: -100px; 
+    font-size: 40px;
+
+ 
+  }
+
+
+}
   </style>
+
 </head>
 <body>
 <div class="wrapper">
