@@ -66,7 +66,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Select Franchisee</label>
-                        <select name="franchisee_id" class="form-control">
+                        <select name="franchisee_id" class="form-control" id="franchisee_id">
 
                           @foreach($franchisee_list as $franchisee)
 
@@ -380,13 +380,17 @@
 
 function getWeight()
 {
+
+  var franchisee_id=document.getElementById('franchisee_id').value;
+  
+var token = "{{ csrf_token() }}";
 $.ajax({
   type: "GET",
   url: "getApiData",
   // url: "http://askmeguru.com/APISETUP/api.php",
  dataType: "json",
-// async:false,
-// cache: false,
+ data: {franchisee_id:franchisee_id, _token: token},
+
 success: function(data){
 
   document.getElementById("qty").value=data.total_weight;

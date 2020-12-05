@@ -3,47 +3,47 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\CustomerCreateRequest;
 use App\Models\Customer;
 use App\Models\Order;
 use Auth;
+
 class CustomerController extends Controller
 {
     //
 
-    public function index(Customer $customer){
+    public function index(Customer $customer)
+    {
 
-      if(Auth::user()->role_id=='SUPERADMIN'){
+        if (Auth::user()->role_id == 'SUPERADMIN') {
 
-    	$customer_list=Order::all();
+            $customer_list = Order::all();
 
-    }else{
+        } else {
 
+            $customer_list = Order::where('user_id', Auth::user()->id)->get();
 
-     $customer_list=Order::where('user_id',Auth::user()->id)->get();
+        }
 
+        // $customer_list=auth()->user()->customers()->get();
+
+        return view('admin.Customers.list', compact('customer_list'));
     }
 
-    	// $customer_list=auth()->user()->customers()->get();
+    public function store(CustomerCreateRequest $request)
+    {
 
-        return view('admin.Customers.list',compact('customer_list'));
-    }
+        //       $post = new Customer;
+        // $post->name = $request->input('name');
+        // $post->location = $request->input('location');
+        // $post->mobile = $request->input('mobile');
+        // $post->save();
 
-     public function store(CustomerCreateRequest $request){
-
-  //       $post = new Customer;
-		// $post->name = $request->input('name');
-		// $post->location = $request->input('location');
-		// $post->mobile = $request->input('mobile');
-		// $post->save();
-
-		// $this->validate($request,[
-  //         'name'=> 'required',
-  //         'location'=> 'required',
-  //         'mobile'=> 'required|integer|size:10',
-  //        ]);
+        // $this->validate($request,[
+        //         'name'=> 'required',
+        //         'location'=> 'required',
+        //         'mobile'=> 'required|integer|size:10',
+        //        ]);
 
         //  $validator = Validator::make($request->all(), [
         //     'name' => 'required|max:255',
@@ -59,54 +59,51 @@ class CustomerController extends Controller
         //     ->withInput();
         // }
 
-         Customer::create($request->all());
+        Customer::create($request->all());
 
-       return redirect()->route('customer.index')->with('message','Customers Has been added Successfully');
+        return redirect()->route('customer.index')->with('message', 'Customers Has been added Successfully');
     }
 
     // public function show(Customer $customer){
 
-    // 	 return view('admin.customers.list',compact('customer_list '));
+    //      return view('admin.customers.list',compact('customer_list '));
     // }
 
+    public function edit(Customer $customer)
+    {
 
-     public function edit(Customer $customer){
-   
-         // $todo = Todo::find($id);
+        // $todo = Todo::find($id);
 
         // dd($todo->title);
 
-        return view('admin.Customers.edit_customer',compact('customer'));
+        return view('admin.Customers.edit_customer', compact('customer'));
     }
 
-    public function update(CustomerCreateRequest $request,Customer $customer){
+    public function update(CustomerCreateRequest $request, Customer $customer)
+    {
 
-        $customer->update(['name'=>$request->name,'location'=>$request->location,'mobile'=>$request->mobile]);
+        $customer->update(['name' => $request->name, 'location' => $request->location, 'mobile' => $request->mobile]);
 
-        return redirect(route('customer.index'))->with('message','Updated Successfully');
+        return redirect(route('customer.index'))->with('message', 'Updated Successfully');
     }
 
-    public function show(Customer $customer){
-      
+    public function show(Customer $customer)
+    {
+
         $customer->delete();
 
-         return redirect()->back()->with('error','Customer Deleted Has been Successfully');
+        return redirect()->back()->with('error', 'Customer Deleted Has been Successfully');
 
     }
 
-
-    public function destroy(Customer $customer){
+    public function destroy(Customer $customer)
+    {
 
         // Todo::where('id',$id)->delete();
-         $customer->delete();
+        $customer->delete();
 
-         return redirect()->back()->with('error','Customer Deleted Has been Successfully');
+        return redirect()->back()->with('error', 'Customer Deleted Has been Successfully');
 
     }
 
-
-   
-
 }
-
-

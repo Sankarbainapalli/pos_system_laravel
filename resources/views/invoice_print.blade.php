@@ -126,7 +126,7 @@
               @foreach($order_list as $order)
               <tr class="bg-light">
                 <td>{{$loop->index+1}}</td>
-                <td>{{$order->item_name}}</td>
+                <td>{{$order->Product->product_name}}</td>
                 <td>{{$order->qty/1000}} Kgs</td>
                 <td>{{$order->cur_rate}}</td>
                 <td>{{$order->rate_array}}</td>

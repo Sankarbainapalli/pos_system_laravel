@@ -148,6 +148,7 @@ class StockController extends Controller
 
                   }
 
+
     
         $product_rate=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product_id)->orderBy('id', 'DESC')->limit(1)->get();
 

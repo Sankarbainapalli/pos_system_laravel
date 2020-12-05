@@ -25,10 +25,12 @@ class LiveAmountController extends Controller
          if(Auth::user()->role_id == 'SUPERADMIN'){
 
           $liveamount_list=Liveamount::all();
+          // $liveamount_list=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
           
       }else{
 
-         $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get()->all();
+         $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
+         // $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get()->all();
       }
           
 

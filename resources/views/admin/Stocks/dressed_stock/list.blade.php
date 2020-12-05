@@ -64,7 +64,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Select Franchisee</label>
-                        <select name="franchisee_id" class="form-control">
+                        <select name="franchisee_id" class="form-control" id="franchisee_id">
 
                           @foreach($franchisee_list as $franchisee)
 
@@ -94,7 +94,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Total weight(kg)</label>
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()"  readonly=""><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()"  readonly="" required><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
                       </div>
                     </div>
                   </div>
@@ -377,22 +377,41 @@
             })
 }
 
+// function getWeight()
+// {
+// $.ajax({
+//   type: "GET",
+//   url: "getApiData",
+//  dataType: "json",
+// success: function(data){
+
+//   document.getElementById("qty").value=data.total_weight;
+//  sum();
+// }
+// });
+// }
+
 function getWeight()
 {
-$.ajax({
+
+  var franchisee_id=document.getElementById('franchisee_id').value;
+  
+ var token = "{{ csrf_token() }}";
+ $.ajax({
   type: "GET",
+  // type: "POST",
   url: "getApiData",
+   // data: {franchisee_id:franchisee_id, _token: token},
   // url: "http://askmeguru.com/APISETUP/api.php",
  dataType: "json",
-// async:false,
-// cache: false,
-success: function(data){
-
-  document.getElementById("qty").value=data.total_weight;
- sum();
+ success: function(data){
+  // alert(data);
+ document.getElementById("qty").value=data.total_weight;
+  sum();
 }
 });
 }
+
 
 </script>
 

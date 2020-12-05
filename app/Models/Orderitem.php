@@ -10,4 +10,10 @@ class Orderitem extends Model
     use HasFactory;
 
      protected $fillable  = ['order_id','item_name','qty','cur_rate','rate_array'];
+
+       public function Product(){
+   	
+    	return $this->belongsTo("App\Models\Product", "item_name");
+
+	} 
 }

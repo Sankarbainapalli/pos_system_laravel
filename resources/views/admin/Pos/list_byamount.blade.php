@@ -107,7 +107,7 @@
 
                         <td style="border-top: 0px;"><input type="text" id="total_item" size="6" name="total_items"></td>
                         <th style="width:50%; border-top: 0px;">Total</th>
-                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal"></td>
+                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="8"></td>
 
                       </tr>
                       <tr>
@@ -116,8 +116,8 @@
 
                            <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
                         </td>
-                        <th style="border-top: 0px;">Tax (18.00%)</th>
-                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="" onkeyup="sum()"></td>
+                        <th style="border-top: 0px;">Tax(%)</th>
+                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="0" onkeyup="sum()" size="5"></td>
                       </tr>
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
@@ -596,16 +596,17 @@ $(document).ready(function(){
              // var tax =parseFloat(document.getElementById('tax').value);
 
              var disct =parseFloat(document.getElementById('disct').value);
+             var total_tax =parseFloat(document.getElementById('total_tax').value);
              
-             var total_tax=tot_count*(18/100);
+             var totaltax=tot_count*(total_tax/100);
              // alert(total_tax);
 
-             var payble_amt=tot_count+total_tax-disct;
+             var payble_amt=tot_count+totaltax-disct;
 
               $('#total_payble').val(payble_amt);
 
               $('#total_payment').val(payble_amt);
-              $('#total_tax').val(total_tax);
+              // $('#total_tax').val(total_tax);
 
 
             // });

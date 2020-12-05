@@ -35,9 +35,6 @@
         <div class="row">
 
 
-  
-
-
 
           <div class="col-md-6">
             <div class="card">
@@ -107,17 +104,19 @@
 
                         <td style="border-top: 0px;"><input type="text" id="total_item" size="6" name="total_items"></td>
                         <th style="width:50%; border-top: 0px;">Total</th>
-                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal"></td>
+                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="10"></td>
 
                       </tr>
                       <tr>
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
 
-                           <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
+                           <input size="" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()">
                         </td>
-                        <th style="border-top: 0px;">Tax (18.00%)</th>
-                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="" onkeyup="sum()"></td>
+                        <th style="border-top: 0px;">Tax(%)</th>
+                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="0" onkeyup="sum()" size="5">
+                          <!-- <input type="hidden" name="tax" id="total_tax2" value="" > -->
+                        </td>
                       </tr>
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
@@ -408,9 +407,11 @@ function add_product(id){
             data: {product_id:product_id, _token: token},
             success:function(data){
 
+
+
                   if(data.empty=="empty"){
 
-                    alert("Out of Stock");
+                     alert("Out of Stock");
                   }
 
                  if(data.success=='success'){
@@ -421,16 +422,12 @@ function add_product(id){
 
                  }else{
 
-                  var pergram=data[0].rate/1000;
-                  var grams=data[0].rate/pergram;
+                  // var pergram=data[0].rate/1000;
+                  // var grams=data[0].rate/pergram;
 
                 $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 " value="'+data[0].product_name+'"><input type="hidden" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
 
-                // <span class="badge bg-success">'+data[0].rate+'</span>
-
-                // $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">'+data[0].rate+'</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" ></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
-
-                
+  
                  sum(data[0].product_id);
               }
             }
@@ -489,7 +486,7 @@ $(document).ready(function(){
 
               for (var i = 0; i < data.length; i++) {
 
- tab+='<input type="hidden" name=""  id="product'+data[i].product_id+'" value="'+data[i].rate+'"></div>';
+                tab+='<input type="hidden" name=""  id="product'+data[i].product_id+'" value="'+data[i].rate+'"></div>'; //to get keyup the vallue count purpose
  
               }
 
@@ -602,23 +599,51 @@ $(document).ready(function(){
              // var tax =parseFloat(document.getElementById('tax').value);
 
              var disct =parseFloat(document.getElementById('disct').value);
-             
-             var total_tax=tot_count*(18/100);
-             // alert(total_tax);
+             // var total_tax222=parseFloat(document.getElementById('total_tax2').value);
+             var total_tax=parseFloat(document.getElementById('total_tax').value);
 
-             var payble_amt=tot_count+total_tax-disct;
+              // if(isNaN(total_tax222)){
+              //     var payble_amt=tot_count-disct;
+              //   }else{
+              //      var payble_amt=tot_count-total_tax+disct;
+              //   }
+
+             var totaltax=tot_count*(total_tax/100);
+
+             // var payble_amt=tot_count-disct;
+             var payble_amt=tot_count+totaltax-disct;
 
               $('#total_payble').val(payble_amt);
 
               $('#total_payment').val(payble_amt);
-              $('#total_tax').val(total_tax);
+              // $('#total_tax').val(total_tax);
 
-
+                
+      
             // });
 
              // $('#total_rate').val(rate);
         }
 
+        // $('#total_tax').onkeyup(function() {
+
+    //  var total_cnt=document.getElementById('total_rate').value;
+    //  var disct=document.getElementById('disct').value;
+    //  var totaltax=total_cnt*5/100;
+    //  // var totalfdf= parseInt(partotal_cnt)+parseInt(totaltax);
+    //  var total33=parseFloat(total_cnt)+parseFloat(totaltax)-parseFloat(disct);
+
+    // document.getElementById("total_tax2").value=total33;
+    // document.getElementById("total_payble").value=total33;
+
+    //  $('#total_payble').val(total33);
+
+    //  $('#total_payment').val(total33);
+
+    //   });
+
+
+ 
 
     function remove_product(id){
 
@@ -652,32 +677,32 @@ $(document).ready(function(){
                }
 
 
-     function getCart(){
+     // function getCart(){
 
-      alert("You entered in Getcart");
+     //  alert("You entered in Getcart");
 
-       $.ajax({
+     //   $.ajax({
 
-            url: "getCart",
-            method: "GET",
-            dataType: "json",
-            success:function(data){
+     //        url: "getCart",
+     //        method: "GET",
+     //        dataType: "json",
+     //        success:function(data){
 
-               var tab= "";
+     //           var tab= "";
 
-              for (var i = 0; i < data.length; i++) {
+     //          for (var i = 0; i < data.length; i++) {
 
-                  // tab += '<tr class="block"><td></td><td><input type="text" class="form-control rounded-0" placeholder="1"  id="item_name" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">ddd</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="dddd" ></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>';
+     //              // tab += '<tr class="block"><td></td><td><input type="text" class="form-control rounded-0" placeholder="1"  id="item_name" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">ddd</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="dddd" ></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>';
  
-              }
+     //          }
 
-               $(".tableBox").html(tab);
+     //           $(".tableBox").html(tab);
 
 
-            }
-          });
+     //        }
+     //      });
 
-     }
+     // }
 
 
      $(document).ready(function () {
