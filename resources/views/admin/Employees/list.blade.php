@@ -191,7 +191,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6">
+                   <!--  <div class="col-sm-6">
                       <div class="form-group">
                         <label>Status</label>
                         <select name="status" class="form-control" style="width: 100%;">
@@ -199,7 +199,7 @@
                             <option value="0">Deactive</option>
                         </select>
                         </div>
-                    </div>
+                    </div> -->
                   </div>
                
             </div>

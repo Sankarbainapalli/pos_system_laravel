@@ -34,8 +34,6 @@
 <x-alert />
         <div class="row">
 
-
-
           <div class="col-md-6">
             <div class="card">
               <div class="card-header mt-3">
@@ -104,7 +102,8 @@
 
                         <td style="border-top: 0px;"><input type="text" id="total_item" size="6" name="total_items"></td>
                         <th style="width:50%; border-top: 0px;">Total</th>
-                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="10"></td>
+                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="10">
+                        </td>
 
                       </tr>
                       <tr>
@@ -114,8 +113,8 @@
                            <input size="" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()">
                         </td>
                         <th style="border-top: 0px;">Tax(%)</th>
-                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="0" onkeyup="sum()" size="5">
-                          <!-- <input type="hidden" name="tax" id="total_tax2" value="" > -->
+                        <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
+                          <input type="hidden" name="tax" id="total_tax22" value="" >
                         </td>
                       </tr>
                       <tr>
@@ -234,7 +233,7 @@
                     </div>
                     <div class="col-sm-7">
 
-                      <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile">
+                      <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile" maxlength="10">
                     </div>
                   </div>
 
@@ -616,7 +615,7 @@ $(document).ready(function(){
               $('#total_payble').val(payble_amt);
 
               $('#total_payment').val(payble_amt);
-              // $('#total_tax').val(total_tax);
+              $('#total_tax22').val(totaltax);
 
                 
       

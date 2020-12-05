@@ -11,7 +11,7 @@ class Franchisee extends Model
 {
     use HasFactory;
 
-        protected $fillable  = ['name','addhar_no','ref_id','account_no','mobile','city','start_date','remarks','user_name','password'];
+        protected $fillable  = ['name','addhar_no','ref_id','account_no','mobile','city','start_date','remarks','address','user_name','password'];
 
         public function Branch(){
    	

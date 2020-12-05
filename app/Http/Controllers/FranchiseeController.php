@@ -39,6 +39,7 @@ class FranchiseeController extends Controller
        // send_sms($request->mobile, "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
 
     return redirect()->route('franchisee.index')->with('message','franchisee Has been added Successfully');
+    
     }
 
      public function edit(Franchisee $franchisee){

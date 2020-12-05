@@ -36,8 +36,8 @@
                   <thead>
                   <tr>
                     <th>Customer Name</th>
-                    <th>Location</th>
-                    <th>Email</th>
+                    <!-- <th>Location</th> -->
+                    <!-- <th>Email</th> -->
                     <th>Mobile No.</th>
                      @if(Auth::user()->role_id == 'SUPERADMIN')
                     <th>Action</th>
@@ -49,19 +49,22 @@
                   <tr>
 
                     <td>{{$customer->cus_name}}</td>
-                    <td>{{$customer->user_id}}</td>
-                    <td>{{$customer->cus_email}}</td>
+                    <!-- <td>{{$customer->user_id}}</td> -->
+                    <!-- <td>{{$customer->cus_email}}</td> -->
                     <td>{{$customer->cus_mobile}}</td>
                   
                    @if(Auth::user()->role_id == 'SUPERADMIN')
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('customer.edit',$customer->id)}}"><button type="button" class="btn btn-primary">
+
+                         <!--  <a href="{{route('customer.edit',$customer->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button></a>
+                          </button></a> -->
+
                        <a href="{{route('customer.destroy', $customer->id)}}">  <button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
-                            <i class="far fa-trash-alt"></i>
-                          </button></a> 
+                       <i class="far fa-trash-alt"></i>
+                       </button></a> 
+
                       </div>
                     </td>
                     @endif

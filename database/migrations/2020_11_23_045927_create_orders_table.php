@@ -30,6 +30,7 @@ class CreateOrdersTable extends Migration
             $table->decimal('paid_amt',10,2);
             $table->decimal('return_change',10,2)->default('0');
             $table->integer('user_id')->unsigned()->default('0');
+            $table->integer('frans_id')->unsigned()->default('0');
             $table->timestamps();
         });
     }

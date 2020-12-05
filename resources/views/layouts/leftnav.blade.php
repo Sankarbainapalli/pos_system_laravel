@@ -86,8 +86,8 @@
         <i class="far fa-user"><?php echo ucwords(Auth()->user()->name);?></i><span></span>
       </a>
       <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-        <li><a href="#" class="dropdown-item">Profile </a></li>
-        <li><a href="#" class="dropdown-item">Settings</a></li>
+        <!-- <li><a href="#" class="dropdown-item">Profile </a></li> -->
+        <li><a href="{{route('setting.index')}}" class="dropdown-item">Settings</a></li>
         <li class="dropdown-divider"></li>
         <!-- Level two dropdown-->
         <li>
@@ -174,7 +174,7 @@
         @endif
 
 
-         @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')  
+         @if(Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER') 
 
         <li class="nav-item">
           <a href="{{route('pos.index')}}" class="nav-link">
@@ -428,7 +428,7 @@
        
          @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="{{route('setting.index')}}" class="nav-link">
             <i class="nav-icon fas fa-cog"></i>
             <p>
               Settings
@@ -436,27 +436,14 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <!--   <li class="nav-item">
-              <a href="#" class="nav-link">
+           
+            <li class="nav-item">
+              <a href="{{route('setting.index')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Active/Deactive Employee</p>
+                <p>Systemsetting</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
-                <p>Add City</p>
-              </a>
-            </li> -->
 
-             <!-- <li class="nav-item">
-            <a href="{{route('liveamount.index')}}" class="nav-link">
-              <i class="nav-icon fas fa-rupee-sign"></i>
-              <p>
-                Live Amount
-              </p>
-            </a>
-          </li> -->
            <!-- <li class="nav-item">
           <a href="./index2.html" class="nav-link">
             <i class="nav-icon fas fa-bell"></i>
@@ -466,13 +453,12 @@
           </a>
         </li>
          -->
-
-            <li class="nav-item">
+          <!--   <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
                 <p>Profile</p>
               </a>
-            </li>
+            </li> -->
 
 
           </ul>

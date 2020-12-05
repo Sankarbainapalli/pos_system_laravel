@@ -23,6 +23,7 @@ class CreateFranchiseesTable extends Migration
             $table->string('city');
             $table->date('start_date');
             $table->text('remarks');
+            $table->text('address');
             $table->string('user_name');
             $table->string('password');
             $table->timestamps();

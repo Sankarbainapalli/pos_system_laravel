@@ -117,7 +117,8 @@
                            <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
                         </td>
                         <th style="border-top: 0px;">Tax(%)</th>
-                        <td style="border-top: 0px;"><input type="text" name="tax" id="total_tax" value="0" onkeyup="sum()" size="5"></td>
+                        <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
+                         <input type="hidden" name="tax" id="total_tax22" value="" ></td>
                       </tr>
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
@@ -237,7 +238,7 @@
                     </div>
                     <div class="col-sm-7">
 
-                      <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile">
+                      <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile" maxlength="10">
                     </div>
                   </div>
 
@@ -419,7 +420,7 @@ function add_product(id){
                   var pergram=data[0].rate/1000;
                   var grams=data[0].rate/pergram;
 
-                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
+                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 " value="'+data[0].product_name+'"><input type="hidden" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
 
                 // <span class="badge bg-success">'+data[0].rate+'</span>
 
@@ -606,7 +607,7 @@ $(document).ready(function(){
               $('#total_payble').val(payble_amt);
 
               $('#total_payment').val(payble_amt);
-              // $('#total_tax').val(total_tax);
+              $('#total_tax22').val(totaltax);
 
 
             // });

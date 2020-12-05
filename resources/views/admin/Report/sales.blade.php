@@ -87,11 +87,12 @@
                     <th>#</th>
                     <th>Date</th>
                     <th>Sale Id</th>
-                    <th>Branch Name</th>
+                    <th>Franchisee</th>
                     <th>Payment</th>
                     <th>Sub Total</th>
                     <th>Tax (INR)</th>
                     <th>Grand Total (INR)</th>
+                    <th>Order List</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -100,11 +101,14 @@
                     <td>{{$loop->index+1}}</td>
                     <td><?php echo date('d-m-Y H:i:sa',strtotime($order->created_at))?></td>
                     <td>CSI{{$order->id}}</td>
-                    <td>HYDERABAD</td>
+                    <td>{{$order->franchisee->name}}</td>
                     <td>{{$order->payment_method}}</td>
                     <td>{{$order->subtotal}}</td>
                     <td>{{$order->tax}}</td>
                     <td>{{$order->grandtotal}}</td>
+                    <td><a href="productDetails/{{$order->id}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-file"></i>
+                          </button></a></td>
                   </tr>
                   @endforeach
 
@@ -117,6 +121,7 @@
                     <th>Rs.{{$subtotal}}</th>
                     <th>Rs.{{$tax}}</th>
                     <th>Rs.{{$grandtotal}}</th>
+                    <th></th>
                   </tr>
                   </tbody>
                   <tfoot>
@@ -129,6 +134,7 @@
                     <th>Sub Total</th>
                     <th>Tax (INR)</th>
                     <th>Grand Total (INR)</th>
+                    <th></th>
                   </tr>
                   </tfoot>
                 </table>

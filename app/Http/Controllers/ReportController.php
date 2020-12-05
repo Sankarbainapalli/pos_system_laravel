@@ -152,8 +152,6 @@ class ReportController extends Controller
 
         // dd($request->from_date);
 
-
-
        if(Auth::user()->role_id=='SUPERADMIN'){
 
          $franchisee_list=User::all();
@@ -165,7 +163,7 @@ class ReportController extends Controller
 
          if($request->user_id && $request->payment_method && $request->from_date && $request->to_date){
 
-           return "Branch and Payment and from and to selected";
+           // return "Branch and Payment and from and to selected";
 
         $order_list=Order::where('user_id',$request->user_id)->where('payment_method',$request->payment_method)->whereBetween('created_at', [$request->from_date, $request->to_date])->get();
 
@@ -177,7 +175,7 @@ class ReportController extends Controller
 
     }elseif($request->payment_method && $request->from_date && $request->to_date){
 
-             return "Payment and from and to selected";
+             // return "Payment and from and to selected";
 
 
         $order_list=Order::where('payment_method',$request->payment_method)->whereBetween('created_at', [$request->from_date, $request->to_date])->get();
@@ -190,7 +188,7 @@ class ReportController extends Controller
 
     }elseif($request->from_date && $request->to_date){
 
-       return "from and to selected";
+       // return "from and to selected";
 
         $order_list=Order::where()->whereBetween('created_at', [$request->from_date, $request->to_date])->get();
 
@@ -202,7 +200,7 @@ class ReportController extends Controller
 
     }elseif($request->user_id){
 
-      return "branch selected";
+      // return "branch selected";
 
       $order_list=Order::where('user_id',$request->user_id)->get();
         $subtotal=Order::where('user_id',$request->user_id)->sum('subtotal');

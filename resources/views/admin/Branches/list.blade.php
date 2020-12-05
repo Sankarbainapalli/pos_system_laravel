@@ -55,12 +55,10 @@
                     <!-- <td>{{$branch->status}}</td> -->
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('branch.edit',$branch->id)}}"><button type="button" class="btn btn-primary">
+                          <a href="productDetails/{{$order->id}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                       <a href="{{route('branch.destroy', $branch->id)}}">  <button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
-                            <i class="far fa-trash-alt"></i>
-                          </button></a> 
+                     
 
                           
                           

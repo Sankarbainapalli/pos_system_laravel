@@ -265,13 +265,13 @@
 </div>
 <!-- ./wrapper -->
 <!-- Page specific script -->
-<script>
+<!-- <script>
   window.addEventListener("load", window.print());
 
 function goBack() {
   window.history.back();
 }
 
-</script>
+</script> -->
 </body>
 </html>

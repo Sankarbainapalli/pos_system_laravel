@@ -119,11 +119,11 @@
                
                     <td> 
                       <div class="btn-group">
-                          <a href="{{route('liveamount.edit',$liveamount->id)}}"><button type="button" class="btn btn-primary">
+                         <!--  <a href="{{route('liveamount.edit',$liveamount->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
-                          </button></a>
-                         <a href="{{route('liveamount.destroy',$liveamount->id)}}"><button type="button" class="btn btn-primary" onclick="confirm('You want to delete?')">
-                            <i class="far fa-trash-alt"></i>
+                          </button></a> -->
+                         <a href="{{route('liveamount.destroy',$liveamount->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
+                           <i class="far fa-trash-alt"></i>
                           </button></a>
                       </div>
                     </td>

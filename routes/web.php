@@ -49,7 +49,11 @@ Route::resource('purchaseorder', App\Http\Controllers\PurchaseOrderController::c
 
 Route::resource('pos', App\Http\Controllers\PosController::class);
 
+Route::resource('setting', App\Http\Controllers\SettingController::class);
+
 Route::get('/pos/invoice_print/{id}', [App\Http\Controllers\PosController::class, 'invoice'])->name('pos/invoice_print');
+
+Route::get('productDetails/{id}', [App\Http\Controllers\OrderController::class, 'productDetails']);
 
 Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
 

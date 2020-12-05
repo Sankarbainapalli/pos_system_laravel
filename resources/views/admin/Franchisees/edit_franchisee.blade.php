@@ -47,22 +47,22 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label>Franchisee Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required value="{{$franchisee->name}}">
+                    <input type="text" class="form-control" placeholder="Enter Franchisee Name" id="Fname" required value="{{$franchisee->name}}" name="anme">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Mobile No.</label>
-                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required value="{{$franchisee->mobile}}">
+                    <input type="text" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required value="{{$franchisee->mobile}}" name="mobile">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Adhaar Card/ Pan Card No.</label>
-                    <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required value="{{$franchisee->addhar_no}}">
+                    <input type="text" class="form-control" placeholder="Enter Adhaar Card/ Pan Card No." id="adhr_pan" required value="{{$franchisee->addhar_no}}" name="addhar_no">
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                       <label>Bank A/c No.</label>
-                      <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required value="{{$franchisee->account_no}}">
+                      <input type="text" class="form-control" placeholder="Enter Bank A/c No." id="bank_acc" required value="{{$franchisee->account_no}}" name="account_no">
                 </div>
                 <!-- /.form-group -->
               </div>
@@ -70,12 +70,12 @@
               <div class="col-md-6">
                   <div class="form-group">
                     <label>District/City/Town</label>
-                    <input type="text" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town" value="{{$franchisee->account_no}}">
+                    <input type="text" class="form-control" placeholder="Enter District/City/Town" id="city_dis_town" value="{{$franchisee->account_no}}" name="city">
                   </div>
                   <!-- /.form-group -->
                   <div class="form-group">
                     <label>Unique ID No.(Auto-Generated)</label>  <!-- We have to auto-generate IDs -->
-                    <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required value="FRD00{{$franchisee->id}}">
+                    <input type="text" class="form-control" placeholder="Enter Id No." id="uni_id" required value="FRD00{{$franchisee->id}}" name="">
                   </div>
                   <!-- /.form-group -->
                   <!-- Date -->
@@ -91,7 +91,12 @@
                   <!-- /.form group --> 
                   <div class="form-group">
                     <label>Remarks/Note</label>
-                    <textarea class="form-control" rows="1" placeholder="Enter Remarks/Note" id="remarks">{{$franchisee->remarks}}</textarea>
+                    <textarea class="form-control" name="remarks" rows="1" placeholder="Enter Remarks/Note" id="remarks">{{$franchisee->remarks}}</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control" rows="1" name="address"  id="remarks">{{$franchisee->address}}</textarea>
                   </div>
                 <!-- /.form-group --> 
               </div>

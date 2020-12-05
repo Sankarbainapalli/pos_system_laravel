@@ -77,7 +77,7 @@
                   </div>
                   <!-- /.form-group -->
 
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label>Status</label>
                     <select name="status" class="form-control" style="width: 100%;" id="stat">
                       @if($employee->status=='1')
@@ -90,7 +90,7 @@
                         @endif
                     </select>
                   </div>
-
+ -->
                   <div class="form-group">
                     <label>Password</label>
                     <input type="text" name="password" maxlength="10" class="form-control" placeholder="Enter Mobile No." id="mobile" required value="{{$employee->password}}">

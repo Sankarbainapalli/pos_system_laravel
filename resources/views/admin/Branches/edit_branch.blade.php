@@ -49,15 +49,18 @@
                     <label>Branch Name</label>
                     <input type="text" class="form-control" placeholder="Enter Branch Name" id="ebranchname" name="name" value="{{$branch->name}}" required>
                 </div>
+               </div>
                 <!-- /.form-group -->
+                 <div class="col-md-6">
                 <div class="form-group">
                     <label>Location</label>
                     <input type="text" class="form-control" placeholder="Enter Location Name" id="elocationname" name="location" value="{{$branch->location}}" required>
                 </div>
+              </div>
                 <!-- /.form-group -->
               </div>
               <!-- /.col -->
-              <div class="col-md-6">
+             <!--  <div class="col-md-6">
                 <div class="form-group">
                     <label>Status</label>
                     <select name="status" class="form-control select2bs4" style="width: 100%;">
@@ -71,12 +74,12 @@
 
                     </select>
                 </div>
-                <!-- /.form-group -->
-              </div>
+              </div> -->
               <!-- /.col -->
+              <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
             </div>
             <!-- /.row -->
-            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            
           </form>
             <!-- /.button -->
           </div>

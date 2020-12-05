@@ -169,6 +169,13 @@
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" name="address"  placeholder="Enter address" id="address"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div class="form-group">
                         <label>Remarks/Note</label>
                         <textarea class="form-control" name="remarks"  placeholder="Enter Remarks/Note" id="remarks"></textarea>
                       </div>

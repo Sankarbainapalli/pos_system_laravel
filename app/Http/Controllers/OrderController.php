@@ -15,10 +15,8 @@ class OrderController extends Controller
     {
 
 
-
        $order=new Order;
        $order->cus_name=$request->cus_name;
-       $order->cus_mobile=$request->cus_mobile;
        $order->cus_mobile=$request->cus_mobile;
        $order->total_items=$request->total_items;
        $order->subtotal=$request->subtotal;
@@ -29,7 +27,10 @@ class OrderController extends Controller
        $order->paid_amt=$request->paid_amt;
        $order->return_change=$request->return_change;
        $order->user_id=Auth::user()->id;
+       $order->frans_id=Auth::user()->frans_id;
        $order->save();
+
+
 
         if(count($request->item_name)>0)
         {
@@ -57,13 +58,28 @@ class OrderController extends Controller
 
     }
 
+
+    // send_sms(7661910404, "Dear ".$request->cus_name.",\nYour Order Successfully Placed:\Total Items:".$request->total_items."\Subtotal:".$request->subtotal."\Discount:".$request->discount."\nRegards\nTeam\nRiyusfresh");
+
+    send_sms('7661910404', "fsdfkjshdfkasfd");
+
     return redirect()->route('pos/invoice_print', ['id' => $order->id]);
 
     // return redirect("/pos/"{$order->id}"/invoice_print");
 
     // return redirect()->route('invoice_print/')->with('message','Order Has been added Successfully');
     
-    }
+   }
 
-   
+   public function productDetails($id){
+
+     $order_list=Orderitem::where('order_id',$id)->get();
+
+       $order_r=Order::where('id',$id)->get();
+
+    return view('admin.Report.product_list',compact('order_list','order_r'));
+
+   }
+
+ 
 }
