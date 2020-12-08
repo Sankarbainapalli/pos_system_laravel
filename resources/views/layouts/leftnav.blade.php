@@ -174,7 +174,7 @@
         @endif
 
 
-         @if(Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER') 
+         @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER' ) 
 
         <li class="nav-item">
           <a href="{{route('pos.index')}}" class="nav-link">
@@ -294,6 +294,13 @@
               <a href="{{route('stock.dressed_stock')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
                 <p>Dressed Stock</p>
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a href="{{route('stock.other_stock')}}" class="nav-link">
+                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                <p>Other Stock</p>
               </a>
             </li>
           </ul>

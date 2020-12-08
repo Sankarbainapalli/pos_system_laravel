@@ -24,7 +24,7 @@ class LiveAmountController extends Controller
 
          if(Auth::user()->role_id == 'SUPERADMIN'){
 
-          $liveamount_list=Liveamount::all();
+          $liveamount_list=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get();
           // $liveamount_list=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
           
       }else{
@@ -55,7 +55,9 @@ class LiveAmountController extends Controller
   //   echo 'SUCCESS';
   // }
 
-   function getProduct(Request $request){
+   function getProduct1(Request $request){
+
+    // return $request->product_category;
 
     $product_list=Product::where('category_id',$request->product_category)->get()->all();
 

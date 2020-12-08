@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 use App\Models\Franchisee;
 use App\Models\Branch;
 use App\Models\User;
+use App\Models\Customer;
+use App\Models\Expenses;
+use App\Models\Liveamount;
+use App\Models\Order;
+use App\Models\PurchaseOrder;
+use App\Models\Stocklist;
+use App\Models\Stock;
+
 
 class FranchiseeController extends Controller
 {
@@ -66,7 +74,15 @@ class FranchiseeController extends Controller
 
          $franchisee->delete();
     
-        User::where('frans_id',$franchisee->id)->delete();
+         User::where('frans_id',$franchisee->id)->delete();
+         Customer::where('franchisee_id',$franchisee->id)->delete();
+         Expenses::where('franchisee_id',$franchisee->id)->delete();
+         Liveamount::where('branch_id',$franchisee->id)->delete();
+         Order::where('frans_id',$franchisee->id)->delete();
+         PurchaseOrder::where('franchisee_id',$franchisee->id)->delete();
+         Stocklist::where('franchisee_id',$franchisee->id)->delete();
+         Stock::where('franchisee_id',$franchisee->id)->delete();
+
 
          return redirect()->back()->with('error','franchisee Deleted Has been Successfully');
 
@@ -81,6 +97,13 @@ class FranchiseeController extends Controller
          $franchisee->delete();
 
          User::where('frans_id',$franchisee->id)->delete();
+         Customer::where('franchisee_id',$franchisee->id)->delete();
+         Expenses::where('franchisee_id',$franchisee->id)->delete();
+         Liveamount::where('branch_id',$franchisee->id)->delete();
+         Order::where('frans_id',$franchisee->id)->delete();
+         PurchaseOrder::where('franchisee_id',$franchisee->id)->delete();
+         Stocklist::where('franchisee_id',$franchisee->id)->delete();
+         Stock::where('franchisee_id',$franchisee->id)->delete();
 
          return redirect()->back()->with('error','franchisee Deleted Has been Successfully');
 

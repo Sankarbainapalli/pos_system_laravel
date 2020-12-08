@@ -44,7 +44,7 @@
                        @csrf
                     @method('patch')
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <div class="form-group">
                     <label>Category Name</label>
                     <input type="text" class="form-control" placeholder="Enter Category Name" name="name" required value="{{$category->name}}">
@@ -53,7 +53,6 @@
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
-                      <!-- text input -->
                       <div class="form-group">
                         <label>Status</label>
 
@@ -74,7 +73,7 @@
                     </div>
             </div>
             <!-- /.row -->
-            <button type="submit" class="btn btn-block btn-primary mt-3">Save Changes</button>
+            <button type="submit" class="btn btn-primary mt-3">Update</button>
             <!-- /.button -->
           </form>
           </div>

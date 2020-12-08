@@ -43,15 +43,11 @@
                       <div class="col-sm-6">
                       <div class="form-group">
                        <label>Product Type</label>
-                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required>
+                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required >
                                <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
-                                 @if($product->product_name=='LIVE')
-
                                <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
-
-                                @endif
 
                                 @endforeach
 
@@ -83,8 +79,6 @@
                            @endif
                            @endif
 
-                         
-
                           @endforeach
                          
                         
@@ -98,7 +92,14 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Total weight(kg)</label>
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" readonly=""><span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
+                        @if(Auth::user()->role_id=='SUPERADMIN')
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" >
+                        @else
+
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" readonly="">
+
+                        @endif
+                        <span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
                       </div>
                     </div>
                   </div>
@@ -107,7 +108,8 @@
                       <div class="form-group">
                         
                            <label>Ex-Form Rate</label>                         
-                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" onkeyup="sum()" value="{{$product_rate}}" readonly="">
+                          <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" onkeyup="sum()"  readonly="" >
+                          <!-- value="{{$product_rate}}" -->
                        
 
                     
@@ -344,35 +346,25 @@
 
     var token = "{{ csrf_token() }}";
     $.ajax({
-
+            // url: "getExformrate",
             url: "getRate",
-            // url: "liveamount",
             method: "POST",
             data: {product_id:x, _token: token},
+            dataType: "json",
             success:function(data){
 
-              // var tab= " ";
-              // for (var i = 0; i < data.length; i++) {
+             if(data.empty=='empty'){
 
-              //   tab += "<option value='"+data[i].location+"'>"+data[i].location+"</option>";
+                alert("Please Add The Product Rate");
+                 $('#rate').val(0);
 
-              //   tab += "<input type="text" name="rate" id="rate" class="form-control" placeholder="rate" required onkeyup="sum()" value='"+data[i].rate+"' readonly="">";
-
-
-
-              
-              // }
-
-              //  $("#mySelect").append(tab);
-
-              if(data != 'SUCCESS'){
-                alert('Something Wrong');
               }else{
-                // alert("fdsdf");
-                    location.reload();
-                    // console.log("success");
 
+                 $('#rate').val(data[0].rate);
+                sum();
               }
+
+
              }
 
             })

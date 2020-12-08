@@ -55,13 +55,10 @@
                     <!-- <td>{{$branch->status}}</td> -->
                     <td> 
                       <div class="btn-group">
-                          <a href="productDetails/{{$order->id}}"><button type="button" class="btn btn-primary">
+                          <a href="productDetails/{{$branch->id}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                     
-
-                          
-                          
+  
                       </div>
                     </td>
                   </tr>

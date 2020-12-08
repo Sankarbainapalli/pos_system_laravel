@@ -101,7 +101,12 @@
                     <td>{{$loop->index+1}}</td>
                     <td><?php echo date('d-m-Y H:i:sa',strtotime($order->created_at))?></td>
                     <td>CSI{{$order->id}}</td>
+                    @if($order->frans_id=='0')
+                      <td>Admin Ordered</td>
+                    @else
                     <td>{{$order->franchisee->name}}</td>
+                    @endif
+                    
                     <td>{{$order->payment_method}}</td>
                     <td>{{$order->subtotal}}</td>
                     <td>{{$order->tax}}</td>

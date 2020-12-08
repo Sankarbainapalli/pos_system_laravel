@@ -34,17 +34,26 @@
                   <div class="row">
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" name="type" class="form-control" placeholder="Type" id="name1" required value="chicken" readonly=""> 
+                        <select name="type" class="form-control" id="" required="">
+                          <option>Select Category</option>
+                          @foreach($category_list as $category)
+                          <option value="{{$category->name}}">{{$category->name}}</option>
+                          @endforeach
+
+                        </select>
+
+                        <!-- <input type="text" name="type" class="form-control" placeholder="Type" id="name1" required value="chicken" readonly="">  -->
+
                         </div>
                       </div>
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="text" name="rate" class="form-control" placeholder="Rate" id="name2" required >
+                        <input type="text" name="rate" class="form-control" placeholder="Rate" id="name2" required="" >
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="form-group">
-                        <input type="date" name="cur_date" class="form-control"  id="name3" required >
+                        <input type="date" name="cur_date" class="form-control"  required value="<?php echo date('dd-mm-YYY'); ?>">
                       </div> 
                     </div>
                     <div class="col-sm-3">
@@ -75,7 +84,7 @@
                     <td>{{$loop->index+1}}</td>
                     <td>{{$exformrate->type}}</td>
                     <td>{{$exformrate->rate}}</td>
-                    <td>{{$exformrate->cur_date}}/-</td>
+                    <td>{{$exformrate->cur_date}}</td>
                     <td>{{$exformrate->created_at}}</td>
                
                     <td> 
@@ -83,7 +92,7 @@
                           <a href="{{route('exformrate.edit',$exformrate->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
-                         <a href="{{route('exformrate.destroy',$exformrate->id)}}"><button type="button" class="btn btn-primary" onclick="confirm('You want to delete?')">
+                         <a href="{{route('exformrate.destroy',$exformrate->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
                             <i class="far fa-trash-alt"></i>
                           </button></a>
                       </div>

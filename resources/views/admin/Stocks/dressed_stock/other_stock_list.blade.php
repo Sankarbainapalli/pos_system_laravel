@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dressed Stocks List</h1>
+            <h1 class="m-0">Other Stocks List</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -162,9 +162,8 @@
                     
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>FRD00{{$stock->franchisee_id}}</td>
-                     <td>{{$stock->Franchisee->name}}</td>
-                    <!-- <td>{{$stock->Product->product_name}}</td> -->
+                    <td>FRD00{{$stock->franchisee_id}}({{$stock->Franchisee->name}})</td>
+                    <td>{{$stock->Product->product_name}}</td>
                     <td>{{$stock->qty}} ||       <!-- <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
                            
                           </a> --></td>

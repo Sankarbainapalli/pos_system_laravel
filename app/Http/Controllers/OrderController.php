@@ -59,9 +59,24 @@ class OrderController extends Controller
     }
 
 
-    // send_sms(7661910404, "Dear ".$request->cus_name.",\nYour Order Successfully Placed:\Total Items:".$request->total_items."\Subtotal:".$request->subtotal."\Discount:".$request->discount."\nRegards\nTeam\nRiyusfresh");
+// $username="riyusfresh";
+// $password="Rfresh789";
+// $from = "RIYUSF";
+// $to = $request->cus_mobile; 
+// $message = "Dear ".$request->cus_name.",\nYour Order Successfully Placed\nTotal Items:".$request->total_items."\nSubtotal:".$request->subtotal."\nDiscount:".$request->discount."\nTax:".$request->tax."\nGrand Total:".$request->grandtotal."\nRegards\nTeam\nRiyusfresh";
+// $message = urlencode($message);
+// $vars="username=".$username."&password=".$password."&message=".$message."&selectdnums=".$to."&from=".$from."&to=".$to."&info=1&test=0";
 
-    send_sms('7661910404', "fsdfkjshdfkasfd");
+// $ch=curl_init('http://www.onlinebulksmslogin.com/spanelv2/api.php?');
+// curl_setopt($ch, CURLOPT_POST, true);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, $vars);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// $result = curl_exec($ch); // This is the result from the API
+// curl_close($ch);
+
+
+    // send_sms($request->cus_mobile, "Dear ".$request->cus_name.",\nYour Order Successfully Placed\nTotal Items:".$request->total_items."\nSubtotal:".$request->subtotal."\nDiscount:".$request->discount."\nTax:".$request->tax."\nGrand Total:".$request->grandtotal."\nRegards\nTeam\nRiyusfresh");
+
 
     return redirect()->route('pos/invoice_print', ['id' => $order->id]);
 

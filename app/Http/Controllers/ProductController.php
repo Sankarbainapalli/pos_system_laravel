@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Branch;
+use App\Models\Cart;
+use App\Models\Liveamount;
+use App\Models\Stock;
+use App\Models\Stocklist;
 
 class ProductController extends Controller
 {
@@ -98,6 +102,12 @@ class ProductController extends Controller
 
         // Todo::where('id',$id)->delete();
          $product->delete();
+         Liveamount::where('product_id',$product->id)->delete();
+         Cart::where('product_id',$product->id)->delete();
+         Stocklist::where('product_id',$product->id)->delete();
+         Stock::where('product_id',$product->id)->delete();
+
+
 
          return redirect()->back()->with('error','product Deleted Has been Successfully');
 
@@ -107,6 +117,10 @@ class ProductController extends Controller
 
         // Todo::where('id',$id)->delete();
          $product->delete();
+         Liveamount::where('product_id',$product->id)->delete();
+         Cart::where('product_id',$product->id)->delete();
+         Stocklist::where('product_id',$product->id)->delete();
+         Stock::where('product_id',$product->id)->delete();
 
          return redirect()->back()->with('error','product Deleted Has been Successfully');
 

@@ -41,7 +41,7 @@ class ProfitlossController extends Controller
       
 
 
-        return view('admin.profit&loss.list',compact('total_lived_stock','total_dressed_stock','exform_rate','pos','today_rate'));
+        return view('admin.Profit&Loss.list',compact('total_lived_stock','total_dressed_stock','exform_rate','pos','today_rate'));
     
     }
 }

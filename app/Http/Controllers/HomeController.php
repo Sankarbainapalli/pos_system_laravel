@@ -36,6 +36,8 @@ class HomeController extends Controller
      public function index()
     {    
 
+
+     // send_sms(7661910404, "Hi venky");
     
 
         if(Auth::user()->role_id == 'SUPERADMIN'){

@@ -10,4 +10,11 @@ class Exformrate extends Model
     use HasFactory;
 
      protected $fillable  = ['type','rate','cur_date'];
+
+       public function Category(){
+   	
+    	return $this->belongsTo("App\Models\Category", "type");
+
+	} 
+
 }

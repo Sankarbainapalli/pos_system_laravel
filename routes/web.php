@@ -57,6 +57,8 @@ Route::get('productDetails/{id}', [App\Http\Controllers\OrderController::class, 
 
 Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
 
+Route::post('/getExformrate', [App\Http\Controllers\StockController::class, 'getExformrate'])->name('getExformrate');
+
 Route::get('/delete_all_cart', [App\Http\Controllers\PosController::class, 'delete_all_cart'])->name('delete_all_cart');
 
 Route::get('byamount', [App\Http\Controllers\PosController::class, 'byamount'])->name('byamount');
@@ -81,6 +83,10 @@ Route::get('/dressed_stock', [App\Http\Controllers\StockController::class, 'dres
 
 Route::post('/dressed_stock', [App\Http\Controllers\StockController::class, 'dressed_stock'])->name('stock.dressed_stock');
 
+Route::get('/other_stock', [App\Http\Controllers\StockController::class, 'other_stock'])->name('stock.other_stock');
+
+Route::post('/other_stock', [App\Http\Controllers\StockController::class, 'other_stock'])->name('stock.other_stock');
+
 Route::get('/lived_stock', [App\Http\Controllers\StockController::class, 'lived_stock'])->name('stock.lived_stock');
 
 // Route::post('/store_dressed_stock', [App\Http\Controllers\StockController::class, 'store_dressed_stock'])->name('stock.store_dressed_stock');
@@ -99,6 +105,7 @@ Route::post('/getProduct1', [App\Http\Controllers\LiveAmountController::class, '
 Route::get('/live_stock_report', [App\Http\Controllers\ReportController::class, 'live_stock_report'])->name('live_stock_report');
 
 Route::get('/dressed_stock_report', [App\Http\Controllers\ReportController::class, 'dressed_stock_report'])->name('dressed_stock_report');
+
 
 Route::get('/sales_report', [App\Http\Controllers\ReportController::class, 'sales_report'])->name('sales_report');
 

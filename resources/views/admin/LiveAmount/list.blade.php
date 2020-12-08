@@ -52,12 +52,8 @@
                               <option value="0">Select Category</option>
                                @foreach($category_list as $category)
 
-                                @if($type==$category->id)
-                                <option value="{{$category->id}}" selected="selected">{{$category->name}}</option>
-                                @else
                                 <option value="{{$category->id}}">{{$category->name}}</option>
-                                @endif
-                                
+    
                                 @endforeach
                             </select>
                         </div>
@@ -99,7 +95,7 @@
                   <thead>
                   <tr>
                     <th>S.no</th>
-                    <th>Branch</th>
+                    <th>Franchisee</th>
                     <th>Category</th>
                     <th>Product type</th>
                     <th>Rate</th>
@@ -159,7 +155,7 @@
     var token = "{{ csrf_token() }}";
     $.ajax({
 
-            url: "getProduct",
+            url: "getProduct1",
             method: "POST",
             dataType: "json",
             data: {product_category:product_id, _token: token},

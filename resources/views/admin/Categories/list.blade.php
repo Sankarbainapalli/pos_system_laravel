@@ -123,8 +123,7 @@
                         <input type="text" class="form-control" placeholder="Enter Category Name" id="categoryname" name="name" required="">
                       </div>
                     </div>
-                    <div class="col-sm-6">
-                      <!-- text input -->
+                   <!--  <div class="col-sm-6">
                       <div class="form-group">
                         <label>Status</label>
 
@@ -136,7 +135,7 @@
 
                         </select>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 
             </div>

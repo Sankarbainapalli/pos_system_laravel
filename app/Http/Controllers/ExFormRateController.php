@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Exformrate;
+use App\Models\Category;
 
 class ExFormRateController extends Controller
 {
@@ -13,14 +14,16 @@ class ExFormRateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+      
     public function index()
     {
 
+        $category_list=Category::all();
 
        $exformrate_list=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
        // $exformrate_list=Exformrate::all();
         
-     return view('admin.ExFormRate.list',compact('exformrate_list'));
+     return view('admin.ExFormRate.list',compact('exformrate_list','category_list'));
 
     }
 

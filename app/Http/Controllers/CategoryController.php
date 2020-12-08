@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Category;
+use App\Models\Product;
+use App\Models\Liveamount;
 
 class CategoryController extends Controller
 {
@@ -42,6 +44,8 @@ class CategoryController extends Controller
 
         // Todo::where('id',$id)->delete();
          $category->delete();
+         Product::where('category_id',$category->id)->delete();
+         Liveamount::where('category_id',$category->id)->delete();
 
          return redirect()->back()->with('error','Category Deleted Has been Successfully');
 
@@ -52,6 +56,9 @@ class CategoryController extends Controller
 
         // Todo::where('id',$id)->delete();
          $category->delete();
+
+         Product::where('category_id',$category->id)->delete();
+         Liveamount::where('category_id',$category->id)->delete();
 
          return redirect()->back()->with('error','Category Deleted Has been Successfully');
 

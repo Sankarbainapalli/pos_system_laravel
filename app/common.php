@@ -2,24 +2,28 @@
 
  function  send_sms($to,$message){
 
- $username=env("SMS_USER");
- $password=env("SMS_PASSWORD");
+//  $username=env("SMS_USER");
+//  $password=env("SMS_PASSWORD");
 
- // $message = '$message';
+//  $message = urlencode($message);
 
- $message = urlencode($message);
-
-// file_get_contents('https://smsleads.in/pushsms.php?username='.$username.'&password='.$password.'&sender=POPCAB&numbers='.$to.'&message='.$message.'&unicode=1');
-
-file_get_contents('https://smsleads.in/pushsms.php?username='.$username.'&password='.$password.'&sender=RIYUSF&numbers='.$to.'&message='.$message);
+// file_get_contents('http://www.onlinebulksmslogin.com/spanelv2/api.php?username='.$username.'&password='.$password.'&to='.$to.'&from=RIYUSF&message='.$message);
 
 
-// file_get_contents('http://www.onlinebulksmslogin.com/spanelv2/api.php?username='.$username.'&password='.$password.'&to='.$to.'&from=ASKMEG&message='.$message);
+$username="riyusfresh";
+$password="Rfresh789";
+$from = "RIYUSF";
+// $to = "7661910404"; 
+// $message = "hi sankar";
+$message = urlencode($message);
+$vars="username=".$username."&password=".$password."&message=".$message."&selectdnums=".$to."&from=".$from."&to=".$to."&info=1&test=0";
 
-// file_get_contents('http://www.onlinebulksmslogin.com/spanelv2/api.php?username='.$username.'&password='.$password.'&to='.$to.'&from=ASKMEG&message='.$message);
-
-
-
+$ch=curl_init('http://www.onlinebulksmslogin.com/spanelv2/api.php?');
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $vars);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$result = curl_exec($ch); // This is the result from the API
+curl_close($ch);
 
 
 }
