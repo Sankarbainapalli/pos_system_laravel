@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-           <h1 class="m-0">POS &nbsp;<a href="{{route('pos.index')}}" class="btn btn-primary bygrams blink" >By Grams</a>&nbsp;<a href="{{route('byamount')}}" class="btn btn-warning byamount" >By Amount</a></h1>
+           <h1 class="m-0">POS &nbsp;<a href="{{route('pos.index')}}" class="btn btn-primary bygrams blink" >By Grams</a>&nbsp;<a href="{{route('byamount')}}" class="btn btn-warning byamount" >By Amount</a>&nbsp;<a href="{{route('regularpos')}}" class="btn btn-info regular" >Regular POS</a></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -142,10 +142,10 @@
                   <!-- <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-info"> All</button>
                   </div> -->
-                     <div class="col-md-4">
+                     <!-- <div class="col-md-4"> -->
                     
-                    <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType(0)">ALL</button>
-                   </div>
+                    <!-- <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType(0)">ALL</button> -->
+                   <!-- </div> -->
                   @foreach($category_list as $category)
                   <div class="col-md-4">
                     
@@ -344,7 +344,6 @@
             method: "POST",
             data: {cust_name:cust_name,cust_mobile:cust_mobile, _token: token},
             success:function(data){
-
              console.log('inserted');
              }
 
@@ -491,7 +490,7 @@ $(document).ready(function(){
 
                $("#getLiveamount").html(tab);
 
-               getCategoryType(0);
+               getCategoryType(0); //Fetch all product List when Load Liveamout
 
              }
 

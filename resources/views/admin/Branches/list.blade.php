@@ -55,7 +55,7 @@
                     <!-- <td>{{$branch->status}}</td> -->
                     <td> 
                       <div class="btn-group">
-                          <a href="productDetails/{{$branch->id}}"><button type="button" class="btn btn-primary">
+                          <a href="{{route('branch.edit',$branch->id)}}"><button type="button" class="btn btn-primary">
                             <i class="far fa-edit"></i>
                           </button></a>
   

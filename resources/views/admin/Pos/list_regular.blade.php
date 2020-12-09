@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">POS &nbsp;<a href="{{route('pos.index')}}" class="btn btn-primary bygrams" >By Grams</a>&nbsp;<a href="{{route('byamount')}}" class="btn btn-warning byamount blink" >By Amount</a>&nbsp;<a href="{{route('regularpos')}}" class="btn btn-info regular" >Regular POS</a></h1>
+           <h1 class="m-0">POS &nbsp;<a href="{{route('pos.index')}}" class="btn btn-primary bygrams" >By Grams</a>&nbsp;<a href="{{route('byamount')}}" class="btn btn-warning byamount" >By Amount</a>&nbsp;<a href="{{route('regularpos')}}" class="btn btn-info regular blink" >Regular POS</a></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -34,11 +34,6 @@
 <x-alert />
         <div class="row">
 
-
-  
-
-
-
           <div class="col-md-6">
             <div class="card">
               <div class="card-header mt-3">
@@ -48,7 +43,7 @@
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: 300px;">
 
-              <form action="{{route('order.store')}}" method="POST">
+              <form action="{{route('order.regularstore')}}" method="POST">
                 @csrf
                 <table class="table table-head-fixed text-nowrap" >
                   <thead>
@@ -107,18 +102,20 @@
 
                         <td style="border-top: 0px;"><input type="text" id="total_item" size="6" name="total_items"></td>
                         <th style="width:50%; border-top: 0px;">Total</th>
-                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="8"></td>
+                        <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="10">
+                        </td>
 
                       </tr>
                       <tr>
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
 
-                           <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
+                           <input size="" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()">
                         </td>
                         <th style="border-top: 0px;">Tax(%)</th>
                         <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
-                         <input type="hidden" name="tax" id="total_tax22" value="" ></td>
+                          <input type="hidden" name="tax" id="total_tax22" value="" >
+                        </td>
                       </tr>
                       <tr>
                         <th style="border-top: 1px solid #dee2e6;">Total Payable</th>
@@ -145,16 +142,14 @@
                   <!-- <div class="col-md-4">
                     <button type="button" class="btn btn-block bg-gradient-info"> All</button>
                   </div> -->
-
-                    <!-- <div class="col-md-4">
- 
+                     <!-- <div class="col-md-4">
+                    
                     <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType(0)">ALL</button>
-
                    </div> -->
-
                   @foreach($category_list as $category)
                   <div class="col-md-4">
-                   <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType('{{$category->id}}')">{{$category->name}}</button><br/>
+                    
+                    <button type="button" class="btn btn-block bg-gradient-info" onclick="getCategoryType('{{$category->id}}')">{{$category->name}}</button><br>
                   </div>
                   @endforeach
 
@@ -183,7 +178,7 @@
 
                     <button type="button" class="btn btn-block bg-gradient-danger" onclick="window.location.reload()"> Cancel</button>
                     <!-- <button type="button" class="btn btn-block bg-gradient-warning"> Hold</button> -->
-                    <button type="button" class="btn btn-block bg-gradient-primary" data-toggle="modal" data-target="#modal-default" > Payment</button>
+                    <button type="button" class="btn btn-block bg-gradient-primary" data-toggle="modal" data-target="#modal-default" >Payment</button>
 
                   </div>
                 </div>
@@ -251,6 +246,7 @@
                     </div>
                   </div>
 
+
                   <div class="form-group row" >
 
                     <div class="col-sm-5">
@@ -268,7 +264,7 @@
                     </div>
                     <div class="col-sm-7">
 
-                      <input type="text" class="form-control" id="total_items"  placeholder="5" name="">
+                      <input type="text" class="form-control" id="total_items"  placeholder="" name="">
 
                     </div>
                   </div>
@@ -279,15 +275,16 @@
                     <div class="col-sm-7">
 
                       <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)" name="payment_method">
-                        <!-- select2bs4 -->
-                                <option value="Cash">Cash</option>
-                                <option value="Nett">Nett</option>
+
+                                <option value="CASH">Cash</option>
+                                <option value="NETT">Nett</option>
                                 <option value="VISA">VISA</option>
                                 <option value="4">Master Card</option>
-                                <option value="Cheque">Cheque</option>
-                                <option value="Debit">Debit</option>
-                                <option value="credit">credit</option>
-                                <option value="ONLINE PAYMENT">ONLINE PAYMENT</option>
+                                <option value="CHEQUE">Cheque</option>
+                                <option value="DEBIT">Debit</option>
+                                <option value="CREDIT">Credit</option>
+                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option>
+
                       </select>
                     </div>
                   </div>
@@ -319,7 +316,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" >Save changes</button>
+              <button type="submit" class="btn btn-primary" >Submit</button>
               </form>
             </div>
           </div>
@@ -347,7 +344,6 @@
             method: "POST",
             data: {cust_name:cust_name,cust_mobile:cust_mobile, _token: token},
             success:function(data){
-
              console.log('inserted');
              }
 
@@ -360,6 +356,7 @@
  function getCategoryType(value){
 
   var category_id=value;
+  // alert(category_id);
     var token = "{{ csrf_token() }}";
     $.ajax({
 
@@ -390,7 +387,6 @@
 
 
 
-
 function add_product(id){
 
 
@@ -409,6 +405,13 @@ function add_product(id){
             data: {product_id:product_id, _token: token},
             success:function(data){
 
+
+
+                  if(data.empty=="empty"){
+
+                     alert("Out of Stock");
+                  }
+
                  if(data.success=='success'){
                   // alert("Producte already Added! Please Chose Other Product");
 
@@ -417,16 +420,10 @@ function add_product(id){
 
                  }else{
 
-                  var pergram=data[0].rate/1000;
-                  var grams=data[0].rate/pergram;
 
-                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 " value="'+data[0].product_name+'"><input type="hidden" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1000" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
+                $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 " value="'+data[0].product_name+'"><input type="hidden" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><input type="text" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" onkeyup="sum('+data[0].product_id+')"><input type="hidden" class="form-control rounded-0 cur_rate" placeholder="1" name="cur_rate[]"  id="cur_rate'+data[0].product_id+'"  value="'+data[0].rate+'"></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
 
-                // <span class="badge bg-success">'+data[0].rate+'</span>
-
-                // $(".tableBox").append('<tr class="block"><td></td><td><input type="text" class="form-control rounded-0 item_name" placeholder="1"  id="item_name'+data[0].product_id+'" name="item_name[]" value="'+data[0].product_name+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0 qty" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]" onkeyup="sum('+data[0].product_id+')"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">'+data[0].rate+'</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="'+data[0].rate+'" ></h4></td><td><input type="hidden" class="form-control rounded-0 total_count" placeholder="1" name="total_count[]" id="total_count'+data[0].product_id+'"></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>');
-
-                
+  
                  sum(data[0].product_id);
               }
             }
@@ -447,9 +444,8 @@ function add_product(id){
 
     var value = parseInt(document.getElementById('qty'+id).value, 10);
     value = isNaN(value) ? 0 : value;
-    var kg=1000;
-    if(value<10000000){
-        value=value+kg;
+    if(value<10000){
+        value++;
           document.getElementById('qty'+id).value = value;
     }
     sum(id);
@@ -460,9 +456,9 @@ function decrementValue(id)
 
     var value = parseInt(document.getElementById('qty'+id).value, 10);
     value = isNaN(value) ? 0 : value;
-    var kg=1000;
+
     if(value>1){
-        value=value-kg;
+        value--;
             document.getElementById('qty'+id).value = value;
     }
       sum(id);
@@ -485,7 +481,7 @@ $(document).ready(function(){
 
               for (var i = 0; i < data.length; i++) {
 
- tab+='<input type="hidden" name=""  id="product'+data[i].product_id+'" value="'+data[i].rate+'"></div>';
+                tab+='<input type="hidden" name=""  id="product'+data[i].product_id+'" value="'+data[i].rate+'"></div>'; //to get keyup the vallue count purpose
  
               }
 
@@ -518,20 +514,20 @@ $(document).ready(function(){
 
              var dbrate = parseFloat($('#product'+product_id).val());
 
-                  var pergram=dbrate/1000;
+                  var pergram=dbrate;
 
-                  var total_grams=rate1/pergram;
+                  // var total_grams=rate1/pergram;
 
                   var total_price=qty*pergram;
 
                   // if(product_id=='grams'){
 
-                      $('#qty'+product_id).val(total_grams);
+                      // $('#qty'+product_id).val(total_grams);
 
                   // }
 
                   // if(product_id=='amount'){
-                  // $('#rate'+product_id).val(total_price);  
+                  $('#rate'+product_id).val(total_price);  
                   // }
 
 
@@ -580,6 +576,7 @@ $(document).ready(function(){
               tot_item = i;
 
               }
+
               
               $('#total_item').val(i);
 
@@ -597,11 +594,18 @@ $(document).ready(function(){
              // var tax =parseFloat(document.getElementById('tax').value);
 
              var disct =parseFloat(document.getElementById('disct').value);
-             var total_tax =parseFloat(document.getElementById('total_tax').value);
-             
-             var totaltax=tot_count*(total_tax/100);
-             // alert(total_tax);
+             // var total_tax222=parseFloat(document.getElementById('total_tax2').value);
+             var total_tax=parseFloat(document.getElementById('total_tax').value);
 
+              // if(isNaN(total_tax222)){
+              //     var payble_amt=tot_count-disct;
+              //   }else{
+              //      var payble_amt=tot_count-total_tax+disct;
+              //   }
+
+             var totaltax=tot_count*(total_tax/100);
+
+             // var payble_amt=tot_count-disct;
              var payble_amt=tot_count+totaltax-disct;
 
               $('#total_payble').val(payble_amt);
@@ -609,12 +613,32 @@ $(document).ready(function(){
               $('#total_payment').val(payble_amt);
               $('#total_tax22').val(totaltax);
 
-
+                
+      
             // });
 
              // $('#total_rate').val(rate);
         }
 
+        // $('#total_tax').onkeyup(function() {
+
+    //  var total_cnt=document.getElementById('total_rate').value;
+    //  var disct=document.getElementById('disct').value;
+    //  var totaltax=total_cnt*5/100;
+    //  // var totalfdf= parseInt(partotal_cnt)+parseInt(totaltax);
+    //  var total33=parseFloat(total_cnt)+parseFloat(totaltax)-parseFloat(disct);
+
+    // document.getElementById("total_tax2").value=total33;
+    // document.getElementById("total_payble").value=total33;
+
+    //  $('#total_payble').val(total33);
+
+    //  $('#total_payment').val(total33);
+
+    //   });
+
+
+ 
 
     function remove_product(id){
 
@@ -648,32 +672,32 @@ $(document).ready(function(){
                }
 
 
-     function getCart(){
+     // function getCart(){
 
-      alert("You entered in Getcart");
+     //  alert("You entered in Getcart");
 
-       $.ajax({
+     //   $.ajax({
 
-            url: "getCart",
-            method: "GET",
-            dataType: "json",
-            success:function(data){
+     //        url: "getCart",
+     //        method: "GET",
+     //        dataType: "json",
+     //        success:function(data){
 
-               var tab= "";
+     //           var tab= "";
 
-              for (var i = 0; i < data.length; i++) {
+     //          for (var i = 0; i < data.length; i++) {
 
-                  // tab += '<tr class="block"><td></td><td><input type="text" class="form-control rounded-0" placeholder="1"  id="item_name" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">ddd</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="dddd" ></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>';
+     //              // tab += '<tr class="block"><td></td><td><input type="text" class="form-control rounded-0" placeholder="1"  id="item_name" name="item_name[]" value="'+data[0].product_id+'"></td><td><div class="btn-group"><button type="button" class="btn btn-sm btn-secondary" onclick="decrementValue('+data[0].product_id+')"><i class="fas fa-minus"></i></button><input type="text" class="form-control rounded-0" placeholder="1" value="1" id="qty'+data[0].product_id+'" name="qty[]"><button type="button" class="btn btn-sm btn-secondary" onclick="incrementValue('+data[0].product_id+')"><i class="fas fa-plus" ></i></button></div></td><td><h4><span class="badge bg-success">ddd</span><input type="hidden" class="form-control rounded-0 rate_array" placeholder="1" name="rate_array[]"  id="rate'+data[0].product_id+'"  value="dddd" ></h4></td><td onclick="remove_product('+data[0].product_id+')"><i class="fas fa-times text-danger remove-btn" ></i></td></tr>';
  
-              }
+     //          }
 
-               $(".tableBox").html(tab);
+     //           $(".tableBox").html(tab);
 
 
-            }
-          });
+     //        }
+     //      });
 
-     }
+     // }
 
 
      $(document).ready(function () {
@@ -760,14 +784,11 @@ $(document).ready(function(){
 
     $('#return_amount').val(return_amount);
 
-    // customer_details();
-
   }
 
   $(document).ready(function(){
     $(".toast").toast('show');
   });
-
 
 </script>
 

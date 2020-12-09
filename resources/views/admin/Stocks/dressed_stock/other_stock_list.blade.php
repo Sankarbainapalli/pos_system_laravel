@@ -36,20 +36,37 @@
                 <form action="{{route('stock.store')}}" method="POST">
                   @csrf
                   <div class="row col-md-12" >
-                  <div class="col-md-3"></div>
-                  <div class="col-md-6">
-                     <div class="row">
-                      <div class="col-sm-6">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                    <div class="row">
+                       <div class="col-sm-4">
+                      <div class="form-group">
+                      <label>Product Category</label>
+                            <select onchange="category_type(this.value)" name="category_id" id="product_category"  class="form-control" style="width: 100%;" >
+                              <option value="0">Select Category</option>
+                               @foreach($category_list as $category)
+
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+    
+                                @endforeach
+                            </select>
+                          </div>
+                        </div>
+                   <!--  </div>
+                     <div class="row"> -->
+                     
+                      <div class="col-sm-4">
                       <div class="form-group">
                        <label>Product Type</label>
-                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required>
-                              <option >Select Product Type</option>
+                            <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required product_id>
+
+                             <!--  <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
                                   <option value="{{$product->id}}" >{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
 
 
-                                @endforeach
+                                @endforeach -->
 
                                 <!-- {{ ( $product->product_name == 'DRESSED') ? 'selected' : '' }} -->
 
@@ -57,11 +74,11 @@
                             </select>
                           </div>
                         </div>
-                      </div>
+                     <!--  </div>
 
-  <div class="row">
+  <div class="row"> -->
                    
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                       <div class="form-group">
                         <label>Select Franchisee</label>
                         <select name="franchisee_id" class="form-control" id="franchisee_id">
@@ -91,22 +108,17 @@
 
                       <div class="row">
                    
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                       <div class="form-group">
-                        <label>Total weight(kg)</label>
-                        @if(Auth::user()->role_id=='SUPERADMIN')
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()" required>
-                        @else
+                        <label>Total qty</label>
 
-                         <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" required onkeyup="sum()"  readonly="" >
-
-                        @endif
-                        <span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="Ex:10" required onkeyup="sum()" required>
+                      
                       </div>
                     </div>
-                  </div>
-                    <div class="row">
-                    <div class="col-sm-6">
+                 <!--  </div>
+                    <div class="row"> -->
+                    <div class="col-sm-4">
                       <div class="form-group">
                 
                         <label>Rate</label>
@@ -115,12 +127,12 @@
 
                       </div>
                     </div>
-                  </div>
-                 <div class="row">
-                    <div class="col-sm-6">
+                 <!--  </div>
+                 <div class="row"> -->
+                    <div class="col-sm-4">
                       <div class="form-group">
                         <label>Amount</label>
-                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()">
+                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()" readonly="">
                       </div>
                     </div>
 
@@ -268,6 +280,48 @@
 @section('script')
 <script type="text/javascript">
 
+  function category_type(value) {
+
+    // alert(value);
+
+  var product_id = value;
+  // var product_id = document.getElementById("product_category").value;
+
+    var token = "{{ csrf_token() }}";
+    $.ajax({
+
+            url: "getProduct1",
+            method: "POST",
+            dataType: "json",
+            data: {product_category:product_id, _token: token},
+            success:function(data){
+
+                var tab= "";
+
+                if(data.length==0){
+                  
+                    alert("No Data Found! Please Add product in the product Module");
+                    // window.location.href = "product";
+                  }else{ 
+
+                    tab += "<option value=''>Select Product</option>";}
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        tab += "<option value='"+data[i].id+"'>"+data[i].product_name+"</option>";
+       
+                    }
+
+               $("#product_id").html(tab);
+
+             }
+
+            })
+}
+
+
+
+
   function sum() {
 
              var qty = parseFloat($('#qty').val()) ;
@@ -294,10 +348,12 @@
 
                 alert("Please Add The Product Rate");
                   $('#rate').val(0);
+                  // $('#qty').val(0);
 
               }else{
 
                  $('#rate').val(data[0].rate);
+                  // $('#qty').val(0);
                    sum();
               }
               

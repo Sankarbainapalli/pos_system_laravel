@@ -120,7 +120,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Amount</label>
-                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()">
+                        <input type="text" class="form-control" placeholder="Enter Amount" name="amount" required id="total" onkeyup="sum()" readonly="">
                       </div>
                     </div>
 

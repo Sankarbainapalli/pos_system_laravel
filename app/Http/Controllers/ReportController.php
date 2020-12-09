@@ -26,6 +26,7 @@ class ReportController extends Controller
         $product_list_l=Product::where('product_name','LIVE')->get()->all();
 
         $total_lived_stock1='0';
+        
         foreach ($product_list_l as $product) {
         
           $total_lived_stock1=Stocklist::where('product_id',$product->id)->sum('qty'); 

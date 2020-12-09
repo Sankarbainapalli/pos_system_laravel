@@ -24,7 +24,7 @@ class PosController extends Controller
     public function index(){
 
     	$total_sum=Stock::sum('qty');
-    	$category_list=Category::all();
+    	$category_list=Category::where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
     	$product_list=Product::all();
         $customer_list=Customer::all();
 
@@ -34,11 +34,21 @@ class PosController extends Controller
     public function byamount(){
 
         $total_sum=Stock::sum('qty');
-        $category_list=Category::all();
+        $category_list=Category::where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
         $product_list=Product::all();
         $customer_list=Customer::all();
 
         return view('admin.Pos.list_byamount',compact('category_list','total_sum','product_list','customer_list'));
+    }
+
+    public function regularpos(){
+
+        $total_sum=Stock::sum('qty');
+        $category_list=Category::where('name', '!=', 'CHICKEN')->where('name', '!=', 'MUTTON')->where('name', '!=', 'FISH')->get();
+        $product_list=Product::all();
+        $customer_list=Customer::all();
+
+        return view('admin.Pos.list_regular',compact('category_list','total_sum','product_list','customer_list'));
     }
 
  
@@ -51,24 +61,34 @@ class PosController extends Controller
 
      }
 
+      public function regularinvoice($id){
+
+    $order_list=Orderitem::where('order_id',$id)->get();
+    $order_r=Order::where('id',$id)->get();
+
+    return view('regular_invoice_print',compact('order_list','order_r'));
+
+     }
+
+
+
+     //By category fetch the products.
+
      public function getProduct(Request $request)
     {
 
-        // echo $request->category_id;
+        // if($request->category_id==0){
 
-        if($request->category_id==0){
-         $product_list=Product::all();   
-        }else{
+        //  $product_list=Product::all();  //Fetch all the product
+
+        // }else{
             
-            $product_list=Product::WHERE('category_id',$request->category_id)->get()->all();
+        $product_list=Product::WHERE('category_id',$request->category_id)->get()->all();
   
-        }
+        // }
 
 
-        // $product_list=Product::all();
-      
         echo json_encode($product_list);
-     
 
     }
 

@@ -24,12 +24,12 @@ class LiveAmountController extends Controller
 
          if(Auth::user()->role_id == 'SUPERADMIN'){
 
-          $liveamount_list=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get();
+          $liveamount_list=Liveamount::all();
           // $liveamount_list=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
           
       }else{
 
-         $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
+         $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get();
          // $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get()->all();
       }
           
@@ -38,12 +38,7 @@ class LiveAmountController extends Controller
 
         $franchisee_list=Franchisee::all();
 
-        $type =  $request->session()->get('product_category');
-
-      $product_list=Product::where('category_id',$type)->get()->all();
-      
-     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','product_list','type','franchisee_list'));
-      // }
+     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','franchisee_list'));
 
         
     }
@@ -118,15 +113,18 @@ class LiveAmountController extends Controller
     }
 
     public function edit(Liveamount $liveamount){
+
+         $franchisee_list=Franchisee::all();
+          $category_list=Category::all();
+          $product_list=Product::all();
         
-        return view('admin.LiveAmount.edit',compact('liveamount'));
+        return view('admin.LiveAmount.edit',compact('liveamount','franchisee_list','category_list','product_list'));
     }
 
      public function update(Request $request,Liveamount $liveamount){
 
 
-
-        $liveamount->update(['chicken'=>$request->chicken,'motton'=>$request->motton,'fish'=>$request->fish]);
+        $liveamount->update(['category_id'=>$request->category_id,'product_id'=>$request->product_id,'branch_id'=>$request->branch_id,'rate'=>$request->rate]);
 
         return redirect(route('liveamount.index'))->with('message','LiveAmount Updated Successfully');
     }

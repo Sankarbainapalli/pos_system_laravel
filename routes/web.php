@@ -53,7 +53,11 @@ Route::resource('setting', App\Http\Controllers\SettingController::class);
 
 Route::get('/pos/invoice_print/{id}', [App\Http\Controllers\PosController::class, 'invoice'])->name('pos/invoice_print');
 
+Route::get('/pos/regular_invoice_print/{id}', [App\Http\Controllers\PosController::class, 'regularinvoice'])->name('pos/regular_invoice_print');
+
 Route::get('productDetails/{id}', [App\Http\Controllers\OrderController::class, 'productDetails']);
+
+Route::post('regularstore', [App\Http\Controllers\OrderController::class, 'regularstore'])->name('order.regularstore');
 
 Route::post('/getRate', [App\Http\Controllers\StockController::class, 'getRate'])->name('stock.rate');
 
@@ -62,6 +66,8 @@ Route::post('/getExformrate', [App\Http\Controllers\StockController::class, 'get
 Route::get('/delete_all_cart', [App\Http\Controllers\PosController::class, 'delete_all_cart'])->name('delete_all_cart');
 
 Route::get('byamount', [App\Http\Controllers\PosController::class, 'byamount'])->name('byamount');
+
+Route::get('regularpos', [App\Http\Controllers\PosController::class, 'regularpos'])->name('regularpos');
 
 Route::get('/getApiData', [App\Http\Controllers\PosController::class, 'getApiData'])->name('getApiData');
 
