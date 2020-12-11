@@ -41,6 +41,21 @@
                      <div class="row">
                       <div class="col-sm-6">
                       <div class="form-group">
+                         <label>Product Category</label>
+                            <select onchange="category_type(this.value)" name="category_id" id="product_category"  class="form-control" style="width: 100%;" >
+                              <option value="0">Select Category</option>
+                               @foreach($category_list as $category)
+
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+    
+                                @endforeach
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                     <div class="row">
+                      <div class="col-sm-6">
+                      <div class="form-group">
                        <label>Product Type</label>
                             <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required>
                               <option >Select Product Type</option>
@@ -142,12 +157,13 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped text-center">
+                <!-- <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
                     <th>S.no</th>
                     <th>Franchisee ID</th>
-                    <th>Name</th>
+                    <th>Category Name</th>
+                    <th>Product Name</th>
                     <th>Total Qty</th>
                     <th>Rate</th>
                     <th>Total Amount</th>
@@ -162,25 +178,13 @@
                     
                   <tr>
                     <td>{{$loop->index+1}}</td>
-                    <td>FRD00{{$stock->franchisee_id}}</td>
-                     <td>{{$stock->Franchisee->name}}</td>
-                    <!-- <td>{{$stock->Product->product_name}}</td> -->
-                    <td>{{$stock->qty}} ||       <!-- <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
-                           
-                          </a> --></td>
-                    <td>
-                 
-                      {{$stock->rate}}
-                    
-                    </td>
-                    <td> 
-
-                      {{$stock->amount}}
-
-                    </td>
-
+                    <td>FRD00{{$stock->franchisee_id}}({{$stock->Franchisee->name}})</td>
+                    <td>{{$stock->Category->name}}</td>
+                    <td>{{$stock->Product->product_name}}</td>
+                    <td>{{$stock->qty}}</td>
+                    <td>{{$stock->rate}}</td>
+                    <td>{{$stock->amount}}</td>
                     <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
-
                     @if(Auth::user()->role_id == 'SUPERADMIN')
                     <td> 
                       <div class="btn-group">
@@ -198,57 +202,8 @@
             
                   </tbody>
              
-                </table>
+                </table> -->
 
-
-
-                <!-- <table id="example1" class="table table-bordered table-striped text-center">
-                  <thead>
-                  <tr>
-                    <th>OverAll Stocks</th>
-                    <th>Live Stocks</th>
-                    <th>Dressed Stocks</th>
-                    <th>Rate</th>
-                    <th>Amount</th>
-                    <th>Action</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Branch 1</td>
-                    <td>56</td>
-                    <td>19</td>
-                    <td>400</td>
-                    <td>50000</td>
-                    <td> 
-                      <div class="btn-group">
-                          <a href=""><button type="button" class="btn btn-primary">
-                            <i class="far fa-edit"></i>
-                          </button></a>
-                          <button type="button" class="btn btn-primary">
-                            <i class="far fa-trash-alt"></i>
-                          </button>
-                      </div>
-                    </td>
-                  </tr>
-            
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th colspan="4">Total</th>
-                    <th>54000</th>
-                    <th></th>
-                  </tr>
-                  <tr>
-                    <th>OverAll Stocks</th>
-                    <th>Live Stocks</th>
-                    <th>Dressed Stocks</th>
-                    <th>Rate</th>
-                    <th>Amount</th>
-                    <th>Action</th>
-                  </tr>
-                  </tfoot> -->
-                </table>
               </div>
               <!-- /.card-body -->
             </div>

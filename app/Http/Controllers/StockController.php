@@ -56,22 +56,29 @@ class StockController extends Controller
 
   function getExformrate(Request $request){
 
-    dd($request->product_id);
+    // dd($request->product_id);
 
-    $product_cnt=Exformrate::where('type',$request->product_id)->where('created_at', '>=', date('Y-m-d').' 00:00:00')->count();
+    // $product_cnt=Exformrate::where('type',$request->product_id)->where('created_at', '>=', date('Y-m-d').' 00:00:00')->count();
 
-    if($product_cnt==0){
-  
-     $product_rate['empty'] = 'empty'; //If empty the count excute this block
+    $product=Product::where('id',$request->product_id)->get();
+    foreach ($product as $value) {
+
+    $product_cnt=Exformrate::where('type',$value->Category->name)->count();
+
+             if($product_cnt==0){
+          
+             $product_rate['empty'] = 'empty'; //If empty the count excute this block
 
 
-    }else{
+            }else{
 
-      $product_rate=Exformrate::where('type',$request->product_id)->where('created_at', '>=', date('Y-m-d').' 00:00:00')->get(); 
+              $product_rate=Exformrate::where('type',$value->Category->name)->get(); 
+
+            }
+
+             echo json_encode($product_rate);
 
     }
-
-     echo json_encode($product_rate);
 
 
 
@@ -79,13 +86,14 @@ class StockController extends Controller
 
     public function store(Request $request){
 
-         $total_count=Stock::where('product_id',$request->product_id)->where('franchisee_id',$request->franchisee_id)->count();
 
-        //  print_r($total_count);return;
+
+         $total_count=Stock::where('category_id',$request->category_id)->where('product_id',$request->product_id)->where('franchisee_id',$request->franchisee_id)->count();
 
         if($total_count==0){
 
             $stock=new Stock;
+            $stock->category_id=$request->category_id;
             $stock->product_id=$request->product_id;
             $stock->qty=$request->qty;
             $stock->rate=$request->rate;
@@ -95,9 +103,10 @@ class StockController extends Controller
 
             Stocklist::create($request->all());
 
+
             if($request->product_id=='2'){
 
-             $live_stock=Stock::where('product_id',1)->where('franchisee_id',$request->franchisee_id)->sum('qty');
+             $live_stock=Stock::where('product_id','1')->where('franchisee_id',$request->franchisee_id)->sum('qty');
 
                  $update_livestock=$live_stock-$request->qty;
 
@@ -105,6 +114,18 @@ class StockController extends Controller
           }
 
         }else{
+
+             if($request->product_id >1 && $request->product_id >2){
+
+                $other_stock=Stock::where('category_id',$request->category_id)->where('product_id',$request->product_id)->where('franchisee_id',$request->franchisee_id)->sum('qty');
+
+                 $update_other=$other_stock+$request->qty;
+
+                Stock::where('product_id',$request->product_id)->where('franchisee_id',$request->franchisee_id)->update(['qty' => ($update_other)]); 
+
+                Stocklist::create($request->all());
+
+            }
 
            // $update_stock=$total_stock+$request->qty;
             // Stock::where('product_id',$request->product_id)->where('franchisee_id',$request->franchisee_id)->update(['qty' => ($update_stock)]);
@@ -140,8 +161,9 @@ class StockController extends Controller
 
             }
 
+           
 
-            // Stock::where('product_id',$request->product_id)->where('franchisee_id',$request->franchisee_id)->update(['qty' => ($update_stock)]);
+
         }
 
               
@@ -154,6 +176,7 @@ class StockController extends Controller
         $product_id =  $request->product_id;
 
         $liveamount_list=Liveamount::all();    
+         $category_list=Category::where('name', '!=', 'FISH')->where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
 
          if(Auth::user()->role_id=="SUPERADMIN"){
 
@@ -195,8 +218,9 @@ class StockController extends Controller
         // $product_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
          $franchisee_list=Franchisee::all();
+         // $category_list =Category::all();
 
-        return view('admin.Stocks.dressed_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list'));
+        return view('admin.Stocks.dressed_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list','category_list'));
     }
 
 
@@ -241,6 +265,17 @@ class StockController extends Controller
     }
 
 
+    public function total_stock_list(){
+
+
+          $stock_list=Stock::all();
+
+
+        return view('admin.Stocks.dressed_stock.total_stock_list',compact('stock_list'));
+
+
+    }
+
      public function lived_stock(Request $request){
 
          $product_id =  $request->session()->get('product_id');
@@ -250,26 +285,24 @@ class StockController extends Controller
         $liveamount_list=Liveamount::all();
         $franchisee_list=Franchisee::all();
 
-        $product_list=Product::where('product_name','LIVE')->get()->all();
+         $product_list=Product::where('product_name','LIVE')->get()->all();
         // $product_list=Product::where('category_id','1')->where('product_name','LIVE')->get()->all();
 
         $stock_sum=Stock::where('created_at', '>=', date('Y-m-d').' 00:00:00')->where('product_id',$product_id)->sum('amount');
 
          $product_rate=Exformrate::where('type','chicken')->where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
+          $category_list=Category::where('name', '!=', 'MUTTON')->where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
+
 
          if(Auth::user()->role_id == 'SUPERADMIN'){
 
-            foreach ($product_list as $products) {
 
-              $stock_list=Stock::where('product_id',$products->id)->get()->all();
+            foreach ($product_list as $productss) {
 
+               $stock_list=Stock::where('product_id',$productss->id)->get();
 
-
-
-        return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list'));
-
-              }
+               }
 
                 }else{
 
@@ -278,12 +311,13 @@ class StockController extends Controller
                  $stock_list=Stock::where('product_id',$products->id)->where('franchisee_id',Auth::user()->frans_id)->get()->all();
 
                  }
+                 // $category_list=Category::all();
 
-                  return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list'));
+                  // return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list','category_list'));
 
                   }
 
-
+return view('admin.Stocks.lived_stock.list',compact('liveamount_list','product_list','product_rate','product_id','stock_list','stock_sum','franchisee_list','category_list'));
 
         
     }

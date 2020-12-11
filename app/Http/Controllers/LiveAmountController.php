@@ -61,6 +61,18 @@ class LiveAmountController extends Controller
     // echo 'SUCCESS';
   }
 
+  function onlyLiveProduct(Request $request){
+
+    // return $request->product_category;
+
+    $product_list=Product::where('category_id',$request->product_category)->where('product_name','LIVE')->get()->all();
+
+    echo json_encode($product_list);
+
+    // echo 'SUCCESS';
+  }
+
+
 
     /**
      * Show the form for creating a new resource.

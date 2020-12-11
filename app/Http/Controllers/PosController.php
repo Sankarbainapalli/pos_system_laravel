@@ -14,6 +14,7 @@ use App\Models\Customer;
 use App\Models\Apidata;
 use App\Models\Orderitem;
 use App\Models\Order;
+use App\Models\Paymentmethod;
 use DB;
 
 
@@ -27,8 +28,9 @@ class PosController extends Controller
     	$category_list=Category::where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
     	$product_list=Product::all();
         $customer_list=Customer::all();
+        $paymentmethod_list=Paymentmethod::where('status','1')->get();
 
-    	return view('admin.Pos.list',compact('category_list','total_sum','product_list','customer_list'));
+    	return view('admin.Pos.list',compact('category_list','total_sum','product_list','customer_list','paymentmethod_list'));
     }
 
     public function byamount(){
@@ -37,8 +39,9 @@ class PosController extends Controller
         $category_list=Category::where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
         $product_list=Product::all();
         $customer_list=Customer::all();
+        $paymentmethod_list=Paymentmethod::where('status','1')->get();
 
-        return view('admin.Pos.list_byamount',compact('category_list','total_sum','product_list','customer_list'));
+        return view('admin.Pos.list_byamount',compact('category_list','total_sum','product_list','customer_list','paymentmethod_list'));
     }
 
     public function regularpos(){
@@ -47,8 +50,10 @@ class PosController extends Controller
         $category_list=Category::where('name', '!=', 'CHICKEN')->where('name', '!=', 'MUTTON')->where('name', '!=', 'FISH')->get();
         $product_list=Product::all();
         $customer_list=Customer::all();
+        $paymentmethod_list=Paymentmethod::where('status','1')->get();
 
-        return view('admin.Pos.list_regular',compact('category_list','total_sum','product_list','customer_list'));
+
+        return view('admin.Pos.list_regular',compact('category_list','total_sum','product_list','customer_list','paymentmethod_list'));
     }
 
  
@@ -123,11 +128,13 @@ class PosController extends Controller
             // dd($request->franchisee_id);return;
 
         // $data1=file_get_contents('http://askmeguru.com/APISETUP/api.php?id="FRD00'.$request->franchisee_id.'"');
+
         $data1=file_get_contents('http://askmeguru.com/APISETUP/api.php');
 
           $data=json_decode($data1);
 
-          // $data=Apidata::where('branch_id',$request->franchisee_id)->get()->all();
+
+          // $data=Apidata::where('branch_id',$request->franchisee_id)->get();
 
           echo json_encode($data);
 

@@ -127,7 +127,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Required Qty</label>
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="Auto"  onkeyup="sum()">
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="Ex:10"  onkeyup="sum()">
 
                          <!-- <input type="button" onclick="ReadWeight();" value="GET" /> -->
                       </div>

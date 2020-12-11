@@ -23,7 +23,7 @@ class ReportController extends Controller
 
         if(Auth::user()->role_id=='SUPERADMIN'){
 
-        $product_list_l=Product::where('product_name','LIVE')->get()->all();
+        $product_list_l=Product::where('category_id','1')->where('product_name','LIVE')->get()->all();
 
         $total_lived_stock1='0';
         
@@ -31,14 +31,15 @@ class ReportController extends Controller
         
           $total_lived_stock1=Stocklist::where('product_id',$product->id)->sum('qty'); 
 
-          $total_lived_stock_amt=Stocklist::where('product_id',$product->id)->sum('amount'); 
+          $total_lived_stock_amt=Stocklist::where('product_id',$product->id)->sum('amount');
+
 
         }
 
        
         // $category_list=Category::all();
         $liveamount_list=Liveamount::all();
-        $product_list=Product::where('product_name','LIVE')->get()->all();
+        $product_list=Product::where('category_id','1')->where('product_name','LIVE')->get()->all();
 
         foreach ($product_list as $products) {
 
@@ -51,7 +52,7 @@ class ReportController extends Controller
         }else{
 
             
-        $product_list_l=Product::where('product_name','LIVE')->get()->all();
+        $product_list_l=Product::where('category_id','1')->where('product_name','LIVE')->get()->all();
 
         $total_lived_stock1='0';
         foreach ($product_list_l as $product) {
@@ -65,7 +66,7 @@ class ReportController extends Controller
        
         // $category_list=Category::all();
         $liveamount_list=Liveamount::all();
-        $product_list=Product::where('product_name','LIVE')->get();
+        $product_list=Product::where('category_id','1')->where('product_name','LIVE')->get();
 
 
         foreach ($product_list as $products) {
@@ -89,7 +90,7 @@ class ReportController extends Controller
 
         if(Auth::user()->role_id=='SUPERADMIN'){
 
-        $product_list_l=Product::where('product_name','DRESSED')->get()->all();
+        $product_list_l=Product::where('category_id','1')->where('product_name','DRESSED')->get()->all();
 
         $total_lived_stock1='0';
         foreach ($product_list_l as $product) {
@@ -103,7 +104,7 @@ class ReportController extends Controller
        
         // $category_list=Category::all();
         $liveamount_list=Liveamount::all();
-        $product_list=Product::where('product_name','DRESSED')->get()->all();
+        $product_list=Product::where('category_id','1')->where('product_name','DRESSED')->get()->all();
 
         foreach ($product_list as $products) {
 
@@ -116,7 +117,7 @@ class ReportController extends Controller
         }else{
 
             
-       $product_list_l=Product::where('product_name','DRESSED')->get()->all();
+       $product_list_l=Product::where('category_id','1')->where('product_name','DRESSED')->get()->all();
 
         $total_lived_stock1='0';
         foreach ($product_list_l as $product) {
@@ -130,7 +131,7 @@ class ReportController extends Controller
        
         // $category_list=Category::all();
         $liveamount_list=Liveamount::all();
-        $product_list=Product::where('product_name','DRESSED')->get();
+        $product_list=Product::where('category_id','1')->where('product_name','DRESSED')->get();
 
 
         foreach ($product_list as $products) {

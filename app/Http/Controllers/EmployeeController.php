@@ -85,6 +85,7 @@ class EmployeeController extends Controller
 
         // Todo::where('id',$id)->delete();
          $user->delete();
+         Order::where('user_id',$employee->id)->delete();
 
          return redirect()->back()->with('error','Employee Deleted Has been Successfully');
 
@@ -96,6 +97,7 @@ class EmployeeController extends Controller
 
         // Todo::where('id',$id)->delete();
          $employee->delete();
+         Order::where('user_id',$employee->id)->delete();
 
          return redirect()->back()->with('error','Employee Deleted Has been Successfully');
 

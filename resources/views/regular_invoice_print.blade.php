@@ -119,16 +119,13 @@
         <!-- info row -->
         <div class="row invoice-info">
           <div class="col-sm-9 invoice-col">
-            <address class="widthaddress">
-              <strong class="f-14 size2print">Address</strong><br>
-
-
-              <span class="f-14 sizeaddress">At - 4th Floor, Plot No. 802 & 803, Ayyappa Central, <br>
-              Ayyappa Society, Madhapur, Hyderabad - 500081, India<br>
-              Telephone: 8885051616<br>
+             <address class="widthaddress">
+              <strong class="f-14 size2print">Address:</strong><br>
+              <span class="f-14 sizeaddress"><bold>Opp.</bold> Manju Wines, Mallampet Road, <br>
+             Bachupally,Hyderabad<br>
+              Telephone: 9652255622<br>
               Customer Name : {{$orders->cus_name}}<br>
               Mobile : {{$orders->cus_mobile}}</span>
-            
             </address>
           </div>
           <!-- /.col -->
@@ -147,7 +144,7 @@
                <tr>
                <th class="float-right f-15 sizeprint">Sale Id</th>
                 <th class="float-right f-15 sizeprint">:</th>
-                <th class="float-right f-15 sizeprint">CSI{{$orders->id}}</th>
+                <th class="float-right f-15 sizeprint">CSI00{{$orders->id}}</th>
               </tr>
 
             </table>

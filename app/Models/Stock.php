@@ -9,7 +9,7 @@ class Stock extends Model
 {
     use HasFactory;
 
-     protected $fillable  = ['product_id','qty','rate','amount','franchisee_id'];
+     protected $fillable  = ['category_id','product_id','qty','rate','amount','franchisee_id'];
 
 
       public function Product(){
@@ -29,5 +29,11 @@ class Stock extends Model
     	return $this->belongsTo("App\Models\Franchisee", "franchisee_id");
 
 	} 
+
+  public function Category(){
+    
+      return $this->belongsTo("App\Models\Category", "category_id");
+
+  } 
 
 }

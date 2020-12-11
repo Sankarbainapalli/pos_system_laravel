@@ -46,7 +46,7 @@ class FranchiseeController extends Controller
 
        // send_sms($request->mobile, "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");
 
-    return redirect()->route('franchisee.index')->with('message','franchisee Has been added Successfully');
+    return redirect()->route('franchisee.index')->with('message','Franchisee Has been added Successfully');
     
     }
 
@@ -65,7 +65,7 @@ class FranchiseeController extends Controller
 
         // $franchisee->update(['name'=>$request->name,'status'=>$request->status]);
 
-        return redirect(route('franchisee.index'))->with('message','franchisee Updated Successfully');
+        return redirect(route('franchisee.index'))->with('message','Franchisee Updated Successfully');
     }
 
      public function show(Franchisee $franchisee){
@@ -84,7 +84,7 @@ class FranchiseeController extends Controller
          Stock::where('franchisee_id',$franchisee->id)->delete();
 
 
-         return redirect()->back()->with('error','franchisee Deleted Has been Successfully');
+         return redirect()->back()->with('error','Franchisee Deleted Has been Successfully');
 
     }
 
@@ -105,7 +105,7 @@ class FranchiseeController extends Controller
          Stocklist::where('franchisee_id',$franchisee->id)->delete();
          Stock::where('franchisee_id',$franchisee->id)->delete();
 
-         return redirect()->back()->with('error','franchisee Deleted Has been Successfully');
+         return redirect()->back()->with('error','Franchisee Deleted Has been Successfully');
 
     }
 

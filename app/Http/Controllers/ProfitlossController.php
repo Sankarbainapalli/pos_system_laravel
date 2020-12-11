@@ -15,12 +15,13 @@ class ProfitlossController extends Controller
     //
     public function profitloss(){
 
-    	 $exform_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+    	 $exform_rate=Exformrate::where('type','CHICKEN')->sum('rate');
+         // $exform_rate=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
 
-    	 $today_rate=Liveamount::where('product_id','2')->where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('rate');
+    	 $today_rate=Liveamount::where('product_id','2')->sum('rate');
 
 
-    	 $product_list_l=Product::where('product_name','live')->get()->all();
+    	 $product_list_l=Product::where('category_id','1')->where('product_name','live')->get()->all();
         $total_lived_stock='0';
         foreach ($product_list_l as $product) {
         
@@ -28,7 +29,7 @@ class ProfitlossController extends Controller
 
         }
 
-        $product_list_d=Product::where('product_name','dressed')->get()->all();
+        $product_list_d=Product::where('category_id','1')->where('product_name','dressed')->get()->all();
          $total_dressed_stock='0';
         foreach ($product_list_d as $product) {
         
@@ -37,8 +38,6 @@ class ProfitlossController extends Controller
         }
 
         $pos= Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('grandtotal');
-
-
 
 
         return view('admin.Profit&Loss.list',compact('total_lived_stock','total_dressed_stock','exform_rate','pos','today_rate'));

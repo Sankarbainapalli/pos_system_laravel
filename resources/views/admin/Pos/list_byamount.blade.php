@@ -280,14 +280,18 @@
 
                       <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)" name="payment_method">
                         <!-- select2bs4 -->
-                                <option value="Cash">Cash</option>
+                          @foreach($paymentmethod_list as $payment)
+                                <option value="{{$payment->name}}">{{$payment->name}}</option>
+                              @endforeach
+                              
+                               <!--  <option value="Cash">Cash</option>
                                 <option value="Nett">Nett</option>
                                 <option value="VISA">VISA</option>
                                 <option value="4">Master Card</option>
                                 <option value="Cheque">Cheque</option>
                                 <option value="Debit">Debit</option>
                                 <option value="credit">credit</option>
-                                <option value="ONLINE PAYMENT">ONLINE PAYMENT</option>
+                                <option value="ONLINE PAYMENT">ONLINE PAYMENT</option> -->
                       </select>
                     </div>
                   </div>

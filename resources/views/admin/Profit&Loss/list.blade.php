@@ -57,11 +57,27 @@
                      <td>{{$today_rate}}/{{$total_dressed_stock*$today_rate}}</td>
                      
                     <td>{{$pos}}</td>
+                   
+                    @if($pos=='0')
+                    <td>0</td>
+                    @elseif($pos>$total_lived_stock*$exform_rate)
                     <td>{{$pos-$total_lived_stock*$exform_rate}}</td>
+                    @endif
+
+                     @if($pos=='0')
+                    <td>0</td>
+                    @else
                     <td>{{$total_dressed_stock*$today_rate-$pos}}</td>
-                    <td>{{($pos-$total_lived_stock*$exform_rate)*30/100}}</td>
+                    @endif
+                    
+                    @if($pos>$total_lived_stock*$exform_rate)
+                   <td>{{($pos-$total_lived_stock*$exform_rate)*30/100}}</td>
+                    @else
+                    <td>0</td>
+                    @endif
+             
       
-                  </tr>
+                    </tr>
               
                   </tbody>
                 </table>

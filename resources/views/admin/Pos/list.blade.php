@@ -274,16 +274,21 @@
                     </div>
                     <div class="col-sm-7">
 
-                      <select class="form-control" style="width: 100%;" id="paidby" onchange="paymentMethod(this.value)" name="payment_method">
+                      <select class="form-control" style="width: 100%;" id="paidby"  name="payment_method">
+                        <!-- onchange="paymentMethod(this.value)" -->
 
-                                <option value="CASH">Cash</option>
+                              @foreach($paymentmethod_list as $payment)
+                                <option value="{{$payment->name}}">{{$payment->name}}</option>
+                              @endforeach
+
+                               <!--  <option value="CASH">Cash</option>
                                 <option value="NETT">Nett</option>
                                 <option value="VISA">VISA</option>
                                 <option value="4">Master Card</option>
                                 <option value="CHEQUE">Cheque</option>
                                 <option value="DEBIT">Debit</option>
                                 <option value="CREDIT">Credit</option>
-                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option>
+                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option> -->
 
                       </select>
                     </div>

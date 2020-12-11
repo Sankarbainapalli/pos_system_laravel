@@ -178,9 +178,10 @@
                       <div class="form-group">
                         <label>Mode Of Payment</label>
                         <select class="form-control select2bs4" style="width: 100%;" name="payment_mode">
-                            <option selected="selected" value="bank">Bank</option>
-                            <option value="Cash">Cash</option>
-                            <option value="Bank Transfer">Bank Transfer</option>
+                             <option value="0">Select Payment Type</option>
+                              @foreach($paymentmethod_list as $payment)
+                                <option value="{{$payment->name}}">{{$payment->name}}</option>
+                              @endforeach
                         </select>
                       </div>
                     </div>

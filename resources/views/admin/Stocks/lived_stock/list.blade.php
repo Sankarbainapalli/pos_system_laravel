@@ -39,18 +39,34 @@
                   <div class="row col-md-12" >
                   <div class="col-md-3"></div>
                   <div class="col-md-6">
+
+                      <div class="row">
+                       <div class="col-sm-6">
+                      <div class="form-group">
+                      <label>Product Category</label>
+                            <select onchange="category_type(this.value)" name="category_id" id="product_category"  class="form-control" style="width: 100%;" required="">
+                              <option value="0">Select Category</option>
+                               @foreach($category_list as $category)
+
+                                <option value="{{$category->id}}">{{$category->name}}</option>
+    
+                                @endforeach
+                            </select>
+                          </div>
+                        </div>
+                    </div>
                      <div class="row">
                       <div class="col-sm-6">
                       <div class="form-group">
                        <label>Product Type</label>
-                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()" required >
-                               <option >Select Product Type</option>
+                           <select name="product_id"  id="product_id" class="form-control" style="width: 100%;" onchange="product_type()"  required="">
+                              <!--  <option >Select Product Type</option>
                                @foreach($product_list as $product)
 
                                <option value="{{$product->id}}" selected="selected">{{$product->Category->name. '('}}{{($product->product_name.')')}}</option>
 
                                 @endforeach
-
+ -->
 
                             </select>
                           </div>
@@ -62,7 +78,7 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label>Select Franchisee</label>
-                        <select name="franchisee_id" class="form-control" id="franchisee_id">
+                        <select name="franchisee_id" class="form-control" id="franchisee_id" required="">
 
                           @foreach($franchisee_list as $franchisee)
 
@@ -93,10 +109,10 @@
                       <div class="form-group">
                         <label>Total weight(kg)</label>
                         @if(Auth::user()->role_id=='SUPERADMIN')
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" >
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" required="">
                         @else
 
-                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" readonly="">
+                        <input type="text" name="qty" id="qty" class="form-control" placeholder="weiging machine" onkeyup="sum()" readonly="" required="">
 
                         @endif
                         <span onclick="getWeight()" class="btn btn-sm btn-primary">Get Weight</span>
@@ -109,7 +125,7 @@
                         
                            <label>Ex-Form Rate</label>                         
                           <input type="text" name="rate" id="rate" class="form-control" placeholder="rate" onkeyup="sum()"  readonly="" >
-                          <!-- value="{{$product_rate}}" -->
+                           <!-- value="{{$product_rate}}" -->
                        
 
                     
@@ -149,12 +165,13 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped text-center">
+               <!--  <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
                     <th>S.no</th>
                     <th>Franchisee ID</th>
-                    <th>Name</th>
+                    <th>Category Name</th>
+                    <th>Product Name</th>
                     <th>Total Qty</th>
                     <th>Ex-Form Rate</th>
                     <th>Total Amount</th>
@@ -169,28 +186,14 @@
                   <tr>
                     <td>{{$loop->index+1}}</td>
                     <td>FRD00{{$stock->franchisee_id}}</td>
+                    <td>{{$stock->Category->name}}</td>
                     <td>{{$stock->Product->product_name}}</td>
-                    <td>{{$stock->qty}} ||       <!-- <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
-                          </a> --></td>
-                    <td>
-
-                      {{$stock->rate}}
-                 
-                   
-                    </td>
-
-                    <td> 
-
-                      {{$stock->amount}}
-                     
-                    </td>
-
-
+                    <td>{{$stock->qty}}</td>
+                    <td>{{$stock->rate}}</td>
+                    <td>{{$stock->amount}}</td>
                     <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
 
                     @if(Auth::user()->role_id == 'SUPERADMIN')
-                  
-                    
                     
                     <td> 
                       <div class="btn-group">
@@ -207,7 +210,7 @@
             
                   </tbody>
              
-                </table>
+                </table> -->
 
 
 
@@ -331,6 +334,47 @@
 @section('script')
 <script type="text/javascript">
 
+
+  function category_type(value) {
+
+    // alert(value);
+
+  var product_id = value;
+  // var product_id = document.getElementById("product_category").value;
+
+    var token = "{{ csrf_token() }}";
+    $.ajax({
+
+            url: "onlyLiveProduct",
+            method: "POST",
+            dataType: "json",
+            data: {product_category:product_id, _token: token},
+            success:function(data){
+
+                var tab= "";
+
+                if(data.length==0){
+                  
+                    alert("No Data Found! Please Add product in the product Module");
+                    // window.location.href = "product";
+                  }else{ 
+
+                    tab += "<option value=''>Select Product</option>";
+                  }
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        tab += "<option value='"+data[i].id+"'>"+data[i].product_name+"</option>";
+       
+                    }
+
+               $("#product_id").html(tab);
+
+             }
+
+            })
+}
+
   function sum() {
 
              var qty = parseFloat($('#qty').val()) ;
@@ -346,8 +390,8 @@
 
     var token = "{{ csrf_token() }}";
     $.ajax({
-            // url: "getExformrate",
-            url: "getRate",
+            url: "getExformrate",
+            // url: "getRate",
             method: "POST",
             data: {product_id:x, _token: token},
             dataType: "json",

@@ -15,6 +15,7 @@ class CreateStocksTable extends Migration
     {
         Schema::create('stocks', function (Blueprint $table) {
             $table->id();
+            $table->integer('category_id')->unsigned();
             $table->integer('product_id')->unsigned();
             $table->bigInteger('qty');
             $table->decimal('rate', 5, 2);

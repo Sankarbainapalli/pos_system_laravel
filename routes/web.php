@@ -51,6 +51,8 @@ Route::resource('pos', App\Http\Controllers\PosController::class);
 
 Route::resource('setting', App\Http\Controllers\SettingController::class);
 
+Route::resource('paymentmethod', App\Http\Controllers\PaymentMethodController::class);
+
 Route::get('/pos/invoice_print/{id}', [App\Http\Controllers\PosController::class, 'invoice'])->name('pos/invoice_print');
 
 Route::get('/pos/regular_invoice_print/{id}', [App\Http\Controllers\PosController::class, 'regularinvoice'])->name('pos/regular_invoice_print');
@@ -91,6 +93,8 @@ Route::post('/dressed_stock', [App\Http\Controllers\StockController::class, 'dre
 
 Route::get('/other_stock', [App\Http\Controllers\StockController::class, 'other_stock'])->name('stock.other_stock');
 
+Route::get('/total_stock_list', [App\Http\Controllers\StockController::class, 'total_stock_list'])->name('stock.total_stock_list');
+
 Route::post('/other_stock', [App\Http\Controllers\StockController::class, 'other_stock'])->name('stock.other_stock');
 
 Route::get('/lived_stock', [App\Http\Controllers\StockController::class, 'lived_stock'])->name('stock.lived_stock');
@@ -107,6 +111,8 @@ Route::resource('order', App\Http\Controllers\OrderController::class);
 
 
 Route::post('/getProduct1', [App\Http\Controllers\LiveAmountController::class, 'getProduct1'])->name('getProduct1');
+
+Route::post('/onlyLiveProduct', [App\Http\Controllers\LiveAmountController::class, 'onlyLiveProduct'])->name('onlyLiveProduct');
 
 Route::get('/live_stock_report', [App\Http\Controllers\ReportController::class, 'live_stock_report'])->name('live_stock_report');
 

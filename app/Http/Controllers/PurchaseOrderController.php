@@ -17,7 +17,7 @@ class PurchaseOrderController extends Controller
 
         $franchisee_list = Franchisee::all();
         $banch_list = Branch::all();
-        $product_rate = Exformrate::where('created_at', '>=', date('Y-m-d') . ' 00:00:00')->sum('rate');
+        $product_rate = Exformrate::where('type','CHICKEN')->sum('rate');
 
         if(Auth::user()->role_id=="SUPERADMIN"){
 
@@ -30,7 +30,7 @@ class PurchaseOrderController extends Controller
 
        $pur_list = PurchaseOrder::where('franchisee_id',Auth::user()->frans_id)->get();
 
-  }
+   }
 
         return view('admin.PurchaseOrder.list', compact('franchisee_list', 'product_rate', 'banch_list', 'pur_list'));
     }

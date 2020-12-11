@@ -10,7 +10,7 @@ class Stocklist extends Model
     use HasFactory;
 
       // protected $table = 'stocklist';
-       protected $fillable  = ['product_id','qty','rate','amount','franchisee_id'];
+       protected $fillable  = ['category_id','product_id','qty','rate','amount','franchisee_id'];
 
         public function Product(){
    	

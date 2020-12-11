@@ -154,7 +154,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped text-center">
+              <!--   <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
                     <th>S.no</th>
@@ -176,22 +176,11 @@
                     <td>{{$loop->index+1}}</td>
                     <td>FRD00{{$stock->franchisee_id}}({{$stock->Franchisee->name}})</td>
                     <td>{{$stock->Product->product_name}}</td>
-                    <td>{{$stock->qty}} ||       <!-- <a href="{{route('stock.edit',$stock->id)}}"><span class="badge badge-primary badge-lg"> Add qty</span>
-                           
-                          </a> --></td>
-                    <td>
-                 
-                      {{$stock->rate}}
-                    
-                    </td>
-                    <td> 
-
-                      {{$stock->amount}}
-
-                    </td>
-
+                    <td>{{$stock->qty}}</td>
+                    <td>{{$stock->rate}}</td>
+                    <td>{{$stock->amount}}</td>
                     <td><?php echo date('d-m-Y H:i:s',strtotime($stock->created_at));?></td>
-
+                    
                     @if(Auth::user()->role_id == 'SUPERADMIN')
                     <td> 
                       <div class="btn-group">
@@ -209,7 +198,7 @@
             
                   </tbody>
              
-                </table>
+                </table> -->
 
 
 

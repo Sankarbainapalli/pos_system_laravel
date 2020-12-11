@@ -303,6 +303,14 @@
                 <p>Other Stock</p>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="{{route('stock.total_stock_list')}}" class="nav-link">
+                <i class="far fa-arrow-alt-circle-right nav-icon"></i>
+                <p>Total Stock</p>
+              </a>
+            </li>
+            
           </ul>
         </li>
 
@@ -444,10 +452,17 @@
           </a>
           <ul class="nav nav-treeview">
            
-            <li class="nav-item">
+          <!--   <li class="nav-item">
               <a href="{{route('setting.index')}}" class="nav-link">
                 <i class="far fa-arrow-alt-circle-right nav-icon"></i>
                 <p>Systemsetting</p>
+              </a>
+            </li> -->
+
+             <li class="nav-item">
+              <a href="{{route('paymentmethod.index')}}" class="nav-link">
+                <i class="far ffa-credit-card nav-icon"></i>
+                <p>Payment Method</p>
               </a>
             </li>
 
