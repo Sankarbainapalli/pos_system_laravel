@@ -81,7 +81,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example" class="table table-bordered table-striped text-center">
+                <table id="example1" class="table table-bordered table-striped text-center">
                   <thead>
                   <tr>
                     <th>#</th>
@@ -90,9 +90,9 @@
                     <th>Franchisee</th>
                     <th>Payment</th>
                     <th>Sub Total</th>
-                    <th>Tax (INR)</th>
-                    <th>Grand Total (INR)</th>
-                    <th>Order List</th>
+                    <th>Tax </th>
+                    <th>Grand Total</th>
+                    <th>Print</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -100,7 +100,7 @@
                   <tr>
                     <td>{{$loop->index+1}}</td>
                     <td><?php echo date('d-m-Y H:i:sa',strtotime($order->created_at))?></td>
-                    <td>CSI{{$order->id}}</td>
+                    <td>CSI00{{$order->id}}</td>
                     @if($order->frans_id=='0')
                       <td>Admin Ordered</td>
                     @else
@@ -121,9 +121,9 @@
                     <th class="border-right-0"><b>TOTAL</b></th>
                     <td class="border-right-0"></td>
                     <td class="border-right-0"></td>
+                    <td class="border-right-0"></td>
                     <td></td>
-                    <td></td>
-                    <th>Rs.{{$subtotal}}</th>
+                    <th >Rs.{{$subtotal}}</th>
                     <th>Rs.{{$tax}}</th>
                     <th>Rs.{{$grandtotal}}</th>
                     <th></th>

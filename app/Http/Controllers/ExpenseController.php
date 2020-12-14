@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Expenses;
 use App\Models\Franchisee;
-use App\Models\PaymentMethod;
+use App\Models\Paymentmethod;
 
 
 class ExpenseController extends Controller
@@ -17,7 +17,7 @@ class ExpenseController extends Controller
 
     	$franchisee_list=Franchisee::all();
     	$expenses_list=Expenses::all();
-        $paymentmethod_list=PaymentMethod::where('status','1')->get();
+        $paymentmethod_list=Paymentmethod::where('status','1')->get();
 
     	return view('admin.Expenses.list',compact('franchisee_list','expenses_list','paymentmethod_list'));
     }
@@ -32,7 +32,6 @@ class ExpenseController extends Controller
   
 
     public function edit(Expenses $expense){
-
 
     	$franchisee_list=Franchisee::all();
 

@@ -54,6 +54,9 @@
         visibility: hidden;
       }
     }
+    .boxcolor{
+      color:black !important;
+    }
   </style>
 
 </head>

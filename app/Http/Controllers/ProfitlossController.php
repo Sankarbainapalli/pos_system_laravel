@@ -37,7 +37,8 @@ class ProfitlossController extends Controller
 
         }
 
-        $pos= Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('grandtotal');
+        $pos= Order::sum('grandtotal');
+        // $pos= Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('grandtotal');
 
 
         return view('admin.Profit&Loss.list',compact('total_lived_stock','total_dressed_stock','exform_rate','pos','today_rate'));

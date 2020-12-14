@@ -70,7 +70,8 @@ class HomeController extends Controller
         $total_franchisee=Franchisee::count();
         $no_of_sales=Order::count('id');
         $total_sales=Order::sum('grandtotal');
-        $today_sale="";
+         $today_sale=Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('grandtotal'); 
+        $today_nf_sales=Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->count('id');
 
 
     }else{
@@ -115,6 +116,8 @@ class HomeController extends Controller
         $total_franchisee=" ";
 
         $no_of_sales=Order::where('user_id', Auth::user()->id)->count('id');
+         $today_nf_sales=Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->count('id');
+
         $total_sales=Order::where('user_id', Auth::user()->id)->sum('grandtotal');
 
         $today_sale=Order::where('created_at', '>=', date('Y-m-d').' 00:00:00')->sum('grandtotal'); 
@@ -122,7 +125,7 @@ class HomeController extends Controller
     }
 
 
-    return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate','total_sales','no_of_sales','dres_stock','today_sale'));
+    return view('admin.dashboard',compact('total_emp','total_dressed_stock','total_lived_stock','total_franchisee','today_rate','total_sales','no_of_sales','dres_stock','today_nf_sales','today_sale'));
       
     }
 

@@ -28,41 +28,32 @@
 
         <div class="row">
            @if(Auth::user()->role_id == 'SUPERADMIN')
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box">
+         <div class="col-12 col-sm-6 col-md-3">
+           <a href="{{route('franchisee.index')}}" class="boxcolor">    <div class="info-box">
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-warehouse"></i></span>
 
-              <div class="info-box-content">
+             <div class="info-box-content">
                 <span class="info-box-text">Total Franchisees</span>
                 <span class="info-box-number">
                   {{$total_franchisee}}
                 </span>
               </div>
+
             </div>
+              </a>
             <!-- /.info-box -->
           </div>
+          
           @endif
 
-         @if(Auth::user()->role_id == 'FRANCHISEEOWNER' || Auth::user()->role_id == 'STOREMANAGER')
+       
 
-           <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-warehouse"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Today Sale</span>
-                <span class="info-box-number">
-                  {{$today_sale}}
-                </span>
-              </div>
-            </div>
-            <!-- /.info-box -->
-          </div>
+           
 
 
-          @endif
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
+            <a href="{{route('sales_report')}}" class="boxcolor"> 
             <div class="info-box mb-3">
               <span class="info-box-icon bg-danger elevation-1"><i class="far fa-money-bill-alt"></i></span>
 
@@ -72,14 +63,29 @@
               </div>
               <!-- /.info-box-content -->
             </div>
+          </a>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
+
+           <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="far fa-money-bill-alt"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Today No. Of sales</span>
+                <span class="info-box-number">{{$today_nf_sales}}</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
 
           <!-- fix for small devices only -->
           <div class="clearfix hidden-md-up"></div>
 
           <div class="col-12 col-sm-6 col-md-3">
+             <a href="{{route('stock.total_stock_list')}}" class="boxcolor"> 
             <div class="info-box mb-3">
               <span class="info-box-icon bg-success elevation-1"><i class="far fa-check-square"></i></span>
 
@@ -89,10 +95,12 @@
               </div>
               <!-- /.info-box-content -->
             </div>
+          </a>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
+            <a href="{{route('stock.total_stock_list')}}" class="boxcolor"> 
             <div class="info-box mb-3">
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-check-square"></i></span>
 
@@ -106,6 +114,7 @@
               </div>
               <!-- /.info-box-content -->
             </div>
+          </a>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
@@ -123,6 +132,21 @@
           </div> -->
           <!-- /.col -->
           <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-warehouse"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Today Sale</span>
+                <span class="info-box-number">
+                  {{$today_sale}}
+                </span>
+              </div>
+            </div>
+            <!-- /.info-box -->
+          </div>
+          
+          <div class="col-12 col-sm-6 col-md-3">
+             <a href="{{route('sales_report')}}" class="boxcolor"> 
             <div class="info-box mb-3">
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-shopping-cart"></i></span>
 
@@ -132,6 +156,7 @@
               </div>
               <!-- /.info-box-content -->
             </div>
+          </a>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
@@ -140,6 +165,7 @@
           <div class="clearfix hidden-md-up"></div>
 
           <div class="col-12 col-sm-6 col-md-3">
+              <a href="{{route('employee.index')}}" class="boxcolor"> 
             <div class="info-box mb-3">
               <span class="info-box-icon bg-success elevation-1"><i class="fas fa-users"></i></span>
 
@@ -149,6 +175,7 @@
               </div>
               <!-- /.info-box-content -->
             </div>
+          </a>
             <!-- /.info-box --> 
           </div>
           <!-- /.col -->
