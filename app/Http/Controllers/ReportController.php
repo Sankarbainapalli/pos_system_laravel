@@ -13,6 +13,7 @@ use App\Models\Franchisee;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Stocklist;
+use App\Models\Paymentmethod;
 use Auth;
 use DB;
 
@@ -157,12 +158,7 @@ class ReportController extends Controller
        if(Auth::user()->role_id=='SUPERADMIN'){
 
          $franchisee_list=User::all();
-         // $franchisee_list=User::groupBy('frans_id')->get()->all();
-
-         //  $query="SELECT *, fr.name as fra_name, usr.id as use_id FROM `franchisees` as fr INNER JOIN users as usr on fr.id=usr.frans_id  GROUP BY usr.frans_id ";
-
-         // return $franchisee_list=DB::select(DB::raw($query));  
-
+        
          if($request->user_id && $request->payment_method && $request->from_date && $request->to_date){
 
            // return "Branch and Payment and from and to selected";
@@ -174,6 +170,19 @@ class ReportController extends Controller
         $tax=Order::where('user_id',$request->user_id)->where('payment_method',$request->payment_method)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('tax');
 
         $grandtotal=Order::where('user_id',$request->user_id)->where('payment_method',$request->payment_method)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('grandtotal');
+
+    }elseif($request->user_id && $request->from_date && $request->to_date){
+
+             // return "Payment and from and to selected";
+
+
+        $order_list=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->get();
+
+        $subtotal=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('subtotal');
+        
+        $tax=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('tax');
+
+        $grandtotal=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('grandtotal');
 
     }elseif($request->payment_method && $request->from_date && $request->to_date){
 
@@ -238,7 +247,7 @@ class ReportController extends Controller
 
       }else{
 
-        // return   "ALL selected";
+       // return   "ALL selected";
 
         $order_list=Order::all();
         $subtotal=Order::sum('subtotal');
@@ -259,6 +268,18 @@ class ReportController extends Controller
         $tax=Order::where('user_id',$request->user_id)->where('payment_method',$request->payment_method)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('tax');
 
         $grandtotal=Order::where('user_id',$request->user_id)->where('payment_method',$request->payment_method)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('grandtotal');
+
+    }elseif($request->user_id && $request->from_date && $request->to_date){
+
+             // return "Payment and from and to selected";
+
+        $order_list=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->get();
+
+        $subtotal=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('subtotal');
+        
+        $tax=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('tax');
+
+        $grandtotal=Order::where('user_id',$request->user_id)->whereBetween('created_at', [$request->from_date, $request->to_date])->sum('grandtotal');
 
     }elseif($request->payment_method && $request->from_date && $request->to_date){
 
@@ -312,7 +333,9 @@ class ReportController extends Controller
 
     }
 
-        return view('admin.Report.sales',compact('franchisee_list','order_list','subtotal','tax','grandtotal'));
+     $paymentmethod_list=Paymentmethod::where('status','1')->get();
+
+        return view('admin.Report.sales',compact('franchisee_list','order_list','subtotal','tax','grandtotal','paymentmethod_list'));
     }
 
 }

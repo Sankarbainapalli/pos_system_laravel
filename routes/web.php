@@ -67,6 +67,8 @@ Route::post('/getExformrate', [App\Http\Controllers\StockController::class, 'get
 
 Route::get('/delete_all_cart', [App\Http\Controllers\PosController::class, 'delete_all_cart'])->name('delete_all_cart');
 
+Route::post('getDiscount', [App\Http\Controllers\PosController::class, 'getDiscount'])->name('getDiscount');
+
 Route::get('byamount', [App\Http\Controllers\PosController::class, 'byamount'])->name('byamount');
 
 Route::get('regularpos', [App\Http\Controllers\PosController::class, 'regularpos'])->name('regularpos');

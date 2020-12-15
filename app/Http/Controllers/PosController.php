@@ -33,6 +33,25 @@ class PosController extends Controller
     	return view('admin.Pos.list',compact('category_list','total_sum','product_list','customer_list','paymentmethod_list'));
     }
 
+    public function getDiscount(Request $request){
+
+        $cnt_user=Order::where('cus_mobile',$request->mobile_no)->count();
+
+        if($cnt_user=='3'){
+
+            $discount='20';
+
+         echo json_encode($discount);
+         
+        }
+        else{
+
+            $discount='0';
+
+           echo json_encode($discount);
+        }
+    }
+
     public function byamount(){
 
         $total_sum=Stock::sum('qty');

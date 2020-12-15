@@ -16,7 +16,7 @@
         <i class="fas fa-search"></i>
         </button>
             </div> -->
-             <i class="fas fa-spinner fa-pulse"></i><badge style="text-decoration-color: blue;">  {{Auth()->user()->role_id}}
+             <i class="fas fa-spinner fa-pulse text-primary" ></i><badge style="text-decoration-color: blue;">  {{Auth()->user()->role_id}}
 
     </div>
   <!-- </form> -->
@@ -87,7 +87,7 @@
       </a>
       <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
         <!-- <li><a href="#" class="dropdown-item">Profile </a></li> -->
-        <li><a href="{{route('setting.index')}}" class="dropdown-item">Settings</a></li>
+        <!-- <li><a href="{{route('setting.index')}}" class="dropdown-item">Settings</a></li> -->
         <li class="dropdown-divider"></li>
         <!-- Level two dropdown-->
         <li>

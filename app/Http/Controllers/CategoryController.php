@@ -22,6 +22,7 @@ class CategoryController extends Controller
 
     public function store(Request $request){
 
+ 
        Category::create($request->all());
 
     return redirect()->route('category.index')->with('message','Category Has been added Successfully');

@@ -53,13 +53,16 @@
                             <label>Paid By</label>
                             <select name="payment_method" class="form-control select2bs4" style="width: 100%;" id="Branch">
                                 <option value="">Select</option>
-                                <option value="CASH">Cash</option>
+                                @foreach($paymentmethod_list as $payment)
+                                <option value="{{$payment->name}}">{{$payment->name}}</option>
+                                @endforeach
+                               <!--  <option value="CASH">Cash</option>
                                 <option value="NETT">Nett</option>
                                 <option value="VISA">VISA</option>
                                 <option value="CHEQUE">Cheque</option>
                                 <option value="DEBIT">Debit</option>
                                 <option value="CREDIT">Credit</option>
-                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option>
+                                <option value="ONLINEPAYMENT">ONLINE PAYMENT</option> -->
                             </select>
                         </div>
                     </div>

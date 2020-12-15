@@ -23,4 +23,14 @@ class Product extends Model
 
 	} 
 
+  public function getProductNameAttribute($value)
+    {
+        return strtoupper($value);
+    }
+
+  public function setProductNameAttribute($value)
+    {
+        $this->attributes['product_name'] = strtoupper($value);
+    }
+
 }

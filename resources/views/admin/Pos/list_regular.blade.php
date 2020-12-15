@@ -110,7 +110,7 @@
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
 
-                           <input size="" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()">
+                           <input size="" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" readonly="">
                         </td>
                         <th style="border-top: 0px;">Tax(%)</th>
                         <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
@@ -233,7 +233,7 @@
                     </div>
                     <div class="col-sm-7">
 
-                      <input type="text" class="form-control" id="cus_mobile"  placeholder="" name="cus_mobile" maxlength="10">
+                      <input type="text" class="form-control" onkeyup="discountCal(this.value)" id="cus_mobile"  placeholder="" name="cus_mobile" maxlength="10">
                     </div>
                   </div>
 
@@ -497,6 +497,32 @@ $(document).ready(function(){
 
             });
 });
+
+
+// who will buy 3 times get discount **;
+function discountCal(value){
+
+   var mobile_no=value;
+
+    var token = "{{ csrf_token() }}";
+
+   $.ajax({
+
+            url: "getDiscount",
+            method: "POST",
+            dataType: "json",
+            data: {mobile_no:mobile_no, _token: token},
+            success:function(data){
+
+               $('#disct').val(data);
+
+               sum(); 
+
+             }
+
+            });
+
+}
 
 
 
