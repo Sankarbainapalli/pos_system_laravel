@@ -47,7 +47,7 @@ class PosController extends Controller
         else{
 
             $discount='0';
-
+            
            echo json_encode($discount);
         }
     }
@@ -107,6 +107,7 @@ class PosController extends Controller
 
         // }else{
             
+        // $product_list=Product::WHERE('category_id',$request->category_id)->get()->all();
         $product_list=Product::WHERE('category_id',$request->category_id)->get()->all();
   
         // }

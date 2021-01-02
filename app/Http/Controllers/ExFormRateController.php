@@ -20,8 +20,8 @@ class ExFormRateController extends Controller
 
         $category_list=Category::all();
 
-       $exformrate_list=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
-       // $exformrate_list=Exformrate::all();
+       // $exformrate_list=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
+       $exformrate_list=Exformrate::all();
         
      return view('admin.ExFormRate.list',compact('exformrate_list','category_list'));
 

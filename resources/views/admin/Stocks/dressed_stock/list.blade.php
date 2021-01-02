@@ -224,6 +224,46 @@
 @section('script')
 <script type="text/javascript">
 
+  function category_type(value) {
+
+    // alert(value);
+
+  var product_id = value;
+  // var product_id = document.getElementById("product_category").value;
+
+    var token = "{{ csrf_token() }}";
+    $.ajax({
+
+            url: "getProduct1",
+            method: "POST",
+            dataType: "json",
+            data: {product_category:product_id, _token: token},
+            success:function(data){
+
+                var tab= "";
+
+                if(data.length==0){
+                  
+                    alert("No Data Found! Please Add product in the product Module");
+                    // window.location.href = "product";
+                  }else{ 
+
+                    tab += "<option value=''>Select Product</option>";
+                  }
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        tab += "<option value='"+data[i].id+"'>"+data[i].product_name+"</option>";
+       
+                    }
+
+               $("#product_id").html(tab);
+
+             }
+
+            })
+}
+
   function sum() {
 
              var qty = parseFloat($('#qty').val()) ;

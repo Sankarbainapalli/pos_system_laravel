@@ -180,7 +180,8 @@ class StockController extends Controller
 
          if(Auth::user()->role_id=="SUPERADMIN"){
 
-             $product_list=Product::where('product_name','DRESSED')->where('product_name', '!=', 'LIVE')->get();
+             $product_list=Product::where('product_name', '!=', 'LIVE')->get();
+             // $product_list=Product::where('product_name','DRESSED')->where('product_name', '!=', 'LIVE')->get();
 
          }else{
 

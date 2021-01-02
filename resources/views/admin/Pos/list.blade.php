@@ -104,14 +104,18 @@
                         <th style="width:50%; border-top: 0px;">Total</th>
                         <td style="border-top: 0px;" ><input type="text" id="total_rate" readonly="" name="subtotal" size="10">
                         </td>
-
                       </tr>
-                      <tr>
-                        <th style="border-top: 0px;">Discount Amt / %</th>
+                      <tr >
+                        <th style="border-top: 0px;">Discount By Amt</th>
                         <td style="border-top: 0px;">
-
-                           <input size="" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" readonly="">
+                          <input type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" size="5">
                         </td>
+                      <!--  <th style="border-top: 0px;">Discount(%)</th>
+                        <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
+                        </td> -->
+                      <!-- </tr> -->
+
+                      <!-- <tr> -->
                         <th style="border-top: 0px;">Tax(%)</th>
                         <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
                           <input type="hidden" name="tax" id="total_tax22" value="" >

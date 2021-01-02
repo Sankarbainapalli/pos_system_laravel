@@ -56,7 +56,7 @@ class EmployeeController extends Controller
        $post->role_id = $request->input('role_id');
        $post->frans_id = $request->input('frans_id');
        // $post->user_id = Auth::user()->id;
-       $post->status = $request->input('status');
+       // $post->status = $request->input('status');
        $post->save();
 
          // send_sms('7661910404', "Dear ".$request->name.",\nYour Creadintial Details:\nEmail:".$request->email."\nPassword:".$request->password."\nRegards\nTeam\ASKMEGURU");

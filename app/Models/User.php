@@ -27,7 +27,7 @@ class User extends Authenticatable
         'role_id',
         'frans_id',
         'user_id',
-        'status',
+        // 'status',
         
     ];
 

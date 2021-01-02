@@ -96,7 +96,7 @@
                     <th>Category</th>
                     <th>Product type</th>
                     <th>Rate</th>
-                    <th>Date</th>
+                    <th>Date&Time</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -108,7 +108,7 @@
                     <td>{{$liveamount->Category->name}}</td>
                     <td>{{$liveamount->Product->product_name}}</td>
                     <td>{{$liveamount->rate}}/-</td>
-                    <td>{{$liveamount->ratedate}}</td>
+                    <td><?php echo date('d-m-Y H:i:sa',strtotime($liveamount->updated_at)) ?></td>
                
                     <td> 
                       <div class="btn-group">
@@ -152,10 +152,11 @@
     var token = "{{ csrf_token() }}";
     $.ajax({
 
-            url: "getProduct1",
+            url: "getProduct",
             method: "POST",
             dataType: "json",
-            data: {product_category:product_id, _token: token},
+            // data: {product_category:product_id, _token: token},
+            data: {category_id:product_id, _token: token},
             success:function(data){
 
                 var tab= "";

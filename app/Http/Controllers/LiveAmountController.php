@@ -54,7 +54,7 @@ class LiveAmountController extends Controller
 
     // return $request->product_category;
 
-    $product_list=Product::where('category_id',$request->product_category)->get()->all();
+    $product_list=Product::where('category_id',$request->product_category)->where('product_name', '!=', 'LIVE')->get()->all();
 
     echo json_encode($product_list);
 

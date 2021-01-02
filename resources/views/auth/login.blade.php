@@ -49,8 +49,16 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="input-group col-md-6">
+                                <!-- <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"> -->
+
+                                <!-- <div class="input-group mb-3"> -->
+  <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary hide" id="show_password" type="button"><i class="far fa-eye-slash"></i></button>
+    <!-- <button class="btn btn-outline-secondary show" id="show_password" type="button"><i class="fas fa-eye"></i></button> -->
+  <!-- </div> -->
+</div>
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -58,6 +66,12 @@
                                     </span>
                                 @enderror
                             </div>
+
+
+
+
+                            <!-- <badge type="button" id="show_password" name="show_password" class="btn bnt-sm btn-default">Show Password</badge> -->
+
                         </div>
 
                        <!--  <div class="form-group row">
@@ -103,6 +117,35 @@
 <script src="{{asset('public/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('public/dist/js/adminlte.min.js')}}"></script>
+
+<script>  
+$(document).ready(function(){  
+ $('#show_password').on('click', function(){  
+  var passwordField = $('#password');  
+  var passwordFieldType = passwordField.attr('type');
+  if(passwordField.val() != '')
+  {
+   if(passwordFieldType == 'password')  
+   {  
+    passwordField.attr('type', 'text');  
+    $(this).html('<i class="far fa-eye"></i>');  
+    // $('#hide').hide();  
+   }  
+   else  
+   {  
+    passwordField.attr('type', 'password');  
+    $(this).html('<i class="fas fa-eye-slash"></i>');  
+    // $('#show').show();  
+   }
+  }
+  else
+  {
+   alert("Please Enter Password");
+  }
+ });  
+});  
+</script>
+
 </body>
 </html>
 
