@@ -85,6 +85,8 @@ Route::get('/getLiveamount', [App\Http\Controllers\PosController::class, 'getLiv
 
 Route::post('/addProduct', [App\Http\Controllers\PosController::class, 'addProduct'])->name('addProduct');
 
+Route::post('/checkqty', [App\Http\Controllers\PosController::class, 'checkqty'])->name('checkqty');
+
 Route::post('/getFranchisee', [App\Http\Controllers\PurchaseOrderController::class, 'getFranchisee'])->name('getFranchisee');
 
 Route::post('/getBranch', [App\Http\Controllers\PurchaseOrderController::class, 'getBranch'])->name('getBranch');

@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Branch;
 use App\Models\Franchisee;
+use App\Models\todayrate;
 use Auth;
  
 
@@ -25,11 +26,13 @@ class LiveAmountController extends Controller
          if(Auth::user()->role_id == 'SUPERADMIN'){
 
           $liveamount_list=Liveamount::all();
+          $today_list=todayrate::all();
           // $liveamount_list=Liveamount::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
           
       }else{
 
          $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get();
+         $today_list=todayrate::where('branch_id',Auth::user()->frans_id)->get();
          // $liveamount_list=Liveamount::where('branch_id',Auth::user()->frans_id)->get()->all();
       }
           
@@ -38,7 +41,7 @@ class LiveAmountController extends Controller
 
         $franchisee_list=Franchisee::all();
 
-     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','franchisee_list'));
+     return view('admin.LiveAmount.list',compact('liveamount_list','category_list','franchisee_list','today_list'));
 
         
     }
@@ -104,6 +107,10 @@ class LiveAmountController extends Controller
         $liveamount->ratedate= date('Y-m-d');
         $liveamount->save();
 
+        todayrate::create($request->all());
+
+
+
         return redirect()->back()->with('message','LiveAmount Added Has been Successfully');
 
 
@@ -137,6 +144,9 @@ class LiveAmountController extends Controller
 
 
         $liveamount->update(['category_id'=>$request->category_id,'product_id'=>$request->product_id,'branch_id'=>$request->branch_id,'rate'=>$request->rate]);
+
+        todayrate::create($request->all());
+
 
         return redirect(route('liveamount.index'))->with('message','LiveAmount Updated Successfully');
     }

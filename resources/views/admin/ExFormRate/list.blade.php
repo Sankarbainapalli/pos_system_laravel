@@ -100,6 +100,42 @@
                   </tr>
                   @endforeach
                   </tfoot>
+                </table><br></br>
+            <center><h3>Report  Details</h3></center><hr>
+                 <table id="example1" class="table table-bordered table-striped text-center">
+                  <thead>
+                  <tr>
+                    <th>S.no</th>
+                
+                    <th>Product type</th>
+                    <th>Ex-Form Rate</th>
+                    <!-- <th>Cur Date</th> -->
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($exformrates_list as $exformrate)
+                  <tr>
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$exformrate->type}}</td>
+                    <td>{{$exformrate->rate}}</td>
+                    <!-- <td>{{$exformrate->cur_date}}</td> -->
+                    <td>{{$exformrate->created_at}}</td>
+               
+                    <td> 
+                      <div class="btn-group">
+                          <a href="{{route('exformrate.edit',$exformrate->id)}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                         <a href="{{route('exformrate.destroy',$exformrate->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
+                            <i class="far fa-trash-alt"></i>
+                          </button></a>
+                      </div>
+                    </td>
+                  </tr>
+                  @endforeach
+                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

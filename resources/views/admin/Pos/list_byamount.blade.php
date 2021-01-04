@@ -114,7 +114,7 @@
                         <th style="border-top: 0px;">Discount Amt / %</th>
                         <td style="border-top: 0px;">
 
-                           <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" readonly="">
+                           <input size="50" type="text" name="discount" id="disct" placeholder="₹10.00" class="form-control float-right" value="0" onkeyup="sum()" >
                         </td>
                         <th style="border-top: 0px;">Tax(%)</th>
                         <td style="border-top: 0px;"><input type="text" name="tax2" id="total_tax" value="0" onkeyup="sum()" size="5">
@@ -534,6 +534,26 @@ function discountCal(value){
 
 
    function sum(product_id) {
+
+    var pid=product_id;
+     var ttll_qty=$('#qty'+product_id).val()/1000;
+
+  var token = "{{ csrf_token() }}";
+
+                 $.ajax({
+
+            url: "checkqty",
+            method: "POST",
+            dataType: "json",
+            data: {product_id:pid, _token: token},
+            success:function(data){
+
+              if(ttll_qty>data.checkqty){
+                  alert("Out of Stock!Please update inventory OR make Purchase Order to Supplier!");
+              }
+            }
+
+          });
 
 
          // $('#rate'+product_id).each(function(){

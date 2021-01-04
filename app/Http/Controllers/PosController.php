@@ -171,6 +171,18 @@ class PosController extends Controller
              echo json_encode($response_array);  
 
     }
+
+     public function checkqty(Request $request)
+    {
+
+
+     $stock_qty=Stock::where('product_id',$request->product_id)->sum('qty');
+
+         $response_array['checkqty'] = $stock_qty;
+
+             echo json_encode($response_array);  
+
+    }
     
 
 

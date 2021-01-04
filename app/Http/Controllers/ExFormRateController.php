@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Exformrate;
+use App\Models\Exformratereport;
 use App\Models\Category;
 
 class ExFormRateController extends Controller
@@ -22,8 +23,9 @@ class ExFormRateController extends Controller
 
        // $exformrate_list=Exformrate::where('created_at', '>=', date('Y-m-d').' 00:00:00')->get()->all();
        $exformrate_list=Exformrate::all();
+       $exformrates_list=Exformratereport::all();
         
-     return view('admin.ExFormRate.list',compact('exformrate_list','category_list'));
+     return view('admin.ExFormRate.list',compact('exformrate_list','category_list','exformrates_list'));
 
     }
 
@@ -50,6 +52,7 @@ class ExFormRateController extends Controller
         // dd($request->all());
 
         Exformrate::create($request->all());
+        Exformratereport::create($request->all());
 
        return redirect()->route('exformrate.index')->with('message','EXFormRate Has been added Successfully');
     }
@@ -73,6 +76,8 @@ class ExFormRateController extends Controller
     public function update(Request $request,Exformrate $exformrate){
 
         $exformrate->update(['type'=>$request->type,'rate'=>$request->rate]);
+
+         Exformratereport::create($request->all());
 
         return redirect(route('exformrate.index'))->with('message','Updated Successfully');
     }

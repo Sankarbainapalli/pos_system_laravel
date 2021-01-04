@@ -535,6 +535,31 @@ function discountCal(value){
 
    function sum(product_id) {
 
+     var pid=product_id;
+     var ttll_qty=$('#qty'+product_id).val()/1000;
+
+  var token = "{{ csrf_token() }}";
+
+                 $.ajax({
+
+            url: "checkqty",
+            method: "POST",
+            dataType: "json",
+            data: {product_id:pid, _token: token},
+            success:function(data){
+
+              if(ttll_qty>data.checkqty){
+                  alert("Out of Stock!Please update inventory OR make Purchase Order to Supplier!");
+
+                  // decrementValue(product_id);
+              }
+            }
+
+          });
+
+
+
+
 
          // $('#rate'+product_id).each(function(){
 

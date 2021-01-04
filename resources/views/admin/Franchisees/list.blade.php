@@ -59,7 +59,7 @@
                     <td>{{$franchisee->mobile}}</td>
                     <td>{{$franchisee->addhar_no}}</td>
                     <td>{{$franchisee->account_no}}</td>
-                    <td>{{$franchisee->Branch->location}}</td>
+                    <td>{{$franchisee->Branch->name}}</td>
                     <td>{{$franchisee->start_date}}</td>
                     <td>{{$franchisee->remarks}}</td>
                     <td> 

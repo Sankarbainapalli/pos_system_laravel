@@ -27,7 +27,7 @@
           <div class="col-12">
             <x-alert />
             <div class="card">
-                @if(Auth::user()->role_id == 'SUPERADMIN')
+                @if(Auth::user()->role_id == 'SUPERADMIN' || Auth::user()->role_id == 'FRANCHISEEOWNER')
               <div class="card-header">
                 <!-- <h3 class="card-title justify-content-center ">Live Amount (Main Shop)</h3> -->
               
@@ -124,6 +124,45 @@
                   @endforeach
                   </tfoot>
                 </table>
+                <br></br>
+                    <center><h3>Report  Details</h3></center><hr>
+                 <table id="example1" class="table table-bordered table-striped text-center">
+                  <thead>
+                  <tr>
+                    <th>S.no</th>
+                    <th>Franchisee</th>
+                    <th>Category</th>
+                    <th>Product type</th>
+                    <th>Rate</th>
+                    <th>Date&Time</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($today_list as $liveamount)
+                  <tr>
+                    <td>{{$loop->index+1}}</td>
+                    <td>{{$liveamount->Franchisee->name}}</td>
+                    <td>{{$liveamount->Category->name}}</td>
+                    <td>{{$liveamount->Product->product_name}}</td>
+                    <td>{{$liveamount->rate}}/-</td>
+                    <td><?php echo date('d-m-Y H:i:sa',strtotime($liveamount->updated_at)) ?></td>
+               
+                    <td> 
+                      <div class="btn-group">
+                          <a href="{{route('liveamount.edit',$liveamount->id)}}"><button type="button" class="btn btn-primary">
+                            <i class="far fa-edit"></i>
+                          </button></a>
+                         <a href="{{route('liveamount.destroy',$liveamount->id)}}"><button type="button" class="btn btn-danger" onclick="confirm('You want to delete?')">
+                           <i class="far fa-trash-alt"></i>
+                          </button></a>
+                      </div>
+                    </td>
+                  </tr>
+                  @endforeach
+                  </tfoot>
+                </table>
+
               </div>
               <!-- /.card-body -->
             </div>

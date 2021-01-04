@@ -176,7 +176,9 @@ class StockController extends Controller
         $product_id =  $request->product_id;
 
         $liveamount_list=Liveamount::all();    
-         $category_list=Category::where('name', '!=', 'FISH')->where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
+         $category_list=Category::where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
+
+         // $category_list=Category::where('name', '!=', 'FISH')->where('name', '!=', 'OTHERS')->where('name', '!=', 'COMBO')->get();
 
          if(Auth::user()->role_id=="SUPERADMIN"){
 

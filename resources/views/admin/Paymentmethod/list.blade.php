@@ -55,6 +55,8 @@
                     @else
                     <td><span class="badge badge-danger">Inactive</span></td>
                     @endif
+
+                     @if(Auth::user()->role_id=='SUPERADMIN' || Auth::user()->role_id=='FRANCHISEEOWNER')
                     <td> 
                       <div class="btn-group">
                       <a href="{{route('paymentmethod.edit',$payment->id)}}"><button type="button" class="btn btn-primary" >
@@ -68,6 +70,7 @@
                       </div>
                     </td>
                   </tr>
+                  @endif
                   @endforeach
                   </tbody>
                 </table>
